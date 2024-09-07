@@ -24,20 +24,41 @@ namespace TemplateTPIntegrador
         {
             ValidacionesTemplateUtils validacionesTemplateUtils = new ValidacionesTemplateUtils();
 
-            // Llama al método ValidarInicioSesion para chequear los inputs
-            string MensajeValidación = validacionesTemplateUtils.ValidarInicioSesion(txt_usuario.Text, txt_contraseña.Text);
+            // Llama al método ValidarVacios para chequear los inputs
+            string mensaje_validacion_vacios = validacionesTemplateUtils.ValidarVacios(txt_usuario.Text, txt_contraseña.Text);
 
-            if (MensajeValidación != null)
+            if (mensaje_validacion_vacios != null)
             {
                 // Muestra mensaje de error para el primer campo vacío
-                MessageBox.Show(MensajeValidación, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(mensaje_validacion_vacios, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
                 // Pone el cursor en el primer campo vacío
-                if (MensajeValidación.Contains("Usuario"))
+                if (mensaje_validacion_vacios.Contains("Usuario"))
                 {
                     txt_usuario.Focus();
                 }
-                else if (MensajeValidación.Contains("Contraseña"))
+                else if (mensaje_validacion_vacios.Contains("Contraseña"))
+                {
+                    txt_contraseña.Focus();
+                }
+            }
+
+            ValidacionesNegocioUtils validacionesNegocioUtils = new ValidacionesNegocioUtils();
+
+            // Llama al metodo ValidarCaracteres para chequear que los campos contengan la cantidad de caracteres requeridos
+            string mensaje_validacion_caracteres = validacionesNegocioUtils.ValidarCaracteres(txt_usuario.Text, txt_contraseña.Text);
+
+            if (mensaje_validacion_caracteres != null)
+            {
+                // Muestra mensaje de error para el primer campo incorrecto
+                MessageBox.Show(mensaje_validacion_caracteres, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                // Pone el cursor en el primer campo incorrecto
+                if (mensaje_validacion_caracteres.Contains("Usuario"))
+                {
+                    txt_usuario.Focus();
+                }
+                else if (mensaje_validacion_caracteres.Contains("Contraseña"))
                 {
                     txt_contraseña.Focus();
                 }
@@ -47,11 +68,6 @@ namespace TemplateTPIntegrador
                 // Inicio de sesión si pasa las validaciones
                 MessageBox.Show("Inicio de Sesión exitoso!");
             }
-
-            //ValidacionesNegocioUtils validacionesNegocioUtils = new ValidacionesNegocioUtils();
-
-            //LoginNegocio ln = new LoginNegocio();
-            //ln.Login();
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
