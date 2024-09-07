@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace Negocio
 {
-    public class Class1
+    public class LoginNegocio
     {
+        public void Login(string username, string password)
+        {
+            //aca escribo que hace el login
+        }
     }
 }
