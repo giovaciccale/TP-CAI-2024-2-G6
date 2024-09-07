@@ -16,7 +16,7 @@ namespace TemplateTPIntegrador.utils
         }
 
         // Método que valida si el Nombre de Usauario o Contraseña son vacíos. Devuelve un mensaje para el primer campo vacío.
-        public string ValidarInicioSesion(string usuario, string contraseña)
+        public string ValidarVacios(string usuario, string contraseña)
         {
             if (ValidarInputVacio(usuario))
             {
