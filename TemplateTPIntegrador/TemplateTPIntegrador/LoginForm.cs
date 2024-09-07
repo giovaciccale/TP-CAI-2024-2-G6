@@ -24,13 +24,31 @@ namespace TemplateTPIntegrador
         {
             ValidacionesTemplateUtils validacionesTemplateUtils = new ValidacionesTemplateUtils();
 
-            string usuario = txt_usuario.Text;
-            string contraseña = txt_contraseña.Text;
+            // Llama al método ValidarInicioSesion para chequear los inputs
+            string MensajeValidación = validacionesTemplateUtils.ValidarInicioSesion(txt_usuario.Text, txt_contraseña.Text);
 
-            validacionesTemplateUtils.ValidarStringVacio(usuario);
-            validacionesTemplateUtils.ValidarStringVacio(contraseña);
+            if (MensajeValidación != null)
+            {
+                // Muestra mensaje de error para el primer campo vacío
+                MessageBox.Show(MensajeValidación, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
-            ValidacionesNegocioUtils validacionesNegocioUtils = new ValidacionesNegocioUtils();
+                // Pone el cursor en el primer campo vacío
+                if (MensajeValidación.Contains("Usuario"))
+                {
+                    txt_usuario.Focus();
+                }
+                else if (MensajeValidación.Contains("Contraseña"))
+                {
+                    txt_contraseña.Focus();
+                }
+            }
+            else
+            {
+                // Inicio de sesión si pasa las validaciones
+                MessageBox.Show("Inicio de Sesión exitoso!");
+            }
+
+            //ValidacionesNegocioUtils validacionesNegocioUtils = new ValidacionesNegocioUtils();
 
             //LoginNegocio ln = new LoginNegocio();
             //ln.Login();

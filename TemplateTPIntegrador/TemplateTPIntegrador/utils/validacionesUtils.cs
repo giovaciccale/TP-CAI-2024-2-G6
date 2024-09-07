@@ -9,15 +9,26 @@ namespace TemplateTPIntegrador.utils
 {
     public class ValidacionesTemplateUtils
     {
-        public bool ValidarStringVacio(string dato)
+        // Método que valida si el usuario está dejando vacío algún campo
+        public bool ValidarInputVacio(string input)
         {
-            if (dato == "")
+            return string.IsNullOrWhiteSpace(input);
+        }
+
+        // Método que valida si el Nombre de Usauario o Contraseña son vacíos. Devuelve un mensaje para el primer campo vacío.
+        public string ValidarInicioSesion(string usuario, string contraseña)
+        {
+            if (ValidarInputVacio(usuario))
             {
-                MessageBox.Show("El campo no puede estar vacío.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return true;
+                return "El campo \"Nombre De Usuario\" no puede estar vacío.";
+            }
+            else if (ValidarInputVacio(contraseña))
+            {
+                return "El campo \"Contraseña\" no puede estar vacío.";
             }
 
-            return false;
+            // Si ambos campos son válidos, retorna null
+            return null;
         }
     }
 }
