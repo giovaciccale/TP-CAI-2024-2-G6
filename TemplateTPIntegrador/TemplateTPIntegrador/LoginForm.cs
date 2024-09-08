@@ -70,11 +70,6 @@ namespace TemplateTPIntegrador
             }
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             // Se instancia el formulario de alta de usuarios
@@ -94,6 +89,32 @@ namespace TemplateTPIntegrador
         private void btnCerrar_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void txt_usuario_Click(object sender, EventArgs e)
+        {
+            txt_usuario.BackColor = Color.White;
+            panel3.BackColor = Color.White;
+            panel4.BackColor = SystemColors.Control;
+            txt_contraseña.BackColor = SystemColors.Control;
+        }
+
+        private void txt_contraseña_Click(object sender, EventArgs e)
+        {
+            txt_contraseña.BackColor = Color.White;
+            panel4.BackColor = Color.White;
+            panel3.BackColor = SystemColors.Control;
+            txt_usuario.BackColor = SystemColors.Control;
+        }
+
+        private void pictureBox2_MouseDown(object sender, MouseEventArgs e)
+        {
+            txt_contraseña.UseSystemPasswordChar = false;
+        }
+
+        private void pictureBox2_MouseUp(object sender, MouseEventArgs e)
+        {
+            txt_contraseña.UseSystemPasswordChar = true;
         }
     }
 }
