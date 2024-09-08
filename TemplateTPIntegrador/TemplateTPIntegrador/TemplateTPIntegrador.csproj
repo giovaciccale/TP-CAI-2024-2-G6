@@ -72,6 +72,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -95,6 +96,15 @@
       <Project>{c45177fe-6854-49e9-aa70-13fd2cde1f69}</Project>
       <Name>Negocio</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pngwing.com.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pngegg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kissclipart-password-icon-clipart-password-computer-icons-clip-d813f06606bcdc9a.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
