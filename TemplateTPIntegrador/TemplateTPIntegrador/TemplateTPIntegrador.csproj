@@ -101,9 +101,6 @@
     <None Include="Resources\pngwing.com.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\pngegg.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\kissclipart-password-icon-clipart-password-computer-icons-clip-d813f06606bcdc9a.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
