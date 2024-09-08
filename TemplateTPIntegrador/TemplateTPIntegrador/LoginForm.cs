@@ -74,5 +74,26 @@ namespace TemplateTPIntegrador
         {
 
         }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            // Se instancia el formulario de alta de usuarios
+            AltaUsuariosForm alta_usuarios = new AltaUsuariosForm();
+
+            // Se esconde el formulario padre (LogIn)
+            this.Hide();
+
+            // Se mantiene escondido el fomrulario padre mientras el formulario hijo (alat de usuarios) este abierto.
+            // De cerrarse, se muestra de vuelta el formulario padre.
+            alta_usuarios.FormClosed += (s, args) => this.Show();
+
+            // Se muestra el formulario hijo (alta de usuarios)
+            alta_usuarios.Show();
+        }
+
+        private void btnCerrar_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
