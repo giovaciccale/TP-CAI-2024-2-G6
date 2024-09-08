@@ -43,6 +43,8 @@ namespace TemplateTPIntegrador
                 }
             }
 
+            //// Toda esta validacion de cantidad de caracteres en realidad iría en las altas de usuarios ////
+
             ValidacionesNegocioUtils validacionesNegocioUtils = new ValidacionesNegocioUtils();
 
             // Llama al metodo ValidarCaracteres para chequear que los campos contengan la cantidad de caracteres requeridos
@@ -88,11 +90,13 @@ namespace TemplateTPIntegrador
 
         private void btnCerrar_Click(object sender, EventArgs e)
         {
+            // Cierra el formulario
             Application.Exit();
         }
 
         private void txt_usuario_Click(object sender, EventArgs e)
         {
+            // Indica al usuario que está parado en el campo "usuario" cuando lo clickea
             txt_usuario.BackColor = Color.White;
             panel3.BackColor = Color.White;
             panel4.BackColor = SystemColors.Control;
@@ -101,6 +105,7 @@ namespace TemplateTPIntegrador
 
         private void txt_contraseña_Click(object sender, EventArgs e)
         {
+            // Indica al usuario que esta parado en el campo "Contraseña" cuando lo clickea
             txt_contraseña.BackColor = Color.White;
             panel4.BackColor = Color.White;
             panel3.BackColor = SystemColors.Control;
@@ -109,11 +114,13 @@ namespace TemplateTPIntegrador
 
         private void pictureBox2_MouseDown(object sender, MouseEventArgs e)
         {
+            // Permite al usuario ver la contraseña cuando clickea y mantiene sobre el ícono del campo "Contraseña"
             txt_contraseña.UseSystemPasswordChar = false;
         }
 
         private void pictureBox2_MouseUp(object sender, MouseEventArgs e)
         {
+            // Esconde al usuario la contraseña cuando suelta el click
             txt_contraseña.UseSystemPasswordChar = true;
         }
     }
