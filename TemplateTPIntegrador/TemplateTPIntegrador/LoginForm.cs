@@ -42,29 +42,6 @@ namespace TemplateTPIntegrador
                     txt_contraseña.Focus();
                 }
             }
-
-            //// Toda esta validacion de cantidad de caracteres en realidad iría en las altas de usuarios ////
-
-            ValidacionesNegocioUtils validacionesNegocioUtils = new ValidacionesNegocioUtils();
-
-            // Llama al metodo ValidarCaracteres para chequear que los campos contengan la cantidad de caracteres requeridos
-            string mensaje_validacion_caracteres = validacionesNegocioUtils.ValidarCaracteres(txt_usuario.Text, txt_contraseña.Text);
-
-            if (mensaje_validacion_caracteres != null)
-            {
-                // Muestra mensaje de error para el primer campo incorrecto
-                MessageBox.Show(mensaje_validacion_caracteres, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
-                // Pone el cursor en el primer campo incorrecto
-                if (mensaje_validacion_caracteres.Contains("Usuario"))
-                {
-                    txt_usuario.Focus();
-                }
-                else if (mensaje_validacion_caracteres.Contains("Contraseña"))
-                {
-                    txt_contraseña.Focus();
-                }
-            }
             else
             {
                 // Inicio de sesión si pasa las validaciones
@@ -80,7 +57,7 @@ namespace TemplateTPIntegrador
             // Se esconde el formulario padre (LogIn)
             this.Hide();
 
-            // Se mantiene escondido el fomrulario padre mientras el formulario hijo (alat de usuarios) este abierto.
+            // Se mantiene escondido el fomrulario padre mientras el formulario hijo (alta de usuarios) este abierto.
             // De cerrarse, se muestra de vuelta el formulario padre.
             alta_usuarios.FormClosed += (s, args) => this.Show();
 
