@@ -41,7 +41,7 @@ namespace TemplateTPIntegrador
             Application.Exit();
         }
 
-        private void btn_iniciarSesion_Click(object sender, EventArgs e)
+        private void btn_crearUsuario_Click(object sender, EventArgs e)
         {
 
             ValidacionesNegocioUtils validacionesNegocioUtils = new ValidacionesNegocioUtils();
@@ -63,12 +63,13 @@ namespace TemplateTPIntegrador
                 {
                     txt_contraseñaAlta.Focus();
                 }
-                else 
-                {
-                    // Inicio de sesión si pasa las validaciones
-                    MessageBox.Show("Inicio de Sesión exitoso!");
-                }
             }
+            else 
+            {
+                // Inicio de sesión si pasa las validaciones
+                MessageBox.Show("Su Usuario ha sido creado de manera exitosa!", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+       
         }
         private void txt_nombre_Click(object sender, EventArgs e)
         {
@@ -149,6 +150,30 @@ namespace TemplateTPIntegrador
             txt_contraseñaAlta.BackColor = SystemColors.Control;
             panelConfirmarContraseña.BackColor = Color.White;
             txt_confirmarContraseñaAlta.BackColor = Color.White;
+        }
+
+        private void pictureBox2_MouseDown(object sender, MouseEventArgs e)
+        {
+            // Permite al usuario ver la contraseña cuando clickea y mantiene sobre el ícono del campo "Contraseña"
+            txt_contraseñaAlta.UseSystemPasswordChar = false;
+        }
+
+        private void pictureBox2_MouseUp(object sender, MouseEventArgs e)
+        {
+            // Esconde al usuario la contraseña cuando suelta el click del campo "Contraseña"
+            txt_contraseñaAlta.UseSystemPasswordChar = true;
+        }
+
+        private void pictureBox3_MouseDown(object sender, MouseEventArgs e)
+        {
+            // Permite al usuario ver la contraseña cuando clickea y mantiene sobre el ícono del campo "Confirmar Contraseña"
+            txt_confirmarContraseñaAlta.UseSystemPasswordChar = false;
+        }
+
+        private void pictureBox3_MouseUp(object sender, MouseEventArgs e)
+        {
+            // Esconde al usuario la contraseña cuando suelta el click del campo "Confirmar Contraseña"
+            txt_confirmarContraseñaAlta.UseSystemPasswordChar = true;
         }
     }
 }

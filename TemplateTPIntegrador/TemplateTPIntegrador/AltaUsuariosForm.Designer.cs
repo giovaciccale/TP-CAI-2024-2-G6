@@ -32,7 +32,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.lblCrearCuenta = new System.Windows.Forms.Label();
+            this.lblCrearUsuario = new System.Windows.Forms.Label();
             this.panelNombre = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.txt_nombre = new System.Windows.Forms.TextBox();
@@ -56,7 +56,7 @@
             this.txt_confirmarContraseñaAlta = new System.Windows.Forms.TextBox();
             this.btnCerrar = new System.Windows.Forms.Button();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
-            this.btn_iniciarSesion = new System.Windows.Forms.Button();
+            this.btn_crearUsuario = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panelNombre.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -116,16 +116,16 @@
             this.label3.TabIndex = 995;
             this.label3.Text = "EletroHogarSA";
             // 
-            // lblCrearCuenta
+            // lblCrearUsuario
             // 
-            this.lblCrearCuenta.AutoSize = true;
-            this.lblCrearCuenta.Font = new System.Drawing.Font("Century Gothic", 16F);
-            this.lblCrearCuenta.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.lblCrearCuenta.Location = new System.Drawing.Point(38, 15);
-            this.lblCrearCuenta.Name = "lblCrearCuenta";
-            this.lblCrearCuenta.Size = new System.Drawing.Size(160, 25);
-            this.lblCrearCuenta.TabIndex = 996;
-            this.lblCrearCuenta.Text = "Crear Cuenta";
+            this.lblCrearUsuario.AutoSize = true;
+            this.lblCrearUsuario.Font = new System.Drawing.Font("Century Gothic", 16F);
+            this.lblCrearUsuario.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
+            this.lblCrearUsuario.Location = new System.Drawing.Point(38, 15);
+            this.lblCrearUsuario.Name = "lblCrearUsuario";
+            this.lblCrearUsuario.Size = new System.Drawing.Size(156, 25);
+            this.lblCrearUsuario.TabIndex = 996;
+            this.lblCrearUsuario.Text = "Crear Usuario";
             // 
             // panelNombre
             // 
@@ -279,6 +279,8 @@
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 1000;
             this.pictureBox2.TabStop = false;
+            this.pictureBox2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pictureBox2_MouseDown);
+            this.pictureBox2.MouseUp += new System.Windows.Forms.MouseEventHandler(this.pictureBox2_MouseUp);
             // 
             // txt_contraseñaAlta
             // 
@@ -307,9 +309,9 @@
             this.panelCrearCuenta.Controls.Add(this.panelContraseña);
             this.panelCrearCuenta.Controls.Add(this.panelNombre);
             this.panelCrearCuenta.Controls.Add(this.btnCerrar);
-            this.panelCrearCuenta.Controls.Add(this.lblCrearCuenta);
+            this.panelCrearCuenta.Controls.Add(this.lblCrearUsuario);
             this.panelCrearCuenta.Controls.Add(this.linkLabel1);
-            this.panelCrearCuenta.Controls.Add(this.btn_iniciarSesion);
+            this.panelCrearCuenta.Controls.Add(this.btn_crearUsuario);
             this.panelCrearCuenta.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelCrearCuenta.Location = new System.Drawing.Point(300, 0);
             this.panelCrearCuenta.Name = "panelCrearCuenta";
@@ -357,6 +359,8 @@
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox3.TabIndex = 3;
             this.pictureBox3.TabStop = false;
+            this.pictureBox3.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pictureBox3_MouseDown);
+            this.pictureBox3.MouseUp += new System.Windows.Forms.MouseEventHandler(this.pictureBox3_MouseUp);
             // 
             // txt_confirmarContraseñaAlta
             // 
@@ -401,20 +405,20 @@
             this.linkLabel1.Text = "¿Ya tienes un Usuario? Haz click aquí para Iniciar Sesión";
             this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
-            // btn_iniciarSesion
+            // btn_crearUsuario
             // 
-            this.btn_iniciarSesion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.btn_iniciarSesion.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_iniciarSesion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_iniciarSesion.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_iniciarSesion.ForeColor = System.Drawing.Color.White;
-            this.btn_iniciarSesion.Location = new System.Drawing.Point(148, 458);
-            this.btn_iniciarSesion.Name = "btn_iniciarSesion";
-            this.btn_iniciarSesion.Size = new System.Drawing.Size(148, 35);
-            this.btn_iniciarSesion.TabIndex = 6;
-            this.btn_iniciarSesion.Text = "CREAR CUENTA";
-            this.btn_iniciarSesion.UseVisualStyleBackColor = false;
-            this.btn_iniciarSesion.Click += new System.EventHandler(this.btn_iniciarSesion_Click);
+            this.btn_crearUsuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
+            this.btn_crearUsuario.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_crearUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_crearUsuario.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_crearUsuario.ForeColor = System.Drawing.Color.White;
+            this.btn_crearUsuario.Location = new System.Drawing.Point(148, 458);
+            this.btn_crearUsuario.Name = "btn_crearUsuario";
+            this.btn_crearUsuario.Size = new System.Drawing.Size(148, 35);
+            this.btn_crearUsuario.TabIndex = 6;
+            this.btn_crearUsuario.Text = "CREAR USUARIO";
+            this.btn_crearUsuario.UseVisualStyleBackColor = false;
+            this.btn_crearUsuario.Click += new System.EventHandler(this.btn_crearUsuario_Click);
             // 
             // AltaUsuariosForm
             // 
@@ -459,11 +463,11 @@
         private System.Windows.Forms.Panel panelNombre;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.TextBox txt_nombre;
-        private System.Windows.Forms.Label lblCrearCuenta;
+        private System.Windows.Forms.Label lblCrearUsuario;
         private System.Windows.Forms.Panel panelContraseña;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.TextBox txt_contraseñaAlta;
-        private System.Windows.Forms.Button btn_iniciarSesion;
+        private System.Windows.Forms.Button btn_crearUsuario;
         private System.Windows.Forms.Panel panelCrearCuenta;
         private System.Windows.Forms.Button btnCerrar;
         private System.Windows.Forms.LinkLabel linkLabel1;
