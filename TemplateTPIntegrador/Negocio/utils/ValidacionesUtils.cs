@@ -22,6 +22,66 @@ namespace Negocio.utils
             // Si pasa todas las validaciones, retorna true
             return true;
         }
+
+
+        // Método que Valida largo de contraseña y que obtenga como mínimo una letra mayúscula y un número
+        public bool ValidarContraseña(string nuevaContraseña)
+        {
+            if (nuevaContraseña.Length < 8 || nuevaContraseña.Length > 15)
+                return false;
+
+            bool tieneMayuscula = nuevaContraseña.Any(char.IsUpper);
+            bool tieneNumero = nuevaContraseña.Any(char.IsDigit);
+
+            if (!tieneMayuscula || !tieneNumero)
+                return false;
+
+            return true;
+        }
+
+        // Cambiar contraseña (no debe ser igual a la anterior)
+        public bool CambiarContraseña(string nuevaContraseña, string Contraseña, DateTime FechaUltimaContraseña)
+        {
+            if (nuevaContraseña == Contraseña)
+                return false;
+
+            if (!ValidarContraseña(nuevaContraseña))
+                return false;
+
+            Contraseña = nuevaContraseña;
+            FechaUltimaContraseña = DateTime.Now;
+            return true;
+        }
     }
 }
+
+
+//// Verificar si la contraseña ha expirado (cada 30 días)
+//public bool ContraseñaExpirada()
+//{
+//    if (!FechaUltimaContraseña.HasValue)
+//        return false;
+
+//    return (DateTime.Now - FechaUltimaContraseña.Value).TotalDays >= 30;
+//}
+
+//// Intento de login fallido
+//public void IntentoFallido()
+//{
+//    IntentosLogin++;
+//    if (IntentosLogin >= 3)
+//    {
+//        Estado = EstadoUsuario.INACTIVO;
+//    }
+//}
+
+//// Login exitoso, resetear intentos
+//public void LoginExitoso()
+//{
+//    IntentosLogin = 0;
+//    if (Estado == EstadoUsuario.INACTIVO)
+//    {
+//        Estado = EstadoUsuario.ACTIVO;
+//    }
+//}
 
