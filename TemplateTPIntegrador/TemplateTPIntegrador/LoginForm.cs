@@ -1,4 +1,4 @@
-﻿using Datos;
+using Datos;
 using Negocio.utils;
 using System;
 using System.Collections.Generic;
@@ -24,24 +24,15 @@ namespace TemplateTPIntegrador
         {
             ValidacionesTemplateUtils validacionesTemplateUtils = new ValidacionesTemplateUtils();
 
-<<<<<<< Updated upstream
-            string usuario = txt_usuario.Text;
-            string contraseña = txt_contraseña.Text;
-=======
        
             // Validación de campos vacíos
             string mensaje_validacion_vacios = validacionesTemplateUtils.ValidarVacios(txt_usuario.Text, txt_contraseña.Text);
->>>>>>> Stashed changes
 
-            validacionesTemplateUtils.ValidarStringVacio(usuario);
-            validacionesTemplateUtils.ValidarStringVacio(contraseña);
+            if (mensaje_validacion_vacios != null)
+            {
+                // Muestra mensaje de error para el primer campo vacío
+                MessageBox.Show(mensaje_validacion_vacios, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
-<<<<<<< Updated upstream
-            ValidacionesNegocioUtils validacionesNegocioUtils = new ValidacionesNegocioUtils();
-
-            //LoginNegocio ln = new LoginNegocio();
-            //ln.Login();
-=======
                 // Pone el cursor en el primer campo vacío
                 if (mensaje_validacion_vacios.Contains("Usuario"))
                 {
@@ -53,15 +44,14 @@ namespace TemplateTPIntegrador
                 }
                 return;
             }
->>>>>>> Stashed changes
         }
     
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
+            // Se instancia el formulario de alta de usuarios
+            AltaUsuariosForm alta_usuarios = new AltaUsuariosForm();
 
-<<<<<<< Updated upstream
-=======
             // Se esconde el formulario padre (LogIn)
             this.Hide();
 
@@ -106,7 +96,6 @@ namespace TemplateTPIntegrador
         {
             // Esconde la contraseña cuando el usuario suelta el click
             txt_contraseña.UseSystemPasswordChar = true;
->>>>>>> Stashed changes
         }
     }
 }

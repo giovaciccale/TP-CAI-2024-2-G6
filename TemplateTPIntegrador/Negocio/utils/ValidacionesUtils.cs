@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,16 +8,6 @@ namespace Negocio.utils
 {
     public class ValidacionesNegocioUtils
     {
-<<<<<<< Updated upstream
-        public bool ValidarUsuario(string txt_usuario)
-        {
-            // Validación básica del nombre de usuario
-            if (string.IsNullOrWhiteSpace(txt_usuario) || txt_usuario.Length < 8 || txt_usuario.Length > 15)
-            {
-                //MessageBox.Show("El nombre de usuario debe tener entre 8 y 15 caracteres.");
-                return false;
-            }
-=======
         // Método que valida que el NombreUsuario tenga entre 8 y 15 caracteres
         public bool ValidarNombreUsuario(string UsuarioNombre, string Nombre, string Apellido)
         {
@@ -30,9 +20,8 @@ namespace Negocio.utils
                 return false;
 
             // Si pasa todas las validaciones, retorna true
->>>>>>> Stashed changes
             return true;
         }
     }
+}
 
- }

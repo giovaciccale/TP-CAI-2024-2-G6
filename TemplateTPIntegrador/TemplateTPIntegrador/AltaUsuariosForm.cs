@@ -1,4 +1,4 @@
-﻿using Datos;
+using Datos;
 using Negocio.utils;
 using System;
 using System.Collections.Generic;
@@ -174,3 +174,4 @@ namespace TemplateTPIntegrador
         }
     }
 }
+
