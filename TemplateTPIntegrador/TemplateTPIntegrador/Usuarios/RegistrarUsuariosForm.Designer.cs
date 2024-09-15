@@ -1,6 +1,6 @@
 ﻿namespace TemplateTPIntegrador
 {
-    partial class AltaUsuariosForm
+    partial class RegistrarUsuariosForm
     {
         /// <summary>
         /// Required designer variable.
@@ -55,7 +55,7 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.txt_confirmarContraseñaAlta = new System.Windows.Forms.TextBox();
             this.btnCerrar = new System.Windows.Forms.Button();
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.btn_volver = new System.Windows.Forms.LinkLabel();
             this.btn_crearUsuario = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panelNombre.SuspendLayout();
@@ -123,9 +123,9 @@
             this.lblCrearUsuario.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
             this.lblCrearUsuario.Location = new System.Drawing.Point(38, 15);
             this.lblCrearUsuario.Name = "lblCrearUsuario";
-            this.lblCrearUsuario.Size = new System.Drawing.Size(156, 25);
+            this.lblCrearUsuario.Size = new System.Drawing.Size(180, 25);
             this.lblCrearUsuario.TabIndex = 996;
-            this.lblCrearUsuario.Text = "Crear Usuario";
+            this.lblCrearUsuario.Text = "Registar Usuario";
             // 
             // panelNombre
             // 
@@ -310,7 +310,7 @@
             this.panelCrearCuenta.Controls.Add(this.panelNombre);
             this.panelCrearCuenta.Controls.Add(this.btnCerrar);
             this.panelCrearCuenta.Controls.Add(this.lblCrearUsuario);
-            this.panelCrearCuenta.Controls.Add(this.linkLabel1);
+            this.panelCrearCuenta.Controls.Add(this.btn_volver);
             this.panelCrearCuenta.Controls.Add(this.btn_crearUsuario);
             this.panelCrearCuenta.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelCrearCuenta.Location = new System.Drawing.Point(300, 0);
@@ -391,19 +391,19 @@
             this.btnCerrar.UseVisualStyleBackColor = true;
             this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
             // 
-            // linkLabel1
+            // btn_volver
             // 
-            this.linkLabel1.ActiveLinkColor = System.Drawing.Color.CadetBlue;
-            this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.linkLabel1.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.linkLabel1.Location = new System.Drawing.Point(86, 505);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(279, 13);
-            this.linkLabel1.TabIndex = 7;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "¿Ya tienes un Usuario? Haz click aquí para Iniciar Sesión";
-            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
+            this.btn_volver.ActiveLinkColor = System.Drawing.Color.CadetBlue;
+            this.btn_volver.AutoSize = true;
+            this.btn_volver.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_volver.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
+            this.btn_volver.Location = new System.Drawing.Point(198, 508);
+            this.btn_volver.Name = "btn_volver";
+            this.btn_volver.Size = new System.Drawing.Size(37, 13);
+            this.btn_volver.TabIndex = 7;
+            this.btn_volver.TabStop = true;
+            this.btn_volver.Text = "Volver";
+            this.btn_volver.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
             // btn_crearUsuario
             // 
@@ -420,7 +420,7 @@
             this.btn_crearUsuario.UseVisualStyleBackColor = false;
             this.btn_crearUsuario.Click += new System.EventHandler(this.btn_crearUsuario_Click);
             // 
-            // AltaUsuariosForm
+            // RegistrarUsuariosForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -428,7 +428,7 @@
             this.Controls.Add(this.panelCrearCuenta);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "AltaUsuariosForm";
+            this.Name = "RegistrarUsuariosForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AltaUsuariosForm";
             this.panel1.ResumeLayout(false);
@@ -470,7 +470,7 @@
         private System.Windows.Forms.Button btn_crearUsuario;
         private System.Windows.Forms.Panel panelCrearCuenta;
         private System.Windows.Forms.Button btnCerrar;
-        private System.Windows.Forms.LinkLabel linkLabel1;
+        private System.Windows.Forms.LinkLabel btn_volver;
         private System.Windows.Forms.Panel panelConfirmarContraseña;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.TextBox txt_confirmarContraseñaAlta;

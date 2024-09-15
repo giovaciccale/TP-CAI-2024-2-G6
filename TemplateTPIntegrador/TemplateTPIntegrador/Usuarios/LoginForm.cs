@@ -50,7 +50,7 @@ namespace TemplateTPIntegrador
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             // Se instancia el formulario de alta de usuarios
-            AltaUsuariosForm alta_usuarios = new AltaUsuariosForm();
+            RegistrarUsuariosForm alta_usuarios = new RegistrarUsuariosForm();
 
             // Se esconde el formulario padre (LogIn)
             this.Hide();

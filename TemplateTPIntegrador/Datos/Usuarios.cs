@@ -8,17 +8,6 @@ namespace Datos
 {
     public class Usuario
     {
-        public Guid Id { get; set; }
-        public string Nombre { get; set; }
-        public string Apellido { get; set; }
-        public string UsuarioNombre { get; set; }
-        public string Contraseña { get; set; }
-        public PerfilUsuario Host { get; set; }
-        public DateTime FechaAlta { get; set; }
-        public DateTime? FechaBaja { get; set; }
-        public EstadoUsuario Estado { get; set; }
-        public int IntentosLogin { get; set; }
-        public DateTime? FechaUltimaContraseña { get; set; } // Para validar expiración
 
         // Constructor
         public Usuario()
@@ -28,64 +17,23 @@ namespace Datos
             IntentosLogin = 0;
             FechaAlta = DateTime.Now;
         }
+        public Guid Id { get; set; }
+        public string Nombre { get; set; }
+        public string Apellido { get; set; }
+        public string Direccion { get; set; }
+        public string Telefono { get; set; }
+        public string Email { get; set; }
+        public DateTime FechaAlta { get; set; }
+        public DateTime FechaNacimiento { get; set; }
+        public DateTime? FechaBaja { get; set; }
+        public string UsuarioNombre { get; set; }
+        public PerfilUsuario Host { get; set; }
+        public string DNI { get; set; }
+        public string Contraseña { get; set; }
+        public int IntentosLogin { get; set; }
+        public DateTime? FechaUltimaContraseña { get; set; } // Para validar expiración
+        public EstadoUsuario Estado { get; set; }
 
-        // Validar contraseña
-        public bool ValidarContraseña(string nuevaContraseña)
-        {
-            if (nuevaContraseña.Length < 8 || nuevaContraseña.Length > 15)
-                return false;
-
-            bool tieneMayuscula = nuevaContraseña.Any(char.IsUpper);
-            bool tieneNumero = nuevaContraseña.Any(char.IsDigit);
-
-            if (!tieneMayuscula || !tieneNumero)
-                return false;
-
-            return true;
-        }
-
-        // Cambiar contraseña (no debe ser igual a la anterior)
-        public bool CambiarContraseña(string nuevaContraseña)
-        {
-            if (nuevaContraseña == Contraseña)
-                return false;
-
-            if (!ValidarContraseña(nuevaContraseña))
-                return false;
-
-            Contraseña = nuevaContraseña;
-            FechaUltimaContraseña = DateTime.Now;
-            return true;
-        }
-
-        // Verificar si la contraseña ha expirado (cada 30 días)
-        public bool ContraseñaExpirada()
-        {
-            if (!FechaUltimaContraseña.HasValue)
-                return false;
-
-            return (DateTime.Now - FechaUltimaContraseña.Value).TotalDays >= 30;
-        }
-
-        // Intento de login fallido
-        public void IntentoFallido()
-        {
-            IntentosLogin++;
-            if (IntentosLogin >= 3)
-            {
-                Estado = EstadoUsuario.INACTIVO;
-            }
-        }
-
-        // Login exitoso, resetear intentos
-        public void LoginExitoso()
-        {
-            IntentosLogin = 0;
-            if (Estado == EstadoUsuario.INACTIVO)
-            {
-                Estado = EstadoUsuario.ACTIVO;
-            }
-        }
     }
 
     // Enum para perfiles
@@ -103,3 +51,7 @@ namespace Datos
         INACTIVO
     }
 }
+
+
+
+    

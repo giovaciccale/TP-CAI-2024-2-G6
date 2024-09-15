@@ -12,9 +12,9 @@ using System.Windows.Forms;
 
 namespace TemplateTPIntegrador
 {
-    public partial class AltaUsuariosForm : Form
+    public partial class RegistrarUsuariosForm : Form
     {
-        public AltaUsuariosForm()
+        public RegistrarUsuariosForm()
         {
             InitializeComponent();
         }
@@ -45,6 +45,8 @@ namespace TemplateTPIntegrador
         private void btn_crearUsuario_Click(object sender, EventArgs e)
         {
             ValidacionesNegocioUtils validacionesNegocioUtils = new ValidacionesNegocioUtils();
+
+
             // Crear una instancia de Usuario con los datos del formulario
             Usuario usuarioPrueba = new Usuario
             {
@@ -53,9 +55,10 @@ namespace TemplateTPIntegrador
                 Nombre = txt_nombre.Text,  // Esto es solo un ejemplo;  usar valores reales
                 Apellido = txt_apellido.Text // Esto es solo un ejemplo;  usar valores reales
             };
+
+
             // Validación del nombre de usuario
             bool esNombreUsuarioValido = validacionesNegocioUtils.ValidarNombreUsuario(usuarioPrueba.UsuarioNombre, usuarioPrueba.Nombre, usuarioPrueba.Apellido);
-
             if (!esNombreUsuarioValido)
             {
                 // Muestra mensaje de error si la validación falla
@@ -63,6 +66,27 @@ namespace TemplateTPIntegrador
                                 "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
+
+            // Validación de largo de contraseña y que obtenga como mínimo una letra mayúscula y un número
+            bool esContraseñaValido = validacionesNegocioUtils.ValidarContraseña(usuarioPrueba.Contraseña);
+            if( !esContraseñaValido)
+            {
+                // Muestra mensaje de error si la validación falla
+                MessageBox.Show("La constraseña debe tener entre 8 y 15 caracteres y debe de contener como mínimo una letra mayúscula y un número",
+                                "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+
+            }
+
+
+
+
+
+
+
+
+
+
 
             // Si todas las validaciones pasan, inicio de sesión exitoso
             MessageBox.Show("Usuario Creado con éxito!");
