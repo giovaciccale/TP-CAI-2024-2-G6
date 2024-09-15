@@ -1,4 +1,4 @@
-﻿using Negocio;
+using Datos;
 using Negocio.utils;
 using System;
 using System.Collections.Generic;
@@ -24,7 +24,8 @@ namespace TemplateTPIntegrador
         {
             ValidacionesTemplateUtils validacionesTemplateUtils = new ValidacionesTemplateUtils();
 
-            // Llama al método ValidarVacios para chequear los inputs
+       
+            // Validación de campos vacíos
             string mensaje_validacion_vacios = validacionesTemplateUtils.ValidarVacios(txt_usuario.Text, txt_contraseña.Text);
 
             if (mensaje_validacion_vacios != null)
@@ -41,13 +42,10 @@ namespace TemplateTPIntegrador
                 {
                     txt_contraseña.Focus();
                 }
-            }
-            else
-            {
-                // Inicio de sesión si pasa las validaciones
-                MessageBox.Show("Inicio de Sesión exitoso!");
+                return;
             }
         }
+    
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
@@ -57,8 +55,7 @@ namespace TemplateTPIntegrador
             // Se esconde el formulario padre (LogIn)
             this.Hide();
 
-            // Se mantiene escondido el fomrulario padre mientras el formulario hijo (alta de usuarios) este abierto.
-            // De cerrarse, se muestra de vuelta el formulario padre.
+            // Se mantiene escondido el formulario padre mientras el formulario hijo (alta de usuarios) esté abierto.
             alta_usuarios.FormClosed += (s, args) => this.Show();
 
             // Se muestra el formulario hijo (alta de usuarios)
@@ -82,7 +79,7 @@ namespace TemplateTPIntegrador
 
         private void txt_contraseña_Click(object sender, EventArgs e)
         {
-            // Indica al usuario que esta parado en el campo "Contraseña" cuando lo clickea
+            // Indica al usuario que está parado en el campo "Contraseña" cuando lo clickea
             txt_contraseña.BackColor = Color.White;
             panel4.BackColor = Color.White;
             panel3.BackColor = SystemColors.Control;
@@ -97,7 +94,7 @@ namespace TemplateTPIntegrador
 
         private void pictureBox2_MouseUp(object sender, MouseEventArgs e)
         {
-            // Esconde al usuario la contraseña cuando suelta el click
+            // Esconde la contraseña cuando el usuario suelta el click
             txt_contraseña.UseSystemPasswordChar = true;
         }
     }

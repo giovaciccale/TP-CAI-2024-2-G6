@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,33 +8,20 @@ namespace Negocio.utils
 {
     public class ValidacionesNegocioUtils
     {
-        // Metodo que valida que el input tenga entre 8 y 15 caracteres
-        public bool ValidarUsuario(string input)
+        // Método que valida que el NombreUsuario tenga entre 8 y 15 caracteres
+        public bool ValidarNombreUsuario(string UsuarioNombre, string Nombre, string Apellido)
         {
-            return (input.Length < 8 || input.Length > 15);
-        }
+            // La longitud del nombre de usuario debe ser al menos 8 y como máximo 15 caracteres
+            if (UsuarioNombre.Length < 8 || UsuarioNombre.Length > 15)
+                return false;
 
-        // Metodo que valida que el input tenga al menos 8 caracteres
-        public bool ValidarContraseña(string ipnut)
-        {
-            return (ipnut.Length < 8);
-        }
+            // El nombre de usuario no debe contener el nombre ni el apellido (ignorando mayúsculas)
+            if (UsuarioNombre.ToLower().Contains(Nombre.ToLower()) || UsuarioNombre.ToLower().Contains(Apellido.ToLower()))
+                return false;
 
-        // Metodo que valida que ambos campos contengan la cantidad de caracteres requeridas.
-        // Devuelve un mensaje de error para el primer campo invalido
-        public string ValidarCaracteres(string usuario, string contraseña)
-        {
-            if (ValidarUsuario(usuario))
-            {
-                return "El Nombre De Usuario debe tener entre 8 y 15 caracteres.";
-            }
-            else if (ValidarContraseña(contraseña))
-            {
-                return "La Contraseña debe tener al menos 8 caracteres.";
-            }
-
-            // Si ambos campos son válidos, retorna null
-            return null;
+            // Si pasa todas las validaciones, retorna true
+            return true;
         }
     }
 }
+
