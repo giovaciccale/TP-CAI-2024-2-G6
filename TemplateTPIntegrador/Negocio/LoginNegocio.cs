@@ -11,6 +11,7 @@ namespace Negocio
         public void Login(string username, string password)
         {
             //aca escribo que hace el login
+            // oublic void LoginNegocio(string usuario, string password
         }
     }
 }

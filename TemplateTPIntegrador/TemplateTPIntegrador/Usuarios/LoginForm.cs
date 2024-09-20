@@ -44,22 +44,32 @@ namespace TemplateTPIntegrador
                 }
                 return;
             }
+            // Supongamos que las validaciones de usuario y contraseña fueron correctas
+            // Aquí puedes agregar lógica adicional para verificar la autenticidad del usuario, etc.
+
+            // Abre el formulario de menú
+            MenuForm menuForm = new MenuForm();
+            menuForm.Show();
+
+            // Oculta el formulario actual (Inicio de Sesión)
+            this.Hide(); // O puedes usar this.Close() para cerrarlo en lugar de ocultarlo.
         }
     
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             // Se instancia el formulario de alta de usuarios
-            RegistrarUsuariosForm alta_usuarios = new RegistrarUsuariosForm();
+            //RegistrarUsuariosForm alta_usuarios = new RegistrarUsuariosForm();
+            MenuForm menu = new MenuForm();
 
             // Se esconde el formulario padre (LogIn)
             this.Hide();
 
             // Se mantiene escondido el formulario padre mientras el formulario hijo (alta de usuarios) esté abierto.
-            alta_usuarios.FormClosed += (s, args) => this.Show();
+            menu.FormClosed += (s, args) => this.Show();
 
             // Se muestra el formulario hijo (alta de usuarios)
-            alta_usuarios.Show();
+            menu.Show();
         }
 
         private void btnCerrar_Click(object sender, EventArgs e)
@@ -96,6 +106,11 @@ namespace TemplateTPIntegrador
         {
             // Esconde la contraseña cuando el usuario suelta el click
             txt_contraseña.UseSystemPasswordChar = true;
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

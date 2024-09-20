@@ -32,7 +32,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.btn_volver = new System.Windows.Forms.LinkLabel();
+            this.btn_Usuarios = new System.Windows.Forms.LinkLabel();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.linkLabel3 = new System.Windows.Forms.LinkLabel();
             this.linkLabel4 = new System.Windows.Forms.LinkLabel();
@@ -40,7 +40,6 @@
             this.linkLabel6 = new System.Windows.Forms.LinkLabel();
             this.lblCrearUsuario = new System.Windows.Forms.Label();
             this.btnCerrar = new System.Windows.Forms.Button();
-            this.linkLabel2 = new System.Windows.Forms.LinkLabel();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -49,7 +48,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 16F);
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(63, 204);
+            this.label3.Location = new System.Drawing.Point(62, 197);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(167, 25);
             this.label3.TabIndex = 995;
@@ -64,7 +63,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(300, 450);
+            this.panel1.Size = new System.Drawing.Size(300, 561);
             this.panel1.TabIndex = 993;
             // 
             // label5
@@ -89,18 +88,19 @@
             this.label4.TabIndex = 994;
             this.label4.Text = "Desarrollo Por";
             // 
-            // btn_volver
+            // btn_Usuarios
             // 
-            this.btn_volver.ActiveLinkColor = System.Drawing.Color.CadetBlue;
-            this.btn_volver.AutoSize = true;
-            this.btn_volver.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_volver.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.btn_volver.Location = new System.Drawing.Point(344, 106);
-            this.btn_volver.Name = "btn_volver";
-            this.btn_volver.Size = new System.Drawing.Size(63, 13);
-            this.btn_volver.TabIndex = 994;
-            this.btn_volver.TabStop = true;
-            this.btn_volver.Text = "USUARIOS";
+            this.btn_Usuarios.ActiveLinkColor = System.Drawing.Color.CadetBlue;
+            this.btn_Usuarios.AutoSize = true;
+            this.btn_Usuarios.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_Usuarios.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
+            this.btn_Usuarios.Location = new System.Drawing.Point(344, 106);
+            this.btn_Usuarios.Name = "btn_Usuarios";
+            this.btn_Usuarios.Size = new System.Drawing.Size(63, 13);
+            this.btn_Usuarios.TabIndex = 994;
+            this.btn_Usuarios.TabStop = true;
+            this.btn_Usuarios.Text = "USUARIOS";
+            this.btn_Usuarios.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.btn_Usuarios_LinkClicked);
             // 
             // linkLabel1
             // 
@@ -186,32 +186,20 @@
             this.btnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCerrar.Font = new System.Drawing.Font("Verdana", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCerrar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.btnCerrar.Location = new System.Drawing.Point(762, 0);
+            this.btnCerrar.Location = new System.Drawing.Point(750, 0);
             this.btnCerrar.Name = "btnCerrar";
             this.btnCerrar.Size = new System.Drawing.Size(40, 40);
             this.btnCerrar.TabIndex = 1002;
             this.btnCerrar.Text = "X";
             this.btnCerrar.UseVisualStyleBackColor = true;
             // 
-            // linkLabel2
-            // 
-            this.linkLabel2.ActiveLinkColor = System.Drawing.Color.CadetBlue;
-            this.linkLabel2.AutoSize = true;
-            this.linkLabel2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.linkLabel2.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.linkLabel2.Location = new System.Drawing.Point(751, 428);
-            this.linkLabel2.Name = "linkLabel2";
-            this.linkLabel2.Size = new System.Drawing.Size(37, 13);
-            this.linkLabel2.TabIndex = 1003;
-            this.linkLabel2.TabStop = true;
-            this.linkLabel2.Text = "Volver";
-            // 
             // MenuForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.linkLabel2);
+            this.AutoScrollMinSize = new System.Drawing.Size(300, 0);
+            this.ClientSize = new System.Drawing.Size(784, 561);
+            this.ControlBox = false;
             this.Controls.Add(this.btnCerrar);
             this.Controls.Add(this.lblCrearUsuario);
             this.Controls.Add(this.linkLabel6);
@@ -219,10 +207,14 @@
             this.Controls.Add(this.linkLabel4);
             this.Controls.Add(this.linkLabel3);
             this.Controls.Add(this.linkLabel1);
-            this.Controls.Add(this.btn_volver);
+            this.Controls.Add(this.btn_Usuarios);
             this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Location = new System.Drawing.Point(300, 0);
             this.Name = "MenuForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Menu";
+            this.Load += new System.EventHandler(this.MenuForm_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
@@ -236,7 +228,7 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.LinkLabel btn_volver;
+        private System.Windows.Forms.LinkLabel btn_Usuarios;
         private System.Windows.Forms.LinkLabel linkLabel1;
         private System.Windows.Forms.LinkLabel linkLabel3;
         private System.Windows.Forms.LinkLabel linkLabel4;
@@ -244,6 +236,5 @@
         private System.Windows.Forms.LinkLabel linkLabel6;
         private System.Windows.Forms.Label lblCrearUsuario;
         private System.Windows.Forms.Button btnCerrar;
-        private System.Windows.Forms.LinkLabel linkLabel2;
     }
 }

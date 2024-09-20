@@ -33,24 +33,23 @@
         {
             this.txt_usuario = new System.Windows.Forms.TextBox();
             this.txt_contraseña = new System.Windows.Forms.TextBox();
-            this.btn_iniciarSesion = new System.Windows.Forms.Button();
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.registrarUsuario = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnCerrar = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel4.SuspendLayout();
-            this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -83,34 +82,20 @@
             this.txt_contraseña.TextChanged += new System.EventHandler(this.txt_contraseña_Click);
             this.txt_contraseña.Enter += new System.EventHandler(this.txt_contraseña_Click);
             // 
-            // btn_iniciarSesion
+            // registrarUsuario
             // 
-            this.btn_iniciarSesion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.btn_iniciarSesion.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_iniciarSesion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_iniciarSesion.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_iniciarSesion.ForeColor = System.Drawing.Color.White;
-            this.btn_iniciarSesion.Location = new System.Drawing.Point(151, 320);
-            this.btn_iniciarSesion.Name = "btn_iniciarSesion";
-            this.btn_iniciarSesion.Size = new System.Drawing.Size(148, 35);
-            this.btn_iniciarSesion.TabIndex = 3;
-            this.btn_iniciarSesion.Text = "INICIAR SESIÓN";
-            this.btn_iniciarSesion.UseVisualStyleBackColor = false;
-            this.btn_iniciarSesion.Click += new System.EventHandler(this.btn_iniciarSesion_Click);
-            // 
-            // linkLabel1
-            // 
-            this.linkLabel1.ActiveLinkColor = System.Drawing.Color.CadetBlue;
-            this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.linkLabel1.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.linkLabel1.Location = new System.Drawing.Point(94, 377);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(262, 13);
-            this.linkLabel1.TabIndex = 4;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "¿No tienes un Usuario? Haz click aquí para crear uno";
-            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
+            this.registrarUsuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
+            this.registrarUsuario.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.registrarUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.registrarUsuario.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.registrarUsuario.ForeColor = System.Drawing.Color.White;
+            this.registrarUsuario.Location = new System.Drawing.Point(151, 320);
+            this.registrarUsuario.Name = "registrarUsuario";
+            this.registrarUsuario.Size = new System.Drawing.Size(148, 35);
+            this.registrarUsuario.TabIndex = 3;
+            this.registrarUsuario.Text = "INICIAR SESIÓN";
+            this.registrarUsuario.UseVisualStyleBackColor = false;
+            this.registrarUsuario.Click += new System.EventHandler(this.btn_iniciarSesion_Click);
             // 
             // panel1
             // 
@@ -121,7 +106,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(300, 530);
+            this.panel1.Size = new System.Drawing.Size(300, 600);
             this.panel1.TabIndex = 6;
             // 
             // label5
@@ -163,13 +148,13 @@
             this.panel2.Controls.Add(this.panel3);
             this.panel2.Controls.Add(this.btnCerrar);
             this.panel2.Controls.Add(this.label6);
-            this.panel2.Controls.Add(this.linkLabel1);
-            this.panel2.Controls.Add(this.btn_iniciarSesion);
+            this.panel2.Controls.Add(this.registrarUsuario);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(300, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(450, 530);
+            this.panel2.Size = new System.Drawing.Size(500, 600);
             this.panel2.TabIndex = 0;
+            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
             // panel4
             // 
@@ -181,6 +166,18 @@
             this.panel4.Size = new System.Drawing.Size(450, 45);
             this.panel4.TabIndex = 2;
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::TemplateTPIntegrador.Properties.Resources.kissclipart_password_icon_clipart_password_computer_icons_clip_d813f06606bcdc9a;
+            this.pictureBox2.Location = new System.Drawing.Point(15, 9);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(24, 24);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 3;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pictureBox2_MouseDown);
+            this.pictureBox2.MouseUp += new System.Windows.Forms.MouseEventHandler(this.pictureBox2_MouseUp);
+            // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.SystemColors.Window;
@@ -190,6 +187,16 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(450, 45);
             this.panel3.TabIndex = 1;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::TemplateTPIntegrador.Properties.Resources.pngwing_com;
+            this.pictureBox1.Location = new System.Drawing.Point(15, 11);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(24, 24);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 2;
+            this.pictureBox1.TabStop = false;
             // 
             // btnCerrar
             // 
@@ -217,33 +224,11 @@
             this.label6.TabIndex = 2;
             this.label6.Text = "Inicio De Sesión";
             // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::TemplateTPIntegrador.Properties.Resources.kissclipart_password_icon_clipart_password_computer_icons_clip_d813f06606bcdc9a;
-            this.pictureBox2.Location = new System.Drawing.Point(15, 9);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(24, 24);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 3;
-            this.pictureBox2.TabStop = false;
-            this.pictureBox2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pictureBox2_MouseDown);
-            this.pictureBox2.MouseUp += new System.Windows.Forms.MouseEventHandler(this.pictureBox2_MouseUp);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::TemplateTPIntegrador.Properties.Resources.pngwing_com;
-            this.pictureBox1.Location = new System.Drawing.Point(15, 11);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(24, 24);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 2;
-            this.pictureBox1.TabStop = false;
-            // 
             // LoginForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(750, 530);
+            this.ClientSize = new System.Drawing.Size(800, 600);
             this.ControlBox = false;
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
@@ -257,9 +242,9 @@
             this.panel2.PerformLayout();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
@@ -267,8 +252,7 @@
 
         #endregion
         private System.Windows.Forms.TextBox txt_usuario;
-        private System.Windows.Forms.Button btn_iniciarSesion;
-        private System.Windows.Forms.LinkLabel linkLabel1;
+        private System.Windows.Forms.Button registrarUsuario;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label3;
