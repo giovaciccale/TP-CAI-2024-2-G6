@@ -23,18 +23,7 @@ namespace TemplateTPIntegrador
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            // Se instancia el formulario de Login
-            LoginForm login = new LoginForm();
 
-            // Se esconde el formulario padre (LogIn)
-            this.Hide();
-
-            // Se mantiene escondido el fomrulario padre mientras el formulario hijo (login) este abierto.
-            // De cerrarse, se muestra de vuelta el formulario padre.
-            login.FormClosed += (s, args) => this.Show();
-
-            // Se muestra el formulario hijo (alta de usuarios)
-            login.Show();
         }
 
         private void btnCerrar_Click(object sender, EventArgs e)

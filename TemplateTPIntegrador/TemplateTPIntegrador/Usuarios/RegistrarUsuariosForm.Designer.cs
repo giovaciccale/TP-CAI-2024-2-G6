@@ -80,7 +80,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(300, 530);
+            this.panel1.Size = new System.Drawing.Size(300, 600);
             this.panel1.TabIndex = 992;
             // 
             // label5
@@ -315,7 +315,7 @@
             this.panelCrearCuenta.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelCrearCuenta.Location = new System.Drawing.Point(300, 0);
             this.panelCrearCuenta.Name = "panelCrearCuenta";
-            this.panelCrearCuenta.Size = new System.Drawing.Size(450, 530);
+            this.panelCrearCuenta.Size = new System.Drawing.Size(500, 600);
             this.panelCrearCuenta.TabIndex = 0;
             // 
             // lblConfirmarContraseñaAlta
@@ -424,7 +424,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(750, 530);
+            this.ClientSize = new System.Drawing.Size(800, 600);
             this.Controls.Add(this.panelCrearCuenta);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
