@@ -338,6 +338,16 @@ namespace TemplateTPIntegrador
             // Esconde al usuario la contraseña cuando suelta el click del campo "Contraseña"
             txt_contraseñaAlta.UseSystemPasswordChar = true;
         }
+
+        private void pictureBox2_MouseHover(object sender, EventArgs e)
+        {
+            txt_contraseñaAlta.UseSystemPasswordChar = false;
+        }
+
+        private void pictureBox2_MouseLeave(object sender, EventArgs e)
+        {
+            txt_contraseñaAlta.UseSystemPasswordChar = true;
+        }
     }
 }
 

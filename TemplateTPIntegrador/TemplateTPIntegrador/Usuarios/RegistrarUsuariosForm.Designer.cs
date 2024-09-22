@@ -52,6 +52,7 @@ namespace TemplateTPIntegrador
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.txt_contraseñaAlta = new System.Windows.Forms.TextBox();
             this.panelCrearCuenta = new System.Windows.Forms.Panel();
+            this.linkLabel_volver = new System.Windows.Forms.LinkLabel();
             this.label6 = new System.Windows.Forms.Label();
             this.panelNombreUsuario = new System.Windows.Forms.Panel();
             this.pictureBox11 = new System.Windows.Forms.PictureBox();
@@ -78,9 +79,7 @@ namespace TemplateTPIntegrador
             this.txt_direccion = new System.Windows.Forms.TextBox();
             this.lblAltaContraseña = new System.Windows.Forms.Label();
             this.btnCerrar = new System.Windows.Forms.Button();
-            this.btn_volver = new System.Windows.Forms.LinkLabel();
             this.btn_crearUsuario = new System.Windows.Forms.Button();
-            this.linkLabel_volver = new System.Windows.Forms.LinkLabel();
             this.panel1.SuspendLayout();
             this.panelNombre.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -308,13 +307,15 @@ namespace TemplateTPIntegrador
             // pictureBox2
             // 
             this.pictureBox2.Image = global::TemplateTPIntegrador.Properties.Resources.kissclipart_password_icon_clipart_password_computer_icons_clip_d813f06606bcdc9a;
-            this.pictureBox2.Location = new System.Drawing.Point(15, 9);
+            this.pictureBox2.Location = new System.Drawing.Point(15, 10);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(24, 24);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 1000;
             this.pictureBox2.TabStop = false;
             this.pictureBox2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pictureBox2_MouseDown);
+            this.pictureBox2.MouseLeave += new System.EventHandler(this.pictureBox2_MouseLeave);
+            this.pictureBox2.MouseHover += new System.EventHandler(this.pictureBox2_MouseHover);
             this.pictureBox2.MouseUp += new System.Windows.Forms.MouseEventHandler(this.pictureBox2_MouseUp);
             // 
             // txt_contraseñaAlta
@@ -357,13 +358,24 @@ namespace TemplateTPIntegrador
             this.panelCrearCuenta.Controls.Add(this.panelNombre);
             this.panelCrearCuenta.Controls.Add(this.btnCerrar);
             this.panelCrearCuenta.Controls.Add(this.lblCrearUsuario);
-            this.panelCrearCuenta.Controls.Add(this.btn_volver);
             this.panelCrearCuenta.Controls.Add(this.btn_crearUsuario);
             this.panelCrearCuenta.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelCrearCuenta.Location = new System.Drawing.Point(360, 0);
             this.panelCrearCuenta.Name = "panelCrearCuenta";
             this.panelCrearCuenta.Size = new System.Drawing.Size(540, 636);
             this.panelCrearCuenta.TabIndex = 0;
+            // 
+            // linkLabel_volver
+            // 
+            this.linkLabel_volver.ActiveLinkColor = System.Drawing.Color.CadetBlue;
+            this.linkLabel_volver.AutoSize = true;
+            this.linkLabel_volver.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
+            this.linkLabel_volver.Location = new System.Drawing.Point(252, 614);
+            this.linkLabel_volver.Name = "linkLabel_volver";
+            this.linkLabel_volver.Size = new System.Drawing.Size(37, 13);
+            this.linkLabel_volver.TabIndex = 11;
+            this.linkLabel_volver.TabStop = true;
+            this.linkLabel_volver.Text = "Volver";
             // 
             // label6
             // 
@@ -389,7 +401,7 @@ namespace TemplateTPIntegrador
             // pictureBox11
             // 
             this.pictureBox11.Image = global::TemplateTPIntegrador.Properties.Resources.pngwing_com;
-            this.pictureBox11.Location = new System.Drawing.Point(15, 12);
+            this.pictureBox11.Location = new System.Drawing.Point(15, 11);
             this.pictureBox11.Name = "pictureBox11";
             this.pictureBox11.Size = new System.Drawing.Size(24, 24);
             this.pictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -667,24 +679,13 @@ namespace TemplateTPIntegrador
             this.btn_crearUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_crearUsuario.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_crearUsuario.ForeColor = System.Drawing.Color.White;
-            this.btn_crearUsuario.Location = new System.Drawing.Point(201, 576);
+            this.btn_crearUsuario.Location = new System.Drawing.Point(201, 571);
             this.btn_crearUsuario.Name = "btn_crearUsuario";
             this.btn_crearUsuario.Size = new System.Drawing.Size(148, 35);
             this.btn_crearUsuario.TabIndex = 10;
             this.btn_crearUsuario.Text = "CREAR USUARIO";
             this.btn_crearUsuario.UseVisualStyleBackColor = false;
             this.btn_crearUsuario.Click += new System.EventHandler(this.btn_crearUsuario_Click);
-            // 
-            // linkLabel_volver
-            // 
-            this.linkLabel_volver.AutoSize = true;
-            this.linkLabel_volver.LinkColor = System.Drawing.Color.CadetBlue;
-            this.linkLabel_volver.Location = new System.Drawing.Point(252, 617);
-            this.linkLabel_volver.Name = "linkLabel_volver";
-            this.linkLabel_volver.Size = new System.Drawing.Size(37, 13);
-            this.linkLabel_volver.TabIndex = 11;
-            this.linkLabel_volver.TabStop = true;
-            this.linkLabel_volver.Text = "Volver";
             // 
             // RegistrarUsuariosForm
             // 
@@ -750,7 +751,6 @@ namespace TemplateTPIntegrador
         private System.Windows.Forms.Button btn_crearUsuario;
         private System.Windows.Forms.Panel panelCrearCuenta;
         private System.Windows.Forms.Button btnCerrar;
-        private System.Windows.Forms.LinkLabel btn_volver;
         private System.Windows.Forms.Label lblNombre;
         private System.Windows.Forms.Label lblApellido;
         private System.Windows.Forms.Panel panelApellido;
