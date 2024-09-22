@@ -1,4 +1,4 @@
-﻿using Negocio;
+using Datos;
 using Negocio.utils;
 using System;
 using System.Collections.Generic;
@@ -24,7 +24,8 @@ namespace TemplateTPIntegrador
         {
             ValidacionesTemplateUtils validacionesTemplateUtils = new ValidacionesTemplateUtils();
 
-            // Llama al método ValidarVacios para chequear los inputs
+       
+            // Validación de campos vacíos
             string mensaje_validacion_vacios = validacionesTemplateUtils.ValidarVacios(txt_usuario.Text, txt_contraseña.Text);
 
             if (mensaje_validacion_vacios != null)
@@ -41,28 +42,34 @@ namespace TemplateTPIntegrador
                 {
                     txt_contraseña.Focus();
                 }
+                return;
             }
-            else
-            {
-                // Inicio de sesión si pasa las validaciones
-                MessageBox.Show("Inicio de Sesión exitoso!");
-            }
+            // Supongamos que las validaciones de usuario y contraseña fueron correctas
+            // Aquí puedes agregar lógica adicional para verificar la autenticidad del usuario, etc.
+
+            // Abre el formulario de menú
+            MenuForm menuForm = new MenuForm();
+            menuForm.Show();
+
+            // Oculta el formulario actual (Inicio de Sesión)
+            this.Hide(); // O puedes usar this.Close() para cerrarlo en lugar de ocultarlo.
         }
+    
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             // Se instancia el formulario de alta de usuarios
-            AltaUsuariosForm alta_usuarios = new AltaUsuariosForm();
+            //RegistrarUsuariosForm alta_usuarios = new RegistrarUsuariosForm();
+            MenuForm menu = new MenuForm();
 
             // Se esconde el formulario padre (LogIn)
             this.Hide();
 
-            // Se mantiene escondido el fomrulario padre mientras el formulario hijo (alta de usuarios) este abierto.
-            // De cerrarse, se muestra de vuelta el formulario padre.
-            alta_usuarios.FormClosed += (s, args) => this.Show();
+            // Se mantiene escondido el formulario padre mientras el formulario hijo (alta de usuarios) esté abierto.
+            menu.FormClosed += (s, args) => this.Show();
 
             // Se muestra el formulario hijo (alta de usuarios)
-            alta_usuarios.Show();
+            menu.Show();
         }
 
         private void btnCerrar_Click(object sender, EventArgs e)
@@ -82,7 +89,7 @@ namespace TemplateTPIntegrador
 
         private void txt_contraseña_Click(object sender, EventArgs e)
         {
-            // Indica al usuario que esta parado en el campo "Contraseña" cuando lo clickea
+            // Indica al usuario que está parado en el campo "Contraseña" cuando lo clickea
             txt_contraseña.BackColor = Color.White;
             panel4.BackColor = Color.White;
             panel3.BackColor = SystemColors.Control;
@@ -97,8 +104,13 @@ namespace TemplateTPIntegrador
 
         private void pictureBox2_MouseUp(object sender, MouseEventArgs e)
         {
-            // Esconde al usuario la contraseña cuando suelta el click
+            // Esconde la contraseña cuando el usuario suelta el click
             txt_contraseña.UseSystemPasswordChar = true;
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

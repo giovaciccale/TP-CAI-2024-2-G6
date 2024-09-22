@@ -46,25 +46,49 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AltaUsuariosForm.cs">
+    <Compile Include="Usuarios\MenuUsuario.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AltaUsuariosForm.Designer.cs">
-      <DependentUpon>AltaUsuariosForm.cs</DependentUpon>
+    <Compile Include="Usuarios\MenuUsuario.Designer.cs">
+      <DependentUpon>MenuUsuario.cs</DependentUpon>
     </Compile>
-    <Compile Include="LoginForm.cs">
+    <Compile Include="Usuarios\BajaUsuarios.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="LoginForm.Designer.cs">
+    <Compile Include="Usuarios\BajaUsuarios.Designer.cs">
+      <DependentUpon>BajaUsuarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Usuarios\RegistrarUsuariosForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Usuarios\RegistrarUsuariosForm.Designer.cs">
+      <DependentUpon>RegistrarUsuariosForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Usuarios\LoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Usuarios\LoginForm.Designer.cs">
       <DependentUpon>LoginForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MenuForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MenuForm.Designer.cs">
+      <DependentUpon>MenuForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="utils\validacionesUtils.cs" />
-    <EmbeddedResource Include="AltaUsuariosForm.resx">
-      <DependentUpon>AltaUsuariosForm.cs</DependentUpon>
+    <EmbeddedResource Include="MenuForm.resx">
+      <DependentUpon>MenuForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="LoginForm.resx">
+    <EmbeddedResource Include="Usuarios\MenuUsuario.resx">
+      <DependentUpon>MenuUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Usuarios\RegistrarUsuariosForm.resx">
+      <DependentUpon>RegistrarUsuariosForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Usuarios\LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -105,6 +129,13 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\kissclipart-password-icon-clipart-password-computer-icons-clip-d813f06606bcdc9a.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Cliente\" />
+    <Folder Include="Productos\" />
+    <Folder Include="Proveedores\" />
+    <Folder Include="Reportes\" />
+    <Folder Include="Venta\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

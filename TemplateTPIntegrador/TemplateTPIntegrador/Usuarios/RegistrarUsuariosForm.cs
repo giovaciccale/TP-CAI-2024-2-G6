@@ -1,4 +1,5 @@
-﻿using Negocio.utils;
+using Datos;
+using Negocio.utils;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -11,9 +12,9 @@ using System.Windows.Forms;
 
 namespace TemplateTPIntegrador
 {
-    public partial class AltaUsuariosForm : Form
+    public partial class RegistrarUsuariosForm : Form
     {
-        public AltaUsuariosForm()
+        public RegistrarUsuariosForm()
         {
             InitializeComponent();
         }
@@ -22,18 +23,7 @@ namespace TemplateTPIntegrador
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            // Se instancia el formulario de Login
-            LoginForm login = new LoginForm();
 
-            // Se esconde el formulario padre (LogIn)
-            this.Hide();
-
-            // Se mantiene escondido el fomrulario padre mientras el formulario hijo (login) este abierto.
-            // De cerrarse, se muestra de vuelta el formulario padre.
-            login.FormClosed += (s, args) => this.Show();
-
-            // Se muestra el formulario hijo (alta de usuarios)
-            login.Show();
         }
 
         private void btnCerrar_Click(object sender, EventArgs e)
@@ -43,34 +33,54 @@ namespace TemplateTPIntegrador
 
         private void btn_crearUsuario_Click(object sender, EventArgs e)
         {
-
             ValidacionesNegocioUtils validacionesNegocioUtils = new ValidacionesNegocioUtils();
 
-            // Llama al metodo ValidarCaracteres para chequear que los campos contengan la cantidad de caracteres requeridos
-            string mensaje_validacion_caracteres = validacionesNegocioUtils.ValidarCaracteres(txt_usuarioAlta.Text, txt_contraseñaAlta.Text);
 
-            if (mensaje_validacion_caracteres != null)
+            // Crear una instancia de Usuario con los datos del formulario
+            Usuario usuarioPrueba = new Usuario
             {
-                // Muestra mensaje de error para el primer campo incorrecto
-                MessageBox.Show(mensaje_validacion_caracteres, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                UsuarioNombre = txt_usuarioAlta.Text,
+                Contraseña = txt_contraseñaAlta.Text,
+                Nombre = txt_nombre.Text,  // Esto es solo un ejemplo;  usar valores reales
+                Apellido = txt_apellido.Text // Esto es solo un ejemplo;  usar valores reales
+            };
 
-                // Pone el cursor en el primer campo incorrecto
-                if (mensaje_validacion_caracteres.Contains("Usuario"))
-                {
-                    txt_usuarioAlta.Focus();
-                }
-                else if (mensaje_validacion_caracteres.Contains("Contraseña"))
-                {
-                    txt_contraseñaAlta.Focus();
-                }
-            }
-            else 
+
+            // Validación del nombre de usuario
+            bool esNombreUsuarioValido = validacionesNegocioUtils.ValidarNombreUsuario(usuarioPrueba.UsuarioNombre, usuarioPrueba.Nombre, usuarioPrueba.Apellido);
+            if (!esNombreUsuarioValido)
             {
-                // Inicio de sesión si pasa las validaciones
-                MessageBox.Show("Su Usuario ha sido creado de manera exitosa!", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                // Muestra mensaje de error si la validación falla
+                MessageBox.Show("El Nombre De Usuario debe tener entre 8 y 15 caracteres y no debe contener el nombre o apellido.",
+                                "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
             }
-       
+
+            // Validación de largo de contraseña y que obtenga como mínimo una letra mayúscula y un número
+            bool esContraseñaValido = validacionesNegocioUtils.ValidarContraseña(usuarioPrueba.Contraseña);
+            if( !esContraseñaValido)
+            {
+                // Muestra mensaje de error si la validación falla
+                MessageBox.Show("La constraseña debe tener entre 8 y 15 caracteres y debe de contener como mínimo una letra mayúscula y un número",
+                                "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+
+            }
+
+
+
+
+
+
+
+
+
+
+
+            // Si todas las validaciones pasan, inicio de sesión exitoso
+            MessageBox.Show("Usuario Creado con éxito!");
         }
+    
         private void txt_nombre_Click(object sender, EventArgs e)
         {
             // Indica al usuario que está parado en el campo "Nombre" cuando lo clickea
@@ -177,3 +187,4 @@ namespace TemplateTPIntegrador
         }
     }
 }
+
