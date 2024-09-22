@@ -31,10 +31,13 @@ namespace TemplateTPIntegrador
         {
 
         }
-
         private void registrarUsuario_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
+            RegistrarUsuariosForm registrar_usuarios_form = new RegistrarUsuariosForm();
 
+            registrar_usuarios_form.Show();
+
+            this.Hide();
         }
     }
 }
