@@ -10,6 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using TemplateTPIntegrador.utils;
+using Negocio;
 
 namespace TemplateTPIntegrador
 {
@@ -23,17 +24,15 @@ namespace TemplateTPIntegrador
         private void btn_iniciarSesion_Click(object sender, EventArgs e)
         {
             ValidacionesTemplateUtils validacionesTemplateUtils = new ValidacionesTemplateUtils();
+            LoginNegocio login_negocio = new LoginNegocio();
 
-       
             // Validación de campos vacíos
             string mensaje_validacion_vacios = validacionesTemplateUtils.ValidarVacios(txt_usuario.Text, txt_contraseña.Text);
 
             if (mensaje_validacion_vacios != null)
             {
-                // Muestra mensaje de error para el primer campo vacío
                 MessageBox.Show(mensaje_validacion_vacios, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
-                // Pone el cursor en el primer campo vacío
                 if (mensaje_validacion_vacios.Contains("Usuario"))
                 {
                     txt_usuario.Focus();
@@ -42,35 +41,25 @@ namespace TemplateTPIntegrador
                 {
                     txt_contraseña.Focus();
                 }
+
                 return;
             }
-            // Supongamos que las validaciones de usuario y contraseña fueron correctas
-            // Aquí puedes agregar lógica adicional para verificar la autenticidad del usuario, etc.
 
-            // Abre el formulario de menú
-            MenuForm menuForm = new MenuForm();
-            menuForm.Show();
+           login_negocio.Login(txt_usuario.Text, txt_contraseña.Text);
 
-            // Oculta el formulario actual (Inicio de Sesión)
-            this.Hide(); // O puedes usar this.Close() para cerrarlo en lugar de ocultarlo.
+                // consideramos que el login fue exitoso
+                MenuForm menu = new MenuForm();
+
+                // Oculta el formulario padre (LogIn)
+                this.Hide();
+
+                // Muestra el formulario de menú
+                menu.FormClosed += (s, args) => this.Show();
+                menu.Show();
+           
         }
-    
 
-        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            // Se instancia el formulario de alta de usuarios
-            //RegistrarUsuariosForm alta_usuarios = new RegistrarUsuariosForm();
-            MenuForm menu = new MenuForm();
 
-            // Se esconde el formulario padre (LogIn)
-            this.Hide();
-
-            // Se mantiene escondido el formulario padre mientras el formulario hijo (alta de usuarios) esté abierto.
-            menu.FormClosed += (s, args) => this.Show();
-
-            // Se muestra el formulario hijo (alta de usuarios)
-            menu.Show();
-        }
 
         private void btnCerrar_Click(object sender, EventArgs e)
         {

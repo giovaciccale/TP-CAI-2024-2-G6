@@ -61,7 +61,7 @@
             this.txt_usuario.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
             this.txt_usuario.Location = new System.Drawing.Point(55, 12);
             this.txt_usuario.Name = "txt_usuario";
-            this.txt_usuario.Size = new System.Drawing.Size(370, 20);
+            this.txt_usuario.Size = new System.Drawing.Size(433, 30);
             this.txt_usuario.TabIndex = 0;
             this.txt_usuario.Click += new System.EventHandler(this.txt_usuario_Click);
             this.txt_usuario.TextChanged += new System.EventHandler(this.txt_usuario_Click);
@@ -75,7 +75,7 @@
             this.txt_contraseña.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
             this.txt_contraseña.Location = new System.Drawing.Point(55, 14);
             this.txt_contraseña.Name = "txt_contraseña";
-            this.txt_contraseña.Size = new System.Drawing.Size(370, 17);
+            this.txt_contraseña.Size = new System.Drawing.Size(433, 25);
             this.txt_contraseña.TabIndex = 0;
             this.txt_contraseña.UseSystemPasswordChar = true;
             this.txt_contraseña.Click += new System.EventHandler(this.txt_contraseña_Click);
@@ -116,7 +116,7 @@
             this.label5.ForeColor = System.Drawing.Color.White;
             this.label5.Location = new System.Drawing.Point(189, 477);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(51, 16);
+            this.label5.Size = new System.Drawing.Size(73, 21);
             this.label5.TabIndex = 1;
             this.label5.Text = "Grupo 6";
             // 
@@ -127,7 +127,7 @@
             this.label4.ForeColor = System.Drawing.Color.White;
             this.label4.Location = new System.Drawing.Point(189, 459);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(78, 16);
+            this.label4.Size = new System.Drawing.Size(113, 21);
             this.label4.TabIndex = 1;
             this.label4.Text = "Desarrollo Por";
             // 
@@ -138,7 +138,7 @@
             this.label3.ForeColor = System.Drawing.Color.White;
             this.label3.Location = new System.Drawing.Point(63, 204);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(167, 25);
+            this.label3.Size = new System.Drawing.Size(238, 39);
             this.label3.TabIndex = 0;
             this.label3.Text = "EletroHogarSA";
             // 
@@ -163,7 +163,7 @@
             this.panel4.Controls.Add(this.txt_contraseña);
             this.panel4.Location = new System.Drawing.Point(0, 235);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(450, 45);
+            this.panel4.Size = new System.Drawing.Size(497, 45);
             this.panel4.TabIndex = 2;
             // 
             // pictureBox2
@@ -185,7 +185,7 @@
             this.panel3.Controls.Add(this.txt_usuario);
             this.panel3.Location = new System.Drawing.Point(0, 185);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(450, 45);
+            this.panel3.Size = new System.Drawing.Size(497, 45);
             this.panel3.TabIndex = 1;
             // 
             // pictureBox1
@@ -200,12 +200,13 @@
             // 
             // btnCerrar
             // 
+            this.btnCerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnCerrar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCerrar.FlatAppearance.BorderSize = 0;
             this.btnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCerrar.Font = new System.Drawing.Font("Verdana", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCerrar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.btnCerrar.Location = new System.Drawing.Point(410, 0);
+            this.btnCerrar.Location = new System.Drawing.Point(457, 3);
             this.btnCerrar.Name = "btnCerrar";
             this.btnCerrar.Size = new System.Drawing.Size(40, 40);
             this.btnCerrar.TabIndex = 5;
@@ -220,7 +221,7 @@
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
             this.label6.Location = new System.Drawing.Point(38, 135);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(174, 25);
+            this.label6.Size = new System.Drawing.Size(261, 39);
             this.label6.TabIndex = 2;
             this.label6.Text = "Inicio De Sesión";
             // 
