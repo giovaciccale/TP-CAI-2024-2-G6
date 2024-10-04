@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace Datos
 {
-    public class Usuario
+    public class UsuarioWS
     {
 
         // Constructor
-        public Usuario()
+        public UsuarioWS()
         {
             Id = Guid.NewGuid();
             Estado = EstadoUsuario.INACTIVO;

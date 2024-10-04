@@ -41,7 +41,7 @@ namespace TemplateTPIntegrador
 
 
             // Crear una instancia de Usuario con los datos del formulario
-            Usuario usuarioPrueba = new Usuario
+            UsuarioWS usuarioPrueba = new UsuarioWS
             {
                 UsuarioNombre = txt_nombreUsuario.Text,
                 Contraseña = txt_contraseñaAlta.Text,

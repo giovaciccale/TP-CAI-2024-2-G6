@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Persistencia;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,8 +11,11 @@ namespace Negocio
     {
         public void Login(string username, string password)
         {
+            LoginWS loginWS = new LoginWS();
+            loginWS.login(username, password);
+
             //aca escribo que hace el login
-            // oublic void LoginNegocio(string usuario, string password
+            //public void LoginNegocio(string usuario, string password
         }
     }
 }
