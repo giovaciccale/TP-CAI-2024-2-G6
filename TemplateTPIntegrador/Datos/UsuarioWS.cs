@@ -1,57 +1,32 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Datos
 {
     public class UsuarioWS
     {
-
         // Constructor
         public UsuarioWS()
         {
             Id = Guid.NewGuid();
-            Estado = EstadoUsuario.INACTIVO;
-            IntentosLogin = 0;
-            FechaAlta = DateTime.Now;
+            FechaAlta = DateTime.Now;      
+            FechaBaja = null;  // Estado ACTIVO al inicio
         }
-        public Guid Id { get; set; }
-        public string Nombre { get; set; }
-        public string Apellido { get; set; }
-        public string Direccion { get; set; }
-        public string Telefono { get; set; }
-        public string Email { get; set; }
-        public DateTime FechaAlta { get; set; }
-        public DateTime FechaNacimiento { get; set; }
-        public DateTime? FechaBaja { get; set; }
-        public string UsuarioNombre { get; set; }
-        public PerfilUsuario Host { get; set; }
-        public string DNI { get; set; }
-        public string Contraseña { get; set; }
-        public int IntentosLogin { get; set; }
-        public DateTime? FechaUltimaContraseña { get; set; } // Para validar expiración
-        public EstadoUsuario Estado { get; set; }
+        public Guid Id { get; set; }  // Correspondiente a "id" en JSON
+        public string Nombre { get; set; }  // Correspondiente a "nombre" en JSON
+        public string Apellido { get; set; }  // Correspondiente a "apellido" en JSON
+        public int Dni { get; set; }  // Correspondiente a "dni" en JSON
+        public string Direccion { get; set; }  // Correspondiente a "direccion" en JSON
+        public string Telefono { get; set; }  // Correspondiente a "telefono" en JSON
+        public string Email { get; set; }  // Correspondiente a "email" en JSON
+        public DateTime FechaNacimiento { get; set; }  // Correspondiente a "fechaNacimiento" en JSON
+        public DateTime FechaAlta { get; set; }  // Correspondiente a "fechaAlta" en JSON
+        public DateTime? FechaBaja { get; set; }  // Correspondiente a "fechaBaja" en JSON
+        public int Host { get; set; }  // Correspondiente a "host" en JSON, como un entero en este caso
 
-    }
 
-    // Enum para perfiles
-    public enum PerfilUsuario
-    {
-        Vendedor = 1,
-        Supervisor = 2,
-        Administrador = 3
-    }
-
-    // Enum para estado del usuario
-    public enum EstadoUsuario
-    {
-        ACTIVO,
-        INACTIVO
+        // Propiedades adicionales
+        public string NombreUsuario { get; set; }  // Nuevo campo para nombre de usuario
+        public string Contraseña { get; set; }  // Nuevo campo para contraseña
     }
 }
 
-
-
-    

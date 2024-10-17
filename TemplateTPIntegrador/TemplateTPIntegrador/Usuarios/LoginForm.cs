@@ -1,16 +1,9 @@
-using Datos;
 using Negocio.utils;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using TemplateTPIntegrador.utils;
 using Negocio;
+using System.Drawing;
+using TemplateTPIntegrador.utils;
 
 namespace TemplateTPIntegrador
 {
@@ -45,31 +38,33 @@ namespace TemplateTPIntegrador
                 return;
             }
 
-           login_negocio.Login(txt_usuario.Text, txt_contraseña.Text);
+            // Intentar iniciar sesión
+            bool loginExitoso = login_negocio.Login(txt_usuario.Text, txt_contraseña.Text);
 
-                // consideramos que el login fue exitoso
+            if (loginExitoso)
+            {
+                // Si el login fue exitoso, muestra el menú
                 MenuForm menu = new MenuForm();
-
-                // Oculta el formulario padre (LogIn)
                 this.Hide();
-
-                // Muestra el formulario de menú
                 menu.FormClosed += (s, args) => this.Show();
                 menu.Show();
-           
+            }
+            else
+            {
+                // Si el login falló, muestra un mensaje de error
+                MessageBox.Show("Usuario o contraseña incorrectos. Por favor, intente de nuevo.", "Error de inicio de sesión", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txt_contraseña.Clear();
+                txt_usuario.Focus();
+            }
         }
-
-
 
         private void btnCerrar_Click(object sender, EventArgs e)
         {
-            // Cierra el formulario
             Application.Exit();
         }
 
         private void txt_usuario_Click(object sender, EventArgs e)
         {
-            // Indica al usuario que está parado en el campo "usuario" cuando lo clickea
             txt_usuario.BackColor = Color.White;
             panel3.BackColor = Color.White;
             panel4.BackColor = SystemColors.Control;
@@ -78,7 +73,6 @@ namespace TemplateTPIntegrador
 
         private void txt_contraseña_Click(object sender, EventArgs e)
         {
-            // Indica al usuario que está parado en el campo "Contraseña" cuando lo clickea
             txt_contraseña.BackColor = Color.White;
             panel4.BackColor = Color.White;
             panel3.BackColor = SystemColors.Control;
@@ -87,19 +81,12 @@ namespace TemplateTPIntegrador
 
         private void pictureBox2_MouseDown(object sender, MouseEventArgs e)
         {
-            // Permite al usuario ver la contraseña cuando clickea y mantiene sobre el ícono del campo "Contraseña"
             txt_contraseña.UseSystemPasswordChar = false;
         }
 
         private void pictureBox2_MouseUp(object sender, MouseEventArgs e)
         {
-            // Esconde la contraseña cuando el usuario suelta el click
             txt_contraseña.UseSystemPasswordChar = true;
-        }
-
-        private void panel2_Paint(object sender, PaintEventArgs e)
-        {
-
         }
     }
 }
