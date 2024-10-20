@@ -38,23 +38,36 @@ namespace TemplateTPIntegrador
                 return;
             }
 
-            // Intentar iniciar sesión
-            bool loginExitoso = login_negocio.Login(txt_usuario.Text, txt_contraseña.Text);
+            try
+            {
+                // Intentar iniciar sesión
+                bool loginExitoso = login_negocio.Login(txt_usuario.Text, txt_contraseña.Text);
 
-            if (loginExitoso)
-            {
-                // Si el login fue exitoso, muestra el menú
-                MenuForm menu = new MenuForm();
-                this.Hide();
-                menu.FormClosed += (s, args) => this.Show();
-                menu.Show();
+                if (loginExitoso)
+                {
+                    // Si el login fue exitoso, muestra el menú
+                    MenuForm menu = new MenuForm();
+                    this.Hide();
+                    menu.FormClosed += (s, args) => this.Show();
+                    menu.Show();
+                }
+                else
+                {
+                    // Si el login falló, muestra un mensaje de error
+                    MessageBox.Show("Usuario o contraseña incorrectos. Por favor, intente de nuevo.", "Error de inicio de sesión", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    txt_contraseña.Clear();
+                    txt_usuario.Focus();
+                }
             }
-            else
+            catch (UsuarioBloqueadoException ex)
             {
-                // Si el login falló, muestra un mensaje de error
-                MessageBox.Show("Usuario o contraseña incorrectos. Por favor, intente de nuevo.", "Error de inicio de sesión", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                txt_contraseña.Clear();
-                txt_usuario.Focus();
+                // Capturar la excepción de usuario bloqueado y mostrar el mensaje
+                MessageBox.Show(ex.Message, "Usuario Bloqueado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            catch (Exception ex)
+            {
+                // Manejo de otras excepciones genéricas
+                MessageBox.Show("Ocurrió un error inesperado: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
