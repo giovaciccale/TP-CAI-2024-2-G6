@@ -1,14 +1,8 @@
-using Datos;
 using Negocio.utils;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+using Negocio;
+using System.Drawing;
 using TemplateTPIntegrador.utils;
 
 namespace TemplateTPIntegrador
@@ -23,17 +17,15 @@ namespace TemplateTPIntegrador
         private void btn_iniciarSesion_Click(object sender, EventArgs e)
         {
             ValidacionesTemplateUtils validacionesTemplateUtils = new ValidacionesTemplateUtils();
+            LoginNegocio login_negocio = new LoginNegocio();
 
-       
             // Validación de campos vacíos
             string mensaje_validacion_vacios = validacionesTemplateUtils.ValidarVacios(txt_usuario.Text, txt_contraseña.Text);
 
             if (mensaje_validacion_vacios != null)
             {
-                // Muestra mensaje de error para el primer campo vacío
                 MessageBox.Show(mensaje_validacion_vacios, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
-                // Pone el cursor en el primer campo vacío
                 if (mensaje_validacion_vacios.Contains("Usuario"))
                 {
                     txt_usuario.Focus();
@@ -42,45 +34,50 @@ namespace TemplateTPIntegrador
                 {
                     txt_contraseña.Focus();
                 }
+
                 return;
             }
-            // Supongamos que las validaciones de usuario y contraseña fueron correctas
-            // Aquí puedes agregar lógica adicional para verificar la autenticidad del usuario, etc.
 
-            // Abre el formulario de menú
-            MenuForm menuForm = new MenuForm();
-            menuForm.Show();
+            try
+            {
+                // Intentar iniciar sesión
+                bool loginExitoso = login_negocio.Login(txt_usuario.Text, txt_contraseña.Text);
 
-            // Oculta el formulario actual (Inicio de Sesión)
-            this.Hide(); // O puedes usar this.Close() para cerrarlo en lugar de ocultarlo.
-        }
-    
-
-        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            // Se instancia el formulario de alta de usuarios
-            //RegistrarUsuariosForm alta_usuarios = new RegistrarUsuariosForm();
-            MenuForm menu = new MenuForm();
-
-            // Se esconde el formulario padre (LogIn)
-            this.Hide();
-
-            // Se mantiene escondido el formulario padre mientras el formulario hijo (alta de usuarios) esté abierto.
-            menu.FormClosed += (s, args) => this.Show();
-
-            // Se muestra el formulario hijo (alta de usuarios)
-            menu.Show();
+                if (loginExitoso)
+                {
+                    // Si el login fue exitoso, muestra el menú
+                    MenuForm menu = new MenuForm();
+                    this.Hide();
+                    menu.FormClosed += (s, args) => this.Show();
+                    menu.Show();
+                }
+                else
+                {
+                    // Si el login falló, muestra un mensaje de error
+                    MessageBox.Show("Usuario o contraseña incorrectos. Por favor, intente de nuevo.", "Error de inicio de sesión", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    txt_contraseña.Clear();
+                    txt_usuario.Focus();
+                }
+            }
+            catch (UsuarioBloqueadoException ex)
+            {
+                // Capturar la excepción de usuario bloqueado y mostrar el mensaje
+                MessageBox.Show(ex.Message, "Usuario Bloqueado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            catch (Exception ex)
+            {
+                // Manejo de otras excepciones genéricas
+                MessageBox.Show("Ocurrió un error inesperado: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void btnCerrar_Click(object sender, EventArgs e)
         {
-            // Cierra el formulario
             Application.Exit();
         }
 
         private void txt_usuario_Click(object sender, EventArgs e)
         {
-            // Indica al usuario que está parado en el campo "usuario" cuando lo clickea
             txt_usuario.BackColor = Color.White;
             panel3.BackColor = Color.White;
             panel4.BackColor = SystemColors.Control;
@@ -89,7 +86,6 @@ namespace TemplateTPIntegrador
 
         private void txt_contraseña_Click(object sender, EventArgs e)
         {
-            // Indica al usuario que está parado en el campo "Contraseña" cuando lo clickea
             txt_contraseña.BackColor = Color.White;
             panel4.BackColor = Color.White;
             panel3.BackColor = SystemColors.Control;
@@ -98,19 +94,12 @@ namespace TemplateTPIntegrador
 
         private void pictureBox2_MouseDown(object sender, MouseEventArgs e)
         {
-            // Permite al usuario ver la contraseña cuando clickea y mantiene sobre el ícono del campo "Contraseña"
             txt_contraseña.UseSystemPasswordChar = false;
         }
 
         private void pictureBox2_MouseUp(object sender, MouseEventArgs e)
         {
-            // Esconde la contraseña cuando el usuario suelta el click
             txt_contraseña.UseSystemPasswordChar = true;
-        }
-
-        private void panel2_Paint(object sender, PaintEventArgs e)
-        {
-
         }
     }
 }

@@ -41,9 +41,9 @@ namespace TemplateTPIntegrador
 
 
             // Crear una instancia de Usuario con los datos del formulario
-            Usuario usuarioPrueba = new Usuario
+            UsuarioWS usuarioPrueba = new UsuarioWS
             {
-                UsuarioNombre = txt_nombreUsuario.Text,
+                NombreUsuario = txt_nombreUsuario.Text,
                 Contraseña = txt_contraseñaAlta.Text,
                 Nombre = txt_nombre.Text,  // Esto es solo un ejemplo;  usar valores reales
                 Apellido = txt_apellido.Text // Esto es solo un ejemplo;  usar valores reales
@@ -51,7 +51,7 @@ namespace TemplateTPIntegrador
 
 
             // Validación del nombre de usuario
-            bool esNombreUsuarioValido = validacionesNegocioUtils.ValidarNombreUsuario(usuarioPrueba.UsuarioNombre, usuarioPrueba.Nombre, usuarioPrueba.Apellido);
+            bool esNombreUsuarioValido = validacionesNegocioUtils.ValidarNombreUsuario(usuarioPrueba.NombreUsuario, usuarioPrueba.Nombre, usuarioPrueba.Apellido);
             if (!esNombreUsuarioValido)
             {
                 // Muestra mensaje de error si la validación falla
