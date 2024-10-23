@@ -48,9 +48,10 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 16F);
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(62, 197);
+            this.label3.Location = new System.Drawing.Point(93, 303);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(167, 25);
+            this.label3.Size = new System.Drawing.Size(238, 39);
             this.label3.TabIndex = 995;
             this.label3.Text = "EletroHogarSA";
             // 
@@ -62,8 +63,9 @@
             this.panel1.Controls.Add(this.label3);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(300, 544);
+            this.panel1.Size = new System.Drawing.Size(450, 837);
             this.panel1.TabIndex = 993;
             // 
             // label5
@@ -71,9 +73,10 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Century Gothic", 8F);
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(189, 477);
+            this.label5.Location = new System.Drawing.Point(284, 734);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(51, 16);
+            this.label5.Size = new System.Drawing.Size(73, 21);
             this.label5.TabIndex = 993;
             this.label5.Text = "Grupo 6";
             // 
@@ -82,9 +85,10 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Century Gothic", 8F);
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(189, 459);
+            this.label4.Location = new System.Drawing.Point(284, 706);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(78, 16);
+            this.label4.Size = new System.Drawing.Size(113, 21);
             this.label4.TabIndex = 994;
             this.label4.Text = "Desarrollo Por";
             // 
@@ -94,9 +98,10 @@
             this.btn_Usuarios.AutoSize = true;
             this.btn_Usuarios.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_Usuarios.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.btn_Usuarios.Location = new System.Drawing.Point(344, 106);
+            this.btn_Usuarios.Location = new System.Drawing.Point(516, 163);
+            this.btn_Usuarios.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.btn_Usuarios.Name = "btn_Usuarios";
-            this.btn_Usuarios.Size = new System.Drawing.Size(63, 13);
+            this.btn_Usuarios.Size = new System.Drawing.Size(95, 20);
             this.btn_Usuarios.TabIndex = 994;
             this.btn_Usuarios.TabStop = true;
             this.btn_Usuarios.Text = "USUARIOS";
@@ -108,9 +113,10 @@
             this.linkLabel1.AutoSize = true;
             this.linkLabel1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.linkLabel1.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.linkLabel1.Location = new System.Drawing.Point(344, 159);
+            this.linkLabel1.Location = new System.Drawing.Point(516, 245);
+            this.linkLabel1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(89, 13);
+            this.linkLabel1.Size = new System.Drawing.Size(134, 20);
             this.linkLabel1.TabIndex = 995;
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "PROVEEDORES";
@@ -121,9 +127,10 @@
             this.linkLabel3.AutoSize = true;
             this.linkLabel3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.linkLabel3.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.linkLabel3.Location = new System.Drawing.Point(344, 335);
+            this.linkLabel3.Location = new System.Drawing.Point(516, 515);
+            this.linkLabel3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.linkLabel3.Name = "linkLabel3";
-            this.linkLabel3.Size = new System.Drawing.Size(66, 13);
+            this.linkLabel3.Size = new System.Drawing.Size(97, 20);
             this.linkLabel3.TabIndex = 997;
             this.linkLabel3.TabStop = true;
             this.linkLabel3.Text = "REPORTES";
@@ -134,9 +141,10 @@
             this.linkLabel4.AutoSize = true;
             this.linkLabel4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.linkLabel4.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.linkLabel4.Location = new System.Drawing.Point(344, 293);
+            this.linkLabel4.Location = new System.Drawing.Point(516, 451);
+            this.linkLabel4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.linkLabel4.Name = "linkLabel4";
-            this.linkLabel4.Size = new System.Drawing.Size(52, 13);
+            this.linkLabel4.Size = new System.Drawing.Size(76, 20);
             this.linkLabel4.TabIndex = 998;
             this.linkLabel4.TabStop = true;
             this.linkLabel4.Text = "CLIENTE";
@@ -148,9 +156,10 @@
             this.linkLabel5.AutoSize = true;
             this.linkLabel5.Cursor = System.Windows.Forms.Cursors.Hand;
             this.linkLabel5.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.linkLabel5.Location = new System.Drawing.Point(344, 251);
+            this.linkLabel5.Location = new System.Drawing.Point(516, 386);
+            this.linkLabel5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.linkLabel5.Name = "linkLabel5";
-            this.linkLabel5.Size = new System.Drawing.Size(43, 13);
+            this.linkLabel5.Size = new System.Drawing.Size(62, 20);
             this.linkLabel5.TabIndex = 999;
             this.linkLabel5.TabStop = true;
             this.linkLabel5.Text = "VENTA";
@@ -161,9 +170,10 @@
             this.linkLabel6.AutoSize = true;
             this.linkLabel6.Cursor = System.Windows.Forms.Cursors.Hand;
             this.linkLabel6.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.linkLabel6.Location = new System.Drawing.Point(344, 209);
+            this.linkLabel6.Location = new System.Drawing.Point(516, 322);
+            this.linkLabel6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.linkLabel6.Name = "linkLabel6";
-            this.linkLabel6.Size = new System.Drawing.Size(75, 13);
+            this.linkLabel6.Size = new System.Drawing.Size(110, 20);
             this.linkLabel6.TabIndex = 1000;
             this.linkLabel6.TabStop = true;
             this.linkLabel6.Text = "PRODUCTOS";
@@ -173,9 +183,10 @@
             this.lblCrearUsuario.AutoSize = true;
             this.lblCrearUsuario.Font = new System.Drawing.Font("Century Gothic", 16F);
             this.lblCrearUsuario.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.lblCrearUsuario.Location = new System.Drawing.Point(505, 35);
+            this.lblCrearUsuario.Location = new System.Drawing.Point(758, 54);
+            this.lblCrearUsuario.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCrearUsuario.Name = "lblCrearUsuario";
-            this.lblCrearUsuario.Size = new System.Drawing.Size(75, 25);
+            this.lblCrearUsuario.Size = new System.Drawing.Size(106, 39);
             this.lblCrearUsuario.TabIndex = 1001;
             this.lblCrearUsuario.Text = "Menú";
             // 
@@ -186,20 +197,22 @@
             this.btnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCerrar.Font = new System.Drawing.Font("Verdana", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCerrar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.btnCerrar.Location = new System.Drawing.Point(750, 0);
+            this.btnCerrar.Location = new System.Drawing.Point(1125, 0);
+            this.btnCerrar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnCerrar.Name = "btnCerrar";
-            this.btnCerrar.Size = new System.Drawing.Size(40, 40);
+            this.btnCerrar.Size = new System.Drawing.Size(60, 62);
             this.btnCerrar.TabIndex = 1002;
             this.btnCerrar.Text = "X";
             this.btnCerrar.UseVisualStyleBackColor = true;
+            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
             // 
             // MenuForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.AutoScrollMinSize = new System.Drawing.Size(300, 0);
-            this.ClientSize = new System.Drawing.Size(784, 561);
+            this.ClientSize = new System.Drawing.Size(1176, 863);
             this.ControlBox = false;
             this.Controls.Add(this.btnCerrar);
             this.Controls.Add(this.lblCrearUsuario);
@@ -212,6 +225,7 @@
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Location = new System.Drawing.Point(300, 0);
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "MenuForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Menu";
