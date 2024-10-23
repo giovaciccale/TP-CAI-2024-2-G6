@@ -121,6 +121,7 @@
             this.linkLabel1.TabIndex = 1010;
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "VOLVER";
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.volver_LinkClicked);
             // 
             // MenuUsuario
             // 

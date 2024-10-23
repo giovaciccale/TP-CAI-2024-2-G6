@@ -348,6 +348,9 @@ namespace TemplateTPIntegrador
         {
             txt_contraseñaAlta.UseSystemPasswordChar = true;
         }
+
+
+       
     }
 }
 

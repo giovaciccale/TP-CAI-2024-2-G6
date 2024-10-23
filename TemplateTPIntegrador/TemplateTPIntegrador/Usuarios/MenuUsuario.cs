@@ -39,5 +39,13 @@ namespace TemplateTPIntegrador
 
             this.Hide();
         }
+        private void volver_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            MenuForm menuForm = new MenuForm();
+
+            menuForm.Show();
+
+            this.Hide();
+        }
     }
 }
