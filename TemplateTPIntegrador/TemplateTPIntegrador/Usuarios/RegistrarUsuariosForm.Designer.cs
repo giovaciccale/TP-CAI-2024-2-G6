@@ -113,7 +113,7 @@ namespace TemplateTPIntegrador
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(360, 636);
+            this.panel1.Size = new System.Drawing.Size(360, 640);
             this.panel1.TabIndex = 992;
             // 
             // label5
@@ -359,11 +359,11 @@ namespace TemplateTPIntegrador
             this.panelCrearCuenta.Controls.Add(this.btnCerrar);
             this.panelCrearCuenta.Controls.Add(this.lblCrearUsuario);
             this.panelCrearCuenta.Controls.Add(this.btn_crearUsuario);
-            this.panelCrearCuenta.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelCrearCuenta.Location = new System.Drawing.Point(360, 0);
             this.panelCrearCuenta.Name = "panelCrearCuenta";
             this.panelCrearCuenta.Size = new System.Drawing.Size(540, 636);
             this.panelCrearCuenta.TabIndex = 0;
+            this.panelCrearCuenta.Paint += new System.Windows.Forms.PaintEventHandler(this.panelCrearCuenta_Paint);
             // 
             // linkLabel_volver
             // 
@@ -376,6 +376,7 @@ namespace TemplateTPIntegrador
             this.linkLabel_volver.TabIndex = 11;
             this.linkLabel_volver.TabStop = true;
             this.linkLabel_volver.Text = "Volver";
+            this.linkLabel_volver.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.volver_LinkClicked);
             // 
             // label6
             // 
@@ -691,7 +692,7 @@ namespace TemplateTPIntegrador
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(900, 636);
+            this.ClientSize = new System.Drawing.Size(904, 640);
             this.Controls.Add(this.panelCrearCuenta);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
