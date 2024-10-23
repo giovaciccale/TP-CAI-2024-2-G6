@@ -12,6 +12,7 @@ namespace Negocio
         }
     }
 
+
     public class LoginNegocio
     {
         private const int MaxIntentos = 3; // Máximo de intentos permitidos
