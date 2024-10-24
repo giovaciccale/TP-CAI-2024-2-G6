@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
+using TemplateTPIntegrador.Usuarios.Aministrador;
 
 namespace TemplateTPIntegrador
 {
@@ -16,6 +17,7 @@ namespace TemplateTPIntegrador
         public MenuForm()
         {
             InitializeComponent();
+            this.Shown += new EventHandler(MenuForm_Shown);
         }
 
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
@@ -23,31 +25,15 @@ namespace TemplateTPIntegrador
         [DllImport("user32.DLL",EntryPoint="SendMessage")]
         private extern static void SendMessage(System.IntPtr hwnd, int wmsg, int wparam, int lparam);
 
-
-        private void linkLabel4_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-
-        }
-
- 
-
         private void MenuForm_Load(object sender, EventArgs e)
         {
-
+            btnSeccionUsuarios.Checked = true;
+            tabRegistrarUsuarios.Checked = true;
         }
 
-        private void btn_Usuarios_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        private void MenuForm_Shown(object sender, EventArgs e)
         {
-            //MessageBox.Show("Evento de clic disparado"); // Para verificar si el clic funciona
-
-            // Crea una instancia del formulario RegistrarUsuariosForm
-            MenuUsuario usuariosMenuForm = new MenuUsuario();
-
-            // Muestra el formulario de registro
-            usuariosMenuForm.Show();
-
-            // Oculta el formulario actual (MenuUsuario)
-            this.Hide();
+            abrirFormInPanel(new RegistrarUsuariosForm());
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -62,10 +48,12 @@ namespace TemplateTPIntegrador
             }
         }
 
+
         private void btnCerrar_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
+
 
         private void barraTitulo_MouseDown(object sender, MouseEventArgs e)
         {
@@ -73,6 +61,8 @@ namespace TemplateTPIntegrador
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
 
+
+        // Este Metodo hace que se abra el forms dentro del panel contenedor
         private void abrirFormInPanel(object formhijo)
         {
             if(this.panelContenedor.Controls.Count > 0)
@@ -85,9 +75,31 @@ namespace TemplateTPIntegrador
             fh.Show();
         }
 
-        private void btn_frm_usuarios_Click(object sender, EventArgs e)
+
+        private void btnSeccionUsuarios_Click(object sender, EventArgs e)
+        {
+            tabRegistrarUsuarios.Visible = true;
+            tabModificarUsuarios.Visible = true;
+            tabEliminarUsuarios.Visible = true;
+            tabRegistrarUsuarios.Checked = true;
+            abrirFormInPanel(new RegistrarUsuariosForm());
+        }
+
+
+        private void tabRegistrarUsuarios_Click(object sender, EventArgs e)
         {
             abrirFormInPanel(new RegistrarUsuariosForm());
+        }
+
+
+        private void tabEliminarUsuarios_Click(object sender, EventArgs e)
+        {
+            abrirFormInPanel(new BajaUsuarios());
+        }
+
+        private void tabModificarUsuarios_Click(object sender, EventArgs e)
+        {
+            abrirFormInPanel(new ModificarUsuariosForm());
         }
     }
 }

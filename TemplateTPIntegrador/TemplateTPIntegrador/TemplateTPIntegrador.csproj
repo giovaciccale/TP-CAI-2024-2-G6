@@ -33,11 +33,17 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Guna.UI2, Version=2.0.4.6, Culture=neutral, PublicKeyToken=8b9d14aa5142e261, processorArchitecture=MSIL">
+      <HintPath>..\packages\Guna.UI2.WinForms.2.0.4.6\lib\net472\Guna.UI2.dll</HintPath>
+    </Reference>
     <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.13.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Web" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -49,22 +55,28 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Usuarios\Aministrador\ModificarUsuariosForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Usuarios\Aministrador\ModificarUsuariosForm.Designer.cs">
+      <DependentUpon>ModificarUsuariosForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Usuarios\MenuUsuario.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Usuarios\MenuUsuario.Designer.cs">
       <DependentUpon>MenuUsuario.cs</DependentUpon>
     </Compile>
-    <Compile Include="Usuarios\BajaUsuarios.cs">
+    <Compile Include="Usuarios\Aministrador\BajaUsuarios.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Usuarios\BajaUsuarios.Designer.cs">
+    <Compile Include="Usuarios\Aministrador\BajaUsuarios.Designer.cs">
       <DependentUpon>BajaUsuarios.cs</DependentUpon>
     </Compile>
-    <Compile Include="Usuarios\RegistrarUsuariosForm.cs">
+    <Compile Include="Usuarios\Aministrador\RegistrarUsuariosForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Usuarios\RegistrarUsuariosForm.Designer.cs">
+    <Compile Include="Usuarios\Aministrador\RegistrarUsuariosForm.Designer.cs">
       <DependentUpon>RegistrarUsuariosForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Usuarios\LoginForm.cs">
@@ -73,22 +85,25 @@
     <Compile Include="Usuarios\LoginForm.Designer.cs">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="MenuAdmin.cs">
+    <Compile Include="Usuarios\Aministrador\MenuAdmin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MenuAdmin.Designer.cs">
+    <Compile Include="Usuarios\Aministrador\MenuAdmin.Designer.cs">
       <DependentUpon>MenuAdmin.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="utils\validacionesUtils.cs" />
-    <EmbeddedResource Include="MenuAdmin.resx">
+    <EmbeddedResource Include="Usuarios\Aministrador\MenuAdmin.resx">
       <DependentUpon>MenuAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Usuarios\Aministrador\ModificarUsuariosForm.resx">
+      <DependentUpon>ModificarUsuariosForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Usuarios\MenuUsuario.resx">
       <DependentUpon>MenuUsuario.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Usuarios\RegistrarUsuariosForm.resx">
+    <EmbeddedResource Include="Usuarios\Aministrador\RegistrarUsuariosForm.resx">
       <DependentUpon>RegistrarUsuariosForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Usuarios\LoginForm.resx">
