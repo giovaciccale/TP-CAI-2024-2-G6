@@ -63,11 +63,11 @@ namespace TemplateTPIntegrador
 
 
         // Este Metodo hace que se abra el forms dentro del panel contenedor
-        private void abrirFormInPanel(object formhijo)
+        private void abrirFormInPanel(object formHijo)
         {
             if(this.panelContenedor.Controls.Count > 0)
                 this.panelContenedor.Controls.RemoveAt(0);
-            Form fh = formhijo as Form;
+            Form fh = formHijo as Form;
             fh.TopLevel = false;
             fh.Dock = DockStyle.Fill;
             this.panelContenedor.Controls.Add(fh);
@@ -78,11 +78,33 @@ namespace TemplateTPIntegrador
 
         private void btnSeccionUsuarios_Click(object sender, EventArgs e)
         {
-            tabRegistrarUsuarios.Visible = true;
-            tabModificarUsuarios.Visible = true;
-            tabEliminarUsuarios.Visible = true;
-            tabRegistrarUsuarios.Checked = true;
-            abrirFormInPanel(new RegistrarUsuariosForm());
+            // Verificar si ya estamos en la seccion Usuarios
+            if (!btnSeccionUsuarios.Checked)
+            {
+                // Si no estamos en la seccion usuarios, entonces mostramos las tabs y por default abrimos la tab Registrar Usuarios
+                tabRegistrarUsuarios.Visible = true;
+                tabModificarUsuarios.Visible = true;
+                tabEliminarUsuarios.Visible = true;
+
+                // Marcamos que estamos en la seccion Usuarios
+                btnSeccionUsuarios.Checked = true;
+
+                // Abrimos por default la tab de Registrar Usuarios
+                tabRegistrarUsuarios.Checked = true;
+                abrirFormInPanel(new RegistrarUsuariosForm());
+            }
+            else
+            {
+                // Si ya estamos en la seccion Usuarios, verificamos si no estamos en la tab de Registrar Usuarios
+                if (!tabRegistrarUsuarios.Checked)
+                {
+                    // Si no estamos en la tab Registrar Usuarios, la marcamos y abrimos el formulario
+                    tabRegistrarUsuarios.Checked = true;
+                    abrirFormInPanel(new RegistrarUsuariosForm());
+                }
+                // Si ya estamos en la seccion Usuarios y ya estamos en la tab Registrar Usuarios, no hacemos nada
+            }
+            
         }
 
 
