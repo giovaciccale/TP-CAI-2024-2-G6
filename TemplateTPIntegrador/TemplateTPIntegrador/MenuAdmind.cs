@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace TemplateTPIntegrador
 {
-    public partial class MenuForm : Form
+    public partial class MenuAdmind : Form
     {
-        public MenuForm()
+        public MenuAdmind()
         {
             InitializeComponent();
         }

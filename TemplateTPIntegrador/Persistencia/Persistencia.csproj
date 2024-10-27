@@ -46,6 +46,7 @@
   <ItemGroup>
     <Compile Include="LoginDB.cs" />
     <Compile Include="LoginWS..cs" />
+    <Compile Include="UsuariosWS.cs" />
     <Compile Include="utils\DBHelper.cs" />
     <Compile Include="utils\WebHelper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

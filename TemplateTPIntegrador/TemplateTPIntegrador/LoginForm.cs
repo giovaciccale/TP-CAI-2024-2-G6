@@ -46,7 +46,7 @@ namespace TemplateTPIntegrador
                 if (loginExitoso)
                 {
                     // Si el login fue exitoso, muestra el menú
-                    MenuForm menu = new MenuForm();
+                    MenuAdmind menu = new MenuAdmind();
                     this.Hide();
                     menu.FormClosed += (s, args) => this.Show();
                     menu.Show();

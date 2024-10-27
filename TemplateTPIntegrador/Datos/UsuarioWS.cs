@@ -11,6 +11,8 @@ namespace Datos
             FechaAlta = DateTime.Now;      
             FechaBaja = null;  // Estado ACTIVO al inicio
         }
+
+        public string IdUsuario { get; set; }
         public Guid Id { get; set; }  // Correspondiente a "id" en JSON
         public string Nombre { get; set; }  // Correspondiente a "nombre" en JSON
         public string Apellido { get; set; }  // Correspondiente a "apellido" en JSON
