@@ -104,7 +104,6 @@ namespace TemplateTPIntegrador
                 }
                 // Si ya estamos en la seccion Usuarios y ya estamos en la tab Registrar Usuarios, no hacemos nada
             }
-            
         }
 
 
