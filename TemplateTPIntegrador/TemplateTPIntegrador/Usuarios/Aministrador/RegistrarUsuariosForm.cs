@@ -109,13 +109,20 @@ namespace TemplateTPIntegrador
             txt_apellido.BackColor = SystemColors.Control;
             panelEmail.BackColor = SystemColors.Control;
             txt_email.BackColor = SystemColors.Control;
+            panelFechaNacimiento.BackColor = SystemColors.Control;
             panelDni.BackColor = SystemColors.Control;
             txt_dni.BackColor = SystemColors.Control;
             panelDireccion.BackColor = SystemColors.Control;
             txt_direccion.BackColor = SystemColors.Control;
             panelTelefono.BackColor = SystemColors.Control;
             txt_telefono.BackColor = SystemColors.Control;
-            panelNombreUsuario.BackColor = SystemColors.Control;
+            panelNroRegistro.BackColor = SystemColors.Control;
+            txt_registro.BackColor = SystemColors.Control;
+            panelNombreUsuario.BackColor= SystemColors.Control;
+            txt_usuario.BackColor= SystemColors.Control;
+            panelContraseña.BackColor= SystemColors.Control;
+            txt_contraseña.BackColor= SystemColors.Control;
+            
         }
 
         private void txt_nombre_Click(object sender, EventArgs e)
@@ -130,13 +137,19 @@ namespace TemplateTPIntegrador
             txt_apellido.BackColor = SystemColors.Control;
             panelEmail.BackColor = SystemColors.Control;
             txt_email.BackColor = SystemColors.Control;
+            panelFechaNacimiento.BackColor = SystemColors.Control;
             panelDni.BackColor = SystemColors.Control;
             txt_dni.BackColor = SystemColors.Control;
             panelDireccion.BackColor = SystemColors.Control;
             txt_direccion.BackColor = SystemColors.Control;
             panelTelefono.BackColor = SystemColors.Control;
             txt_telefono.BackColor = SystemColors.Control;
+            panelNroRegistro.BackColor = SystemColors.Control;
+            txt_registro.BackColor = SystemColors.Control;
             panelNombreUsuario.BackColor = SystemColors.Control;
+            txt_usuario.BackColor = SystemColors.Control;
+            panelContraseña.BackColor = SystemColors.Control;
+            txt_contraseña.BackColor = SystemColors.Control;
         }
 
         private void txt_apellido_Click(object sender, EventArgs e)
@@ -151,13 +164,19 @@ namespace TemplateTPIntegrador
             txt_apellido.BackColor = Color.White;
             panelEmail.BackColor = SystemColors.Control;
             txt_email.BackColor = SystemColors.Control;
+            panelFechaNacimiento.BackColor = SystemColors.Control;
             panelDni.BackColor = SystemColors.Control;
             txt_dni.BackColor = SystemColors.Control;
             panelDireccion.BackColor = SystemColors.Control;
             txt_direccion.BackColor = SystemColors.Control;
             panelTelefono.BackColor = SystemColors.Control;
             txt_telefono.BackColor = SystemColors.Control;
+            panelNroRegistro.BackColor = SystemColors.Control;
+            txt_registro.BackColor = SystemColors.Control;
             panelNombreUsuario.BackColor = SystemColors.Control;
+            txt_usuario.BackColor = SystemColors.Control;
+            panelContraseña.BackColor = SystemColors.Control;
+            txt_contraseña.BackColor = SystemColors.Control;
         }
 
         private void txt_email_TextChanged(object sender, EventArgs e)
@@ -170,16 +189,22 @@ namespace TemplateTPIntegrador
             txt_apellido.BackColor = SystemColors.Control;
             panelEmail.BackColor = Color.White;
             txt_email.BackColor = Color.White;
+            panelFechaNacimiento.BackColor = SystemColors.Control;
             panelDni.BackColor = SystemColors.Control;
             txt_dni.BackColor = SystemColors.Control;
             panelDireccion.BackColor = SystemColors.Control;
             txt_direccion.BackColor = SystemColors.Control;
             panelTelefono.BackColor = SystemColors.Control;
             txt_telefono.BackColor = SystemColors.Control;
+            panelNroRegistro.BackColor = SystemColors.Control;
+            txt_registro.BackColor = SystemColors.Control;
             panelNombreUsuario.BackColor = SystemColors.Control;
+            txt_usuario.BackColor = SystemColors.Control;
+            panelContraseña.BackColor = SystemColors.Control;
+            txt_contraseña.BackColor = SystemColors.Control;
         }
 
-        private void txt_numeroRegistro_TextChanged(object sender, EventArgs e)
+        private void txt_fecha_ValueChanged(object sender, EventArgs e)
         {
             comboBoxTipoUsuario.BackColor = SystemColors.Control;
             panelTipoUsuario.BackColor = SystemColors.Control;
@@ -189,13 +214,19 @@ namespace TemplateTPIntegrador
             txt_apellido.BackColor = SystemColors.Control;
             panelEmail.BackColor = SystemColors.Control;
             txt_email.BackColor = SystemColors.Control;
+            panelFechaNacimiento.BackColor = Color.White;
             panelDni.BackColor = SystemColors.Control;
             txt_dni.BackColor = SystemColors.Control;
             panelDireccion.BackColor = SystemColors.Control;
             txt_direccion.BackColor = SystemColors.Control;
             panelTelefono.BackColor = SystemColors.Control;
             txt_telefono.BackColor = SystemColors.Control;
+            panelNroRegistro.BackColor = SystemColors.Control;
+            txt_registro.BackColor = SystemColors.Control;
             panelNombreUsuario.BackColor = SystemColors.Control;
+            txt_usuario.BackColor = SystemColors.Control;
+            panelContraseña.BackColor = SystemColors.Control;
+            txt_contraseña.BackColor = SystemColors.Control;
         }
 
         private void txt_dni_TextChanged(object sender, EventArgs e)
@@ -208,13 +239,19 @@ namespace TemplateTPIntegrador
             txt_apellido.BackColor = SystemColors.Control;
             panelEmail.BackColor = SystemColors.Control;
             txt_email.BackColor = SystemColors.Control;
+            panelFechaNacimiento.BackColor = SystemColors.Control;
             panelDni.BackColor = Color.White;
             txt_dni.BackColor = Color.White;
             panelDireccion.BackColor = SystemColors.Control;
             txt_direccion.BackColor = SystemColors.Control;
             panelTelefono.BackColor = SystemColors.Control;
             txt_telefono.BackColor = SystemColors.Control;
+            panelNroRegistro.BackColor = SystemColors.Control;
+            txt_registro.BackColor = SystemColors.Control;
             panelNombreUsuario.BackColor = SystemColors.Control;
+            txt_usuario.BackColor = SystemColors.Control;
+            panelContraseña.BackColor = SystemColors.Control;
+            txt_contraseña.BackColor = SystemColors.Control;
         }
         private void txt_direccion_TextChanged(object sender, EventArgs e)
         {
@@ -226,13 +263,19 @@ namespace TemplateTPIntegrador
             txt_apellido.BackColor = SystemColors.Control;
             panelEmail.BackColor = SystemColors.Control;
             txt_email.BackColor = SystemColors.Control;
+            panelFechaNacimiento.BackColor = SystemColors.Control;
             panelDni.BackColor = SystemColors.Control;
             txt_dni.BackColor = SystemColors.Control;
             panelDireccion.BackColor = Color.White;
             txt_direccion.BackColor = Color.White;
             panelTelefono.BackColor = SystemColors.Control;
             txt_telefono.BackColor = SystemColors.Control;
+            panelNroRegistro.BackColor = SystemColors.Control;
+            txt_registro.BackColor = SystemColors.Control;
             panelNombreUsuario.BackColor = SystemColors.Control;
+            txt_usuario.BackColor = SystemColors.Control;
+            panelContraseña.BackColor = SystemColors.Control;
+            txt_contraseña.BackColor = SystemColors.Control;
         }
         private void txt_telefono_TextChanged(object sender, EventArgs e)
         {
@@ -244,13 +287,43 @@ namespace TemplateTPIntegrador
             txt_apellido.BackColor = SystemColors.Control;
             panelEmail.BackColor = SystemColors.Control;
             txt_email.BackColor = SystemColors.Control;
+            panelFechaNacimiento.BackColor = SystemColors.Control;
             panelDni.BackColor = SystemColors.Control;
             txt_dni.BackColor = SystemColors.Control;
             panelDireccion.BackColor = SystemColors.Control;
             txt_direccion.BackColor = SystemColors.Control;
             panelTelefono.BackColor = Color.White;
             txt_telefono.BackColor = Color.White;
+            panelNroRegistro.BackColor = SystemColors.Control;
+            txt_registro.BackColor = SystemColors.Control;
             panelNombreUsuario.BackColor = SystemColors.Control;
+            txt_usuario.BackColor = SystemColors.Control;
+            panelContraseña.BackColor = SystemColors.Control;
+            txt_contraseña.BackColor = SystemColors.Control;
+        }
+        private void txt_registro_TextChanged(object sender, EventArgs e)
+        {
+            comboBoxTipoUsuario.BackColor = SystemColors.Control;
+            panelTipoUsuario.BackColor = SystemColors.Control;
+            txt_nombre.BackColor = SystemColors.Control;
+            panelNombre.BackColor = SystemColors.Control;
+            panelApellido.BackColor = SystemColors.Control;
+            txt_apellido.BackColor = SystemColors.Control;
+            panelEmail.BackColor = SystemColors.Control;
+            txt_email.BackColor = SystemColors.Control;
+            panelFechaNacimiento.BackColor = SystemColors.Control;
+            panelDni.BackColor = SystemColors.Control;
+            txt_dni.BackColor = SystemColors.Control;
+            panelDireccion.BackColor = SystemColors.Control;
+            txt_direccion.BackColor = SystemColors.Control;
+            panelTelefono.BackColor = SystemColors.Control;
+            txt_telefono.BackColor = SystemColors.Control;
+            panelNroRegistro.BackColor = Color.White;
+            txt_registro.BackColor = Color.White;
+            panelNombreUsuario.BackColor = SystemColors.Control;
+            txt_usuario.BackColor = SystemColors.Control;
+            panelContraseña.BackColor = SystemColors.Control;
+            txt_contraseña.BackColor = SystemColors.Control;
         }
         private void txt_nombreUsuario_TextChanged(object sender, EventArgs e)
         {
@@ -262,13 +335,19 @@ namespace TemplateTPIntegrador
             txt_apellido.BackColor = SystemColors.Control;
             panelEmail.BackColor = SystemColors.Control;
             txt_email.BackColor = SystemColors.Control;
+            panelFechaNacimiento.BackColor = SystemColors.Control;
             panelDni.BackColor = SystemColors.Control;
             txt_dni.BackColor = SystemColors.Control;
             panelDireccion.BackColor = SystemColors.Control;
             txt_direccion.BackColor = SystemColors.Control;
             panelTelefono.BackColor = SystemColors.Control;
             txt_telefono.BackColor = SystemColors.Control;
+            panelNroRegistro.BackColor = SystemColors.Control;
+            txt_registro.BackColor = SystemColors.Control;
             panelNombreUsuario.BackColor = Color.White;
+            txt_usuario.BackColor = Color.White;
+            panelContraseña.BackColor = SystemColors.Control;
+            txt_contraseña.BackColor = SystemColors.Control;
         }
         private void txt_contraseñaAlta_Click(object sender, EventArgs e)
         {
@@ -288,7 +367,12 @@ namespace TemplateTPIntegrador
             txt_direccion.BackColor = SystemColors.Control;
             panelTelefono.BackColor = SystemColors.Control;
             txt_telefono.BackColor = SystemColors.Control;
+            panelNroRegistro.BackColor = SystemColors.Control;
+            txt_registro.BackColor = SystemColors.Control;
             panelNombreUsuario.BackColor = SystemColors.Control;
+            txt_usuario.BackColor = SystemColors.Control;
+            panelContraseña.BackColor = Color.White;
+            txt_contraseña.BackColor = Color.White;
         }
     }
 }
