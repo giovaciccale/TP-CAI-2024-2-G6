@@ -9,11 +9,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Persistencia; // Para acceder a UsuariosWS y LoginWS
+
+
 
 namespace TemplateTPIntegrador
 {
     public partial class RegistrarUsuariosForm : Form
     {
+        public String adminId = "70b37dc1-8fde-4840-be47-9ababd0ee7e5";
+
+        private string host = "1"; // Valor predeterminado para "Vendedor"
         public RegistrarUsuariosForm()
         {
             InitializeComponent();
@@ -21,6 +27,24 @@ namespace TemplateTPIntegrador
             comboBoxTipoUsuario.Items.Add("Supervisor");
             comboBoxTipoUsuario.Items.Add("Vendedor");
 
+            // Vincular el evento SelectedIndexChanged
+            comboBoxTipoUsuario.SelectedIndexChanged += comboBoxTipoUsuario_SelectedIndexChanged;
+
+        }
+        private void comboBoxTipoUsuario_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            switch (comboBoxTipoUsuario.SelectedItem.ToString())
+            {
+                case "Administrador":
+                    host = "3";
+                    break;
+                case "Supervisor":
+                    host = "2";
+                    break;
+                case "Vendedor":
+                    host = "1";
+                    break;
+            }
         }
 
 
@@ -37,53 +61,43 @@ namespace TemplateTPIntegrador
 
         private void btn_crearUsuario_Click(object sender, EventArgs e)
         {
-            ValidacionesNegocioUtils validacionesNegocioUtils = new ValidacionesNegocioUtils();
-
-
-            // Crear una instancia de Usuario con los datos del formulario
-            UsuarioWS usuarioPrueba = new UsuarioWS
+            try
             {
-                NombreUsuario = txt_nombreUsuario.Text,
-                Contraseña = txt_contraseñaAlta.Text,
-                Nombre = txt_nombre.Text,  // Esto es solo un ejemplo;  usar valores reales
-                Apellido = txt_apellido.Text // Esto es solo un ejemplo;  usar valores reales
-            };
+                // Crear una instancia de UsuarioWS con los datos del formulario
+                UsuarioWS usuario = new UsuarioWS
+                {
+                    idUsuario = adminId,
+                    nombre = txt_nombre.Text,
+                    apellido = txt_apellido.Text,
+                    dni = int.Parse(txt_dni.Text),
+                    direccion = txt_direccion.Text,
+                    telefono = txt_telefono.Text,
+                    email = txt_email.Text,
+                    fechaNacimiento = txt_fecha.Value, // Supongamos que tienes un DateTimePicker
+                    host = host // Usa el valor de host basado en la selección del tipo de usuario
+                };
 
+                // Instancia de UsuariosWS para gestionar la creación
+                UsuariosWS usuariosWS = new UsuariosWS();
 
-            // Validación del nombre de usuario
-            bool esNombreUsuarioValido = validacionesNegocioUtils.ValidarNombreUsuario(usuarioPrueba.NombreUsuario, usuarioPrueba.Nombre, usuarioPrueba.Apellido);
-            if (!esNombreUsuarioValido)
+                // Intentar agregar el usuario
+                bool resultado = usuariosWS.AgregarUsuario(usuario);
+
+                if (resultado)
+                {
+                    MessageBox.Show("Usuario agregado exitosamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MessageBox.Show("Error al agregar el usuario.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            catch (Exception ex)
             {
-                // Muestra mensaje de error si la validación falla
-                MessageBox.Show("El Nombre De Usuario debe tener entre 8 y 15 caracteres y no debe contener el nombre o apellido.",
-                                "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
+                MessageBox.Show("Error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
-            // Validación de largo de contraseña y que obtenga como mínimo una letra mayúscula y un número
-            bool esContraseñaValido = validacionesNegocioUtils.ValidarContraseña(usuarioPrueba.Contraseña);
-            if( !esContraseñaValido)
-            {
-                // Muestra mensaje de error si la validación falla
-                MessageBox.Show("La constraseña debe tener entre 8 y 15 caracteres y debe de contener como mínimo una letra mayúscula y un número",
-                                "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-
-            }
-
-
-
-
-
-
-
-
-
-
-
-            // Si todas las validaciones pasan, inicio de sesión exitoso
-            MessageBox.Show("Usuario Creado con éxito!");
-        }
+}
 
         private void comboBoxTipoUsuario_Click(object sender, EventArgs e)
         {
@@ -95,8 +109,6 @@ namespace TemplateTPIntegrador
             txt_apellido.BackColor = SystemColors.Control;
             panelEmail.BackColor = SystemColors.Control;
             txt_email.BackColor = SystemColors.Control;
-            panelNumeroRegistro.BackColor = SystemColors.Control;
-            txt_numeroRegistro.BackColor = SystemColors.Control;
             panelDni.BackColor = SystemColors.Control;
             txt_dni.BackColor = SystemColors.Control;
             panelDireccion.BackColor = SystemColors.Control;
@@ -104,9 +116,6 @@ namespace TemplateTPIntegrador
             panelTelefono.BackColor = SystemColors.Control;
             txt_telefono.BackColor = SystemColors.Control;
             panelNombreUsuario.BackColor = SystemColors.Control;
-            txt_nombreUsuario.BackColor = SystemColors.Control;
-            panelContraseña.BackColor = SystemColors.Control;
-            txt_contraseñaAlta.BackColor = SystemColors.Control;
         }
 
         private void txt_nombre_Click(object sender, EventArgs e)
@@ -121,8 +130,6 @@ namespace TemplateTPIntegrador
             txt_apellido.BackColor = SystemColors.Control;
             panelEmail.BackColor = SystemColors.Control;
             txt_email.BackColor = SystemColors.Control;
-            panelNumeroRegistro.BackColor = SystemColors.Control;
-            txt_numeroRegistro.BackColor = SystemColors.Control;
             panelDni.BackColor = SystemColors.Control;
             txt_dni.BackColor = SystemColors.Control;
             panelDireccion.BackColor = SystemColors.Control;
@@ -130,9 +137,6 @@ namespace TemplateTPIntegrador
             panelTelefono.BackColor = SystemColors.Control;
             txt_telefono.BackColor = SystemColors.Control;
             panelNombreUsuario.BackColor = SystemColors.Control;
-            txt_nombreUsuario.BackColor = SystemColors.Control;
-            panelContraseña.BackColor = SystemColors.Control;
-            txt_contraseñaAlta.BackColor = SystemColors.Control;
         }
 
         private void txt_apellido_Click(object sender, EventArgs e)
@@ -147,8 +151,6 @@ namespace TemplateTPIntegrador
             txt_apellido.BackColor = Color.White;
             panelEmail.BackColor = SystemColors.Control;
             txt_email.BackColor = SystemColors.Control;
-            panelNumeroRegistro.BackColor = SystemColors.Control;
-            txt_numeroRegistro.BackColor = SystemColors.Control;
             panelDni.BackColor = SystemColors.Control;
             txt_dni.BackColor = SystemColors.Control;
             panelDireccion.BackColor = SystemColors.Control;
@@ -156,10 +158,6 @@ namespace TemplateTPIntegrador
             panelTelefono.BackColor = SystemColors.Control;
             txt_telefono.BackColor = SystemColors.Control;
             panelNombreUsuario.BackColor = SystemColors.Control;
-            txt_nombreUsuario.BackColor = SystemColors.Control;
-            panelContraseña.BackColor = SystemColors.Control;
-            txt_contraseñaAlta.BackColor = SystemColors.Control;
-            panelContraseña.BackColor = SystemColors.Control;
         }
 
         private void txt_email_TextChanged(object sender, EventArgs e)
@@ -172,8 +170,6 @@ namespace TemplateTPIntegrador
             txt_apellido.BackColor = SystemColors.Control;
             panelEmail.BackColor = Color.White;
             txt_email.BackColor = Color.White;
-            panelNumeroRegistro.BackColor = SystemColors.Control;
-            txt_numeroRegistro.BackColor = SystemColors.Control;
             panelDni.BackColor = SystemColors.Control;
             txt_dni.BackColor = SystemColors.Control;
             panelDireccion.BackColor = SystemColors.Control;
@@ -181,9 +177,6 @@ namespace TemplateTPIntegrador
             panelTelefono.BackColor = SystemColors.Control;
             txt_telefono.BackColor = SystemColors.Control;
             panelNombreUsuario.BackColor = SystemColors.Control;
-            txt_nombreUsuario.BackColor = SystemColors.Control;
-            panelContraseña.BackColor = SystemColors.Control;
-            txt_contraseñaAlta.BackColor = SystemColors.Control;
         }
 
         private void txt_numeroRegistro_TextChanged(object sender, EventArgs e)
@@ -196,8 +189,6 @@ namespace TemplateTPIntegrador
             txt_apellido.BackColor = SystemColors.Control;
             panelEmail.BackColor = SystemColors.Control;
             txt_email.BackColor = SystemColors.Control;
-            panelNumeroRegistro.BackColor = Color.White;
-            txt_numeroRegistro.BackColor = Color.White;
             panelDni.BackColor = SystemColors.Control;
             txt_dni.BackColor = SystemColors.Control;
             panelDireccion.BackColor = SystemColors.Control;
@@ -205,9 +196,6 @@ namespace TemplateTPIntegrador
             panelTelefono.BackColor = SystemColors.Control;
             txt_telefono.BackColor = SystemColors.Control;
             panelNombreUsuario.BackColor = SystemColors.Control;
-            txt_nombreUsuario.BackColor = SystemColors.Control;
-            panelContraseña.BackColor = SystemColors.Control;
-            txt_contraseñaAlta.BackColor = SystemColors.Control;
         }
 
         private void txt_dni_TextChanged(object sender, EventArgs e)
@@ -220,8 +208,6 @@ namespace TemplateTPIntegrador
             txt_apellido.BackColor = SystemColors.Control;
             panelEmail.BackColor = SystemColors.Control;
             txt_email.BackColor = SystemColors.Control;
-            panelNumeroRegistro.BackColor = SystemColors.Control;
-            txt_numeroRegistro.BackColor = SystemColors.Control;
             panelDni.BackColor = Color.White;
             txt_dni.BackColor = Color.White;
             panelDireccion.BackColor = SystemColors.Control;
@@ -229,9 +215,6 @@ namespace TemplateTPIntegrador
             panelTelefono.BackColor = SystemColors.Control;
             txt_telefono.BackColor = SystemColors.Control;
             panelNombreUsuario.BackColor = SystemColors.Control;
-            txt_nombreUsuario.BackColor = SystemColors.Control;
-            panelContraseña.BackColor = SystemColors.Control;
-            txt_contraseñaAlta.BackColor = SystemColors.Control;
         }
         private void txt_direccion_TextChanged(object sender, EventArgs e)
         {
@@ -243,8 +226,6 @@ namespace TemplateTPIntegrador
             txt_apellido.BackColor = SystemColors.Control;
             panelEmail.BackColor = SystemColors.Control;
             txt_email.BackColor = SystemColors.Control;
-            panelNumeroRegistro.BackColor = SystemColors.Control;
-            txt_numeroRegistro.BackColor = SystemColors.Control;
             panelDni.BackColor = SystemColors.Control;
             txt_dni.BackColor = SystemColors.Control;
             panelDireccion.BackColor = Color.White;
@@ -252,9 +233,6 @@ namespace TemplateTPIntegrador
             panelTelefono.BackColor = SystemColors.Control;
             txt_telefono.BackColor = SystemColors.Control;
             panelNombreUsuario.BackColor = SystemColors.Control;
-            txt_nombreUsuario.BackColor = SystemColors.Control;
-            panelContraseña.BackColor = SystemColors.Control;
-            txt_contraseñaAlta.BackColor = SystemColors.Control;
         }
         private void txt_telefono_TextChanged(object sender, EventArgs e)
         {
@@ -266,8 +244,6 @@ namespace TemplateTPIntegrador
             txt_apellido.BackColor = SystemColors.Control;
             panelEmail.BackColor = SystemColors.Control;
             txt_email.BackColor = SystemColors.Control;
-            panelNumeroRegistro.BackColor = SystemColors.Control;
-            txt_numeroRegistro.BackColor = SystemColors.Control;
             panelDni.BackColor = SystemColors.Control;
             txt_dni.BackColor = SystemColors.Control;
             panelDireccion.BackColor = SystemColors.Control;
@@ -275,9 +251,6 @@ namespace TemplateTPIntegrador
             panelTelefono.BackColor = Color.White;
             txt_telefono.BackColor = Color.White;
             panelNombreUsuario.BackColor = SystemColors.Control;
-            txt_nombreUsuario.BackColor = SystemColors.Control;
-            panelContraseña.BackColor = SystemColors.Control;
-            txt_contraseñaAlta.BackColor = SystemColors.Control;
         }
         private void txt_nombreUsuario_TextChanged(object sender, EventArgs e)
         {
@@ -289,8 +262,6 @@ namespace TemplateTPIntegrador
             txt_apellido.BackColor = SystemColors.Control;
             panelEmail.BackColor = SystemColors.Control;
             txt_email.BackColor = SystemColors.Control;
-            panelNumeroRegistro.BackColor = SystemColors.Control;
-            txt_numeroRegistro.BackColor = SystemColors.Control;
             panelDni.BackColor = SystemColors.Control;
             txt_dni.BackColor = SystemColors.Control;
             panelDireccion.BackColor = SystemColors.Control;
@@ -298,9 +269,6 @@ namespace TemplateTPIntegrador
             panelTelefono.BackColor = SystemColors.Control;
             txt_telefono.BackColor = SystemColors.Control;
             panelNombreUsuario.BackColor = Color.White;
-            txt_nombreUsuario.BackColor = Color.White;
-            panelContraseña.BackColor = SystemColors.Control;
-            txt_contraseñaAlta.BackColor = SystemColors.Control;
         }
         private void txt_contraseñaAlta_Click(object sender, EventArgs e)
         {
@@ -314,8 +282,6 @@ namespace TemplateTPIntegrador
             txt_apellido.BackColor = SystemColors.Control;
             panelEmail.BackColor = SystemColors.Control;
             txt_email.BackColor = SystemColors.Control;
-            panelNumeroRegistro.BackColor = SystemColors.Control;
-            txt_numeroRegistro.BackColor = SystemColors.Control;
             panelDni.BackColor = SystemColors.Control;
             txt_dni.BackColor = SystemColors.Control;
             panelDireccion.BackColor = SystemColors.Control;
@@ -323,30 +289,6 @@ namespace TemplateTPIntegrador
             panelTelefono.BackColor = SystemColors.Control;
             txt_telefono.BackColor = SystemColors.Control;
             panelNombreUsuario.BackColor = SystemColors.Control;
-            txt_nombreUsuario.BackColor = SystemColors.Control;
-            panelContraseña.BackColor = Color.White;
-            txt_contraseñaAlta.BackColor = Color.White;
-        }
-        private void pictureBox2_MouseDown(object sender, MouseEventArgs e)
-        {
-            // Permite al usuario ver la contraseña cuando clickea y mantiene sobre el ícono del campo "Contraseña"
-            txt_contraseñaAlta.UseSystemPasswordChar = false;
-        }
-
-        private void pictureBox2_MouseUp(object sender, MouseEventArgs e)
-        {
-            // Esconde al usuario la contraseña cuando suelta el click del campo "Contraseña"
-            txt_contraseñaAlta.UseSystemPasswordChar = true;
-        }
-
-        private void pictureBox2_MouseHover(object sender, EventArgs e)
-        {
-            txt_contraseñaAlta.UseSystemPasswordChar = false;
-        }
-
-        private void pictureBox2_MouseLeave(object sender, EventArgs e)
-        {
-            txt_contraseñaAlta.UseSystemPasswordChar = true;
         }
     }
 }
