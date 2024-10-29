@@ -45,10 +45,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="LoginDB.cs" />
-    <Compile Include="LoginWS..cs" />
+    <Compile Include="UsuariosWS.cs" />
+    <Compile Include="LoginWS.cs" />
     <Compile Include="utils\DBHelper.cs" />
     <Compile Include="utils\WebHelper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Datos\Datos.csproj">
@@ -56,9 +60,5 @@
       <Name>Datos</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

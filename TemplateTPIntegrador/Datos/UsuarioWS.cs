@@ -8,20 +8,22 @@ namespace Datos
         public UsuarioWS()
         {
             Id = Guid.NewGuid();
-            FechaAlta = DateTime.Now;      
-            FechaBaja = null;  // Estado ACTIVO al inicio
+            fechaAlta = DateTime.Now;
+            fechaBaja = null;  // Estado ACTIVO al inicio
         }
+
+        public string idUsuario { get; set; }
         public Guid Id { get; set; }  // Correspondiente a "id" en JSON
-        public string Nombre { get; set; }  // Correspondiente a "nombre" en JSON
-        public string Apellido { get; set; }  // Correspondiente a "apellido" en JSON
-        public int Dni { get; set; }  // Correspondiente a "dni" en JSON
-        public string Direccion { get; set; }  // Correspondiente a "direccion" en JSON
-        public string Telefono { get; set; }  // Correspondiente a "telefono" en JSON
-        public string Email { get; set; }  // Correspondiente a "email" en JSON
-        public DateTime FechaNacimiento { get; set; }  // Correspondiente a "fechaNacimiento" en JSON
-        public DateTime FechaAlta { get; set; }  // Correspondiente a "fechaAlta" en JSON
-        public DateTime? FechaBaja { get; set; }  // Correspondiente a "fechaBaja" en JSON
-        public int Host { get; set; }  // Correspondiente a "host" en JSON, como un entero en este caso
+        public string nombre { get; set; }  // Correspondiente a "nombre" en JSON
+        public string apellido { get; set; }  // Correspondiente a "apellido" en JSON
+        public int dni { get; set; }  // Correspondiente a "dni" en JSON
+        public string direccion { get; set; }  // Correspondiente a "direccion" en JSON
+        public string telefono { get; set; }  // Correspondiente a "telefono" en JSON
+        public string email { get; set; }  // Correspondiente a "email" en JSON
+        public DateTime fechaNacimiento { get; set; }  // Correspondiente a "fechaNacimiento" en JSON
+        public DateTime fechaAlta { get; set; }  // Correspondiente a "fechaAlta" en JSON
+        public DateTime? fechaBaja { get; set; }  // Correspondiente a "fechaBaja" en JSON
+        public string host { get; set; }  // Correspondiente a "host" en JSON, como un entero en este caso
 
 
         // Propiedades adicionales
