@@ -138,9 +138,9 @@
             this.label3.ForeColor = System.Drawing.Color.White;
             this.label3.Location = new System.Drawing.Point(63, 204);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(167, 25);
+            this.label3.Size = new System.Drawing.Size(181, 25);
             this.label3.TabIndex = 0;
-            this.label3.Text = "EletroHogarSA";
+            this.label3.Text = "ElectroHogarSA";
             // 
             // panel2
             // 
