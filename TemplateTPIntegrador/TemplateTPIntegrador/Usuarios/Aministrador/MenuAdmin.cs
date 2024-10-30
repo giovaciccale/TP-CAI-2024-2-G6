@@ -25,14 +25,14 @@ namespace TemplateTPIntegrador
         [DllImport("user32.DLL",EntryPoint="SendMessage")]
         private extern static void SendMessage(System.IntPtr hwnd, int wmsg, int wparam, int lparam);
 
+        // Variables para mantener el estado de la sección actual
+        private bool enSeccionUsuarios = true;
+        private bool enSeccionProductos = false;
+
         private void MenuForm_Load(object sender, EventArgs e)
         {
             MostrarSeccionUsuarios();
         }
-
-        // Variables para mantener el estado de la sección actual
-        private bool enSeccionUsuarios = false;
-        private bool enSeccionProductos = false;
 
         private void MenuForm_Shown(object sender, EventArgs e)
         {
