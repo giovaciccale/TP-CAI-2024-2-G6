@@ -1,6 +1,6 @@
-﻿namespace TemplateTPIntegrador
+﻿namespace TemplateTPIntegrador.Usuarios.Aministrador
 {
-    partial class BajaUsuarios
+    partial class AltaProductosForm
     {
         /// <summary>
         /// Required designer variable.
@@ -30,14 +30,14 @@
         {
             this.SuspendLayout();
             // 
-            // BajaUsuarios
+            // AltaProductosForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1050, 600);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "BajaUsuarios";
-            this.Text = "BajaUsuarios";
+            this.Name = "AltaProductosForm";
+            this.Text = "AltaProductosForm";
             this.ResumeLayout(false);
 
         }
