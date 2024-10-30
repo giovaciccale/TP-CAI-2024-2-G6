@@ -101,5 +101,17 @@ namespace TemplateTPIntegrador
         {
             txt_contraseña.UseSystemPasswordChar = true;
         }
+
+        private void pictureBox_MouseHover(object sender, EventArgs e)
+        {
+            txt_contraseña.UseSystemPasswordChar = false;
+
+        }
+
+        private void pictureBox2_MouseLeave(object sender, EventArgs e)
+        {
+            txt_contraseña.UseSystemPasswordChar = true;
+
+        }
     }
 }

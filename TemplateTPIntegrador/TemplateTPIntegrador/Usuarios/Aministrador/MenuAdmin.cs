@@ -27,9 +27,12 @@ namespace TemplateTPIntegrador
 
         private void MenuForm_Load(object sender, EventArgs e)
         {
-            btnSeccionUsuarios.Checked = true;
-            tabRegistrarUsuarios.Checked = true;
+            MostrarSeccionUsuarios();
         }
+
+        // Variables para mantener el estado de la sección actual
+        private bool enSeccionUsuarios = false;
+        private bool enSeccionProductos = false;
 
         private void MenuForm_Shown(object sender, EventArgs e)
         {
@@ -75,35 +78,57 @@ namespace TemplateTPIntegrador
             fh.Show();
         }
 
-
         private void btnSeccionUsuarios_Click(object sender, EventArgs e)
         {
-            // Verificar si ya estamos en la seccion Usuarios
-            if (!btnSeccionUsuarios.Checked)
+            if (!enSeccionUsuarios)
             {
-                // Si no estamos en la seccion usuarios, entonces mostramos las tabs y por default abrimos la tab Registrar Usuarios
-                tabRegistrarUsuarios.Visible = true;
-                tabModificarUsuarios.Visible = true;
-                tabEliminarUsuarios.Visible = true;
-
-                // Marcamos que estamos en la seccion Usuarios
-                btnSeccionUsuarios.Checked = true;
-
-                // Abrimos por default la tab de Registrar Usuarios
-                tabRegistrarUsuarios.Checked = true;
-                abrirFormInPanel(new RegistrarUsuariosForm());
+                MostrarSeccionUsuarios();
+                enSeccionUsuarios = true;
+                enSeccionProductos = false;
             }
-            else
+        }
+        private void btnSeccionProductos_Click(object sender, EventArgs e)
+        {
+            if (!enSeccionProductos)
             {
-                // Si ya estamos en la seccion Usuarios, verificamos si no estamos en la tab de Registrar Usuarios
-                if (!tabRegistrarUsuarios.Checked)
-                {
-                    // Si no estamos en la tab Registrar Usuarios, la marcamos y abrimos el formulario
-                    tabRegistrarUsuarios.Checked = true;
-                    abrirFormInPanel(new RegistrarUsuariosForm());
-                }
-                // Si ya estamos en la seccion Usuarios y ya estamos en la tab Registrar Usuarios, no hacemos nada
+                MostrarSeccionProductos();
+                enSeccionProductos = true;
+                enSeccionUsuarios = false;
             }
+        }
+
+        private void MostrarSeccionUsuarios()
+        {
+            // Ocultar tabs de Productos
+            tabAltaProductos.Visible = false;
+            tabModificarProductos.Visible = false;
+            tabBajaProductos.Visible = false;
+
+            // Mostrar tabs de Usuarios
+            tabRegistrarUsuarios.Visible = true;
+            tabModificarUsuarios.Visible = true;
+            tabEliminarUsuario.Visible = true;
+
+            // Seleccionar tab por defecto y cargar el formulario correspondiente
+            tabRegistrarUsuarios.Checked = true;
+            abrirFormInPanel(new RegistrarUsuariosForm());
+        }
+
+        private void MostrarSeccionProductos()
+        {
+            // Ocultar tabs de Usuarios
+            tabRegistrarUsuarios.Visible = false;
+            tabModificarUsuarios.Visible = false;
+            tabEliminarUsuario.Visible = false;
+
+            // Mostrar tabs de Productos
+            tabAltaProductos.Visible = true;
+            tabModificarProductos.Visible = true;
+            tabBajaProductos.Visible = true;
+
+            // Seleccionar tab por defecto y cargar el formulario correspondiente
+            tabAltaProductos.Checked = true;
+            abrirFormInPanel(new AltaProductosForm());
         }
 
 
@@ -121,6 +146,23 @@ namespace TemplateTPIntegrador
         private void tabModificarUsuarios_Click(object sender, EventArgs e)
         {
             abrirFormInPanel(new ModificarUsuariosForm());
+        }
+
+        private void tabAltaProductos_Click(object sender, EventArgs e)
+        {
+            abrirFormInPanel(new AltaProductosForm());
+        }
+
+        private void tabModificarProductos_Click(object sender, EventArgs e)
+        {
+            abrirFormInPanel(new ModificarProductosForm());
+
+        }
+
+        private void tabBajaProductos_Click(object sender, EventArgs e)
+        {
+            abrirFormInPanel(new BajaProductosForm());
+
         }
     }
 }

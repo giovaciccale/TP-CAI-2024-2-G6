@@ -374,6 +374,26 @@ namespace TemplateTPIntegrador
             panelContraseña.BackColor = Color.White;
             txt_contraseña.BackColor = Color.White;
         }
+
+        private void pictureBox5_MouseDown(object sender, MouseEventArgs e)
+        {
+            txt_contraseña.UseSystemPasswordChar = false;
+        }
+
+        private void pictureBox5_MouseUp(object sender, MouseEventArgs e)
+        {
+            txt_contraseña.UseSystemPasswordChar = true;
+        }
+
+        private void pictureBox5_MouseHover(object sender, EventArgs e)
+        {
+            txt_contraseña.UseSystemPasswordChar = false;
+        }
+
+        private void pictureBox5_MouseLeave(object sender, EventArgs e)
+        {
+            txt_contraseña.UseSystemPasswordChar = true;
+        }
     }
 }
 
