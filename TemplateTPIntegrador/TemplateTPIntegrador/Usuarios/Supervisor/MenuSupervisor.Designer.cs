@@ -1,6 +1,6 @@
 ﻿namespace TemplateTPIntegrador
 {
-    partial class MenuUsuario
+    partial class MenuSupervisor
     {
         /// <summary>
         /// Required designer variable.
