@@ -349,19 +349,8 @@ namespace TemplateTPIntegrador
             txt_contraseñaAlta.UseSystemPasswordChar = true;
         }
 
-        private void volver_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            MenuUsuario menuUsuario = new MenuUsuario();
 
-            menuUsuario.Show();
-
-            this.Hide();
-        }
-
-        private void panelCrearCuenta_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
+       
     }
 }
 
