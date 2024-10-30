@@ -61,7 +61,7 @@
             this.txt_usuario.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
             this.txt_usuario.Location = new System.Drawing.Point(55, 12);
             this.txt_usuario.Name = "txt_usuario";
-            this.txt_usuario.Size = new System.Drawing.Size(433, 30);
+            this.txt_usuario.Size = new System.Drawing.Size(433, 20);
             this.txt_usuario.TabIndex = 0;
             this.txt_usuario.Click += new System.EventHandler(this.txt_usuario_Click);
             this.txt_usuario.TextChanged += new System.EventHandler(this.txt_usuario_Click);
@@ -75,7 +75,7 @@
             this.txt_contraseña.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
             this.txt_contraseña.Location = new System.Drawing.Point(55, 14);
             this.txt_contraseña.Name = "txt_contraseña";
-            this.txt_contraseña.Size = new System.Drawing.Size(433, 25);
+            this.txt_contraseña.Size = new System.Drawing.Size(433, 17);
             this.txt_contraseña.TabIndex = 0;
             this.txt_contraseña.UseSystemPasswordChar = true;
             this.txt_contraseña.Click += new System.EventHandler(this.txt_contraseña_Click);
@@ -89,7 +89,7 @@
             this.registrarUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.registrarUsuario.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.registrarUsuario.ForeColor = System.Drawing.Color.White;
-            this.registrarUsuario.Location = new System.Drawing.Point(151, 320);
+            this.registrarUsuario.Location = new System.Drawing.Point(176, 320);
             this.registrarUsuario.Name = "registrarUsuario";
             this.registrarUsuario.Size = new System.Drawing.Size(148, 35);
             this.registrarUsuario.TabIndex = 3;
@@ -116,7 +116,7 @@
             this.label5.ForeColor = System.Drawing.Color.White;
             this.label5.Location = new System.Drawing.Point(189, 477);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(73, 21);
+            this.label5.Size = new System.Drawing.Size(51, 16);
             this.label5.TabIndex = 1;
             this.label5.Text = "Grupo 6";
             // 
@@ -127,7 +127,7 @@
             this.label4.ForeColor = System.Drawing.Color.White;
             this.label4.Location = new System.Drawing.Point(189, 459);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(113, 21);
+            this.label4.Size = new System.Drawing.Size(78, 16);
             this.label4.TabIndex = 1;
             this.label4.Text = "Desarrollo Por";
             // 
@@ -138,9 +138,9 @@
             this.label3.ForeColor = System.Drawing.Color.White;
             this.label3.Location = new System.Drawing.Point(63, 204);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(238, 39);
+            this.label3.Size = new System.Drawing.Size(181, 25);
             this.label3.TabIndex = 0;
-            this.label3.Text = "EletroHogarSA";
+            this.label3.Text = "ElectroHogarSA";
             // 
             // panel2
             // 
@@ -154,7 +154,6 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(500, 600);
             this.panel2.TabIndex = 0;
-  
             // 
             // panel4
             // 
@@ -176,6 +175,8 @@
             this.pictureBox2.TabIndex = 3;
             this.pictureBox2.TabStop = false;
             this.pictureBox2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pictureBox2_MouseDown);
+            this.pictureBox2.MouseLeave += new System.EventHandler(this.pictureBox2_MouseLeave);
+            this.pictureBox2.MouseHover += new System.EventHandler(this.pictureBox_MouseHover);
             this.pictureBox2.MouseUp += new System.Windows.Forms.MouseEventHandler(this.pictureBox2_MouseUp);
             // 
             // panel3
@@ -221,7 +222,7 @@
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
             this.label6.Location = new System.Drawing.Point(38, 135);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(261, 39);
+            this.label6.Size = new System.Drawing.Size(174, 25);
             this.label6.TabIndex = 2;
             this.label6.Text = "Inicio De Sesión";
             // 

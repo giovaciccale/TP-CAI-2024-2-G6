@@ -49,6 +49,9 @@
     <Compile Include="utils\ValidacionesUtils.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
     <ProjectReference Include="..\Datos\Datos.csproj">
       <Project>{6e0d8fe3-7eaa-45b0-a363-d14d2cb1fce9}</Project>
       <Name>Datos</Name>
@@ -57,9 +60,6 @@
       <Project>{d70d39da-312d-45da-a378-fd222ec9672f}</Project>
       <Name>Persistencia</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
