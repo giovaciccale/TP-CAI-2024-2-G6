@@ -22,11 +22,7 @@ namespace TemplateTPIntegrador
 
         }
 
-        private void btnCerrar_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-
+ 
 
         private void MenuForm_Load(object sender, EventArgs e)
         {
