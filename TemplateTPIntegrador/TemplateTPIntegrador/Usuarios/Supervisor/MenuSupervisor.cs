@@ -4,9 +4,11 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TemplateTPIntegrador.Usuarios.Aministrador;
 
 namespace TemplateTPIntegrador
 {
@@ -15,29 +17,175 @@ namespace TemplateTPIntegrador
         public MenuSupervisor()
         {
             InitializeComponent();
+            this.Shown += new EventHandler(MenuForm_Shown);
         }
 
-        private void btn_registrarUsuario_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-          
-        }
+
+        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
+        private extern static void ReleaseCapture();
+        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
+        private extern static void SendMessage(System.IntPtr hwnd, int wmsg, int wparam, int lparam);
+
+        // Variables para mantener el estado de la sección actual
+        private bool enSeccionProductos = true;
+        private bool enSeccionDevoluciones = false;
+        private bool enSeccionReportes = false;
 
         private void MenuUsuario_Load(object sender, EventArgs e)
         {
-
+            MostrarSeccionProductos();
         }
 
-        private void btn_registrarUsuario_Click(object sender, EventArgs e)
-        {
 
+        private void MenuForm_Shown(object sender, EventArgs e)
+        {
+            abrirFormInPanel(new AltaProductosForm());
         }
-        private void registrarUsuario_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+
+
+        private void pictureBox1_Click(object sender, EventArgs e)
         {
-            RegistrarUsuariosForm registrar_usuarios_form = new RegistrarUsuariosForm();
+            if (menuVertical.Width == 250)
+            {
+                menuVertical.Width = 70;
+            }
+            else
+            {
+                menuVertical.Width = 250;
+            }
+        }
 
-            registrar_usuarios_form.Show();
 
-            this.Hide();
+        private void btnSeccionProductos_Click(object sender, EventArgs e)
+        {
+            if (!enSeccionProductos)
+            {
+                MostrarSeccionProductos();
+                enSeccionProductos = true;
+                enSeccionDevoluciones = false;
+                enSeccionReportes = false;
+            }
+        }
+
+
+        private void btnSeccionDevoluciones_Click(object sender, EventArgs e)
+        {
+            if (!enSeccionDevoluciones)
+            {
+                MostrarSeccionDevoluciones();
+                enSeccionDevoluciones = true;
+                enSeccionProductos = false;
+                enSeccionReportes = false;
+            }
+        }
+
+
+        private void btnSeccionReportes_Click(object sender, EventArgs e)
+        {
+            if (!enSeccionReportes)
+            {
+                MostrarSeccionReportes();
+                enSeccionReportes=true;
+                enSeccionProductos=false;
+                enSeccionDevoluciones=false;
+            }
+        }
+
+
+        private void MostrarSeccionProductos()
+        {
+            // Esconder tabs de Reportes
+            tabStockCritico.Visible = false;
+            tabReporteVentasxVendedor.Visible = false;
+            tabProductosMasVendidos.Visible = false;
+
+            // Esconder tabs de Devoluciones
+            tabDevoluciones.Visible = false;
+
+            // Mostrar tabs de Productos
+            tabAltaProductos.Visible = true;
+            tabModificarProductos.Visible = true;
+            tabBajaProductos.Visible = true;
+
+            // Seleccionar tab por defecto y cargar el formulario correspondiente
+            tabAltaProductos.Checked = true;
+            abrirFormInPanel(new AltaProductosForm());
+        }
+
+
+        private void MostrarSeccionDevoluciones()
+        {
+            // Esconder tabs de Productos
+            tabAltaProductos.Visible = false;
+            tabModificarProductos.Visible = false;
+            tabBajaProductos.Visible = false;
+
+            // Esconder tabs de Reportes
+            tabStockCritico.Visible = false;
+            tabReporteVentasxVendedor.Visible = false;
+            tabProductosMasVendidos.Visible = false;
+
+            // Mostrar tabs de Devoluciones
+            tabDevoluciones.Visible = true;
+
+            // Seleccionar tab por defecto y cargar el formulario correspondiente
+            tabDevoluciones.Checked = true;
+            abrirFormInPanel(new AltaProductosForm());
+        }
+
+
+        private void MostrarSeccionReportes()
+        {
+            // Esconder tabs de Productos
+            tabAltaProductos.Visible = false;
+            tabModificarProductos.Visible = false;
+            tabBajaProductos.Visible = false;
+
+            // Esconder tabs de Devoluciones
+            tabDevoluciones.Visible = false;
+
+            // Mostrar tabs de Reportes
+            tabStockCritico.Visible = true;
+            tabReporteVentasxVendedor.Visible = true;
+            tabProductosMasVendidos.Visible = true;
+
+            // Seleccionar tab por defecto y cargar el formulario correspondiente
+            tabAltaProductos.Checked = true;
+            abrirFormInPanel(new AltaProductosForm());
+        }
+
+
+        private void abrirFormInPanel(object formHijo)
+        {
+            if (this.panelContenedor.Controls.Count > 0)
+                this.panelContenedor.Controls.RemoveAt(0);
+            Form fh = formHijo as Form;
+            fh.TopLevel = false;
+            fh.Dock = DockStyle.Fill;
+            this.panelContenedor.Controls.Add(fh);
+            this.panelContenedor.Tag = fh;
+            fh.Show();
+        }
+
+
+        private void tabAltaProductos_Click(object sender, EventArgs e)
+        {
+            abrirFormInPanel(new AltaProductosForm());
+        }
+
+        private void tabModificarProductos_Click(object sender, EventArgs e)
+        {
+            abrirFormInPanel(new ModificarProductosForm());
+        }
+
+        private void tabBajaProductos_Click(object sender, EventArgs e)
+        {
+            abrirFormInPanel(new BajaProductosForm());
+        }
+
+        private void btnCerrar_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }
