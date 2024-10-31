@@ -39,7 +39,7 @@ namespace TemplateTPIntegrador
 
         private void MenuForm_Shown(object sender, EventArgs e)
         {
-            abrirFormInPanel(new RegistrarUsuariosForm());
+            abrirFormInPanel(new AltaProductosForm());
         }
 
 
