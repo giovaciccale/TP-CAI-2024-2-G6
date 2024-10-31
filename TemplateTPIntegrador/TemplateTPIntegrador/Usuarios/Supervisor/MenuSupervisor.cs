@@ -105,7 +105,7 @@ namespace TemplateTPIntegrador
             // Mostrar tabs de Productos
             tabAltaProductos.Visible = true;
             tabModificarProductos.Visible = true;
-            tabProductosMasVendidos.Visible = true;
+            tabBajaProductos.Visible = true;
 
             // Seleccionar tab por defecto y cargar el formulario correspondiente
             tabAltaProductos.Checked = true;
@@ -118,7 +118,7 @@ namespace TemplateTPIntegrador
             // Esconder tabs de Productos
             tabAltaProductos.Visible = false;
             tabModificarProductos.Visible = false;
-            tabProductosMasVendidos.Visible = false;
+            tabBajaProductos.Visible = false;
 
             // Esconder tabs de Reportes
             tabStockCritico.Visible = false;
@@ -139,7 +139,7 @@ namespace TemplateTPIntegrador
             // Esconder tabs de Productos
             tabAltaProductos.Visible = false;
             tabModificarProductos.Visible = false;
-            tabProductosMasVendidos.Visible = false;
+            tabBajaProductos.Visible = false;
 
             // Esconder tabs de Devoluciones
             tabDevoluciones.Visible = false;
@@ -183,6 +183,9 @@ namespace TemplateTPIntegrador
             abrirFormInPanel(new BajaProductosForm());
         }
 
-
+        private void btnCerrar_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
