@@ -79,12 +79,6 @@
     <Compile Include="Usuarios\Aministrador\ModificarUsuariosForm.Designer.cs">
       <DependentUpon>ModificarUsuariosForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Usuarios\MenuUsuario.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Usuarios\MenuUsuario.Designer.cs">
-      <DependentUpon>MenuUsuario.cs</DependentUpon>
-    </Compile>
     <Compile Include="Usuarios\Aministrador\BajaUsuarios.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -111,6 +105,10 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Usuarios\Supervisor\MenuSupervisor.cs" />
+    <Compile Include="Usuarios\Supervisor\MenuSupervisor.Designer.cs">
+      <DependentUpon>MenuSupervisor.cs</DependentUpon>
+    </Compile>
     <Compile Include="utils\validacionesUtils.cs" />
     <EmbeddedResource Include="Usuarios\Aministrador\AltaProductosForm.resx">
       <DependentUpon>AltaProductosForm.cs</DependentUpon>
@@ -130,9 +128,6 @@
     <EmbeddedResource Include="Usuarios\Aministrador\ModificarUsuariosForm.resx">
       <DependentUpon>ModificarUsuariosForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Usuarios\MenuUsuario.resx">
-      <DependentUpon>MenuUsuario.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Usuarios\Aministrador\RegistrarUsuariosForm.resx">
       <DependentUpon>RegistrarUsuariosForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -149,6 +144,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Usuarios\Supervisor\MenuSupervisor.resx">
+      <DependentUpon>MenuSupervisor.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
