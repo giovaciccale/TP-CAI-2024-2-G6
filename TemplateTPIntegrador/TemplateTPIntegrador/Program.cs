@@ -16,8 +16,7 @@ namespace TemplateTPIntegrador
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new MenuSupervisor());
-            //Application.Run(new LoginForm());
+            Application.Run(new LoginForm());
         }
     }
 }
