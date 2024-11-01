@@ -16,11 +16,11 @@ namespace TemplateTPIntegrador.Usuarios.Aministrador
         public AltaProductosForm()
         {
             InitializeComponent();
-            comboBox2.Items.Add("1 - AUDIO");
-            comboBox2.Items.Add("2 - CELULARES");
-            comboBox2.Items.Add("3 - ELECTRO HOGAR");
-            comboBox2.Items.Add("4 - INFORMÁTICA");
-            comboBox2.Items.Add("5 - SMART TV");
+            comboBox2.Items.Add("AUDIO");
+            comboBox2.Items.Add("CELULARES");
+            comboBox2.Items.Add("ELECTRO HOGAR");
+            comboBox2.Items.Add("INFORMÁTICA");
+            comboBox2.Items.Add("SMART TV");
 
             // Vincular el evento SelectedIndexChanged
            // comboBox1.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
@@ -31,7 +31,7 @@ namespace TemplateTPIntegrador.Usuarios.Aministrador
 
         }
 
-        private void guna2NumericUpDown1_ValueChanged(object sender, EventArgs e)
+        private void txt_host_Click(object sender, EventArgs e)
         {
 
         }
