@@ -23,14 +23,6 @@ namespace TemplateTPIntegrador.Usuarios.Aministrador
             cmbcategoria.Items.Add("INFORMÁTICA");
             cmbcategoria.Items.Add("SMART TV");
 
-
-            txtIdProducto.TabIndex = 2;
-            cmbDescripcion.TabIndex = 0;
-            cmbIdProveedor.TabIndex = 3;
-            guna2NumericUpDown1.TabIndex = 4;
-            cmbcategoria.TabIndex = 1;
-            btn_guardarproducto.TabIndex = 5;
-            btnlimpiar.TabIndex = 6;
         }
 
         private void btnLimpiar_Click(object sender, EventArgs e) 
@@ -54,6 +46,11 @@ namespace TemplateTPIntegrador.Usuarios.Aministrador
         }
 
         private void txt_host_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cmbcategoria_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }

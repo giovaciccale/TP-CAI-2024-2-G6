@@ -105,7 +105,7 @@
             this.panelApellido.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panelApellido.Name = "panelApellido";
             this.panelApellido.Size = new System.Drawing.Size(735, 69);
-            this.panelApellido.TabIndex = 100002;
+            this.panelApellido.TabIndex = 2;
             // 
             // pictureBox4
             // 
@@ -128,7 +128,7 @@
             this.txtIdProducto.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtIdProducto.Name = "txtIdProducto";
             this.txtIdProducto.Size = new System.Drawing.Size(624, 30);
-            this.txtIdProducto.TabIndex = 2;
+            this.txtIdProducto.TabIndex = 0;
             // 
             // label2
             // 
@@ -151,7 +151,7 @@
             this.panel2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(735, 69);
-            this.panel2.TabIndex = 100004;
+            this.panel2.TabIndex = 3;
             // 
             // cmbIdProveedor
             // 
@@ -165,7 +165,7 @@
             this.cmbIdProveedor.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cmbIdProveedor.Name = "cmbIdProveedor";
             this.cmbIdProveedor.Size = new System.Drawing.Size(622, 31);
-            this.cmbIdProveedor.TabIndex = 3;
+            this.cmbIdProveedor.TabIndex = 0;
             // 
             // pictureBox2
             // 
@@ -226,7 +226,7 @@
             this.panel3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(735, 69);
-            this.panel3.TabIndex = 100009;
+            this.panel3.TabIndex = 1;
             // 
             // cmbcategoria
             // 
@@ -241,7 +241,8 @@
             this.cmbcategoria.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cmbcategoria.Name = "cmbcategoria";
             this.cmbcategoria.Size = new System.Drawing.Size(622, 31);
-            this.cmbcategoria.TabIndex = 1;
+            this.cmbcategoria.TabIndex = 0;
+            this.cmbcategoria.SelectedIndexChanged += new System.EventHandler(this.cmbcategoria_SelectedIndexChanged);
             // 
             // pictureBox3
             // 
@@ -263,7 +264,7 @@
             this.panel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(735, 69);
-            this.panel1.TabIndex = 100010;
+            this.panel1.TabIndex = 0;
             // 
             // cmbDescripcion
             // 
