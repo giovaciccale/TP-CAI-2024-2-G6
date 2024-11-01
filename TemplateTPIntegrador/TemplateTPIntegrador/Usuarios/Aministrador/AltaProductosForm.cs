@@ -22,7 +22,7 @@ namespace TemplateTPIntegrador.Usuarios.Aministrador
             cmbcategoria.Items.Add("ELECTRO HOGAR");
             cmbcategoria.Items.Add("INFORMÁTICA");
             cmbcategoria.Items.Add("SMART TV");
-
+            
         }
 
         private void btnLimpiar_Click(object sender, EventArgs e) 

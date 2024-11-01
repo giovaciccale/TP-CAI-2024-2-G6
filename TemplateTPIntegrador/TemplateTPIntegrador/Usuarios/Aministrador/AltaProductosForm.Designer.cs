@@ -197,6 +197,11 @@
             this.guna2NumericUpDown1.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.guna2NumericUpDown1.Location = new System.Drawing.Point(52, 520);
             this.guna2NumericUpDown1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.guna2NumericUpDown1.Maximum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
             this.guna2NumericUpDown1.Name = "guna2NumericUpDown1";
             this.guna2NumericUpDown1.Size = new System.Drawing.Size(735, 69);
             this.guna2NumericUpDown1.TabIndex = 4;
