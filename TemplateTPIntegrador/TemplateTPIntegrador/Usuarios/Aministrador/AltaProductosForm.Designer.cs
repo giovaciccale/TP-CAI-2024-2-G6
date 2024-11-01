@@ -33,21 +33,21 @@
             this.lblApellido = new System.Windows.Forms.Label();
             this.panelApellido = new System.Windows.Forms.Panel();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.txt_apellido = new System.Windows.Forms.TextBox();
+            this.txtIdProducto = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.cmbIdProveedor = new System.Windows.Forms.ComboBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
             this.guna2NumericUpDown1 = new Guna.UI2.WinForms.Guna2NumericUpDown();
-            this.btn_crearUsuario = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.btn_guardarproducto = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.cmbcategoria = new System.Windows.Forms.ComboBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.comboBox4 = new System.Windows.Forms.ComboBox();
+            this.cmbDescripcion = new System.Windows.Forms.ComboBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnlimpiar = new System.Windows.Forms.Button();
             this.panelApellido.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.panel2.SuspendLayout();
@@ -100,7 +100,7 @@
             // 
             this.panelApellido.BackColor = System.Drawing.SystemColors.Control;
             this.panelApellido.Controls.Add(this.pictureBox4);
-            this.panelApellido.Controls.Add(this.txt_apellido);
+            this.panelApellido.Controls.Add(this.txtIdProducto);
             this.panelApellido.Location = new System.Drawing.Point(52, 282);
             this.panelApellido.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panelApellido.Name = "panelApellido";
@@ -118,17 +118,17 @@
             this.pictureBox4.TabIndex = 998;
             this.pictureBox4.TabStop = false;
             // 
-            // txt_apellido
+            // txtIdProducto
             // 
-            this.txt_apellido.BackColor = System.Drawing.SystemColors.Control;
-            this.txt_apellido.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txt_apellido.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_apellido.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.txt_apellido.Location = new System.Drawing.Point(82, 18);
-            this.txt_apellido.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.txt_apellido.Name = "txt_apellido";
-            this.txt_apellido.Size = new System.Drawing.Size(624, 30);
-            this.txt_apellido.TabIndex = 0;
+            this.txtIdProducto.BackColor = System.Drawing.SystemColors.Control;
+            this.txtIdProducto.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtIdProducto.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtIdProducto.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
+            this.txtIdProducto.Location = new System.Drawing.Point(82, 18);
+            this.txtIdProducto.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtIdProducto.Name = "txtIdProducto";
+            this.txtIdProducto.Size = new System.Drawing.Size(624, 30);
+            this.txtIdProducto.TabIndex = 2;
             // 
             // label2
             // 
@@ -145,13 +145,27 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.Control;
-            this.panel2.Controls.Add(this.comboBox3);
+            this.panel2.Controls.Add(this.cmbIdProveedor);
             this.panel2.Controls.Add(this.pictureBox2);
             this.panel2.Location = new System.Drawing.Point(52, 397);
             this.panel2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(735, 69);
             this.panel2.TabIndex = 100004;
+            // 
+            // cmbIdProveedor
+            // 
+            this.cmbIdProveedor.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cmbIdProveedor.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cmbIdProveedor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmbIdProveedor.Font = new System.Drawing.Font("Century Gothic", 10F);
+            this.cmbIdProveedor.FormattingEnabled = true;
+            this.cmbIdProveedor.ItemHeight = 23;
+            this.cmbIdProveedor.Location = new System.Drawing.Point(82, 23);
+            this.cmbIdProveedor.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.cmbIdProveedor.Name = "cmbIdProveedor";
+            this.cmbIdProveedor.Size = new System.Drawing.Size(622, 31);
+            this.cmbIdProveedor.TabIndex = 3;
             // 
             // pictureBox2
             // 
@@ -185,63 +199,49 @@
             this.guna2NumericUpDown1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.guna2NumericUpDown1.Name = "guna2NumericUpDown1";
             this.guna2NumericUpDown1.Size = new System.Drawing.Size(735, 69);
-            this.guna2NumericUpDown1.TabIndex = 100006;
+            this.guna2NumericUpDown1.TabIndex = 4;
             this.guna2NumericUpDown1.ValueChanged += new System.EventHandler(this.guna2NumericUpDown2_ValueChanged);
             // 
-            // btn_crearUsuario
+            // btn_guardarproducto
             // 
-            this.btn_crearUsuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.btn_crearUsuario.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_crearUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_crearUsuario.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_crearUsuario.ForeColor = System.Drawing.Color.White;
-            this.btn_crearUsuario.Location = new System.Drawing.Point(277, 614);
-            this.btn_crearUsuario.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.btn_crearUsuario.Name = "btn_crearUsuario";
-            this.btn_crearUsuario.Size = new System.Drawing.Size(250, 54);
-            this.btn_crearUsuario.TabIndex = 100007;
-            this.btn_crearUsuario.Text = "AGREGAR PRODUCTO";
-            this.btn_crearUsuario.UseVisualStyleBackColor = false;
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(813, 53);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(250, 54);
-            this.button1.TabIndex = 100008;
-            this.button1.Text = "BUSCAR EXISTENTE";
-            this.button1.UseVisualStyleBackColor = false;
-            // 
-            // comboBox3
-            // 
-            this.comboBox3.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.comboBox3.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.comboBox3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.comboBox3.Font = new System.Drawing.Font("Century Gothic", 10F);
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.ItemHeight = 23;
-            this.comboBox3.Location = new System.Drawing.Point(82, 23);
-            this.comboBox3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(622, 31);
-            this.comboBox3.TabIndex = 100009;
+            this.btn_guardarproducto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
+            this.btn_guardarproducto.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_guardarproducto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_guardarproducto.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_guardarproducto.ForeColor = System.Drawing.Color.White;
+            this.btn_guardarproducto.Location = new System.Drawing.Point(82, 621);
+            this.btn_guardarproducto.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btn_guardarproducto.Name = "btn_guardarproducto";
+            this.btn_guardarproducto.Size = new System.Drawing.Size(250, 54);
+            this.btn_guardarproducto.TabIndex = 5;
+            this.btn_guardarproducto.Text = "GUARDAR PRODUCTO";
+            this.btn_guardarproducto.UseVisualStyleBackColor = false;
             // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.SystemColors.Control;
-            this.panel3.Controls.Add(this.comboBox2);
+            this.panel3.Controls.Add(this.cmbcategoria);
             this.panel3.Controls.Add(this.pictureBox3);
             this.panel3.Location = new System.Drawing.Point(52, 166);
             this.panel3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(735, 69);
             this.panel3.TabIndex = 100009;
+            // 
+            // cmbcategoria
+            // 
+            this.cmbcategoria.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cmbcategoria.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cmbcategoria.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbcategoria.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmbcategoria.Font = new System.Drawing.Font("Century Gothic", 10F);
+            this.cmbcategoria.FormattingEnabled = true;
+            this.cmbcategoria.ItemHeight = 23;
+            this.cmbcategoria.Location = new System.Drawing.Point(82, 23);
+            this.cmbcategoria.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.cmbcategoria.Name = "cmbcategoria";
+            this.cmbcategoria.Size = new System.Drawing.Size(622, 31);
+            this.cmbcategoria.TabIndex = 1;
             // 
             // pictureBox3
             // 
@@ -254,24 +254,10 @@
             this.pictureBox3.TabIndex = 998;
             this.pictureBox3.TabStop = false;
             // 
-            // comboBox2
-            // 
-            this.comboBox2.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.comboBox2.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.comboBox2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.comboBox2.Font = new System.Drawing.Font("Century Gothic", 10F);
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.ItemHeight = 23;
-            this.comboBox2.Location = new System.Drawing.Point(82, 23);
-            this.comboBox2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(622, 31);
-            this.comboBox2.TabIndex = 100010;
-            // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.Control;
-            this.panel1.Controls.Add(this.comboBox4);
+            this.panel1.Controls.Add(this.cmbDescripcion);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Location = new System.Drawing.Point(52, 51);
             this.panel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -279,19 +265,19 @@
             this.panel1.Size = new System.Drawing.Size(735, 69);
             this.panel1.TabIndex = 100010;
             // 
-            // comboBox4
+            // cmbDescripcion
             // 
-            this.comboBox4.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.comboBox4.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.comboBox4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.comboBox4.Font = new System.Drawing.Font("Century Gothic", 10F);
-            this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.ItemHeight = 23;
-            this.comboBox4.Location = new System.Drawing.Point(82, 23);
-            this.comboBox4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(622, 31);
-            this.comboBox4.TabIndex = 100010;
+            this.cmbDescripcion.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cmbDescripcion.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cmbDescripcion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmbDescripcion.Font = new System.Drawing.Font("Century Gothic", 10F);
+            this.cmbDescripcion.FormattingEnabled = true;
+            this.cmbDescripcion.ItemHeight = 23;
+            this.cmbDescripcion.Location = new System.Drawing.Point(82, 23);
+            this.cmbDescripcion.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.cmbDescripcion.Name = "cmbDescripcion";
+            this.cmbDescripcion.Size = new System.Drawing.Size(622, 31);
+            this.cmbDescripcion.TabIndex = 0;
             // 
             // pictureBox1
             // 
@@ -304,15 +290,31 @@
             this.pictureBox1.TabIndex = 998;
             this.pictureBox1.TabStop = false;
             // 
+            // btnlimpiar
+            // 
+            this.btnlimpiar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
+            this.btnlimpiar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnlimpiar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnlimpiar.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnlimpiar.ForeColor = System.Drawing.Color.White;
+            this.btnlimpiar.Location = new System.Drawing.Point(438, 621);
+            this.btnlimpiar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnlimpiar.Name = "btnlimpiar";
+            this.btnlimpiar.Size = new System.Drawing.Size(250, 54);
+            this.btnlimpiar.TabIndex = 6;
+            this.btnlimpiar.Text = "LIMPIAR CAMPOS";
+            this.btnlimpiar.UseVisualStyleBackColor = false;
+            this.btnlimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
+            // 
             // AltaProductosForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1575, 923);
+            this.Controls.Add(this.btnlimpiar);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel3);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.btn_crearUsuario);
+            this.Controls.Add(this.btn_guardarproducto);
             this.Controls.Add(this.guna2NumericUpDown1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.panel2);
@@ -347,20 +349,20 @@
         private System.Windows.Forms.Label lblApellido;
         private System.Windows.Forms.Panel panelApellido;
         private System.Windows.Forms.PictureBox pictureBox4;
-        private System.Windows.Forms.TextBox txt_apellido;
+        private System.Windows.Forms.TextBox txtIdProducto;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label label3;
         private Guna.UI2.WinForms.Guna2NumericUpDown guna2NumericUpDown1;
-        private System.Windows.Forms.Button btn_crearUsuario;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.ComboBox comboBox3;
+        private System.Windows.Forms.Button btn_guardarproducto;
+        private System.Windows.Forms.ComboBox cmbIdProveedor;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox cmbcategoria;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.ComboBox comboBox4;
+        private System.Windows.Forms.ComboBox cmbDescripcion;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button btnlimpiar;
     }
 }
