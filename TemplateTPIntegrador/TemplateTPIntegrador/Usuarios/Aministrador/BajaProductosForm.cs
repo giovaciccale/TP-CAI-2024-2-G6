@@ -21,7 +21,7 @@ namespace TemplateTPIntegrador.Usuarios.Aministrador
         {
             // Mostrar un cuadro de mensaje para confirmar la eliminación
             var resultado = MessageBox.Show("¿Seguro que deseas eliminar el producto?", "Confirmar eliminación", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-
+            // agregar que muestre cuantas unidades se estan eliminando
             // Lógica para eliminar el producto si el usuario confirma
             if (resultado == DialogResult.Yes)
             {
@@ -35,5 +35,9 @@ namespace TemplateTPIntegrador.Usuarios.Aministrador
             }
         }
 
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -28,11 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnlimpiar = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.cmbDescripcion = new System.Windows.Forms.ComboBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.btn_guardarproducto = new System.Windows.Forms.Button();
             this.guna2NumericUpDown1 = new Guna.UI2.WinForms.Guna2NumericUpDown();
@@ -47,7 +47,7 @@
             this.lblApellido = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.txt_host = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.btnlimpiar = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel3.SuspendLayout();
@@ -59,21 +59,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.SuspendLayout();
             // 
-            // btnlimpiar
-            // 
-            this.btnlimpiar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.btnlimpiar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnlimpiar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnlimpiar.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnlimpiar.ForeColor = System.Drawing.Color.White;
-            this.btnlimpiar.Location = new System.Drawing.Point(436, 622);
-            this.btnlimpiar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.btnlimpiar.Name = "btnlimpiar";
-            this.btnlimpiar.Size = new System.Drawing.Size(250, 54);
-            this.btnlimpiar.TabIndex = 100012;
-            this.btnlimpiar.Text = "LIMPIAR CAMPOS";
-            this.btnlimpiar.UseVisualStyleBackColor = false;
-            // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.Control;
@@ -82,7 +67,7 @@
             this.panel1.Location = new System.Drawing.Point(50, 52);
             this.panel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(735, 69);
+            this.panel1.Size = new System.Drawing.Size(1483, 69);
             this.panel1.TabIndex = 100006;
             // 
             // cmbDescripcion
@@ -96,7 +81,7 @@
             this.cmbDescripcion.Location = new System.Drawing.Point(82, 23);
             this.cmbDescripcion.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cmbDescripcion.Name = "cmbDescripcion";
-            this.cmbDescripcion.Size = new System.Drawing.Size(622, 31);
+            this.cmbDescripcion.Size = new System.Drawing.Size(1375, 31);
             this.cmbDescripcion.TabIndex = 0;
             // 
             // pictureBox1
@@ -118,8 +103,21 @@
             this.panel3.Location = new System.Drawing.Point(50, 167);
             this.panel3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(735, 69);
+            this.panel3.Size = new System.Drawing.Size(1483, 69);
             this.panel3.TabIndex = 100007;
+            // 
+            // textBox1
+            // 
+            this.textBox1.BackColor = System.Drawing.SystemColors.Control;
+            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
+            this.textBox1.Location = new System.Drawing.Point(82, 24);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.ReadOnly = true;
+            this.textBox1.Size = new System.Drawing.Size(624, 30);
+            this.textBox1.TabIndex = 100018;
             // 
             // pictureBox3
             // 
@@ -139,10 +137,10 @@
             this.btn_guardarproducto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_guardarproducto.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_guardarproducto.ForeColor = System.Drawing.Color.White;
-            this.btn_guardarproducto.Location = new System.Drawing.Point(80, 622);
+            this.btn_guardarproducto.Location = new System.Drawing.Point(384, 717);
             this.btn_guardarproducto.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btn_guardarproducto.Name = "btn_guardarproducto";
-            this.btn_guardarproducto.Size = new System.Drawing.Size(250, 54);
+            this.btn_guardarproducto.Size = new System.Drawing.Size(280, 54);
             this.btn_guardarproducto.TabIndex = 100011;
             this.btn_guardarproducto.Text = "MODIFICAR PRODUCTO";
             this.btn_guardarproducto.UseVisualStyleBackColor = false;
@@ -161,7 +159,7 @@
             0,
             0});
             this.guna2NumericUpDown1.Name = "guna2NumericUpDown1";
-            this.guna2NumericUpDown1.Size = new System.Drawing.Size(735, 69);
+            this.guna2NumericUpDown1.Size = new System.Drawing.Size(1483, 69);
             this.guna2NumericUpDown1.TabIndex = 100010;
             // 
             // label3
@@ -184,7 +182,7 @@
             this.panel2.Location = new System.Drawing.Point(50, 398);
             this.panel2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(735, 69);
+            this.panel2.Size = new System.Drawing.Size(1483, 69);
             this.panel2.TabIndex = 100009;
             // 
             // cmbIdProveedor
@@ -199,7 +197,7 @@
             this.cmbIdProveedor.Location = new System.Drawing.Point(82, 23);
             this.cmbIdProveedor.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cmbIdProveedor.Name = "cmbIdProveedor";
-            this.cmbIdProveedor.Size = new System.Drawing.Size(622, 31);
+            this.cmbIdProveedor.Size = new System.Drawing.Size(1375, 31);
             this.cmbIdProveedor.TabIndex = 0;
             // 
             // pictureBox2
@@ -233,7 +231,7 @@
             this.panelApellido.Location = new System.Drawing.Point(50, 283);
             this.panelApellido.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panelApellido.Name = "panelApellido";
-            this.panelApellido.Size = new System.Drawing.Size(735, 69);
+            this.panelApellido.Size = new System.Drawing.Size(1483, 69);
             this.panelApellido.TabIndex = 100008;
             // 
             // pictureBox4
@@ -296,18 +294,20 @@
             this.txt_host.TabIndex = 100013;
             this.txt_host.Text = "Descripción Producto :";
             // 
-            // textBox1
+            // btnlimpiar
             // 
-            this.textBox1.BackColor = System.Drawing.SystemColors.Control;
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.textBox1.Location = new System.Drawing.Point(82, 24);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(624, 30);
-            this.textBox1.TabIndex = 100018;
+            this.btnlimpiar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
+            this.btnlimpiar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnlimpiar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnlimpiar.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnlimpiar.ForeColor = System.Drawing.Color.White;
+            this.btnlimpiar.Location = new System.Drawing.Point(767, 717);
+            this.btnlimpiar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnlimpiar.Name = "btnlimpiar";
+            this.btnlimpiar.Size = new System.Drawing.Size(280, 54);
+            this.btnlimpiar.TabIndex = 100012;
+            this.btnlimpiar.Text = "LIMPIAR CAMPOS";
+            this.btnlimpiar.UseVisualStyleBackColor = false;
             // 
             // ModificarProductosForm
             // 
@@ -347,8 +347,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Button btnlimpiar;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.ComboBox cmbDescripcion;
         private System.Windows.Forms.PictureBox pictureBox1;
@@ -368,5 +366,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label txt_host;
         private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button btnlimpiar;
     }
 }

@@ -104,7 +104,7 @@
             this.panelApellido.Location = new System.Drawing.Point(52, 282);
             this.panelApellido.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panelApellido.Name = "panelApellido";
-            this.panelApellido.Size = new System.Drawing.Size(735, 69);
+            this.panelApellido.Size = new System.Drawing.Size(1464, 69);
             this.panelApellido.TabIndex = 2;
             // 
             // pictureBox4
@@ -150,8 +150,9 @@
             this.panel2.Location = new System.Drawing.Point(52, 397);
             this.panel2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(735, 69);
+            this.panel2.Size = new System.Drawing.Size(1464, 69);
             this.panel2.TabIndex = 3;
+            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
             // cmbIdProveedor
             // 
@@ -164,7 +165,7 @@
             this.cmbIdProveedor.Location = new System.Drawing.Point(82, 23);
             this.cmbIdProveedor.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cmbIdProveedor.Name = "cmbIdProveedor";
-            this.cmbIdProveedor.Size = new System.Drawing.Size(622, 31);
+            this.cmbIdProveedor.Size = new System.Drawing.Size(1350, 31);
             this.cmbIdProveedor.TabIndex = 0;
             // 
             // pictureBox2
@@ -203,7 +204,7 @@
             0,
             0});
             this.guna2NumericUpDown1.Name = "guna2NumericUpDown1";
-            this.guna2NumericUpDown1.Size = new System.Drawing.Size(735, 69);
+            this.guna2NumericUpDown1.Size = new System.Drawing.Size(1464, 69);
             this.guna2NumericUpDown1.TabIndex = 4;
             this.guna2NumericUpDown1.ValueChanged += new System.EventHandler(this.guna2NumericUpDown2_ValueChanged);
             // 
@@ -214,7 +215,7 @@
             this.btn_guardarproducto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_guardarproducto.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_guardarproducto.ForeColor = System.Drawing.Color.White;
-            this.btn_guardarproducto.Location = new System.Drawing.Point(82, 621);
+            this.btn_guardarproducto.Location = new System.Drawing.Point(407, 728);
             this.btn_guardarproducto.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btn_guardarproducto.Name = "btn_guardarproducto";
             this.btn_guardarproducto.Size = new System.Drawing.Size(250, 54);
@@ -230,7 +231,7 @@
             this.panel3.Location = new System.Drawing.Point(52, 166);
             this.panel3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(735, 69);
+            this.panel3.Size = new System.Drawing.Size(1460, 69);
             this.panel3.TabIndex = 1;
             // 
             // cmbcategoria
@@ -245,7 +246,7 @@
             this.cmbcategoria.Location = new System.Drawing.Point(82, 23);
             this.cmbcategoria.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cmbcategoria.Name = "cmbcategoria";
-            this.cmbcategoria.Size = new System.Drawing.Size(622, 31);
+            this.cmbcategoria.Size = new System.Drawing.Size(1350, 31);
             this.cmbcategoria.TabIndex = 0;
             this.cmbcategoria.SelectedIndexChanged += new System.EventHandler(this.cmbcategoria_SelectedIndexChanged);
             // 
@@ -268,7 +269,7 @@
             this.panel1.Location = new System.Drawing.Point(52, 51);
             this.panel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(735, 69);
+            this.panel1.Size = new System.Drawing.Size(1460, 69);
             this.panel1.TabIndex = 0;
             // 
             // cmbDescripcion
@@ -282,7 +283,7 @@
             this.cmbDescripcion.Location = new System.Drawing.Point(82, 23);
             this.cmbDescripcion.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cmbDescripcion.Name = "cmbDescripcion";
-            this.cmbDescripcion.Size = new System.Drawing.Size(622, 31);
+            this.cmbDescripcion.Size = new System.Drawing.Size(1350, 31);
             this.cmbDescripcion.TabIndex = 0;
             // 
             // pictureBox1
@@ -303,7 +304,7 @@
             this.btnlimpiar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnlimpiar.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnlimpiar.ForeColor = System.Drawing.Color.White;
-            this.btnlimpiar.Location = new System.Drawing.Point(438, 621);
+            this.btnlimpiar.Location = new System.Drawing.Point(784, 728);
             this.btnlimpiar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnlimpiar.Name = "btnlimpiar";
             this.btnlimpiar.Size = new System.Drawing.Size(250, 54);
