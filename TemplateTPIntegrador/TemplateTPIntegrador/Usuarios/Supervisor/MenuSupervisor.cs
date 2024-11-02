@@ -150,7 +150,7 @@ namespace TemplateTPIntegrador
             tabProductosMasVendidos.Visible = true;
 
             // Seleccionar tab por defecto y cargar el formulario correspondiente
-            tabAltaProductos.Checked = true;
+            tabStockCritico.Checked = true;
             abrirFormInPanel(new AltaProductosForm());
         }
 
