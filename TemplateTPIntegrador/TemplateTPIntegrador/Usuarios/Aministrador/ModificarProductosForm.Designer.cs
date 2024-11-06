@@ -69,6 +69,8 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1483, 69);
             this.panel1.TabIndex = 100006;
+            this.panel1.Enter += new System.EventHandler(this.control_Enter);
+            this.panel1.Leave += new System.EventHandler(this.control_Leave);
             // 
             // cmbDescripcion
             // 
@@ -105,6 +107,8 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1483, 69);
             this.panel3.TabIndex = 100007;
+            this.panel3.Enter += new System.EventHandler(this.control_Enter);
+            this.panel3.Leave += new System.EventHandler(this.control_Leave);
             // 
             // textBox1
             // 
@@ -161,6 +165,8 @@
             this.guna2NumericUpDown1.Name = "guna2NumericUpDown1";
             this.guna2NumericUpDown1.Size = new System.Drawing.Size(1483, 69);
             this.guna2NumericUpDown1.TabIndex = 100010;
+            this.guna2NumericUpDown1.Enter += new System.EventHandler(this.control_Enter);
+            this.guna2NumericUpDown1.Leave += new System.EventHandler(this.control_Leave);
             // 
             // label3
             // 
@@ -184,6 +190,8 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1483, 69);
             this.panel2.TabIndex = 100009;
+            this.panel2.Enter += new System.EventHandler(this.control_Enter);
+            this.panel2.Leave += new System.EventHandler(this.control_Leave);
             // 
             // cmbIdProveedor
             // 
@@ -233,6 +241,8 @@
             this.panelApellido.Name = "panelApellido";
             this.panelApellido.Size = new System.Drawing.Size(1483, 69);
             this.panelApellido.TabIndex = 100008;
+            this.panelApellido.Enter += new System.EventHandler(this.control_Enter);
+            this.panelApellido.Leave += new System.EventHandler(this.control_Leave);
             // 
             // pictureBox4
             // 

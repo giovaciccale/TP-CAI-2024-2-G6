@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TemplateTPIntegrador.utils;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace TemplateTPIntegrador.Usuarios.Aministrador
@@ -59,5 +60,31 @@ namespace TemplateTPIntegrador.Usuarios.Aministrador
         {
 
         }
+
+        private Dictionary<Control, Color> originalColors = new Dictionary<Control, Color>();
+
+        private void control_Enter(object sender, EventArgs e)
+        {
+            if (sender is Control control)
+            {
+                
+                if (!originalColors.ContainsKey(control))
+                {
+                    originalColors[control] = control.BackColor;
+                }
+                control.BackColor = Color.White;
+            }
+        }
+
+        private void control_Leave(object sender, EventArgs e)
+        {
+            if (sender is Control control && originalColors.ContainsKey(control))
+            {
+               
+                control.BackColor = originalColors[control];
+            }
+        }
+
+       
     }
 }
