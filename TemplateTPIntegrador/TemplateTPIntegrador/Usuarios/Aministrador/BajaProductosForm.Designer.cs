@@ -35,12 +35,12 @@
             this.btnlimpiar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.panelNombre = new System.Windows.Forms.Panel();
+            this.txt_nombre = new System.Windows.Forms.TextBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.txt_nombre = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panelNombre.SuspendLayout();
@@ -71,6 +71,8 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(735, 69);
             this.panel1.TabIndex = 100007;
+            this.panel1.Enter += new System.EventHandler(this.panel1_Enter);
+            this.panel1.Leave += new System.EventHandler(this.panel1_Leave);
             // 
             // cmbDescripcion
             // 
@@ -136,6 +138,21 @@
             this.panelNombre.Name = "panelNombre";
             this.panelNombre.Size = new System.Drawing.Size(735, 69);
             this.panelNombre.TabIndex = 100015;
+            this.panelNombre.Enter += new System.EventHandler(this.panel1_Enter);
+            this.panelNombre.Leave += new System.EventHandler(this.panel1_Leave);
+            // 
+            // txt_nombre
+            // 
+            this.txt_nombre.BackColor = System.Drawing.SystemColors.Control;
+            this.txt_nombre.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txt_nombre.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_nombre.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
+            this.txt_nombre.Location = new System.Drawing.Point(82, 24);
+            this.txt_nombre.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txt_nombre.Name = "txt_nombre";
+            this.txt_nombre.ReadOnly = true;
+            this.txt_nombre.Size = new System.Drawing.Size(624, 30);
+            this.txt_nombre.TabIndex = 100018;
             // 
             // pictureBox2
             // 
@@ -170,30 +187,8 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(735, 69);
             this.panel2.TabIndex = 100017;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = global::TemplateTPIntegrador.Properties.Resources.pngwing_com;
-            this.pictureBox3.Location = new System.Drawing.Point(22, 17);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(36, 37);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox3.TabIndex = 997;
-            this.pictureBox3.TabStop = false;
-            // 
-            // txt_nombre
-            // 
-            this.txt_nombre.BackColor = System.Drawing.SystemColors.Control;
-            this.txt_nombre.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txt_nombre.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_nombre.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.txt_nombre.Location = new System.Drawing.Point(82, 24);
-            this.txt_nombre.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.txt_nombre.Name = "txt_nombre";
-            this.txt_nombre.ReadOnly = true;
-            this.txt_nombre.Size = new System.Drawing.Size(624, 30);
-            this.txt_nombre.TabIndex = 100018;
+            this.panel2.Enter += new System.EventHandler(this.panel1_Enter);
+            this.panel2.Leave += new System.EventHandler(this.panel1_Leave);
             // 
             // textBox1
             // 
@@ -206,6 +201,17 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(624, 30);
             this.textBox1.TabIndex = 100018;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = global::TemplateTPIntegrador.Properties.Resources.pngwing_com;
+            this.pictureBox3.Location = new System.Drawing.Point(22, 17);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(36, 37);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.TabIndex = 997;
+            this.pictureBox3.TabStop = false;
             // 
             // BajaProductosForm
             // 

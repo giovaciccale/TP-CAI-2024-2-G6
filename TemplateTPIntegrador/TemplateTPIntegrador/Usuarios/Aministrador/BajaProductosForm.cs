@@ -16,13 +16,13 @@ namespace TemplateTPIntegrador.Usuarios.Aministrador
         {
             InitializeComponent();
         }
-      
+
         private void BtnEliminar_Click(object sender, EventArgs e)
         {
             // Mostrar un cuadro de mensaje para confirmar la eliminación
             var resultado = MessageBox.Show("¿Seguro que deseas eliminar el producto?", "Confirmar eliminación", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
             // agregar que muestre cuantas unidades se estan eliminando
-            // Lógica para eliminar el producto si el usuario confirma
+
             if (resultado == DialogResult.Yes)
             {
                 // Aquí agregas la lógica para eliminar el producto
@@ -38,6 +38,29 @@ namespace TemplateTPIntegrador.Usuarios.Aministrador
         private void label1_Click(object sender, EventArgs e)
         {
 
+        }
+        private Dictionary<Control, Color> originalColors = new Dictionary<Control, Color>();
+        private void panel1_Enter(object sender, EventArgs e)
+        {
+
+            if (sender is Control control)
+            {
+                // Guarda el color original si aún no está guardado
+                if (!originalColors.ContainsKey(control))
+                {
+                    originalColors[control] = control.BackColor;
+                }
+                control.BackColor = Color.White;
+            }
+        }
+
+        private void panel1_Leave(object sender, EventArgs e)
+        {
+            if (sender is Control control && originalColors.ContainsKey(control))
+            {
+                // Restaura el color original
+                control.BackColor = originalColors[control];
+            }
         }
     }
 }

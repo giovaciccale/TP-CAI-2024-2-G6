@@ -36,5 +36,28 @@ namespace TemplateTPIntegrador.Usuarios.Aministrador
                 MessageBox.Show("Modificación cancelada", "Cancelar", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
+        private Dictionary<Control, Color> originalColors = new Dictionary<Control, Color>();
+
+        private void control_Enter(object sender, EventArgs e)
+        {
+            if (sender is Control control)
+            {
+               
+                if (!originalColors.ContainsKey(control))
+                {
+                    originalColors[control] = control.BackColor;
+                }
+                control.BackColor = Color.White;
+            }
+        }
+
+        private void control_Leave(object sender, EventArgs e)
+        {
+            if (sender is Control control && originalColors.ContainsKey(control))
+            {
+                
+                control.BackColor = originalColors[control];
+            }
+        }
     }
 }
