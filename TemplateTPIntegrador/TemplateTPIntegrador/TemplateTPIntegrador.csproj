@@ -79,6 +79,12 @@
     <Compile Include="Modulos\Productos\AltaProductosForm.Designer.cs">
       <DependentUpon>AltaProductosForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Modulos\Proveedores\BajaProveedores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modulos\Proveedores\BajaProveedores.Designer.cs">
+      <DependentUpon>BajaProveedores.cs</DependentUpon>
+    </Compile>
     <Compile Include="Modulos\Proveedores\RegistrarProveedoresForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -154,6 +160,9 @@
     <EmbeddedResource Include="Modulos\Productos\AltaProductosForm.resx">
       <DependentUpon>AltaProductosForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Modulos\Proveedores\BajaProveedores.resx">
+      <DependentUpon>BajaProveedores.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Modulos\Proveedores\RegistrarProveedoresForm.resx">
       <DependentUpon>RegistrarProveedoresForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -228,12 +237,7 @@
   <ItemGroup>
     <None Include="Resources\kissclipart-password-icon-clipart-password-computer-icons-clip-d813f06606bcdc9a.png" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Modulos\Clientes\" />
-    <Folder Include="Modulos\Reportes\" />
-    <Folder Include="Modulos\Ventas\" />
-    <Folder Include="Modulos\Proveedores\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="Resources\usuarios.png" />
   </ItemGroup>

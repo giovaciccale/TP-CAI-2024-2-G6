@@ -92,5 +92,28 @@ namespace Persistencia
             }
         }
 
+        public List<ProveedoreWS> buscarDatosProveedor()
+        {
+            try
+            {
+                HttpResponseMessage response = WebHelper.Get("Usuario/TraerProveedores");
+
+                if (response.IsSuccessStatusCode)
+                {
+                    var contentStream = response.Content.ReadAsStringAsync().Result;
+                    return JsonConvert.DeserializeObject<List<ProveedoreWS>>(contentStream);
+                }
+                else
+                {
+                    Console.WriteLine($"Error: {response.StatusCode} - {response.ReasonPhrase}");
+                    return null; // Retorna null si la búsqueda falla
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error al momento de buscar los proveedores: " + ex.Message);
+                return null; // Retorna null en caso de una excepción
+            }
+        }
     }
 }
