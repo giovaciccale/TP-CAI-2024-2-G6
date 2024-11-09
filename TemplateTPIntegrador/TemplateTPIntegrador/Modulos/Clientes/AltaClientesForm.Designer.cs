@@ -1,6 +1,6 @@
 ﻿namespace TemplateTPIntegrador.Modulos.Clientes
 {
-    partial class AltaClientesFom
+    partial class AltaClientesForm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,10 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.SuspendLayout();
+            // 
+            // AltaClientesForm
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1050, 600);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Name = "AltaClientesForm";
             this.Text = "AltaClientesFom";
+            this.ResumeLayout(false);
+
         }
 
         #endregion
