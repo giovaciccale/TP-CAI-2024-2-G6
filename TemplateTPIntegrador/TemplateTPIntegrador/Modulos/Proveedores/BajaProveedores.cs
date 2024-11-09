@@ -20,7 +20,7 @@ namespace TemplateTPIntegrador.Modulos.Proveedores
         {
             InitializeComponent();
             proveedoresWS = new ProveedoresWS(); // Inicializar la instancia
-            /*CargarUsuarios();*/ // Cargar los usuarios al inicializar el formulario
+            CargarProveedores(); // Cargar los proveedores al inicializar el formulario
         }
 
         private void CargarProveedores()
@@ -50,8 +50,8 @@ namespace TemplateTPIntegrador.Modulos.Proveedores
         }
 
         private void btn_desactivarProveedor_Click(object sender, EventArgs e)
-        {
-            // Verificar que se haya seleccionado un usuario
+        {   
+         // Verificar que se haya seleccionado un usuario
             if (cmb_proveedores.SelectedItem != null)
             {
                 // Obtener el ID del usuario seleccionado
