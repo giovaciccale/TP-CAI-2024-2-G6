@@ -168,8 +168,7 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(973, 45);
             this.panel3.TabIndex = 1;
-            this.panel3.Enter += new System.EventHandler(this.control_Enter);
-            this.panel3.Leave += new System.EventHandler(this.control_Leave);
+
             // 
             // cmbcategoria
             // 
