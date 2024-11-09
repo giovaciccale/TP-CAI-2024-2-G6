@@ -38,12 +38,12 @@
             this.label4 = new System.Windows.Forms.Label();
             this.btnCerrar = new System.Windows.Forms.Button();
             this.barraTitulo = new System.Windows.Forms.Panel();
+            this.tabRegistrarProveedores = new Guna.UI2.WinForms.Guna2Button();
             this.tabEliminarUsuario = new Guna.UI2.WinForms.Guna2Button();
             this.tabAltaProductos = new Guna.UI2.WinForms.Guna2Button();
             this.tabRegistrarUsuarios = new Guna.UI2.WinForms.Guna2Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panelContenedor = new System.Windows.Forms.Panel();
-            this.tabRegistrarProveedores = new Guna.UI2.WinForms.Guna2Button();
             this.menuVertical.SuspendLayout();
             this.barraTitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -185,6 +185,30 @@
             this.barraTitulo.TabIndex = 1003;
             this.barraTitulo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.barraTitulo_MouseDown);
             // 
+            // tabRegistrarProveedores
+            // 
+            this.tabRegistrarProveedores.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            this.tabRegistrarProveedores.Checked = true;
+            this.tabRegistrarProveedores.CheckedState.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
+            this.tabRegistrarProveedores.CheckedState.FillColor = System.Drawing.SystemColors.ControlLight;
+            this.tabRegistrarProveedores.CustomBorderColor = System.Drawing.SystemColors.Control;
+            this.tabRegistrarProveedores.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 3);
+            this.tabRegistrarProveedores.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.tabRegistrarProveedores.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.tabRegistrarProveedores.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.tabRegistrarProveedores.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.tabRegistrarProveedores.FillColor = System.Drawing.SystemColors.Control;
+            this.tabRegistrarProveedores.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabRegistrarProveedores.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
+            this.tabRegistrarProveedores.HoverState.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
+            this.tabRegistrarProveedores.Location = new System.Drawing.Point(249, 0);
+            this.tabRegistrarProveedores.Name = "tabRegistrarProveedores";
+            this.tabRegistrarProveedores.Size = new System.Drawing.Size(180, 50);
+            this.tabRegistrarProveedores.TabIndex = 1006;
+            this.tabRegistrarProveedores.Text = "Registrar Proveedor";
+            this.tabRegistrarProveedores.Visible = false;
+            this.tabRegistrarProveedores.Click += new System.EventHandler(this.tabRegistrarProveedores_Click);
+            // 
             // tabEliminarUsuario
             // 
             this.tabEliminarUsuario.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
@@ -273,30 +297,6 @@
             this.panelContenedor.Name = "panelContenedor";
             this.panelContenedor.Size = new System.Drawing.Size(1050, 600);
             this.panelContenedor.TabIndex = 1004;
-            // 
-            // tabRegistrarProveedores
-            // 
-            this.tabRegistrarProveedores.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
-            this.tabRegistrarProveedores.Checked = true;
-            this.tabRegistrarProveedores.CheckedState.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.tabRegistrarProveedores.CheckedState.FillColor = System.Drawing.SystemColors.ControlLight;
-            this.tabRegistrarProveedores.CustomBorderColor = System.Drawing.SystemColors.Control;
-            this.tabRegistrarProveedores.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 3);
-            this.tabRegistrarProveedores.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.tabRegistrarProveedores.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.tabRegistrarProveedores.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.tabRegistrarProveedores.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.tabRegistrarProveedores.FillColor = System.Drawing.SystemColors.Control;
-            this.tabRegistrarProveedores.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabRegistrarProveedores.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.tabRegistrarProveedores.HoverState.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.tabRegistrarProveedores.Location = new System.Drawing.Point(249, 0);
-            this.tabRegistrarProveedores.Name = "tabRegistrarProveedores";
-            this.tabRegistrarProveedores.Size = new System.Drawing.Size(180, 50);
-            this.tabRegistrarProveedores.TabIndex = 1006;
-            this.tabRegistrarProveedores.Text = "Registrar Proveedor";
-            this.tabRegistrarProveedores.Visible = false;
-            this.tabRegistrarProveedores.Click += new System.EventHandler(this.tabRegistrarProveedores_Click);
             // 
             // MenuForm
             // 
