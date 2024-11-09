@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.btn_crearUsuario = new System.Windows.Forms.Button();
+            this.btn_desactivarUsuario = new System.Windows.Forms.Button();
             this.cmb_usuarios = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
@@ -44,20 +44,20 @@
             this.label1.TabIndex = 100028;
             this.label1.Text = "Elija Usuario a Desactivar :";
             // 
-            // btn_crearUsuario
+            // btn_desactivarUsuario
             // 
-            this.btn_crearUsuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.btn_crearUsuario.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_crearUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_crearUsuario.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_crearUsuario.ForeColor = System.Drawing.Color.White;
-            this.btn_crearUsuario.Location = new System.Drawing.Point(378, 255);
-            this.btn_crearUsuario.Name = "btn_crearUsuario";
-            this.btn_crearUsuario.Size = new System.Drawing.Size(195, 35);
-            this.btn_crearUsuario.TabIndex = 100030;
-            this.btn_crearUsuario.Text = "DESACTIVAR USUARIO";
-            this.btn_crearUsuario.UseVisualStyleBackColor = false;
-            this.btn_crearUsuario.Click += new System.EventHandler(this.btn_desactivarUsuario_Click);
+            this.btn_desactivarUsuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
+            this.btn_desactivarUsuario.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_desactivarUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_desactivarUsuario.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_desactivarUsuario.ForeColor = System.Drawing.Color.White;
+            this.btn_desactivarUsuario.Location = new System.Drawing.Point(378, 255);
+            this.btn_desactivarUsuario.Name = "btn_desactivarUsuario";
+            this.btn_desactivarUsuario.Size = new System.Drawing.Size(195, 35);
+            this.btn_desactivarUsuario.TabIndex = 100030;
+            this.btn_desactivarUsuario.Text = "DESACTIVAR USUARIO";
+            this.btn_desactivarUsuario.UseVisualStyleBackColor = false;
+            this.btn_desactivarUsuario.Click += new System.EventHandler(this.btn_desactivarUsuario_Click);
             // 
             // cmb_usuarios
             // 
@@ -76,7 +76,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1050, 600);
             this.Controls.Add(this.cmb_usuarios);
-            this.Controls.Add(this.btn_crearUsuario);
+            this.Controls.Add(this.btn_desactivarUsuario);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "BajaUsuarios";
@@ -89,7 +89,7 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button btn_crearUsuario;
+        private System.Windows.Forms.Button btn_desactivarUsuario;
         private System.Windows.Forms.ComboBox cmb_usuarios;
     }
 }

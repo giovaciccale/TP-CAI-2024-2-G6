@@ -114,8 +114,11 @@ namespace TemplateTPIntegrador
 
         private void MostrarSeccionUsuarios()
         {
-            // Ocultar tabs de Productos
+            // Ocultar tabs 
             tabAltaProductos.Visible = false;
+            tabRegistrarProveedores.Visible = false;
+            tabEliminarProveedores.Visible = false;
+
 
 
 
@@ -133,6 +136,8 @@ namespace TemplateTPIntegrador
             // Ocultar tabs de Usuarios
             tabRegistrarUsuarios.Visible = false;
             tabEliminarUsuario.Visible = false;
+            tabRegistrarProveedores.Visible = false;
+            tabEliminarProveedores.Visible = false;
 
             // Mostrar tabs de Productos
             tabAltaProductos.Visible = true;
@@ -149,10 +154,10 @@ namespace TemplateTPIntegrador
             tabRegistrarUsuarios.Visible = false;
             tabEliminarUsuario.Visible = false;
             tabAltaProductos.Visible = false;
-            // Mostrar tabs de Proveedores
+            // Mostrar tabs de Proveedores tabEliminarProveedores
 
             tabRegistrarProveedores.Visible = true;
-
+            tabEliminarProveedores.Visible = true;
 
             // Seleccionar tab por defecto y cargar el formulario correspondiente
             tabRegistrarProveedores.Checked = true;
@@ -169,7 +174,10 @@ namespace TemplateTPIntegrador
         {
             abrirFormInPanel(new BajaUsuarios());
         }
-
+        private void tabEliminarProveedores_Click(object sender, EventArgs e)
+        {
+            abrirFormInPanel(new BajaProveedores());
+        }
 
         private void tabAltaProductos_Click(object sender, EventArgs e)
         {
@@ -183,6 +191,6 @@ namespace TemplateTPIntegrador
             abrirFormInPanel(new RegistrarProveedoresForm());
         }
 
- 
+    
     }
 }
