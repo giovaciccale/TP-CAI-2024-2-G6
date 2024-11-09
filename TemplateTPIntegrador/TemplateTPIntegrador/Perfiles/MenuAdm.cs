@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
 using TemplateTPIntegrador.Usuarios.Aministrador;
+using TemplateTPIntegrador.Modulos.Proveedores;
 
 namespace TemplateTPIntegrador
 {
@@ -28,6 +29,7 @@ namespace TemplateTPIntegrador
         // Variables para mantener el estado de la sección actual
         private bool enSeccionUsuarios = true;
         private bool enSeccionProductos = false;
+        private bool enSeccionProveedores = false;
 
         private void MenuForm_Load(object sender, EventArgs e)
         {
@@ -85,6 +87,18 @@ namespace TemplateTPIntegrador
                 MostrarSeccionUsuarios();
                 enSeccionUsuarios = true;
                 enSeccionProductos = false;
+                enSeccionProveedores = false;
+            }
+        }
+
+        private void btnSeccionProveedores_Click(object sender, EventArgs e)
+        {
+            if (!enSeccionUsuarios)
+            {
+                MostrarSeccionProveedores();
+                enSeccionUsuarios = true;
+                enSeccionProductos = false;
+                enSeccionProveedores = false;
             }
         }
         private void btnSeccionProductos_Click(object sender, EventArgs e)
@@ -94,6 +108,7 @@ namespace TemplateTPIntegrador
                 MostrarSeccionProductos();
                 enSeccionProductos = true;
                 enSeccionUsuarios = false;
+                enSeccionProveedores = false;
             }
         }
 
@@ -128,7 +143,21 @@ namespace TemplateTPIntegrador
             tabAltaProductos.Checked = true;
             abrirFormInPanel(new AltaProductosForm());
         }
+        private void MostrarSeccionProveedores()
+        {
+            // Ocultar tabs de Usuarios
+            tabRegistrarUsuarios.Visible = false;
+            tabEliminarUsuario.Visible = false;
+            tabAltaProductos.Visible = false;
+            // Mostrar tabs de Proveedores
 
+            tabRegistrarProveedores.Visible = true;
+
+
+            // Seleccionar tab por defecto y cargar el formulario correspondiente
+            tabRegistrarProveedores.Checked = true;
+            abrirFormInPanel(new RegistrarProveedoresForm());
+        }
 
         private void tabRegistrarUsuarios_Click(object sender, EventArgs e)
         {
@@ -149,11 +178,11 @@ namespace TemplateTPIntegrador
 
 
 
-        private void guna2Button1_Click(object sender, EventArgs e)
+        private void tabRegistrarProveedores_Click(object sender, EventArgs e)
         {
-
+            abrirFormInPanel(new RegistrarProveedoresForm());
         }
 
-
+ 
     }
 }
