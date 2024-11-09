@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace TemplateTPIntegrador.Modulos.Clientes
 {
-    public partial class AltaClientesFom : Form
+    public partial class ModificarClientesForm : Form
     {
-        public AltaClientesFom()
+        public ModificarClientesForm()
         {
             InitializeComponent();
         }
