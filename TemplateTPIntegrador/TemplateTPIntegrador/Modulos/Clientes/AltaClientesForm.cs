@@ -27,14 +27,15 @@ namespace TemplateTPIntegrador.Modulos.Clientes
             try
             {
                 // Validar el nombre de cliente antes de crear el cliente
-                var campos = new Dictionary<TextBox, (string nombreDelCampo, bool esNumerico)>
+                var campos = new Dictionary<Control, (string nombreDelCampo, bool esNumerico, bool esFecha)>
                 {
-                    { txt_nombre, ("Nombre", false) },
-                    { txt_apellido, ("Apellido", false) },
-                    { txt_email, ("Email", false) },
-                    { txt_dni, ("DNI", true) }, // Debe ser Numerico
-                    {txt_direccion, ("Dirección", false) },
-                    {txt_telefono, ("Teléfono", true) } // Debe ser Numerico
+                    { txt_nombre, ("Nombre", false, false) },
+                    { txt_apellido, ("Apellido", false, false) },
+                    { txt_email, ("Email", false, false) },
+                    { txt_fecha, ("Fecha De Nacimiento", false, true) },
+                    { txt_dni, ("DNI", true, false) }, // Debe ser Numerico
+                    { txt_direccion, ("Dirección", false, false) },
+                    { txt_telefono, ("Teléfono", false, false) } // Debe ser Numerico
                 };
 
                 ValidadorDeCampos.ValidarCamposCliente(campos);
