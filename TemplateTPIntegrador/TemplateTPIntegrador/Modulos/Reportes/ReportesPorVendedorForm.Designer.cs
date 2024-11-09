@@ -1,6 +1,6 @@
-﻿namespace TemplateTPIntegrador.Modulos.Clientes
+﻿namespace TemplateTPIntegrador.Modulos.Reportes
 {
-    partial class ModificarClientesForm
+    partial class ReportesPorVendedorForm
     {
         /// <summary>
         /// Required designer variable.
@@ -30,14 +30,14 @@
         {
             this.SuspendLayout();
             // 
-            // ModificarClientesForm
+            // ReportesPorVendedorForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1050, 600);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "ModificarClientesForm";
-            this.Text = "ModificarClientesForm";
+            this.Name = "ReportesPorVendedorForm";
+            this.Text = "ReportesPorVendedorForm";
             this.ResumeLayout(false);
 
         }
