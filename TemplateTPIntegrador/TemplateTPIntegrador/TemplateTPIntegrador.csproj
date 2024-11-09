@@ -61,18 +61,6 @@
     <Compile Include="Modulos\Productos\AltaProductosForm.Designer.cs">
       <DependentUpon>AltaProductosForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Modulos\Productos\BajaProductosForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Modulos\Productos\BajaProductosForm.Designer.cs">
-      <DependentUpon>BajaProductosForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Modulos\Productos\ModificarProductosForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Modulos\Productos\ModificarProductosForm.Designer.cs">
-      <DependentUpon>ModificarProductosForm.cs</DependentUpon>
-    </Compile>
     <Compile Include="Modulos\Usuarios\CambiarContraseña.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -121,9 +109,6 @@
     <EmbeddedResource Include="Modulos\Productos\AltaProductosForm.resx">
       <DependentUpon>AltaProductosForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Modulos\Productos\BajaProductosForm.resx">
-      <DependentUpon>BajaProductosForm.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Modulos\Usuarios\BajaUsuarios.resx">
       <DependentUpon>BajaUsuarios.cs</DependentUpon>
     </EmbeddedResource>
@@ -132,9 +117,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Perfiles\MenuAdm.resx">
       <DependentUpon>MenuAdm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Modulos\Productos\ModificarProductosForm.resx">
-      <DependentUpon>ModificarProductosForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Modulos\Usuarios\RegistrarUsuariosForm.resx">
       <DependentUpon>RegistrarUsuariosForm.cs</DependentUpon>

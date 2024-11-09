@@ -198,7 +198,6 @@
             this.tabBajaProductos.Size = new System.Drawing.Size(180, 50);
             this.tabBajaProductos.TabIndex = 1007;
             this.tabBajaProductos.Text = "Baja Productos";
-            this.tabBajaProductos.Click += new System.EventHandler(this.tabBajaProductos_Click);
             // 
             // tabReporteVentasxVendedor
             // 
@@ -288,7 +287,7 @@
             this.tabModificarProductos.Size = new System.Drawing.Size(180, 50);
             this.tabModificarProductos.TabIndex = 1006;
             this.tabModificarProductos.Text = "Modificar Productos";
-            this.tabModificarProductos.Click += new System.EventHandler(this.tabModificarProductos_Click);
+
             // 
             // tabAltaProductos
             // 
