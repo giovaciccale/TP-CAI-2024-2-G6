@@ -24,7 +24,7 @@ namespace Persistencia
             {
 
                 // Serializar el objeto ClienteWS a JSON
-                var jsoncliente = JsonConvert.SerializeObject(new
+                var jsonCliente = JsonConvert.SerializeObject(new
                 {
                     idcliente = adminId,
                     nombre = cliente.nombre,
@@ -41,10 +41,10 @@ namespace Persistencia
                 });
 
                 // Mostrar el JSON generado en la consola para depuración
-                System.Diagnostics.Debug.WriteLine("JSON antes de enviar: " + jsoncliente);
+                System.Diagnostics.Debug.WriteLine("JSON antes de enviar: " + jsonCliente);
 
                 // Llamar al método POST para agregar el cliente
-                HttpResponseMessage response = WebHelper.Post("cliente/Agregarcliente", jsoncliente);
+                HttpResponseMessage response = WebHelper.Post("Cliente/AgregarCliente", jsonCliente);
 
                 // Verificar si la respuesta fue exitosa
                 if (response.IsSuccessStatusCode)
