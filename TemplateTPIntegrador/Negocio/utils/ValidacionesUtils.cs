@@ -111,7 +111,6 @@ namespace Negocio.utils
                 }
             }
 
-            MessageBox.Show("Cliente creado de manera exitosa!", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
     }
