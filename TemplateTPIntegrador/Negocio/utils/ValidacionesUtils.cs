@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
+
 
 namespace Negocio.utils
 {
@@ -53,6 +55,46 @@ namespace Negocio.utils
             FechaUltimaContraseña = DateTime.Now;
             return true;
         }
+        
+    }
+    public static class ValidadorDeCampos
+    {
+        public static void ValidarCamposCliente(Dictionary<TextBox, (string nombreDelCampo, bool esNumerico)> campos)
+        {
+            foreach (var campo in campos)
+            {
+                TextBox textbox = campo.Key;
+                string nombreDelCampo = campo.Value.nombreDelCampo;
+                bool esNumerico = campo.Value.esNumerico;
+
+                if (string.IsNullOrEmpty(textbox.Text))
+                {
+                    MessageBox.Show($"El campo '{nombreDelCampo}' no puede estar vacío.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    textbox.Focus();
+                    return;
+                }
+
+                if (esNumerico)
+                {
+                    if (!int.TryParse(textbox.Text, out int parsedValue))
+                    {
+                        MessageBox.Show($"El campo '{nombreDelCampo}' debe ser numérico.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        textbox.Focus();
+                        return;
+                    }
+
+                    if (textbox.Text.Length != 8)
+                    {
+                        MessageBox.Show($"El campo '{nombreDelCampo}' debe tener 8 dígitos.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        textbox.Focus();
+                        return;
+                    }
+                }
+            }
+
+            MessageBox.Show("Cliente creado de manera exitosa!", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
     }
 }
 

@@ -43,7 +43,7 @@ namespace TemplateTPIntegrador
 
         private void MenuForm_Shown(object sender, EventArgs e)
         {
-            abrirFormInPanel(new AltaClientesForm());
+            abrirFormInPanel(new BuscarClientesForm());
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -105,7 +105,7 @@ namespace TemplateTPIntegrador
 
             // Mostrar tabs de Clientes
             tabBuscarCliente.Visible = true;
-            tabSeccionAgregarCliente.Visible = true;
+            tabAgregarCliente.Visible = true;
             tabModificarCliente.Visible = true;
 
             // Seleccionar tab por defecto y cargar el formulario correspondiente
@@ -118,7 +118,7 @@ namespace TemplateTPIntegrador
         {
             // Esconder tabs de Clientes
             tabBuscarCliente.Visible = false;
-            tabSeccionAgregarCliente.Visible = false;
+            tabAgregarCliente.Visible = false;
             tabModificarCliente.Visible = false;
 
             // Esconder tabs de Reportes
@@ -137,11 +137,11 @@ namespace TemplateTPIntegrador
         {
             // Esconder tabs de Clientes
             tabBuscarCliente.Visible = false;
-            tabSeccionAgregarCliente.Visible = false;
+            tabAgregarCliente.Visible = false;
             tabModificarCliente.Visible = false;
 
             // Esconder tabs de Ventas
-            tabSeccionAgregarCliente.Visible = false;
+            tabAgregarCliente.Visible = false;
 
             // Mostrar tabs de Reportes
             tabVentasPorVendedor.Visible = true;
@@ -167,10 +167,18 @@ namespace TemplateTPIntegrador
         {
             abrirFormInPanel(new AltaClientesForm());
         }
-
+        private void tabBuscarCliente_Click(object sender, EventArgs e)
+        {
+            abrirFormInPanel(new BuscarClientesForm());
+        }
+        private void tabModificarCliente_Click(object sender, EventArgs e)
+        {
+            abrirFormInPanel(new ModificarClientesForm());
+        }
         private void btnCerrar_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
+
     }
 }

@@ -36,15 +36,15 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.barraTitulo = new System.Windows.Forms.Panel();
+            this.tabVentasPorVendedor = new Guna.UI2.WinForms.Guna2Button();
             this.tabModificarCliente = new Guna.UI2.WinForms.Guna2Button();
             this.tabVentas = new Guna.UI2.WinForms.Guna2Button();
-            this.tabSeccionAgregarCliente = new Guna.UI2.WinForms.Guna2Button();
+            this.tabAgregarCliente = new Guna.UI2.WinForms.Guna2Button();
             this.tabModificarClientes = new Guna.UI2.WinForms.Guna2Button();
             this.tabBuscarCliente = new Guna.UI2.WinForms.Guna2Button();
             this.btnCerrar = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panelContenedor = new System.Windows.Forms.Panel();
-            this.tabVentasPorVendedor = new Guna.UI2.WinForms.Guna2Button();
             this.menuVertical.SuspendLayout();
             this.barraTitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -143,7 +143,7 @@
             this.barraTitulo.Controls.Add(this.tabVentasPorVendedor);
             this.barraTitulo.Controls.Add(this.tabModificarCliente);
             this.barraTitulo.Controls.Add(this.tabVentas);
-            this.barraTitulo.Controls.Add(this.tabSeccionAgregarCliente);
+            this.barraTitulo.Controls.Add(this.tabAgregarCliente);
             this.barraTitulo.Controls.Add(this.tabModificarClientes);
             this.barraTitulo.Controls.Add(this.tabBuscarCliente);
             this.barraTitulo.Controls.Add(this.btnCerrar);
@@ -153,6 +153,29 @@
             this.barraTitulo.Name = "barraTitulo";
             this.barraTitulo.Size = new System.Drawing.Size(1050, 50);
             this.barraTitulo.TabIndex = 1004;
+            // 
+            // tabVentasPorVendedor
+            // 
+            this.tabVentasPorVendedor.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            this.tabVentasPorVendedor.Checked = true;
+            this.tabVentasPorVendedor.CheckedState.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
+            this.tabVentasPorVendedor.CheckedState.FillColor = System.Drawing.SystemColors.ControlLight;
+            this.tabVentasPorVendedor.CustomBorderColor = System.Drawing.SystemColors.Control;
+            this.tabVentasPorVendedor.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 3);
+            this.tabVentasPorVendedor.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.tabVentasPorVendedor.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.tabVentasPorVendedor.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.tabVentasPorVendedor.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.tabVentasPorVendedor.FillColor = System.Drawing.SystemColors.Control;
+            this.tabVentasPorVendedor.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabVentasPorVendedor.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
+            this.tabVentasPorVendedor.HoverState.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
+            this.tabVentasPorVendedor.Location = new System.Drawing.Point(435, 0);
+            this.tabVentasPorVendedor.Name = "tabVentasPorVendedor";
+            this.tabVentasPorVendedor.Size = new System.Drawing.Size(180, 50);
+            this.tabVentasPorVendedor.TabIndex = 1011;
+            this.tabVentasPorVendedor.Text = "Ventas Por Vendedor";
+            this.tabVentasPorVendedor.Visible = false;
             // 
             // tabModificarCliente
             // 
@@ -174,6 +197,7 @@
             this.tabModificarCliente.Size = new System.Drawing.Size(180, 50);
             this.tabModificarCliente.TabIndex = 1007;
             this.tabModificarCliente.Text = "Modificar Cliente";
+            this.tabModificarCliente.Click += new System.EventHandler(this.tabModificarCliente_Click);
             // 
             // tabVentas
             // 
@@ -198,26 +222,27 @@
             this.tabVentas.Text = "Ventas";
             this.tabVentas.Visible = false;
             // 
-            // tabSeccionAgregarCliente
+            // tabAgregarCliente
             // 
-            this.tabSeccionAgregarCliente.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
-            this.tabSeccionAgregarCliente.CheckedState.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.tabSeccionAgregarCliente.CheckedState.FillColor = System.Drawing.SystemColors.ControlLight;
-            this.tabSeccionAgregarCliente.CustomBorderColor = System.Drawing.SystemColors.Control;
-            this.tabSeccionAgregarCliente.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 3);
-            this.tabSeccionAgregarCliente.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.tabSeccionAgregarCliente.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.tabSeccionAgregarCliente.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.tabSeccionAgregarCliente.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.tabSeccionAgregarCliente.FillColor = System.Drawing.SystemColors.Control;
-            this.tabSeccionAgregarCliente.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabSeccionAgregarCliente.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.tabSeccionAgregarCliente.HoverState.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.tabSeccionAgregarCliente.Location = new System.Drawing.Point(435, 0);
-            this.tabSeccionAgregarCliente.Name = "tabSeccionAgregarCliente";
-            this.tabSeccionAgregarCliente.Size = new System.Drawing.Size(180, 50);
-            this.tabSeccionAgregarCliente.TabIndex = 1008;
-            this.tabSeccionAgregarCliente.Text = "Agregar cliente";
+            this.tabAgregarCliente.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            this.tabAgregarCliente.CheckedState.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
+            this.tabAgregarCliente.CheckedState.FillColor = System.Drawing.SystemColors.ControlLight;
+            this.tabAgregarCliente.CustomBorderColor = System.Drawing.SystemColors.Control;
+            this.tabAgregarCliente.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 3);
+            this.tabAgregarCliente.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.tabAgregarCliente.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.tabAgregarCliente.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.tabAgregarCliente.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.tabAgregarCliente.FillColor = System.Drawing.SystemColors.Control;
+            this.tabAgregarCliente.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabAgregarCliente.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
+            this.tabAgregarCliente.HoverState.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
+            this.tabAgregarCliente.Location = new System.Drawing.Point(435, 0);
+            this.tabAgregarCliente.Name = "tabAgregarCliente";
+            this.tabAgregarCliente.Size = new System.Drawing.Size(180, 50);
+            this.tabAgregarCliente.TabIndex = 1008;
+            this.tabAgregarCliente.Text = "Agregar cliente";
+            this.tabAgregarCliente.Click += new System.EventHandler(this.tabAltaClientes_Click);
             // 
             // tabModificarClientes
             // 
@@ -261,7 +286,7 @@
             this.tabBuscarCliente.Size = new System.Drawing.Size(180, 50);
             this.tabBuscarCliente.TabIndex = 1005;
             this.tabBuscarCliente.Text = "Buscar Cliente";
-            this.tabBuscarCliente.Click += new System.EventHandler(this.tabAltaClientes_Click);
+            this.tabBuscarCliente.Click += new System.EventHandler(this.tabBuscarCliente_Click);
             // 
             // btnCerrar
             // 
@@ -298,29 +323,6 @@
             this.panelContenedor.Name = "panelContenedor";
             this.panelContenedor.Size = new System.Drawing.Size(1050, 600);
             this.panelContenedor.TabIndex = 1005;
-            // 
-            // tabVentasPorVendedor
-            // 
-            this.tabVentasPorVendedor.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
-            this.tabVentasPorVendedor.Checked = true;
-            this.tabVentasPorVendedor.CheckedState.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.tabVentasPorVendedor.CheckedState.FillColor = System.Drawing.SystemColors.ControlLight;
-            this.tabVentasPorVendedor.CustomBorderColor = System.Drawing.SystemColors.Control;
-            this.tabVentasPorVendedor.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 3);
-            this.tabVentasPorVendedor.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.tabVentasPorVendedor.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.tabVentasPorVendedor.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.tabVentasPorVendedor.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.tabVentasPorVendedor.FillColor = System.Drawing.SystemColors.Control;
-            this.tabVentasPorVendedor.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabVentasPorVendedor.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.tabVentasPorVendedor.HoverState.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.tabVentasPorVendedor.Location = new System.Drawing.Point(435, 0);
-            this.tabVentasPorVendedor.Name = "tabVentasPorVendedor";
-            this.tabVentasPorVendedor.Size = new System.Drawing.Size(180, 50);
-            this.tabVentasPorVendedor.TabIndex = 1011;
-            this.tabVentasPorVendedor.Text = "Ventas Por Vendedor";
-            this.tabVentasPorVendedor.Visible = false;
             // 
             // MenuVendedor
             // 
@@ -359,7 +361,7 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panelContenedor;
         private Guna.UI2.WinForms.Guna2Button btnSeccionVentas;
-        private Guna.UI2.WinForms.Guna2Button tabSeccionAgregarCliente;
+        private Guna.UI2.WinForms.Guna2Button tabAgregarCliente;
         private Guna.UI2.WinForms.Guna2Button tabVentas;
         private Guna.UI2.WinForms.Guna2Button tabVentasPorVendedor;
     }
