@@ -21,6 +21,7 @@ namespace TemplateTPIntegrador.Modulos.Clientes
         }
 
         private string HOST = "Grupo 6"; // Valor predeterminado para host
+        private string CLIENTEID = "3220f419-a126-47a1-950f-202d19be8d4c";
 
         private void btn_crearUsuario_Click(object sender, EventArgs e)
         {
@@ -43,7 +44,7 @@ namespace TemplateTPIntegrador.Modulos.Clientes
                 // Crear una instancia de ClienteWS con los datos del formulario
                 ClienteWS cliente = new ClienteWS
                 {
-                    idUsuario = txt_dni.Text,
+                    idUsuario = CLIENTEID,
                     nombre = txt_nombre.Text,
                     apellido = txt_apellido.Text,
                     dni = int.Parse(txt_dni.Text),

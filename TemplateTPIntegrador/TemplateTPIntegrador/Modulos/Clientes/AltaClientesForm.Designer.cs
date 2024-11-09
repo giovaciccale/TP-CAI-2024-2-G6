@@ -99,12 +99,12 @@
             this.txt_fecha.CalendarFont = new System.Drawing.Font("Century Gothic", 10F);
             this.txt_fecha.Font = new System.Drawing.Font("Century Gothic", 10F);
             this.txt_fecha.Location = new System.Drawing.Point(55, 11);
-            this.txt_fecha.MaxDate = new System.DateTime(2007, 1, 1, 0, 0, 0, 0);
+            this.txt_fecha.MaxDate = new System.DateTime(2024, 1, 1, 0, 0, 0, 0);
             this.txt_fecha.MinDate = new System.DateTime(1924, 1, 1, 0, 0, 0, 0);
             this.txt_fecha.Name = "txt_fecha";
             this.txt_fecha.Size = new System.Drawing.Size(416, 24);
             this.txt_fecha.TabIndex = 0;
-            this.txt_fecha.Value = new System.DateTime(2007, 1, 1, 0, 0, 0, 0);
+            this.txt_fecha.Value = new System.DateTime(2024, 1, 1, 0, 0, 0, 0);
             this.txt_fecha.ValueChanged += new System.EventHandler(this.txt_fecha_ValueChanged);
             this.txt_fecha.Enter += new System.EventHandler(this.txt_fecha_ValueChanged);
             // 

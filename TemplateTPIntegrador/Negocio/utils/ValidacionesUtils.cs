@@ -100,7 +100,7 @@ namespace Negocio.utils
                 {
                     DateTime fechaSeleccionada = datePicker.Value;
                     DateTime fechaMinima = new DateTime(1924, 1, 1);
-                    DateTime fechaMaxima = new DateTime(2007, 1, 1);
+                    DateTime fechaMaxima = new DateTime(2006, 9, 11);
 
                     if (fechaSeleccionada < fechaMinima || fechaSeleccionada > fechaMaxima)
                     {
