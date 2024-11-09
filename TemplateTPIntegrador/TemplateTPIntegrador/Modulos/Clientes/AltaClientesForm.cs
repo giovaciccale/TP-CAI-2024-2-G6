@@ -20,21 +20,23 @@ namespace TemplateTPIntegrador.Modulos.Clientes
             InitializeComponent();
         }
 
-        private string host = ""; // Valor predeterminado para host
+        private string HOST = "Grupo 6"; // Valor predeterminado para host
+        private string CLIENTEID = "3220f419-a126-47a1-950f-202d19be8d4c";
 
         private void btn_crearUsuario_Click(object sender, EventArgs e)
         {
             try
             {
                 // Validar el nombre de cliente antes de crear el cliente
-                var campos = new Dictionary<TextBox, (string nombreDelCampo, bool esNumerico)>
+                var campos = new Dictionary<Control, (string nombreDelCampo, bool esNumerico, bool esFecha)>
                 {
-                    { txt_nombre, ("Nombre", false) },
-                    { txt_apellido, ("Apellido", false) },
-                    { txt_email, ("Email", false) },
-                    { txt_dni, ("DNI", true) }, // Debe ser Numerico
-                    {txt_direccion, ("Dirección", false) },
-                    {txt_telefono, ("Teléfono", true) } // Debe ser Numerico
+                    { txt_nombre, ("Nombre", false, false) },
+                    { txt_apellido, ("Apellido", false, false) },
+                    { txt_email, ("Email", false, false) },
+                    { txt_fecha, ("Fecha De Nacimiento", false, true) },
+                    { txt_dni, ("DNI", true, false) }, // Debe ser Numerico
+                    { txt_direccion, ("Dirección", false, false) },
+                    { txt_telefono, ("Teléfono", false, false) } // Debe ser Numerico
                 };
 
                 ValidadorDeCampos.ValidarCamposCliente(campos);
@@ -42,6 +44,7 @@ namespace TemplateTPIntegrador.Modulos.Clientes
                 // Crear una instancia de ClienteWS con los datos del formulario
                 ClienteWS cliente = new ClienteWS
                 {
+                    idUsuario = CLIENTEID,
                     nombre = txt_nombre.Text,
                     apellido = txt_apellido.Text,
                     dni = int.Parse(txt_dni.Text),
@@ -49,7 +52,7 @@ namespace TemplateTPIntegrador.Modulos.Clientes
                     telefono = txt_telefono.Text,
                     email = txt_email.Text,
                     fechaNacimiento = txt_fecha.Value,
-                    host = host,  // Usa el valor de host basado en la selección del tipo de cliente
+                    host = HOST,  // Usa el valor de host basado en la selección del tipo de cliente
 
                 };
 

@@ -59,40 +59,58 @@ namespace Negocio.utils
     }
     public static class ValidadorDeCampos
     {
-        public static void ValidarCamposCliente(Dictionary<TextBox, (string nombreDelCampo, bool esNumerico)> campos)
+        public static void ValidarCamposCliente(Dictionary<Control, (string nombreDelCampo, bool esNumerico, bool esFecha)> campos)
         {
             foreach (var campo in campos)
             {
-                TextBox textbox = campo.Key;
+                Control control = campo.Key;
                 string nombreDelCampo = campo.Value.nombreDelCampo;
                 bool esNumerico = campo.Value.esNumerico;
+                bool esFecha = campo.Value.esFecha;
 
-                if (string.IsNullOrEmpty(textbox.Text))
+                if (control is TextBox textbox)
                 {
-                    MessageBox.Show($"El campo '{nombreDelCampo}' no puede estar vacío.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    textbox.Focus();
-                    return;
-                }
-
-                if (esNumerico)
-                {
-                    if (!int.TryParse(textbox.Text, out int parsedValue))
+                    if (string.IsNullOrEmpty(textbox.Text))
                     {
-                        MessageBox.Show($"El campo '{nombreDelCampo}' debe ser numérico.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        MessageBox.Show($"El campo '{nombreDelCampo}' no puede estar vacío.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         textbox.Focus();
                         return;
                     }
 
-                    if (textbox.Text.Length != 8)
+                    if (esNumerico)
                     {
-                        MessageBox.Show($"El campo '{nombreDelCampo}' debe tener 8 dígitos.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                        textbox.Focus();
+                        if (!int.TryParse(textbox.Text, out int parsedValue))
+                        {
+                            MessageBox.Show($"El campo '{nombreDelCampo}' debe ser numérico.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            textbox.Focus();
+                            return;
+                        }
+
+                        if (textbox.Text.Length != 8)
+                        {
+                            MessageBox.Show($"El campo '{nombreDelCampo}' debe tener 8 dígitos.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            textbox.Focus();
+                            return;
+                        }
+                    }
+                }
+                    
+
+                else if (control is DateTimePicker datePicker && esFecha)
+                {
+                    DateTime fechaSeleccionada = datePicker.Value;
+                    DateTime fechaMinima = new DateTime(1924, 1, 1);
+                    DateTime fechaMaxima = new DateTime(2006, 9, 11);
+
+                    if (fechaSeleccionada < fechaMinima || fechaSeleccionada > fechaMaxima)
+                    {
+                        MessageBox.Show($"El campo '{nombreDelCampo}' debe ser una fecha entre {fechaMinima.ToShortDateString()} y {fechaMaxima.ToShortDateString()}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        datePicker.Focus();
                         return;
                     }
                 }
             }
 
-            MessageBox.Show("Cliente creado de manera exitosa!", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
     }

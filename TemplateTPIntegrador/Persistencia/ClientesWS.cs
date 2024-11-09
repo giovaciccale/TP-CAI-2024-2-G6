@@ -12,7 +12,7 @@ namespace Persistencia
 {
     public class ClientesWS
     {
-        public String adminId = "3220f419-a126-47a1-950f-202d19be8d4c";
+        public String IDUSUARIO = "3220f419-a126-47a1-950f-202d19be8d4c";
         DateTime FechaAlta = DateTime.Now;
 
         // Método para agregar un nuevo cliente
@@ -26,7 +26,7 @@ namespace Persistencia
                 // Serializar el objeto ClienteWS a JSON
                 var jsonCliente = JsonConvert.SerializeObject(new
                 {
-                    idcliente = adminId,
+                    idUsuario = IDUSUARIO,
                     nombre = cliente.nombre,
                     apellido = cliente.apellido,
                     dni = cliente.dni,
@@ -103,7 +103,7 @@ namespace Persistencia
         {
             try
             {
-                HttpResponseMessage response = WebHelper.Get("Cliente/GetClientes?id=" + adminId);
+                HttpResponseMessage response = WebHelper.Get("Cliente/GetClientes?id=" + IDUSUARIO);
 
                 if (response.IsSuccessStatusCode)
                 {
