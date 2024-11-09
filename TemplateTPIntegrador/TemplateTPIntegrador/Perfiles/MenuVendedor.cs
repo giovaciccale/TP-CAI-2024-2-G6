@@ -9,6 +9,10 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using TemplateTPIntegrador.Usuarios.Aministrador;
+using TemplateTPIntegrador.Modulos.Clientes;
+using TemplateTPIntegrador.Modulos.Ventas;
+using TemplateTPIntegrador.Modulos.Reportes;
+
 
 namespace TemplateTPIntegrador
 {
@@ -27,21 +31,20 @@ namespace TemplateTPIntegrador
         private extern static void SendMessage(System.IntPtr hwnd, int wmsg, int wparam, int lparam);
 
         // Variables para mantener el estado de la sección actual
-        private bool enSeccionProductos = true;
-        private bool enSeccionDevoluciones = false;
+        private bool enSeccionClientes = true;
+        private bool enSeccionVentas = false;
         private bool enSeccionReportes = false;
 
         private void MenuUsuario_Load(object sender, EventArgs e)
         {
-            MostrarSeccionProductos();
+            MostrarSeccionClientes();
         }
 
 
         private void MenuForm_Shown(object sender, EventArgs e)
         {
-            abrirFormInPanel(new AltaProductosForm());
+            abrirFormInPanel(new AltaClientesForm());
         }
-
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
@@ -56,25 +59,25 @@ namespace TemplateTPIntegrador
         }
 
 
-        private void btnSeccionProductos_Click(object sender, EventArgs e)
+        private void btnSeccionClientes_Click(object sender, EventArgs e)
         {
-            if (!enSeccionProductos)
+            if (!enSeccionClientes)
             {
-                MostrarSeccionProductos();
-                enSeccionProductos = true;
-                enSeccionDevoluciones = false;
+                MostrarSeccionClientes();
+                enSeccionClientes = true;
+                enSeccionVentas = false;
                 enSeccionReportes = false;
             }
         }
 
 
-        private void btnSeccionDevoluciones_Click(object sender, EventArgs e)
+        private void btnSeccionVentas_Click(object sender, EventArgs e)
         {
-            if (!enSeccionDevoluciones)
+            if (!enSeccionVentas)
             {
-                MostrarSeccionDevoluciones();
-                enSeccionDevoluciones = true;
-                enSeccionProductos = false;
+                MostrarSeccionVentas();
+                enSeccionVentas = true;
+                enSeccionClientes = false;
                 enSeccionReportes = false;
             }
         }
@@ -86,74 +89,67 @@ namespace TemplateTPIntegrador
             {
                 MostrarSeccionReportes();
                 enSeccionReportes=true;
-                enSeccionProductos=false;
-                enSeccionDevoluciones=false;
+                enSeccionClientes=false;
+                enSeccionVentas=false;
             }
         }
 
 
-        private void MostrarSeccionProductos()
+        private void MostrarSeccionClientes()
         {
             // Esconder tabs de Reportes
-            tabStockCritico.Visible = false;
-            tabReporteVentasxVendedor.Visible = false;
-            tabProductosMasVendidos.Visible = false;
+            tabVentasPorVendedor.Visible = false;
 
-            // Esconder tabs de Devoluciones
-            tabDevoluciones.Visible = false;
+            // Esconder tabs de Ventas
+            tabVentas.Visible = false;
 
-            // Mostrar tabs de Productos
-            tabAltaProductos.Visible = true;
-            tabModificarProductos.Visible = true;
-            tabBajaProductos.Visible = true;
+            // Mostrar tabs de Clientes
+            tabBuscarCliente.Visible = true;
+            tabSeccionAgregarCliente.Visible = true;
+            tabModificarCliente.Visible = true;
 
             // Seleccionar tab por defecto y cargar el formulario correspondiente
-            tabAltaProductos.Checked = true;
-            abrirFormInPanel(new AltaProductosForm());
+            tabBuscarCliente.Checked = true;
+            abrirFormInPanel(new BuscarClientesForm());
         }
 
 
-        private void MostrarSeccionDevoluciones()
+        private void MostrarSeccionVentas()
         {
-            // Esconder tabs de Productos
-            tabAltaProductos.Visible = false;
-            tabModificarProductos.Visible = false;
-            tabBajaProductos.Visible = false;
+            // Esconder tabs de Clientes
+            tabBuscarCliente.Visible = false;
+            tabSeccionAgregarCliente.Visible = false;
+            tabModificarCliente.Visible = false;
 
             // Esconder tabs de Reportes
-            tabStockCritico.Visible = false;
-            tabReporteVentasxVendedor.Visible = false;
-            tabProductosMasVendidos.Visible = false;
+            tabVentasPorVendedor.Visible = false;
 
-            // Mostrar tabs de Devoluciones
-            tabDevoluciones.Visible = true;
+            // Mostrar tabs de Ventas
+            tabVentas.Visible = true;
 
             // Seleccionar tab por defecto y cargar el formulario correspondiente
-            tabDevoluciones.Checked = true;
-            abrirFormInPanel(new AltaProductosForm());
+            tabVentas.Checked = true;
+            abrirFormInPanel(new VentasForm());
         }
 
 
         private void MostrarSeccionReportes()
         {
-            // Esconder tabs de Productos
-            tabAltaProductos.Visible = false;
-            tabModificarProductos.Visible = false;
-            tabBajaProductos.Visible = false;
+            // Esconder tabs de Clientes
+            tabBuscarCliente.Visible = false;
+            tabSeccionAgregarCliente.Visible = false;
+            tabModificarCliente.Visible = false;
 
-            // Esconder tabs de Devoluciones
-            tabDevoluciones.Visible = false;
+            // Esconder tabs de Ventas
+            tabSeccionAgregarCliente.Visible = false;
 
             // Mostrar tabs de Reportes
-            tabStockCritico.Visible = true;
-            tabReporteVentasxVendedor.Visible = true;
-            tabProductosMasVendidos.Visible = true;
+            tabVentasPorVendedor.Visible = true;
 
             // Seleccionar tab por defecto y cargar el formulario correspondiente
-            tabStockCritico.Checked = true;
-            abrirFormInPanel(new AltaProductosForm());
+            tabVentasPorVendedor.Checked = true;
+            abrirFormInPanel(new ReportesPorVendedorForm());
         }
-
 
         private void abrirFormInPanel(object formHijo)
         {
@@ -167,13 +163,10 @@ namespace TemplateTPIntegrador
             fh.Show();
         }
 
-
-        private void tabAltaProductos_Click(object sender, EventArgs e)
+        private void tabAltaClientes_Click(object sender, EventArgs e)
         {
-            abrirFormInPanel(new AltaProductosForm());
+            abrirFormInPanel(new AltaClientesForm());
         }
-
-
 
         private void btnCerrar_Click(object sender, EventArgs e)
         {
