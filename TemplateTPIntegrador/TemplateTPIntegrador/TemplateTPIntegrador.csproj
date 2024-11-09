@@ -55,6 +55,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Modulos\Clientes\AltaClientesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modulos\Clientes\AltaClientesForm.Designer.cs">
+      <DependentUpon>AltaClientesForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modulos\Clientes\BuscarClientesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modulos\Clientes\BuscarClientesForm.Designer.cs">
+      <DependentUpon>BuscarClientesForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modulos\Clientes\ModificarClientesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modulos\Clientes\ModificarClientesForm.Designer.cs">
+      <DependentUpon>ModificarClientesForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Modulos\Productos\AltaProductosForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -85,6 +103,12 @@
     <Compile Include="Modulos\Usuarios\LoginForm.Designer.cs">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Modulos\Ventas\VentasForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modulos\Ventas\VentasForm.Designer.cs">
+      <DependentUpon>VentasForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Perfiles\MenuAdm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -106,6 +130,9 @@
       <DependentUpon>MenuSupervisor.cs</DependentUpon>
     </Compile>
     <Compile Include="utils\validacionesUtils.cs" />
+    <EmbeddedResource Include="Modulos\Clientes\AltaClientesForm.resx">
+      <DependentUpon>AltaClientesForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Modulos\Productos\AltaProductosForm.resx">
       <DependentUpon>AltaProductosForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -114,6 +141,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Modulos\Usuarios\CambiarContraseña.resx">
       <DependentUpon>CambiarContraseña.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modulos\Ventas\VentasForm.resx">
+      <DependentUpon>VentasForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Perfiles\MenuAdm.resx">
       <DependentUpon>MenuAdm.cs</DependentUpon>
@@ -175,10 +205,8 @@
     <None Include="Resources\kissclipart-password-icon-clipart-password-computer-icons-clip-d813f06606bcdc9a.png" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Modulos\Clientes\" />
     <Folder Include="Modulos\Proveedores\" />
     <Folder Include="Modulos\Reportes\" />
-    <Folder Include="Modulos\Ventas\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\usuarios.png" />
