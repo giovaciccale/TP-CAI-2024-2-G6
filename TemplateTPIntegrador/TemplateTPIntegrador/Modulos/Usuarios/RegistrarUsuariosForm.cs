@@ -95,7 +95,7 @@ namespace TemplateTPIntegrador
                     host = int.Parse(host),  // Usa el valor de host basado en la selección del tipo de usuario
                     nombreUsuario = txt_usuario.Text,
                     contraseña = contraseñaTemporal
-             
+
                 };
 
                 // Muestra un mensaje de depuración
