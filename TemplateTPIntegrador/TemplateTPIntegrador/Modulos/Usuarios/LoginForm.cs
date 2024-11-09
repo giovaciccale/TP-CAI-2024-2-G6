@@ -4,6 +4,8 @@ using System.Windows.Forms;
 using Negocio;
 using System.Drawing;
 using TemplateTPIntegrador.utils;
+using TemplateTPIntegrador.Modulos.Usuarios;
+using Persistencia;
 
 namespace TemplateTPIntegrador
 {
@@ -41,16 +43,44 @@ namespace TemplateTPIntegrador
             try
             {
                 // Intentar iniciar sesión
-                bool loginExitoso = login_negocio.Login(txt_usuario.Text, txt_contraseña.Text);
+                bool loginExitoso = login_negocio.Login(txt_usuario.Text, txt_contraseña.Text, out bool requiereCambioContraseña, 
+                    out string idUsuario, out string nombreUsuario, out string contraseñaActual, out DateTime fechaAlta , out int host);
 
-                if (loginExitoso)
+                if (requiereCambioContraseña)
                 {
-                    // Si el login fue exitoso, muestra el menú
-                    MenuForm menu = new MenuForm();
+                    // Si se requiere cambiar la contraseña, abrir el formulario CambiarContraseña
+                    CambiarContraseña cambiarContraseñaForm = new CambiarContraseña(idUsuario, nombreUsuario, contraseñaActual, fechaAlta);
                     this.Hide();
-                    menu.FormClosed += (s, args) => this.Show();
-                    menu.Show();
+                    cambiarContraseñaForm.FormClosed += (s, args) => this.Show();
+                    cambiarContraseñaForm.ShowDialog(); // Mostrar el formulario de manera modal
                 }
+                else if (loginExitoso)
+                {
+                    if (host == 3)
+                    {
+                        // Si el login fue exitoso y el host es 3, muestra el menú principal
+                        MenuForm menu = new MenuForm();
+                        this.Hide();
+                        menu.FormClosed += (s, args) => this.Show();
+                        menu.Show();
+                    }
+                    else if (host == 2)
+                    {
+                        // Si el login fue exitoso y el host es 2, muestra el menú para supervisores
+                        MenuSupervisor menuSupervisor = new MenuSupervisor();
+                        this.Hide();
+                        menuSupervisor.FormClosed += (s, args) => this.Show();
+                        menuSupervisor.Show();
+                    }
+                    else
+                    {
+                        // Si el host no es 3 ni 2, muestra un mensaje de acceso denegado
+                        MessageBox.Show("No tiene permiso para acceder a esta área.", "Acceso denegado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        txt_contraseña.Clear();
+                        txt_usuario.Focus();
+                    }
+                }
+
                 else
                 {
                     // Si el login falló, muestra un mensaje de error
@@ -105,13 +135,11 @@ namespace TemplateTPIntegrador
         private void pictureBox_MouseHover(object sender, EventArgs e)
         {
             txt_contraseña.UseSystemPasswordChar = false;
-
         }
 
         private void pictureBox2_MouseLeave(object sender, EventArgs e)
         {
             txt_contraseña.UseSystemPasswordChar = true;
-
         }
     }
 }
