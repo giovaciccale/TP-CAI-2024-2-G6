@@ -1,6 +1,6 @@
-﻿namespace TemplateTPIntegrador.Modulos.Clientes
+﻿namespace TemplateTPIntegrador.Modulos.Ventas
 {
-    partial class AltaClientesForm
+    partial class VentasForm
     {
         /// <summary>
         /// Required designer variable.
@@ -30,14 +30,14 @@
         {
             this.SuspendLayout();
             // 
-            // AltaClientesForm
+            // VentasForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1050, 600);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "AltaClientesForm";
-            this.Text = "AltaClientesFom";
+            this.Name = "VentasForm";
+            this.Text = "VentasForm";
             this.ResumeLayout(false);
 
         }

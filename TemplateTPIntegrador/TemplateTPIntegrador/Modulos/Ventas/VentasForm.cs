@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace TemplateTPIntegrador.Modulos.Clientes
+namespace TemplateTPIntegrador.Modulos.Ventas
 {
-    public partial class AltaClientesForm : Form
+    public partial class VentasForm : Form
     {
-        public AltaClientesForm()
+        public VentasForm()
         {
             InitializeComponent();
         }
