@@ -55,6 +55,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Modulos\Clientes\AltaClientesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modulos\Clientes\AltaClientesForm.Designer.cs">
+      <DependentUpon>AltaClientesForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modulos\Clientes\BuscarClientesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modulos\Clientes\BuscarClientesForm.Designer.cs">
+      <DependentUpon>BuscarClientesForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modulos\Clientes\ModificarClientesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modulos\Clientes\ModificarClientesForm.Designer.cs">
+      <DependentUpon>ModificarClientesForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Modulos\Productos\AltaProductosForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -66,6 +84,11 @@
     </Compile>
     <Compile Include="Modulos\Proveedores\RegistrarProveedoresForm.Designer.cs">
       <DependentUpon>RegistrarProveedoresForm.cs</DependentUpon>
+    <Compile Include="Modulos\Reportes\ReportesPorVendedorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modulos\Reportes\ReportesPorVendedorForm.Designer.cs">
+      <DependentUpon>ReportesPorVendedorForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Modulos\Usuarios\CambiarContraseña.cs">
       <SubType>Form</SubType>
@@ -91,6 +114,12 @@
     <Compile Include="Modulos\Usuarios\LoginForm.Designer.cs">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Modulos\Ventas\VentasForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modulos\Ventas\VentasForm.Designer.cs">
+      <DependentUpon>VentasForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Perfiles\MenuAdm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -112,17 +141,31 @@
       <DependentUpon>MenuSupervisor.cs</DependentUpon>
     </Compile>
     <Compile Include="utils\validacionesUtils.cs" />
+    <EmbeddedResource Include="Modulos\Clientes\AltaClientesForm.resx">
+      <DependentUpon>AltaClientesForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modulos\Clientes\BuscarClientesForm.resx">
+      <DependentUpon>BuscarClientesForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modulos\Clientes\ModificarClientesForm.resx">
+      <DependentUpon>ModificarClientesForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Modulos\Productos\AltaProductosForm.resx">
       <DependentUpon>AltaProductosForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Modulos\Proveedores\RegistrarProveedoresForm.resx">
       <DependentUpon>RegistrarProveedoresForm.cs</DependentUpon>
+    <EmbeddedResource Include="Modulos\Reportes\ReportesPorVendedorForm.resx">
+      <DependentUpon>ReportesPorVendedorForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Modulos\Usuarios\BajaUsuarios.resx">
       <DependentUpon>BajaUsuarios.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Modulos\Usuarios\CambiarContraseña.resx">
       <DependentUpon>CambiarContraseña.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modulos\Ventas\VentasForm.resx">
+      <DependentUpon>VentasForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Perfiles\MenuAdm.resx">
       <DependentUpon>MenuAdm.cs</DependentUpon>
@@ -187,6 +230,7 @@
     <Folder Include="Modulos\Clientes\" />
     <Folder Include="Modulos\Reportes\" />
     <Folder Include="Modulos\Ventas\" />
+    <Folder Include="Modulos\Proveedores\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\usuarios.png" />
