@@ -79,6 +79,12 @@
     <Compile Include="Modulos\Productos\AltaProductosForm.Designer.cs">
       <DependentUpon>AltaProductosForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Modulos\Reportes\ReportesPorVendedorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modulos\Reportes\ReportesPorVendedorForm.Designer.cs">
+      <DependentUpon>ReportesPorVendedorForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Modulos\Usuarios\CambiarContraseña.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -133,8 +139,17 @@
     <EmbeddedResource Include="Modulos\Clientes\AltaClientesForm.resx">
       <DependentUpon>AltaClientesForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Modulos\Clientes\BuscarClientesForm.resx">
+      <DependentUpon>BuscarClientesForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modulos\Clientes\ModificarClientesForm.resx">
+      <DependentUpon>ModificarClientesForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Modulos\Productos\AltaProductosForm.resx">
       <DependentUpon>AltaProductosForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modulos\Reportes\ReportesPorVendedorForm.resx">
+      <DependentUpon>ReportesPorVendedorForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Modulos\Usuarios\BajaUsuarios.resx">
       <DependentUpon>BajaUsuarios.cs</DependentUpon>
@@ -206,7 +221,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Modulos\Proveedores\" />
-    <Folder Include="Modulos\Reportes\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\usuarios.png" />

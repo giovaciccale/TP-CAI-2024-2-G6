@@ -10,6 +10,9 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using TemplateTPIntegrador.Usuarios.Aministrador;
 using TemplateTPIntegrador.Modulos.Clientes;
+using TemplateTPIntegrador.Modulos.Ventas;
+using TemplateTPIntegrador.Modulos.Reportes;
+
 
 namespace TemplateTPIntegrador
 {
@@ -107,7 +110,7 @@ namespace TemplateTPIntegrador
 
             // Seleccionar tab por defecto y cargar el formulario correspondiente
             tabBuscarCliente.Checked = true;
-            abrirFormInPanel(new AltaClientesForm());
+            abrirFormInPanel(new BuscarClientesForm());
         }
 
 
@@ -126,7 +129,7 @@ namespace TemplateTPIntegrador
 
             // Seleccionar tab por defecto y cargar el formulario correspondiente
             tabVentas.Checked = true;
-            abrirFormInPanel(new AltaClientesForm());
+            abrirFormInPanel(new VentasForm());
         }
 
 
@@ -145,7 +148,7 @@ namespace TemplateTPIntegrador
 
             // Seleccionar tab por defecto y cargar el formulario correspondiente
             tabVentasPorVendedor.Checked = true;
-            abrirFormInPanel(new AltaClientesForm());
+            abrirFormInPanel(new ReportesPorVendedorForm());
         }
 
         private void abrirFormInPanel(object formHijo)
