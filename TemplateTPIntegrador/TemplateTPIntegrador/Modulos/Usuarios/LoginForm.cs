@@ -72,12 +72,13 @@ namespace TemplateTPIntegrador
                         menuSupervisor.FormClosed += (s, args) => this.Show();
                         menuSupervisor.Show();
                     }
-                    else
+                    else if (host == 1)
                     {
-                        // Si el host no es 3 ni 2, muestra un mensaje de acceso denegado
-                        MessageBox.Show("No tiene permiso para acceder a esta área.", "Acceso denegado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                        txt_contraseña.Clear();
-                        txt_usuario.Focus();
+                        // Si el login fue exitoso y el host es 1, muestra el menú para vendedores
+                        MenuVendedor menuVendedor = new MenuVendedor();
+                        this.Hide();
+                        menuVendedor.FormClosed += (s, args) => this.Show();
+                        menuVendedor.Show();
                     }
                 }
 
