@@ -96,9 +96,9 @@ namespace TemplateTPIntegrador
             if (!enSeccionUsuarios)
             {
                 MostrarSeccionProveedores();
-                enSeccionUsuarios = true;
+                enSeccionUsuarios = false;
                 enSeccionProductos = false;
-                enSeccionProveedores = false;
+                enSeccionProveedores = true;
             }
         }
         private void btnSeccionProductos_Click(object sender, EventArgs e)
