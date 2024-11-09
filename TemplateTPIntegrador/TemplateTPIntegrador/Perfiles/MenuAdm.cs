@@ -106,7 +106,6 @@ namespace TemplateTPIntegrador
 
             // Mostrar tabs de Usuarios
             tabRegistrarUsuarios.Visible = true;
-            tabModificarUsuarios.Visible = true;
             tabEliminarUsuario.Visible = true;
 
             // Seleccionar tab por defecto y cargar el formulario correspondiente
@@ -118,7 +117,6 @@ namespace TemplateTPIntegrador
         {
             // Ocultar tabs de Usuarios
             tabRegistrarUsuarios.Visible = false;
-            tabModificarUsuarios.Visible = false;
             tabEliminarUsuario.Visible = false;
 
             // Mostrar tabs de Productos
@@ -143,10 +141,6 @@ namespace TemplateTPIntegrador
             abrirFormInPanel(new BajaUsuarios());
         }
 
-        private void tabModificarUsuarios_Click(object sender, EventArgs e)
-        {
-            abrirFormInPanel(new ModificarUsuariosForm());
-        }
 
         private void tabAltaProductos_Click(object sender, EventArgs e)
         {
@@ -164,5 +158,12 @@ namespace TemplateTPIntegrador
             abrirFormInPanel(new BajaProductosForm());
 
         }
+
+        private void guna2Button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+
     }
 }

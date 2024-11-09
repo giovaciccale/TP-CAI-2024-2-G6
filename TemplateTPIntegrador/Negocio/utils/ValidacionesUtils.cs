@@ -39,6 +39,7 @@ namespace Negocio.utils
             return true;
         }
 
+
         // Cambiar contraseña (no debe ser igual a la anterior)
         public bool CambiarContraseña(string nuevaContraseña, string Contraseña, DateTime FechaUltimaContraseña)
         {
@@ -56,32 +57,4 @@ namespace Negocio.utils
 }
 
 
-//// Verificar si la contraseña ha expirado (cada 30 días)
-//public bool ContraseñaExpirada()
-//{
-//    if (!FechaUltimaContraseña.HasValue)
-//        return false;
-
-//    return (DateTime.Now - FechaUltimaContraseña.Value).TotalDays >= 30;
-//}
-
-//// Intento de login fallido
-//public void IntentoFallido()
-//{
-//    IntentosLogin++;
-//    if (IntentosLogin >= 3)
-//    {
-//        Estado = EstadoUsuario.INACTIVO;
-//    }
-//}
-
-//// Login exitoso, resetear intentos
-//public void LoginExitoso()
-//{
-//    IntentosLogin = 0;
-//    if (Estado == EstadoUsuario.INACTIVO)
-//    {
-//        Estado = EstadoUsuario.ACTIVO;
-//    }
-//}
 

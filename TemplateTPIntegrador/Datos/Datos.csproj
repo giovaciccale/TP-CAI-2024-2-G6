@@ -44,7 +44,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Producto.cs" />
+    <Compile Include="CategoriaWS.cs" />
+    <Compile Include="ClienteWS.cs" />
+    <Compile Include="ProductoWS.cs" />
+    <Compile Include="ProveedoreWS.cs" />
     <Compile Include="UsuarioWS.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
