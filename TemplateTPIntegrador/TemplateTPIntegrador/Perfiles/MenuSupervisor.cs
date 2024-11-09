@@ -173,15 +173,7 @@ namespace TemplateTPIntegrador
             abrirFormInPanel(new AltaProductosForm());
         }
 
-        private void tabModificarProductos_Click(object sender, EventArgs e)
-        {
-            abrirFormInPanel(new ModificarProductosForm());
-        }
 
-        private void tabBajaProductos_Click(object sender, EventArgs e)
-        {
-            abrirFormInPanel(new BajaProductosForm());
-        }
 
         private void btnCerrar_Click(object sender, EventArgs e)
         {

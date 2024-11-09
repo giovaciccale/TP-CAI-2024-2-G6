@@ -101,12 +101,11 @@ namespace TemplateTPIntegrador
         {
             // Ocultar tabs de Productos
             tabAltaProductos.Visible = false;
-            tabModificarProductos.Visible = false;
-            tabBajaProductos.Visible = false;
+
+
 
             // Mostrar tabs de Usuarios
             tabRegistrarUsuarios.Visible = true;
-            tabModificarUsuarios.Visible = true;
             tabEliminarUsuario.Visible = true;
 
             // Seleccionar tab por defecto y cargar el formulario correspondiente
@@ -118,13 +117,12 @@ namespace TemplateTPIntegrador
         {
             // Ocultar tabs de Usuarios
             tabRegistrarUsuarios.Visible = false;
-            tabModificarUsuarios.Visible = false;
             tabEliminarUsuario.Visible = false;
 
             // Mostrar tabs de Productos
             tabAltaProductos.Visible = true;
-            tabModificarProductos.Visible = true;
-            tabBajaProductos.Visible = true;
+
+
 
             // Seleccionar tab por defecto y cargar el formulario correspondiente
             tabAltaProductos.Checked = true;
@@ -143,26 +141,19 @@ namespace TemplateTPIntegrador
             abrirFormInPanel(new BajaUsuarios());
         }
 
-        private void tabModificarUsuarios_Click(object sender, EventArgs e)
-        {
-            abrirFormInPanel(new ModificarUsuariosForm());
-        }
 
         private void tabAltaProductos_Click(object sender, EventArgs e)
         {
             abrirFormInPanel(new AltaProductosForm());
         }
 
-        private void tabModificarProductos_Click(object sender, EventArgs e)
+
+
+        private void guna2Button1_Click(object sender, EventArgs e)
         {
-            abrirFormInPanel(new ModificarProductosForm());
 
         }
 
-        private void tabBajaProductos_Click(object sender, EventArgs e)
-        {
-            abrirFormInPanel(new BajaProductosForm());
 
-        }
     }
 }

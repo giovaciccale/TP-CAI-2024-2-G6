@@ -32,18 +32,10 @@ namespace TemplateTPIntegrador
         private void InitializeComponent()
         {
             this.panelCrearCuenta = new System.Windows.Forms.Panel();
-            this.panelContraseña = new System.Windows.Forms.Panel();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.txt_contraseña = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
             this.panelNombreUsuario = new System.Windows.Forms.Panel();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.txt_usuario = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.panelNroRegistro = new System.Windows.Forms.Panel();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.txt_registro = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.panelFechaNacimiento = new System.Windows.Forms.Panel();
             this.txt_fecha = new System.Windows.Forms.DateTimePicker();
@@ -78,12 +70,8 @@ namespace TemplateTPIntegrador
             this.txt_nombre = new System.Windows.Forms.TextBox();
             this.btn_crearUsuario = new System.Windows.Forms.Button();
             this.panelCrearCuenta.SuspendLayout();
-            this.panelContraseña.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.panelNombreUsuario.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            this.panelNroRegistro.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panelFechaNacimiento.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
             this.panelEmail.SuspendLayout();
@@ -104,12 +92,8 @@ namespace TemplateTPIntegrador
             // 
             // panelCrearCuenta
             // 
-            this.panelCrearCuenta.Controls.Add(this.panelContraseña);
-            this.panelCrearCuenta.Controls.Add(this.label4);
             this.panelCrearCuenta.Controls.Add(this.panelNombreUsuario);
             this.panelCrearCuenta.Controls.Add(this.label3);
-            this.panelCrearCuenta.Controls.Add(this.panelNroRegistro);
-            this.panelCrearCuenta.Controls.Add(this.label1);
             this.panelCrearCuenta.Controls.Add(this.label6);
             this.panelCrearCuenta.Controls.Add(this.panelFechaNacimiento);
             this.panelCrearCuenta.Controls.Add(this.panelEmail);
@@ -133,62 +117,12 @@ namespace TemplateTPIntegrador
             this.panelCrearCuenta.Size = new System.Drawing.Size(1050, 600);
             this.panelCrearCuenta.TabIndex = 0;
             // 
-            // panelContraseña
-            // 
-            this.panelContraseña.BackColor = System.Drawing.SystemColors.Control;
-            this.panelContraseña.Controls.Add(this.pictureBox5);
-            this.panelContraseña.Controls.Add(this.txt_contraseña);
-            this.panelContraseña.Location = new System.Drawing.Point(36, 498);
-            this.panelContraseña.Name = "panelContraseña";
-            this.panelContraseña.Size = new System.Drawing.Size(979, 45);
-            this.panelContraseña.TabIndex = 11;
-            // 
-            // pictureBox5
-            // 
-            this.pictureBox5.Image = global::TemplateTPIntegrador.Properties.Resources.kissclipart_password_icon_clipart_password_computer_icons_clip_d813f06606bcdc9a;
-            this.pictureBox5.Location = new System.Drawing.Point(14, 12);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(24, 24);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox5.TabIndex = 1002;
-            this.pictureBox5.TabStop = false;
-            this.pictureBox5.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pictureBox5_MouseDown);
-            this.pictureBox5.MouseLeave += new System.EventHandler(this.pictureBox5_MouseLeave);
-            this.pictureBox5.MouseHover += new System.EventHandler(this.pictureBox5_MouseHover);
-            this.pictureBox5.MouseUp += new System.Windows.Forms.MouseEventHandler(this.pictureBox5_MouseUp);
-            // 
-            // txt_contraseña
-            // 
-            this.txt_contraseña.BackColor = System.Drawing.SystemColors.Control;
-            this.txt_contraseña.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txt_contraseña.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_contraseña.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.txt_contraseña.Location = new System.Drawing.Point(55, 12);
-            this.txt_contraseña.Name = "txt_contraseña";
-            this.txt_contraseña.Size = new System.Drawing.Size(910, 20);
-            this.txt_contraseña.TabIndex = 0;
-            this.txt_contraseña.UseSystemPasswordChar = true;
-            this.txt_contraseña.Click += new System.EventHandler(this.txt_contraseñaAlta_Click);
-            this.txt_contraseña.TextChanged += new System.EventHandler(this.txt_contraseñaAlta_Click);
-            this.txt_contraseña.Enter += new System.EventHandler(this.txt_contraseñaAlta_Click);
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Century Gothic", 12F);
-            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.label4.Location = new System.Drawing.Point(32, 474);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(111, 21);
-            this.label4.TabIndex = 1008;
-            this.label4.Text = "Contraseña :";
-            // 
             // panelNombreUsuario
             // 
             this.panelNombreUsuario.BackColor = System.Drawing.SystemColors.Control;
             this.panelNombreUsuario.Controls.Add(this.pictureBox3);
             this.panelNombreUsuario.Controls.Add(this.txt_usuario);
-            this.panelNombreUsuario.Location = new System.Drawing.Point(35, 418);
+            this.panelNombreUsuario.Location = new System.Drawing.Point(49, 356);
             this.panelNombreUsuario.Name = "panelNombreUsuario";
             this.panelNombreUsuario.Size = new System.Drawing.Size(979, 45);
             this.panelNombreUsuario.TabIndex = 10;
@@ -222,56 +156,11 @@ namespace TemplateTPIntegrador
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.label3.Location = new System.Drawing.Point(32, 394);
+            this.label3.Location = new System.Drawing.Point(46, 332);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(166, 21);
             this.label3.TabIndex = 1006;
             this.label3.Text = "Nombre de Usuario :";
-            // 
-            // panelNroRegistro
-            // 
-            this.panelNroRegistro.BackColor = System.Drawing.SystemColors.Control;
-            this.panelNroRegistro.Controls.Add(this.pictureBox2);
-            this.panelNroRegistro.Controls.Add(this.txt_registro);
-            this.panelNroRegistro.Location = new System.Drawing.Point(35, 338);
-            this.panelNroRegistro.Name = "panelNroRegistro";
-            this.panelNroRegistro.Size = new System.Drawing.Size(979, 45);
-            this.panelNroRegistro.TabIndex = 9;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::TemplateTPIntegrador.Properties.Resources.pngwing_com;
-            this.pictureBox2.Location = new System.Drawing.Point(14, 12);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(24, 24);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 1002;
-            this.pictureBox2.TabStop = false;
-            // 
-            // txt_registro
-            // 
-            this.txt_registro.BackColor = System.Drawing.SystemColors.Control;
-            this.txt_registro.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txt_registro.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_registro.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.txt_registro.Location = new System.Drawing.Point(55, 12);
-            this.txt_registro.Name = "txt_registro";
-            this.txt_registro.Size = new System.Drawing.Size(911, 20);
-            this.txt_registro.TabIndex = 0;
-            this.txt_registro.Click += new System.EventHandler(this.txt_registro_TextChanged);
-            this.txt_registro.TextChanged += new System.EventHandler(this.txt_registro_TextChanged);
-            this.txt_registro.Enter += new System.EventHandler(this.txt_registro_TextChanged);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 12F);
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.label1.Location = new System.Drawing.Point(31, 314);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(171, 21);
-            this.label1.TabIndex = 1004;
-            this.label1.Text = "Número de Registro :";
             // 
             // label6
             // 
@@ -657,15 +546,9 @@ namespace TemplateTPIntegrador
             this.Text = "AltaUsuariosForm";
             this.panelCrearCuenta.ResumeLayout(false);
             this.panelCrearCuenta.PerformLayout();
-            this.panelContraseña.ResumeLayout(false);
-            this.panelContraseña.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.panelNombreUsuario.ResumeLayout(false);
             this.panelNombreUsuario.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            this.panelNroRegistro.ResumeLayout(false);
-            this.panelNroRegistro.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panelFechaNacimiento.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
             this.panelEmail.ResumeLayout(false);
@@ -695,18 +578,10 @@ namespace TemplateTPIntegrador
         #endregion
         private System.Windows.Forms.Button btn_crearUsuario;
         private System.Windows.Forms.Panel panelCrearCuenta;
-        private System.Windows.Forms.Panel panelContraseña;
-        private System.Windows.Forms.PictureBox pictureBox5;
-        private System.Windows.Forms.TextBox txt_contraseña;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Panel panelNombreUsuario;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.TextBox txt_usuario;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Panel panelNroRegistro;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.TextBox txt_registro;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Panel panelFechaNacimiento;
         private System.Windows.Forms.DateTimePicker txt_fecha;
