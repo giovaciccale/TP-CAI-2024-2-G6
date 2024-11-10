@@ -59,7 +59,7 @@ namespace Negocio.utils
     }
     public static class ValidadorDeCampos
     {
-        public static void ValidarCamposCliente(Dictionary<Control, (string nombreDelCampo, bool esNumerico, bool esFecha)> campos)
+        public static bool ValidarCamposCliente(Dictionary<Control, (string nombreDelCampo, bool esNumerico, bool esFecha)> campos)
         {
             foreach (var campo in campos)
             {
@@ -74,7 +74,7 @@ namespace Negocio.utils
                     {
                         MessageBox.Show($"El campo '{nombreDelCampo}' no puede estar vacío.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         textbox.Focus();
-                        return;
+                        return false;
                     }
 
                     if (esNumerico)
@@ -83,38 +83,43 @@ namespace Negocio.utils
                         {
                             MessageBox.Show($"El campo '{nombreDelCampo}' debe ser numérico.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                             textbox.Focus();
-                            return;
+                            return false;
                         }
 
                         if (textbox.Text.Length != 8)
                         {
                             MessageBox.Show($"El campo '{nombreDelCampo}' debe tener 8 dígitos.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                             textbox.Focus();
-                            return;
+                            return false;
                         }
                     }
                 }
-                    
-
                 else if (control is DateTimePicker datePicker && esFecha)
                 {
                     DateTime fechaSeleccionada = datePicker.Value;
-                    DateTime fechaMinima = new DateTime(1924, 1, 1);
-                    DateTime fechaMaxima = new DateTime(2006, 9, 11);
+                    DateTime fechaActual = DateTime.Now;
+                    int edad = fechaActual.Year - fechaSeleccionada.Year;
+                    if (fechaSeleccionada > fechaActual.AddYears(-edad)) edad--;
 
-                    if (fechaSeleccionada < fechaMinima || fechaSeleccionada > fechaMaxima)
+                    if (edad < 18)
                     {
-                        MessageBox.Show($"El campo '{nombreDelCampo}' debe ser una fecha entre {fechaMinima.ToShortDateString()} y {fechaMaxima.ToShortDateString()}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        MessageBox.Show($"El cliente debe tener al menos 18 años.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         datePicker.Focus();
-                        return;
+                        return false;
                     }
                 }
             }
 
+            return true;
         }
 
     }
 }
+
+
+    
+
+
 
 
 
