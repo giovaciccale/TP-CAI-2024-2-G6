@@ -29,19 +29,17 @@ namespace TemplateTPIntegrador.Modulos.Clientes
 
             if (clientesActivos != null)
             {
-                // Limpia el ComboBox antes de llenarlo
+                // Limpia el ComboBox antes de agregar nuevos items
+                cmb_clientes.DataSource = null;
                 cmb_clientes.Items.Clear();
 
-                // Llenar el ComboBox con los nombres de usuario y sus IDs
-                foreach (var cliente in clientesActivos)
-                {
-                    // Agrega un nuevo objeto con el nombre y el ID del usuario
-                    cmb_clientes.Items.Add(new { Nombre = cliente.nombre, Id = cliente.Id }); // Asegúrate de incluir Id aquí
-                }
+                // Bind ComboBox to List of ClienteWS
+                cmb_clientes.DataSource = clientesActivos;
+                cmb_clientes.DisplayMember = "nombre"; // campo que mostrara
+                cmb_clientes.ValueMember = "Id";       // Ensure ClienteWS has this property
 
-                // Establecer el formato para mostrar el nombre en el ComboBox
-                cmb_clientes.DisplayMember = "Nombre"; // Campo que se mostrará
-                cmb_clientes.ValueMember = "Id"; // Campo que se utilizará como valor
+                // Previene autoseleccion
+                cmb_clientes.SelectedIndex = -1;
             }
             else
             {
@@ -49,14 +47,10 @@ namespace TemplateTPIntegrador.Modulos.Clientes
             }
         }
 
-       /* private void btn_buscarCliente_Click(object sender, EventArgs e)
+        private void btn_buscarCliente_Click(object sender, EventArgs e)
         {
-            var clientesActivos = clientesWS.buscarDatosCliente();
-            string nombreSeleccionado = cmb_clientes.Text;
 
-            ClientesWS clienteSeleccionado = clientes.FirstOrDefault(cliente => clientesActivos.nombre == nombreSeleccionado);
-
-            if (clienteSeleccionado != null)
+            if (cmb_clientes.SelectedItem is ClienteWS clienteSeleccionado)
             {
                 txt_nombre.Text = clienteSeleccionado.nombre;
                 txt_apellido.Text = clienteSeleccionado.apellido;
@@ -68,9 +62,9 @@ namespace TemplateTPIntegrador.Modulos.Clientes
             }
             else
             {
-                MessageBox.Show($"El cliente '{nombreSeleccionado}' no existe.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Por favor, seleccione un cliente válido.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
-        } */
+        } 
     }
 }
