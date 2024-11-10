@@ -56,14 +56,14 @@ namespace Persistencia
                 return false; // Retorna false en caso de una excepción
             }
         }
-        public bool DarDeBajaProveedor(string idProveedor, string adminId)
+        public bool DarDeBajaProveedor(string idUsuario, string adminId)
         {
             try
             {
                 // Crear el objeto que será enviado en el cuerpo de la solicitud
                 var request = new
                 {
-                    id = idProveedor,               // ID del usuario que quieres dar de baja
+                    
                     idUsuario = adminId // ID del usuario con permisos para dar de baja (en este caso el admin)
                 };
 
@@ -96,7 +96,7 @@ namespace Persistencia
         {
             try
             {
-                HttpResponseMessage response = WebHelper.Get("Usuario/TraerProveedores");
+                HttpResponseMessage response = WebHelper.Get("Proveedor/TraerProveedores");
 
                 if (response.IsSuccessStatusCode)
                 {
