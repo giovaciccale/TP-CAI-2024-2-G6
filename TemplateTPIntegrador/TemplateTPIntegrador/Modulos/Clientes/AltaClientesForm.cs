@@ -27,19 +27,22 @@ namespace TemplateTPIntegrador.Modulos.Clientes
         {
             try
             {
-                // Validar el nombre de cliente antes de crear el cliente
                 var campos = new Dictionary<Control, (string nombreDelCampo, bool esNumerico, bool esFecha)>
-                {
-                    { txt_nombre, ("Nombre", false, false) },
-                    { txt_apellido, ("Apellido", false, false) },
-                    { txt_email, ("Email", false, false) },
-                    { txt_fecha, ("Fecha De Nacimiento", false, true) },
-                    { txt_dni, ("DNI", true, false) }, // Debe ser Numerico
-                    { txt_direccion, ("Dirección", false, false) },
-                    { txt_telefono, ("Teléfono", false, false) } // Debe ser Numerico
-                };
+        {
+            { txt_nombre, ("Nombre", false, false) },
+            { txt_apellido, ("Apellido", false, false) },
+            { txt_email, ("Email", false, false) },
+            { txt_fecha, ("Fecha De Nacimiento", false, true) },
+            { txt_dni, ("DNI", true, false) },
+            { txt_direccion, ("Dirección", false, false) },
+            { txt_telefono, ("Teléfono", false, false) }
+        };
 
-                ValidadorDeCampos.ValidarCamposCliente(campos);
+                // Si la validación falla, detiene la ejecución
+                if (!ValidadorDeCampos.ValidarCamposCliente(campos))
+                {
+                    return;
+                }
 
                 // Crear una instancia de ClienteWS con los datos del formulario
                 ClienteWS cliente = new ClienteWS
@@ -52,8 +55,7 @@ namespace TemplateTPIntegrador.Modulos.Clientes
                     telefono = txt_telefono.Text,
                     email = txt_email.Text,
                     fechaNacimiento = txt_fecha.Value,
-                    host = HOST,  // Usa el valor de host basado en la selección del tipo de cliente
-
+                    host = HOST
                 };
 
                 // Instancia de ClientesWS para gestionar la creación
@@ -64,7 +66,7 @@ namespace TemplateTPIntegrador.Modulos.Clientes
 
                 if (resultado)
                 {
-                    MessageBox.Show("cliente agregado exitosamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Cliente agregado exitosamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     LimpiarCampos(); // Llama al método para limpiar los campos
                 }
                 else
@@ -78,6 +80,7 @@ namespace TemplateTPIntegrador.Modulos.Clientes
             }
         }
 
+
         private void LimpiarCampos()
         {
             txt_nombre.Clear();
@@ -86,7 +89,8 @@ namespace TemplateTPIntegrador.Modulos.Clientes
             txt_direccion.Clear();
             txt_telefono.Clear();
             txt_email.Clear();
-            txt_fecha.Value = DateTime.Now; // Restablecer la fecha al día actual
+            txt_fecha.Value = DateTime.Now >= txt_fecha.MinDate && DateTime.Now <= txt_fecha.MaxDate ? DateTime.Now : txt_fecha.MinDate;
+
         }
 
         private void txt_nombre_TextChanged(object sender, EventArgs e)
