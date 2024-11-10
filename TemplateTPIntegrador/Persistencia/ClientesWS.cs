@@ -49,7 +49,7 @@ namespace Persistencia
                 // Verificar si la respuesta fue exitosa
                 if (response.IsSuccessStatusCode)
                 {
-                    Console.WriteLine("cliente agregado exitosamente.");
+                    Console.WriteLine("Cliente agregado exitosamente.");
                     return true;
                 }
                 else
@@ -99,7 +99,7 @@ namespace Persistencia
                 return false;
             }
         }
-        public List<ClienteWS> buscarDatoscliente()
+        public List<ClienteWS> buscarDatosCliente()
         {
             try
             {
