@@ -399,7 +399,7 @@
             this.btn_crearUsuario.Name = "btn_crearUsuario";
             this.btn_crearUsuario.Size = new System.Drawing.Size(148, 35);
             this.btn_crearUsuario.TabIndex = 100010;
-            this.btn_crearUsuario.Text = "CREAR USUARIO";
+            this.btn_crearUsuario.Text = "CREAR CLIENTE";
             this.btn_crearUsuario.UseVisualStyleBackColor = false;
             this.btn_crearUsuario.Click += new System.EventHandler(this.btn_crearUsuario_Click);
             // 
