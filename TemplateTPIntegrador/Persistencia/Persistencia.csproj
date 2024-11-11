@@ -53,6 +53,7 @@
     <Compile Include="utils\DBHelper.cs" />
     <Compile Include="utils\WebHelper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="VentasWS.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

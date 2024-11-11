@@ -121,6 +121,12 @@
     <Compile Include="Modulos\Usuarios\LoginForm.Designer.cs">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Modulos\Ventas\CarritoVentas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modulos\Ventas\CarritoVentas.Designer.cs">
+      <DependentUpon>CarritoVentas.cs</DependentUpon>
+    </Compile>
     <Compile Include="Modulos\Ventas\VentasForm.cs">
       <SubType>Form</SubType>
     </Compile>
