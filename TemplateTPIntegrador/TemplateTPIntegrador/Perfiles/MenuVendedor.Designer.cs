@@ -35,11 +35,12 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.barraTitulo = new System.Windows.Forms.Panel();
+            this.tabVentasPorVendedor = new Guna.UI2.WinForms.Guna2Button();
+            this.tabVentas = new Guna.UI2.WinForms.Guna2Button();
             this.btnCerrar = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panelContenedor = new System.Windows.Forms.Panel();
-            this.tabVentas = new Guna.UI2.WinForms.Guna2Button();
-            this.tabVentasPorVendedor = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.menuVertical.SuspendLayout();
             this.barraTitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -116,6 +117,7 @@
             // 
             // barraTitulo
             // 
+            this.barraTitulo.Controls.Add(this.guna2Button1);
             this.barraTitulo.Controls.Add(this.tabVentasPorVendedor);
             this.barraTitulo.Controls.Add(this.tabVentas);
             this.barraTitulo.Controls.Add(this.btnCerrar);
@@ -125,6 +127,52 @@
             this.barraTitulo.Name = "barraTitulo";
             this.barraTitulo.Size = new System.Drawing.Size(1050, 50);
             this.barraTitulo.TabIndex = 1004;
+            // 
+            // tabVentasPorVendedor
+            // 
+            this.tabVentasPorVendedor.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            this.tabVentasPorVendedor.Checked = true;
+            this.tabVentasPorVendedor.CheckedState.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
+            this.tabVentasPorVendedor.CheckedState.FillColor = System.Drawing.SystemColors.ControlLight;
+            this.tabVentasPorVendedor.CustomBorderColor = System.Drawing.SystemColors.Control;
+            this.tabVentasPorVendedor.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 3);
+            this.tabVentasPorVendedor.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.tabVentasPorVendedor.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.tabVentasPorVendedor.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.tabVentasPorVendedor.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.tabVentasPorVendedor.FillColor = System.Drawing.SystemColors.Control;
+            this.tabVentasPorVendedor.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabVentasPorVendedor.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
+            this.tabVentasPorVendedor.HoverState.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
+            this.tabVentasPorVendedor.Location = new System.Drawing.Point(371, 0);
+            this.tabVentasPorVendedor.Name = "tabVentasPorVendedor";
+            this.tabVentasPorVendedor.Size = new System.Drawing.Size(180, 50);
+            this.tabVentasPorVendedor.TabIndex = 1011;
+            this.tabVentasPorVendedor.Text = "Ventas Por Vendedor";
+            this.tabVentasPorVendedor.Visible = false;
+            // 
+            // tabVentas
+            // 
+            this.tabVentas.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            this.tabVentas.Checked = true;
+            this.tabVentas.CheckedState.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
+            this.tabVentas.CheckedState.FillColor = System.Drawing.SystemColors.ControlLight;
+            this.tabVentas.CustomBorderColor = System.Drawing.SystemColors.Control;
+            this.tabVentas.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 3);
+            this.tabVentas.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.tabVentas.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.tabVentas.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.tabVentas.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.tabVentas.FillColor = System.Drawing.SystemColors.Control;
+            this.tabVentas.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabVentas.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
+            this.tabVentas.HoverState.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
+            this.tabVentas.Location = new System.Drawing.Point(194, 0);
+            this.tabVentas.Name = "tabVentas";
+            this.tabVentas.Size = new System.Drawing.Size(180, 50);
+            this.tabVentas.TabIndex = 1010;
+            this.tabVentas.Text = "Ventas";
+            this.tabVentas.Visible = false;
             // 
             // btnCerrar
             // 
@@ -162,51 +210,28 @@
             this.panelContenedor.Size = new System.Drawing.Size(1050, 600);
             this.panelContenedor.TabIndex = 1005;
             // 
-            // tabVentas
+            // guna2Button1
             // 
-            this.tabVentas.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
-            this.tabVentas.Checked = true;
-            this.tabVentas.CheckedState.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.tabVentas.CheckedState.FillColor = System.Drawing.SystemColors.ControlLight;
-            this.tabVentas.CustomBorderColor = System.Drawing.SystemColors.Control;
-            this.tabVentas.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 3);
-            this.tabVentas.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.tabVentas.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.tabVentas.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.tabVentas.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.tabVentas.FillColor = System.Drawing.SystemColors.Control;
-            this.tabVentas.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabVentas.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.tabVentas.HoverState.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.tabVentas.Location = new System.Drawing.Point(194, 0);
-            this.tabVentas.Name = "tabVentas";
-            this.tabVentas.Size = new System.Drawing.Size(180, 50);
-            this.tabVentas.TabIndex = 1010;
-            this.tabVentas.Text = "Ventas";
-            this.tabVentas.Visible = false;
-            // 
-            // tabVentasPorVendedor
-            // 
-            this.tabVentasPorVendedor.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
-            this.tabVentasPorVendedor.Checked = true;
-            this.tabVentasPorVendedor.CheckedState.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.tabVentasPorVendedor.CheckedState.FillColor = System.Drawing.SystemColors.ControlLight;
-            this.tabVentasPorVendedor.CustomBorderColor = System.Drawing.SystemColors.Control;
-            this.tabVentasPorVendedor.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 3);
-            this.tabVentasPorVendedor.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.tabVentasPorVendedor.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.tabVentasPorVendedor.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.tabVentasPorVendedor.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.tabVentasPorVendedor.FillColor = System.Drawing.SystemColors.Control;
-            this.tabVentasPorVendedor.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabVentasPorVendedor.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.tabVentasPorVendedor.HoverState.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.tabVentasPorVendedor.Location = new System.Drawing.Point(371, 0);
-            this.tabVentasPorVendedor.Name = "tabVentasPorVendedor";
-            this.tabVentasPorVendedor.Size = new System.Drawing.Size(180, 50);
-            this.tabVentasPorVendedor.TabIndex = 1011;
-            this.tabVentasPorVendedor.Text = "Ventas Por Vendedor";
-            this.tabVentasPorVendedor.Visible = false;
+            this.guna2Button1.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            this.guna2Button1.Checked = true;
+            this.guna2Button1.CheckedState.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
+            this.guna2Button1.CheckedState.FillColor = System.Drawing.SystemColors.ControlLight;
+            this.guna2Button1.CustomBorderColor = System.Drawing.SystemColors.Control;
+            this.guna2Button1.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 3);
+            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2Button1.FillColor = System.Drawing.SystemColors.Control;
+            this.guna2Button1.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2Button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
+            this.guna2Button1.HoverState.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
+            this.guna2Button1.Location = new System.Drawing.Point(548, 0);
+            this.guna2Button1.Name = "guna2Button1";
+            this.guna2Button1.Size = new System.Drawing.Size(180, 50);
+            this.guna2Button1.TabIndex = 1012;
+            this.guna2Button1.Text = "Agregar Cliente";
+            this.guna2Button1.Visible = false;
             // 
             // MenuVendedor
             // 
@@ -243,5 +268,6 @@
         private Guna.UI2.WinForms.Guna2Button btnSeccionVentas;
         private Guna.UI2.WinForms.Guna2Button tabVentasPorVendedor;
         private Guna.UI2.WinForms.Guna2Button tabVentas;
+        private Guna.UI2.WinForms.Guna2Button guna2Button1;
     }
 }

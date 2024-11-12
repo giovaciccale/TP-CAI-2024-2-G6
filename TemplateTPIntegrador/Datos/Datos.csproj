@@ -50,6 +50,7 @@
     <Compile Include="ProveedoreWS.cs" />
     <Compile Include="UsuarioWS.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="VentaWS.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

@@ -315,6 +315,7 @@
             this.vercarrito_btn.TabIndex = 100034;
             this.vercarrito_btn.Text = "VER CARRITO";
             this.vercarrito_btn.UseVisualStyleBackColor = false;
+            this.vercarrito_btn.Click += new System.EventHandler(this.vercarrito_btn_Click);
             // 
             // VentasForm
             // 
