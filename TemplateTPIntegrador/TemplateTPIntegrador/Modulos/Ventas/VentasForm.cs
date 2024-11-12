@@ -1,6 +1,8 @@
 ﻿using Datos;
 using Persistencia;
 using System;
+using System.Collections.Generic;
+using System.Linq;
 using System.Windows.Forms;
 
 namespace TemplateTPIntegrador.Modulos.Ventas
@@ -11,6 +13,16 @@ namespace TemplateTPIntegrador.Modulos.Ventas
         private ClientesWS clientesWS;
         private ProductosWS productosWS;
         private VentasWS ventasWS; // Servicio para ventas
+        private double totalAcumulado = 0; // Total acumulado para el carrito
+        private List<CarritoItem> carrito = new List<CarritoItem>();
+
+        public class CarritoItem
+        {
+            public string IdProducto { get; set; }
+            public int Cantidad { get; set; }
+            public double PrecioUnitario { get; set; } // Precio unitario del producto
+            public double Total { get; set; } // Total = Cantidad * PrecioUnitario
+        }
 
         public VentasForm()
         {
@@ -36,8 +48,8 @@ namespace TemplateTPIntegrador.Modulos.Ventas
                 cmb_clientes.Items.Clear();
 
                 cmb_clientes.DataSource = clientesActivos;
-                cmb_clientes.DisplayMember = "nombre"; // Muestra el nombre del cliente
-                cmb_clientes.ValueMember = "Id";       // Configura el ID como valor interno
+                cmb_clientes.DisplayMember = "nombre";
+                cmb_clientes.ValueMember = "Id";
 
                 cmb_clientes.SelectedIndex = -1;
             }
@@ -49,7 +61,7 @@ namespace TemplateTPIntegrador.Modulos.Ventas
 
         private void CargarProductos()
         {
-            var productosActivos = productosWS.buscarDatosProducto(); // Llama al método para obtener productos
+            var productosActivos = productosWS.buscarDatosProducto();
 
             if (productosActivos != null)
             {
@@ -57,8 +69,8 @@ namespace TemplateTPIntegrador.Modulos.Ventas
                 cmb_productos.Items.Clear();
 
                 cmb_productos.DataSource = productosActivos;
-                cmb_productos.DisplayMember = "Nombre"; // Muestra el nombre del producto
-                cmb_productos.ValueMember = "Id";       // Configura el ID como valor interno
+                cmb_productos.DisplayMember = "Nombre";
+                cmb_productos.ValueMember = "Id";
 
                 cmb_productos.SelectedIndex = -1;
             }
@@ -93,7 +105,7 @@ namespace TemplateTPIntegrador.Modulos.Ventas
 
                 if (productoSeleccionado != null)
                 {
-                    stock_int.Text = productoSeleccionado.stock.ToString(); // Muestra el stock del producto en el TextBox
+                    stock_int.Text = productoSeleccionado.stock.ToString();
                 }
                 else
                 {
@@ -104,8 +116,7 @@ namespace TemplateTPIntegrador.Modulos.Ventas
 
         private void agregarcarrito_btn_Click(object sender, EventArgs e)
         {
-            // Obtiene los valores seleccionados
-            if (cmb_clientes.SelectedValue == null || cmb_productos.SelectedValue == null)
+            if (cmb_productos.SelectedValue == null || cmb_clientes.SelectedValue == null)
             {
                 MessageBox.Show("Seleccione un cliente y un producto antes de agregar al carrito.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
@@ -115,24 +126,65 @@ namespace TemplateTPIntegrador.Modulos.Ventas
             string idProducto = cmb_productos.SelectedValue.ToString();
             int cantidad;
 
-            // Verifica que la cantidad sea un número válido
             if (!int.TryParse(cantidad_int.Text, out cantidad) || cantidad <= 0)
             {
                 MessageBox.Show("Ingrese una cantidad válida.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
-            // Llama al método AgregarVenta en VentasWS
-            bool ventaAgregada = ventasWS.AgregarVenta(idCliente, IDUSUARIO, idProducto, cantidad);
-
-            if (ventaAgregada)
+            // Busca el precio unitario del producto seleccionado en la lista de productos
+            var productoSeleccionado = productosWS.buscarDatosProducto().FirstOrDefault(p => p.id.ToString() == idProducto);
+            if (productoSeleccionado == null)
             {
-                MessageBox.Show("Venta agregada exitosamente al carrito.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("No se pudo encontrar el precio del producto.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            double precioUnitario = productoSeleccionado.precio;
+
+            // Llama al método AgregarVenta para guardar en el backend y obtener el Id de la venta
+            string idVenta = ventasWS.AgregarVenta(idCliente, IDUSUARIO, idProducto, cantidad);
+
+            if (!string.IsNullOrEmpty(idProducto))
+            {
+                // Calcula el total de esta venta
+                double total = precioUnitario * cantidad;
+
+                // Si se agrega exitosamente, guarda también la venta localmente
+                var nuevaVenta = new CarritoItem
+                {
+                    IdProducto = idProducto,
+                    Cantidad = cantidad,
+                    PrecioUnitario = precioUnitario,
+                    Total = total
+                };
+
+                carrito.Add(nuevaVenta);
+
+                // Suma el total al total acumulado
+                totalAcumulado += total;
+
+                MessageBox.Show("Producto agregado exitosamente al carrito.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {
                 MessageBox.Show("Hubo un error al agregar la venta. Intente de nuevo.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+
+
+        private void vercarrito_btn_Click(object sender, EventArgs e)
+        {
+            if (cmb_clientes.SelectedValue == null)
+            {
+                MessageBox.Show("Seleccione un cliente para ver el carrito.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            // Abre el formulario CarritoVentas con los elementos del carrito y el total acumulado
+            CarritoVentas carritoForm = new CarritoVentas(carrito, totalAcumulado);
+            carritoForm.Show();
         }
     }
 }

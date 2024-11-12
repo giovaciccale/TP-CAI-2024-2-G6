@@ -1,30 +1,77 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Net.Http;
 using System.Text;
 using Newtonsoft.Json;
+using Datos;
+
 
 namespace Persistencia
 {
     public class VentasWS
     {
-        public bool AgregarVenta(string idCliente, string idUsuario, string idProducto, int cantidad)
+        public string AgregarVenta(string idCliente, string idUsuario, string idProducto, int cantidad)
         {
-            // Crea el objeto que será convertido a JSON
-            var ventaData = new
+            try
             {
-                idCliente = idCliente,
-                idUsuario = idUsuario,
-                idProducto = idProducto,
-                cantidad = cantidad
-            };
+                // Crea el objeto JSON para la solicitud
+                var jsonVenta = JsonConvert.SerializeObject(new
+                {
+                    idCliente = idCliente,
+                    idUsuario = idUsuario,
+                    idProducto = idProducto,
+                    cantidad = cantidad
+                });
 
-            // Convierte el objeto a JSON
-            string jsonVenta = JsonConvert.SerializeObject(ventaData);
+                // Realiza la solicitud POST al endpoint
+                var response = WebHelper.Post("Venta/AgregarVenta", jsonVenta);
 
-            // Realiza la solicitud POST
-            var response = WebHelper.Post("Venta/AgregarVenta", jsonVenta);
-
-            return response.IsSuccessStatusCode; // Retorna true si la solicitud fue exitosa
+                if (response.IsSuccessStatusCode)
+                {
+                    // Obtén el Id de la venta de la respuesta del servidor
+                    var responseBody = response.Content.ReadAsStringAsync().Result;
+                    dynamic result = JsonConvert.DeserializeObject(responseBody);
+                    return result.id; // Asegúrate de que 'id' sea el campo que contiene el Id de la venta
+                }
+                else
+                {
+                    Console.WriteLine("Error al agregar venta: " + response.StatusCode);
+                    return null;
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Excepción al agregar venta: " + ex.Message);
+                return null;
+            }
         }
+
+
+
+        public List<VentaWS> ObtenerVentasPorCliente(string idCliente)
+        {
+            string url = $"Venta/GetVentaByCliente?id={idCliente}";
+
+            var response = WebHelper.Get(url);
+
+            if (response.IsSuccessStatusCode)
+            {
+                string jsonResponse = response.Content.ReadAsStringAsync().Result;
+                List<VentaWS> ventas = JsonConvert.DeserializeObject<List<VentaWS>>(jsonResponse);
+                return ventas;
+            }
+            else
+            {
+                Console.WriteLine("Error al obtener las ventas del cliente: " + response.StatusCode);
+                return null;
+            }
+        }
+
+
+
+
+
+
+
     }
 }
