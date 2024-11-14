@@ -93,7 +93,7 @@ namespace TemplateTPIntegrador
 
         private void btnSeccionProveedores_Click(object sender, EventArgs e)
         {
-            if (!enSeccionUsuarios)
+            if (!enSeccionProductos)
             {
                 MostrarSeccionProveedores();
                 enSeccionUsuarios = false;

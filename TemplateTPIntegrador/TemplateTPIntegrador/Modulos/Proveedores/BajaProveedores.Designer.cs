@@ -39,9 +39,10 @@
             this.cmb_proveedores.DropDownWidth = 500;
             this.cmb_proveedores.FormattingEnabled = true;
             this.cmb_proveedores.IntegralHeight = false;
-            this.cmb_proveedores.Location = new System.Drawing.Point(59, 119);
+            this.cmb_proveedores.Location = new System.Drawing.Point(88, 183);
+            this.cmb_proveedores.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cmb_proveedores.Name = "cmb_proveedores";
-            this.cmb_proveedores.Size = new System.Drawing.Size(459, 21);
+            this.cmb_proveedores.Size = new System.Drawing.Size(686, 28);
             this.cmb_proveedores.TabIndex = 100034;
             // 
             // btn_desactivarProveedor
@@ -51,9 +52,10 @@
             this.btn_desactivarProveedor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_desactivarProveedor.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_desactivarProveedor.ForeColor = System.Drawing.Color.White;
-            this.btn_desactivarProveedor.Location = new System.Drawing.Point(404, 229);
+            this.btn_desactivarProveedor.Location = new System.Drawing.Point(606, 352);
+            this.btn_desactivarProveedor.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btn_desactivarProveedor.Name = "btn_desactivarProveedor";
-            this.btn_desactivarProveedor.Size = new System.Drawing.Size(195, 35);
+            this.btn_desactivarProveedor.Size = new System.Drawing.Size(292, 54);
             this.btn_desactivarProveedor.TabIndex = 100033;
             this.btn_desactivarProveedor.Text = "DESACTIVAR PROVEEDOR";
             this.btn_desactivarProveedor.UseVisualStyleBackColor = false;
@@ -64,20 +66,23 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.label1.Location = new System.Drawing.Point(55, 56);
+            this.label1.Location = new System.Drawing.Point(82, 86);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(235, 21);
+            this.label1.Size = new System.Drawing.Size(361, 30);
             this.label1.TabIndex = 100032;
             this.label1.Text = "Elija Proveedor a Desactivar :";
             // 
             // BajaProveedores
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1200, 692);
             this.Controls.Add(this.cmb_proveedores);
             this.Controls.Add(this.btn_desactivarProveedor);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "BajaProveedores";
             this.Text = "BajaProveedores";
             this.ResumeLayout(false);
