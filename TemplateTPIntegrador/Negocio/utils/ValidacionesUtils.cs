@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
+
 
 namespace Negocio.utils
 {
@@ -53,8 +55,71 @@ namespace Negocio.utils
             FechaUltimaContraseña = DateTime.Now;
             return true;
         }
+        
+    }
+    public static class ValidadorDeCampos
+    {
+        public static bool ValidarCamposCliente(Dictionary<Control, (string nombreDelCampo, bool esNumerico, bool esFecha)> campos)
+        {
+            foreach (var campo in campos)
+            {
+                Control control = campo.Key;
+                string nombreDelCampo = campo.Value.nombreDelCampo;
+                bool esNumerico = campo.Value.esNumerico;
+                bool esFecha = campo.Value.esFecha;
+
+                if (control is TextBox textbox)
+                {
+                    if (string.IsNullOrEmpty(textbox.Text))
+                    {
+                        MessageBox.Show($"El campo '{nombreDelCampo}' no puede estar vacío.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        textbox.Focus();
+                        return false;
+                    }
+
+                    if (esNumerico)
+                    {
+                        if (!int.TryParse(textbox.Text, out int parsedValue))
+                        {
+                            MessageBox.Show($"El campo '{nombreDelCampo}' debe ser numérico.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            textbox.Focus();
+                            return false;
+                        }
+
+                        if (textbox.Text.Length != 8)
+                        {
+                            MessageBox.Show($"El campo '{nombreDelCampo}' debe tener 8 dígitos.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            textbox.Focus();
+                            return false;
+                        }
+                    }
+                }
+                else if (control is DateTimePicker datePicker && esFecha)
+                {
+                    DateTime fechaSeleccionada = datePicker.Value;
+                    DateTime fechaActual = DateTime.Now;
+                    int edad = fechaActual.Year - fechaSeleccionada.Year;
+                    if (fechaSeleccionada > fechaActual.AddYears(-edad)) edad--;
+
+                    if (edad < 18)
+                    {
+                        MessageBox.Show($"El cliente debe tener al menos 18 años.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        datePicker.Focus();
+                        return false;
+                    }
+                }
+            }
+
+            return true;
+        }
+
     }
 }
+
+
+    
+
+
 
 
 

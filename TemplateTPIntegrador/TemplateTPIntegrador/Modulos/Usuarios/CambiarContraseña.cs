@@ -66,5 +66,16 @@ namespace TemplateTPIntegrador.Modulos.Usuarios
                 MessageBox.Show("Error al actualizar la contraseña.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void IconoCandado_MouseHover(object sender, EventArgs e)
+        {
+            txt_contraseña.UseSystemPasswordChar = false;
+        }
+
+        private void IconoCandado_MouseLeave(object sender, EventArgs e)
+        {
+            txt_contraseña.UseSystemPasswordChar = true;
+
+        }
     }
 }

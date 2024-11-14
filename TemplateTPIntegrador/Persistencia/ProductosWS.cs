@@ -2,6 +2,7 @@
 using Newtonsoft.Json;
 using Persistencia.Utils;
 using System;
+using System.Collections.Generic;
 using System.Net.Http;
 
 namespace Persistencia
@@ -51,5 +52,49 @@ namespace Persistencia
                 return false;
             }
         }
+
+
+        public List<ProductoWS> buscarDatosProducto()
+        {
+            try
+            {
+                // URL del endpoint
+                string url = "Producto/TraerProductos";
+
+                // Realiza la solicitud GET al endpoint
+                var response = WebHelper.Get(url);
+
+                if (response.IsSuccessStatusCode)
+                {
+                    // Lee el contenido de la respuesta como string
+                    string jsonResponse = response.Content.ReadAsStringAsync().Result;
+
+                    // Deserializa la respuesta JSON a una lista de objetos ProductoWS
+                    List<ProductoWS> productos = JsonConvert.DeserializeObject<List<ProductoWS>>(jsonResponse);
+
+                    return productos;
+                }
+                else
+                {
+                    Console.WriteLine("Error en la solicitud: " + response.StatusCode);
+                    return null;
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error al obtener los productos: " + ex.Message);
+                return null;
+            }
+        }
     }
+
+
+
+
+
+
+
+
+
 }
+
