@@ -30,7 +30,7 @@
         {
             this.label6 = new System.Windows.Forms.Label();
             this.panelFechaNacimiento = new System.Windows.Forms.Panel();
-            this.dni_txt = new System.Windows.Forms.TextBox();
+            this.txt_nombreCliente = new System.Windows.Forms.TextBox();
             this.pictureBox11 = new System.Windows.Forms.PictureBox();
             this.panelSeleccionarCliente = new System.Windows.Forms.Panel();
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
@@ -67,31 +67,31 @@
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
             this.label6.Location = new System.Drawing.Point(515, 34);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(43, 21);
+            this.label6.Size = new System.Drawing.Size(81, 21);
             this.label6.TabIndex = 1018;
-            this.label6.Text = "DNI:";
+            this.label6.Text = "Nombre :";
             // 
             // panelFechaNacimiento
             // 
             this.panelFechaNacimiento.BackColor = System.Drawing.SystemColors.Control;
-            this.panelFechaNacimiento.Controls.Add(this.dni_txt);
+            this.panelFechaNacimiento.Controls.Add(this.txt_nombreCliente);
             this.panelFechaNacimiento.Controls.Add(this.pictureBox11);
             this.panelFechaNacimiento.Location = new System.Drawing.Point(519, 58);
             this.panelFechaNacimiento.Name = "panelFechaNacimiento";
             this.panelFechaNacimiento.Size = new System.Drawing.Size(489, 45);
             this.panelFechaNacimiento.TabIndex = 1017;
             // 
-            // dni_txt
+            // txt_nombreCliente
             // 
-            this.dni_txt.BackColor = System.Drawing.SystemColors.Control;
-            this.dni_txt.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dni_txt.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dni_txt.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.dni_txt.Location = new System.Drawing.Point(55, 12);
-            this.dni_txt.Name = "dni_txt";
-            this.dni_txt.ReadOnly = true;
-            this.dni_txt.Size = new System.Drawing.Size(421, 20);
-            this.dni_txt.TabIndex = 1001;
+            this.txt_nombreCliente.BackColor = System.Drawing.SystemColors.Control;
+            this.txt_nombreCliente.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txt_nombreCliente.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_nombreCliente.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
+            this.txt_nombreCliente.Location = new System.Drawing.Point(55, 12);
+            this.txt_nombreCliente.Name = "txt_nombreCliente";
+            this.txt_nombreCliente.ReadOnly = true;
+            this.txt_nombreCliente.Size = new System.Drawing.Size(421, 20);
+            this.txt_nombreCliente.TabIndex = 1001;
             // 
             // pictureBox11
             // 
@@ -131,8 +131,7 @@
             this.cmb_clientes.DropDownHeight = 150;
             this.cmb_clientes.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmb_clientes.DropDownWidth = 200;
-            this.cmb_clientes.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cmb_clientes.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cmb_clientes.FocusedColor = System.Drawing.Color.Empty;
             this.cmb_clientes.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmb_clientes.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
             this.cmb_clientes.IntegralHeight = false;
@@ -358,11 +357,10 @@
 
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Panel panelFechaNacimiento;
-        private System.Windows.Forms.TextBox dni_txt;
+        private System.Windows.Forms.TextBox txt_nombreCliente;
         private System.Windows.Forms.PictureBox pictureBox11;
         private System.Windows.Forms.Panel panelSeleccionarCliente;
         private System.Windows.Forms.PictureBox pictureBox10;
-        private Guna.UI2.WinForms.Guna2ComboBox cmb_clientes;
         private System.Windows.Forms.Label txt_cliente;
         private Guna.UI2.WinForms.Guna2NumericUpDown cantidad_int;
         private System.Windows.Forms.Label label3;
@@ -377,5 +375,6 @@
         private System.Windows.Forms.Button agregarcarrito_btn;
         private System.Windows.Forms.Button finalizar_btn;
         private System.Windows.Forms.Button vercarrito_btn;
+        private Guna.UI2.WinForms.Guna2ComboBox cmb_clientes;
     }
 }
