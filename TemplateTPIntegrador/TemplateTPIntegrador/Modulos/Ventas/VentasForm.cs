@@ -48,7 +48,7 @@ namespace TemplateTPIntegrador.Modulos.Ventas
                 cmb_clientes.Items.Clear();
 
                 cmb_clientes.DataSource = clientesActivos;
-                cmb_clientes.DisplayMember = "nombre";
+                cmb_clientes.DisplayMember = "dni";
                 cmb_clientes.ValueMember = "Id";
 
                 cmb_clientes.SelectedIndex = -1;
@@ -88,7 +88,7 @@ namespace TemplateTPIntegrador.Modulos.Ventas
 
                 if (clienteSeleccionado != null)
                 {
-                    dni_txt.Text = clienteSeleccionado.dni.ToString();
+                    txt_nombreCliente.Text = clienteSeleccionado.nombre;
                 }
                 else
                 {
