@@ -207,6 +207,7 @@
             this.label1.Size = new System.Drawing.Size(84, 30);
             this.label1.TabIndex = 100011;
             this.label1.Text = "Stock:";
+            this.label1.Visible = false;
             // 
             // panel1
             // 
@@ -218,6 +219,7 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(734, 69);
             this.panel1.TabIndex = 100010;
+            this.panel1.Visible = false;
             // 
             // stock_int
             // 
@@ -231,6 +233,7 @@
             this.stock_int.ReadOnly = true;
             this.stock_int.Size = new System.Drawing.Size(632, 30);
             this.stock_int.TabIndex = 1001;
+            this.stock_int.Visible = false;
             // 
             // pictureBox1
             // 
@@ -242,6 +245,7 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 1002;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Visible = false;
             // 
             // panel2
             // 
