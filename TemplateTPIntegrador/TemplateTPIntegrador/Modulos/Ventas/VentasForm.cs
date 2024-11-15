@@ -39,7 +39,7 @@ namespace TemplateTPIntegrador.Modulos.Ventas
             cmb_clientes.SelectedIndexChanged += cmb_clientes_SelectedIndexChanged;
             cmb_productos.SelectedIndexChanged += cmb_productos_SelectedIndexChanged;
             btnEliminar.Click += btnEliminar_Click;
-            finalizar_btn.Click += btnConfirmarVenta_Click; // Botón para confirmar la venta
+            finalizar_btn.Click += btnFinalizarCompra_Click; // Botón para confirmar la venta
         }
 
         private void CargarClientes()
@@ -121,7 +121,7 @@ namespace TemplateTPIntegrador.Modulos.Ventas
             }
         }
 
-        private void agregarcarrito_btn_Click(object sender, EventArgs e)
+        private void btnAgregar_Click(object sender, EventArgs e)
         {
             if (cmb_productos.SelectedValue == null || cmb_clientes.SelectedValue == null)
             {
@@ -129,17 +129,14 @@ namespace TemplateTPIntegrador.Modulos.Ventas
                 return;
             }
 
-            string idCliente = cmb_clientes.SelectedValue.ToString();
             string idProducto = cmb_productos.SelectedValue.ToString();
             int cantidad;
-
             if (!int.TryParse(cantidad_int.Text, out cantidad) || cantidad <= 0)
             {
                 MessageBox.Show("Ingrese una cantidad válida.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
-            // Busca el precio unitario del producto seleccionado en la lista de productos
             var productoSeleccionado = productosWS.buscarDatosProducto().FirstOrDefault(p => p.id.ToString() == idProducto);
             if (productoSeleccionado == null)
             {
@@ -150,81 +147,47 @@ namespace TemplateTPIntegrador.Modulos.Ventas
             double precioUnitario = productoSeleccionado.precio;
             string nombreProducto = productoSeleccionado.nombre;
 
-            // Calcula el total de esta venta
-            double total = precioUnitario * cantidad;
+            var itemExistente = carrito.FirstOrDefault(item => item.IdProducto == idProducto);
+            int cantidadEnCarrito = itemExistente != null ? itemExistente.Cantidad : 0;
 
-            // Si se agrega exitosamente, guarda también la venta localmente
-            var nuevaVenta = new CarritoItem
-            {
-                IdProducto = idProducto,
-                Nombre = nombreProducto,
-                Cantidad = cantidad,
-                PrecioUnitario = precioUnitario,
-                Total = total
-            };
-
-            if (!int.TryParse(stock_int.Text, out int stockDisponible))
-            {
-                MessageBox.Show("Error al leer el stock disponible.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
-
-            if (cantidad > stockDisponible)
+            if (cantidadEnCarrito + cantidad > productoSeleccionado.stock)
             {
                 MessageBox.Show("No hay suficiente stock disponible.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-            else if (cantidad == stockDisponible)
-            {
-                DialogResult resultado = MessageBox.Show(
-                    "Al agregar esta cantidad el stock quedará en 0. ¿Desea continuar?",
-                    "Advertencia",
-                    MessageBoxButtons.YesNo,
-                    MessageBoxIcon.Warning
-                );
 
-                if (resultado == DialogResult.No)
-                {
-                    return;
-                }
+            if (itemExistente != null)
+            {
+                itemExistente.Cantidad += cantidad;
+                itemExistente.Total = itemExistente.Cantidad * itemExistente.PrecioUnitario;
             }
-            carrito.Add(nuevaVenta);
+            else
+            {
+                var nuevaVenta = new CarritoItem
+                {
+                    IdProducto = idProducto,
+                    Nombre = nombreProducto,
+                    Cantidad = cantidad,
+                    PrecioUnitario = precioUnitario,
+                    Total = precioUnitario * cantidad
+                };
+                carrito.Add(nuevaVenta);
+            }
+
             dataGridViewCarrito.DataSource = null;
             dataGridViewCarrito.DataSource = carrito;
-            totalAcumulado += total;
+            totalAcumulado += precioUnitario * cantidad;
             lbl_Total.Text = $"Total acumulado: ${totalAcumulado:F2}";
             MessageBox.Show("Producto agregado exitosamente al carrito.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
-        private void btnConfirmarVenta_Click(object sender, EventArgs e)
+
+        private void btnFinalizarCompra_Click(object sender, EventArgs e)
         {
-            if (carrito.Count == 0)
-            {
-                MessageBox.Show("El carrito está vacío. Agregue productos antes de confirmar la venta.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
 
-            foreach (var item in carrito)
-            {
-                // Llama al método AgregarVenta para guardar en el backend y obtener el Id de la venta
-                string idVenta = ventasWS.AgregarVenta(cmb_clientes.SelectedValue.ToString(), IDUSUARIO, item.IdProducto, item.Cantidad);
-
-                if (string.IsNullOrEmpty(idVenta))
-                {
-                    MessageBox.Show("Hubo un error al confirmar la venta. Intente de nuevo.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    return;
-                }
-
-                // Actualiza el stock del producto
-                productosWS.ActualizarStock(item.IdProducto, item.Cantidad);
-            }
-
-            MessageBox.Show("Venta confirmada exitosamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            carrito.Clear();
-            dataGridViewCarrito.DataSource = null;
-            dataGridViewCarrito.DataSource = carrito;
-            totalAcumulado = 0;
-            lbl_Total.Text = $"Total acumulado: ${totalAcumulado:F2}";
+            FacturaForm formComprobante = new FacturaForm();
+            formComprobante.Show();
+            
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)

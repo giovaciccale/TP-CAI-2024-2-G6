@@ -28,22 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.cmb_proveedores = new System.Windows.Forms.ComboBox();
             this.btn_desactivarProveedor = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.panelSeleccionarCliente = new System.Windows.Forms.Panel();
+            this.cmb_proveedores = new System.Windows.Forms.ComboBox();
+            this.pictureBox10 = new System.Windows.Forms.PictureBox();
+            this.panelSeleccionarCliente.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
             this.SuspendLayout();
-            // 
-            // cmb_proveedores
-            // 
-            this.cmb_proveedores.DropDownHeight = 500;
-            this.cmb_proveedores.DropDownWidth = 500;
-            this.cmb_proveedores.FormattingEnabled = true;
-            this.cmb_proveedores.IntegralHeight = false;
-            this.cmb_proveedores.Location = new System.Drawing.Point(88, 183);
-            this.cmb_proveedores.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.cmb_proveedores.Name = "cmb_proveedores";
-            this.cmb_proveedores.Size = new System.Drawing.Size(686, 28);
-            this.cmb_proveedores.TabIndex = 100034;
             // 
             // btn_desactivarProveedor
             // 
@@ -73,27 +65,67 @@
             this.label1.TabIndex = 100032;
             this.label1.Text = "Elija Proveedor a Desactivar :";
             // 
+            // panelSeleccionarCliente
+            // 
+            this.panelSeleccionarCliente.BackColor = System.Drawing.SystemColors.Window;
+            this.panelSeleccionarCliente.Controls.Add(this.cmb_proveedores);
+            this.panelSeleccionarCliente.Controls.Add(this.pictureBox10);
+            this.panelSeleccionarCliente.Location = new System.Drawing.Point(87, 150);
+            this.panelSeleccionarCliente.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.panelSeleccionarCliente.Name = "panelSeleccionarCliente";
+            this.panelSeleccionarCliente.Size = new System.Drawing.Size(735, 69);
+            this.panelSeleccionarCliente.TabIndex = 100034;
+            // 
+            // cmb_proveedores
+            // 
+            this.cmb_proveedores.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cmb_proveedores.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cmb_proveedores.DropDownHeight = 30;
+            this.cmb_proveedores.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmb_proveedores.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmb_proveedores.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
+            this.cmb_proveedores.FormattingEnabled = true;
+            this.cmb_proveedores.IntegralHeight = false;
+            this.cmb_proveedores.Location = new System.Drawing.Point(65, 22);
+            this.cmb_proveedores.Name = "cmb_proveedores";
+            this.cmb_proveedores.Size = new System.Drawing.Size(639, 38);
+            this.cmb_proveedores.TabIndex = 100040;
+            // 
+            // pictureBox10
+            // 
+            this.pictureBox10.Image = global::TemplateTPIntegrador.Properties.Resources.pngwing_com;
+            this.pictureBox10.Location = new System.Drawing.Point(22, 17);
+            this.pictureBox10.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pictureBox10.Name = "pictureBox10";
+            this.pictureBox10.Size = new System.Drawing.Size(36, 37);
+            this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox10.TabIndex = 1000;
+            this.pictureBox10.TabStop = false;
+            // 
             // BajaProveedores
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1200, 692);
-            this.Controls.Add(this.cmb_proveedores);
+            this.Controls.Add(this.panelSeleccionarCliente);
             this.Controls.Add(this.btn_desactivarProveedor);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "BajaProveedores";
             this.Text = "BajaProveedores";
+            this.panelSeleccionarCliente.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.ComboBox cmb_proveedores;
         private System.Windows.Forms.Button btn_desactivarProveedor;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Panel panelSeleccionarCliente;
+        private System.Windows.Forms.ComboBox cmb_proveedores;
+        private System.Windows.Forms.PictureBox pictureBox10;
     }
 }

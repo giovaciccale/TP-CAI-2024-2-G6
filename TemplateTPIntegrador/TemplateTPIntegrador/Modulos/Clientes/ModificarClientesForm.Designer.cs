@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.panelSeleccionarCliente = new System.Windows.Forms.Panel();
+            this.cmb_clientes = new System.Windows.Forms.ComboBox();
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
-            this.cmb_clientes = new Guna.UI2.WinForms.Guna2ComboBox();
             this.txt_cliente = new System.Windows.Forms.Label();
             this.panelTelefono = new System.Windows.Forms.Panel();
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
@@ -58,50 +58,50 @@
             // panelSeleccionarCliente
             // 
             this.panelSeleccionarCliente.BackColor = System.Drawing.SystemColors.Window;
-            this.panelSeleccionarCliente.Controls.Add(this.pictureBox10);
             this.panelSeleccionarCliente.Controls.Add(this.cmb_clientes);
-            this.panelSeleccionarCliente.Location = new System.Drawing.Point(36, 55);
+            this.panelSeleccionarCliente.Controls.Add(this.pictureBox10);
+            this.panelSeleccionarCliente.Location = new System.Drawing.Point(54, 85);
+            this.panelSeleccionarCliente.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panelSeleccionarCliente.Name = "panelSeleccionarCliente";
-            this.panelSeleccionarCliente.Size = new System.Drawing.Size(490, 45);
+            this.panelSeleccionarCliente.Size = new System.Drawing.Size(735, 69);
             this.panelSeleccionarCliente.TabIndex = 1008;
+            // 
+            // cmb_clientes
+            // 
+            this.cmb_clientes.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.cmb_clientes.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cmb_clientes.BackColor = System.Drawing.Color.White;
+            this.cmb_clientes.DropDownHeight = 30;
+            this.cmb_clientes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmb_clientes.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmb_clientes.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
+            this.cmb_clientes.FormattingEnabled = true;
+            this.cmb_clientes.IntegralHeight = false;
+            this.cmb_clientes.Location = new System.Drawing.Point(68, 22);
+            this.cmb_clientes.Name = "cmb_clientes";
+            this.cmb_clientes.Size = new System.Drawing.Size(638, 38);
+            this.cmb_clientes.TabIndex = 100033;
             // 
             // pictureBox10
             // 
             this.pictureBox10.Image = global::TemplateTPIntegrador.Properties.Resources.pngwing_com;
-            this.pictureBox10.Location = new System.Drawing.Point(15, 11);
+            this.pictureBox10.Location = new System.Drawing.Point(22, 17);
+            this.pictureBox10.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pictureBox10.Name = "pictureBox10";
-            this.pictureBox10.Size = new System.Drawing.Size(24, 24);
+            this.pictureBox10.Size = new System.Drawing.Size(36, 37);
             this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox10.TabIndex = 1000;
             this.pictureBox10.TabStop = false;
-            // 
-            // cmb_clientes
-            // 
-            this.cmb_clientes.BackColor = System.Drawing.Color.Transparent;
-            this.cmb_clientes.BorderColor = System.Drawing.Color.White;
-            this.cmb_clientes.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cmb_clientes.DropDownHeight = 150;
-            this.cmb_clientes.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmb_clientes.DropDownWidth = 200;
-            this.cmb_clientes.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cmb_clientes.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cmb_clientes.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmb_clientes.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.cmb_clientes.IntegralHeight = false;
-            this.cmb_clientes.ItemHeight = 30;
-            this.cmb_clientes.Location = new System.Drawing.Point(55, 5);
-            this.cmb_clientes.Name = "cmb_clientes";
-            this.cmb_clientes.Size = new System.Drawing.Size(416, 36);
-            this.cmb_clientes.TabIndex = 0;
             // 
             // txt_cliente
             // 
             this.txt_cliente.AutoSize = true;
             this.txt_cliente.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.txt_cliente.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.txt_cliente.Location = new System.Drawing.Point(32, 31);
+            this.txt_cliente.Location = new System.Drawing.Point(48, 48);
+            this.txt_cliente.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.txt_cliente.Name = "txt_cliente";
-            this.txt_cliente.Size = new System.Drawing.Size(187, 21);
+            this.txt_cliente.Size = new System.Drawing.Size(294, 30);
             this.txt_cliente.TabIndex = 1007;
             this.txt_cliente.Text = "Seleccione Un Cliente :";
             // 
@@ -110,17 +110,19 @@
             this.panelTelefono.BackColor = System.Drawing.SystemColors.Control;
             this.panelTelefono.Controls.Add(this.pictureBox9);
             this.panelTelefono.Controls.Add(this.txt_telefono);
-            this.panelTelefono.Location = new System.Drawing.Point(36, 205);
+            this.panelTelefono.Location = new System.Drawing.Point(54, 315);
+            this.panelTelefono.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panelTelefono.Name = "panelTelefono";
-            this.panelTelefono.Size = new System.Drawing.Size(490, 45);
+            this.panelTelefono.Size = new System.Drawing.Size(735, 69);
             this.panelTelefono.TabIndex = 1015;
             // 
             // pictureBox9
             // 
             this.pictureBox9.Image = global::TemplateTPIntegrador.Properties.Resources.pngwing_com;
-            this.pictureBox9.Location = new System.Drawing.Point(14, 12);
+            this.pictureBox9.Location = new System.Drawing.Point(21, 18);
+            this.pictureBox9.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pictureBox9.Name = "pictureBox9";
-            this.pictureBox9.Size = new System.Drawing.Size(24, 24);
+            this.pictureBox9.Size = new System.Drawing.Size(36, 37);
             this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox9.TabIndex = 1002;
             this.pictureBox9.TabStop = false;
@@ -131,9 +133,10 @@
             this.txt_telefono.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt_telefono.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_telefono.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.txt_telefono.Location = new System.Drawing.Point(55, 12);
+            this.txt_telefono.Location = new System.Drawing.Point(82, 18);
+            this.txt_telefono.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txt_telefono.Name = "txt_telefono";
-            this.txt_telefono.Size = new System.Drawing.Size(421, 20);
+            this.txt_telefono.Size = new System.Drawing.Size(632, 30);
             this.txt_telefono.TabIndex = 0;
             this.txt_telefono.Click += new System.EventHandler(this.txt_telefono_TextChanged);
             this.txt_telefono.TextChanged += new System.EventHandler(this.txt_telefono_TextChanged);
@@ -144,9 +147,10 @@
             this.lblTelefono.AutoSize = true;
             this.lblTelefono.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.lblTelefono.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.lblTelefono.Location = new System.Drawing.Point(32, 181);
+            this.lblTelefono.Location = new System.Drawing.Point(48, 278);
+            this.lblTelefono.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTelefono.Name = "lblTelefono";
-            this.lblTelefono.Size = new System.Drawing.Size(84, 21);
+            this.lblTelefono.Size = new System.Drawing.Size(131, 30);
             this.lblTelefono.TabIndex = 1017;
             this.lblTelefono.Text = "Teléfono :";
             // 
@@ -155,9 +159,10 @@
             this.lblDireccion.AutoSize = true;
             this.lblDireccion.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.lblDireccion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.lblDireccion.Location = new System.Drawing.Point(32, 106);
+            this.lblDireccion.Location = new System.Drawing.Point(48, 163);
+            this.lblDireccion.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblDireccion.Name = "lblDireccion";
-            this.lblDireccion.Size = new System.Drawing.Size(91, 21);
+            this.lblDireccion.Size = new System.Drawing.Size(143, 30);
             this.lblDireccion.TabIndex = 1016;
             this.lblDireccion.Text = "Dirección :";
             // 
@@ -166,17 +171,19 @@
             this.panelDireccion.BackColor = System.Drawing.SystemColors.Control;
             this.panelDireccion.Controls.Add(this.pictureBox8);
             this.panelDireccion.Controls.Add(this.txt_direccion);
-            this.panelDireccion.Location = new System.Drawing.Point(36, 130);
+            this.panelDireccion.Location = new System.Drawing.Point(54, 200);
+            this.panelDireccion.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panelDireccion.Name = "panelDireccion";
-            this.panelDireccion.Size = new System.Drawing.Size(490, 45);
+            this.panelDireccion.Size = new System.Drawing.Size(735, 69);
             this.panelDireccion.TabIndex = 1014;
             // 
             // pictureBox8
             // 
             this.pictureBox8.Image = global::TemplateTPIntegrador.Properties.Resources.pngwing_com;
-            this.pictureBox8.Location = new System.Drawing.Point(15, 11);
+            this.pictureBox8.Location = new System.Drawing.Point(22, 17);
+            this.pictureBox8.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Size = new System.Drawing.Size(24, 24);
+            this.pictureBox8.Size = new System.Drawing.Size(36, 37);
             this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox8.TabIndex = 1001;
             this.pictureBox8.TabStop = false;
@@ -187,9 +194,10 @@
             this.txt_direccion.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt_direccion.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_direccion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.txt_direccion.Location = new System.Drawing.Point(55, 12);
+            this.txt_direccion.Location = new System.Drawing.Point(82, 18);
+            this.txt_direccion.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txt_direccion.Name = "txt_direccion";
-            this.txt_direccion.Size = new System.Drawing.Size(421, 20);
+            this.txt_direccion.Size = new System.Drawing.Size(632, 30);
             this.txt_direccion.TabIndex = 0;
             this.txt_direccion.Click += new System.EventHandler(this.txt_direccion_TextChanged);
             this.txt_direccion.TextChanged += new System.EventHandler(this.txt_direccion_TextChanged);
@@ -200,17 +208,19 @@
             this.panelEmail.BackColor = System.Drawing.SystemColors.Control;
             this.panelEmail.Controls.Add(this.pictureBox6);
             this.panelEmail.Controls.Add(this.txt_email);
-            this.panelEmail.Location = new System.Drawing.Point(36, 280);
+            this.panelEmail.Location = new System.Drawing.Point(54, 431);
+            this.panelEmail.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panelEmail.Name = "panelEmail";
-            this.panelEmail.Size = new System.Drawing.Size(490, 45);
+            this.panelEmail.Size = new System.Drawing.Size(735, 69);
             this.panelEmail.TabIndex = 100005;
             // 
             // pictureBox6
             // 
             this.pictureBox6.Image = global::TemplateTPIntegrador.Properties.Resources.pngwing_com;
-            this.pictureBox6.Location = new System.Drawing.Point(15, 12);
+            this.pictureBox6.Location = new System.Drawing.Point(22, 18);
+            this.pictureBox6.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(24, 24);
+            this.pictureBox6.Size = new System.Drawing.Size(36, 37);
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox6.TabIndex = 1001;
             this.pictureBox6.TabStop = false;
@@ -221,9 +231,10 @@
             this.txt_email.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt_email.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_email.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.txt_email.Location = new System.Drawing.Point(55, 12);
+            this.txt_email.Location = new System.Drawing.Point(82, 18);
+            this.txt_email.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txt_email.Name = "txt_email";
-            this.txt_email.Size = new System.Drawing.Size(416, 20);
+            this.txt_email.Size = new System.Drawing.Size(624, 30);
             this.txt_email.TabIndex = 0;
             this.txt_email.Click += new System.EventHandler(this.txt_email_TextChanged);
             this.txt_email.TextChanged += new System.EventHandler(this.txt_email_TextChanged);
@@ -234,9 +245,10 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.label2.Location = new System.Drawing.Point(32, 256);
+            this.label2.Location = new System.Drawing.Point(48, 394);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(59, 21);
+            this.label2.Size = new System.Drawing.Size(92, 30);
             this.label2.TabIndex = 100006;
             this.label2.Text = "Email :";
             // 
@@ -247,9 +259,10 @@
             this.btnActualizarDatos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnActualizarDatos.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnActualizarDatos.ForeColor = System.Drawing.Color.White;
-            this.btnActualizarDatos.Location = new System.Drawing.Point(449, 531);
+            this.btnActualizarDatos.Location = new System.Drawing.Point(674, 817);
+            this.btnActualizarDatos.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnActualizarDatos.Name = "btnActualizarDatos";
-            this.btnActualizarDatos.Size = new System.Drawing.Size(148, 35);
+            this.btnActualizarDatos.Size = new System.Drawing.Size(222, 54);
             this.btnActualizarDatos.TabIndex = 100032;
             this.btnActualizarDatos.Text = "ACTUALIZAR DATOS";
             this.btnActualizarDatos.UseVisualStyleBackColor = false;
@@ -257,9 +270,9 @@
             // 
             // ModificarClientesForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1050, 600);
+            this.ClientSize = new System.Drawing.Size(1575, 923);
             this.Controls.Add(this.btnActualizarDatos);
             this.Controls.Add(this.panelEmail);
             this.Controls.Add(this.label2);
@@ -270,6 +283,7 @@
             this.Controls.Add(this.panelSeleccionarCliente);
             this.Controls.Add(this.txt_cliente);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "ModificarClientesForm";
             this.Text = "ModificarClientesForm";
             this.panelSeleccionarCliente.ResumeLayout(false);
@@ -292,7 +306,6 @@
 
         private System.Windows.Forms.Panel panelSeleccionarCliente;
         private System.Windows.Forms.PictureBox pictureBox10;
-        private Guna.UI2.WinForms.Guna2ComboBox cmb_clientes;
         private System.Windows.Forms.Label txt_cliente;
         private System.Windows.Forms.Panel panelTelefono;
         private System.Windows.Forms.PictureBox pictureBox9;
@@ -307,5 +320,6 @@
         private System.Windows.Forms.TextBox txt_email;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnActualizarDatos;
+        private System.Windows.Forms.ComboBox cmb_clientes;
     }
 }
