@@ -39,7 +39,7 @@ namespace TemplateTPIntegrador.Modulos.Ventas
             cmb_clientes.SelectedIndexChanged += cmb_clientes_SelectedIndexChanged;
             cmb_productos.SelectedIndexChanged += cmb_productos_SelectedIndexChanged;
             btnEliminar.Click += btnEliminar_Click;
-            finalizar_btn.Click += btnConfirmarVenta_Click; // Botón para confirmar la venta
+            finalizar_btn.Click += btnFinalizarCompra_Click; // Botón para confirmar la venta
         }
 
         private void CargarClientes()
@@ -182,35 +182,12 @@ namespace TemplateTPIntegrador.Modulos.Ventas
         }
 
 
-        private void btnConfirmarVenta_Click(object sender, EventArgs e)
+        private void btnFinalizarCompra_Click(object sender, EventArgs e)
         {
-            if (carrito.Count == 0)
-            {
-                MessageBox.Show("El carrito está vacío. Agregue productos antes de confirmar la venta.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
 
-            foreach (var item in carrito)
-            {
-                // Llama al método AgregarVenta para guardar en el backend y obtener el Id de la venta
-                string idVenta = ventasWS.AgregarVenta(cmb_clientes.SelectedValue.ToString(), IDUSUARIO, item.IdProducto, item.Cantidad);
-
-                if (string.IsNullOrEmpty(idVenta))
-                {
-                    MessageBox.Show("Hubo un error al confirmar la venta. Intente de nuevo.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    return;
-                }
-
-                // Actualiza el stock del producto
-                productosWS.ActualizarStock(item.IdProducto, item.Cantidad);
-            }
-
-            MessageBox.Show("Venta confirmada exitosamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            carrito.Clear();
-            dataGridViewCarrito.DataSource = null;
-            dataGridViewCarrito.DataSource = carrito;
-            totalAcumulado = 0;
-            lbl_Total.Text = $"Total acumulado: ${totalAcumulado:F2}";
+            FacturaForm formComprobante = new FacturaForm();
+            formComprobante.Show();
+            
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)

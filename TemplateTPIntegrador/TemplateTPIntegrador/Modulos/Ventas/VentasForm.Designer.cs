@@ -31,42 +31,42 @@
             this.label6 = new System.Windows.Forms.Label();
             this.panelFechaNacimiento = new System.Windows.Forms.Panel();
             this.txt_nombreCliente = new System.Windows.Forms.TextBox();
-            this.pictureBox11 = new System.Windows.Forms.PictureBox();
             this.panelSeleccionarCliente = new System.Windows.Forms.Panel();
-            this.pictureBox10 = new System.Windows.Forms.PictureBox();
-            this.cmb_clientes = new Guna.UI2.WinForms.Guna2ComboBox();
             this.txt_cliente = new System.Windows.Forms.Label();
             this.cantidad_int = new Guna.UI2.WinForms.Guna2NumericUpDown();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.stock_int = new System.Windows.Forms.TextBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.cmb_productos = new Guna.UI2.WinForms.Guna2ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.agregarcarrito_btn = new System.Windows.Forms.Button();
             this.finalizar_btn = new System.Windows.Forms.Button();
             this.lblPrecioUnitario = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.txtPrecioUnitario = new System.Windows.Forms.TextBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.dataGridViewCarrito = new System.Windows.Forms.DataGridView();
             this.lbl_Total = new System.Windows.Forms.Label();
             this.btnEliminar = new System.Windows.Forms.Button();
+            this.cmb_clientes = new System.Windows.Forms.ComboBox();
+            this.cmb_productos = new System.Windows.Forms.ComboBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox11 = new System.Windows.Forms.PictureBox();
+            this.pictureBox10 = new System.Windows.Forms.PictureBox();
             this.panelFechaNacimiento.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
             this.panelSeleccionarCliente.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cantidad_int)).BeginInit();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCarrito)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
             this.SuspendLayout();
             // 
             // label6
@@ -105,57 +105,16 @@
             this.txt_nombreCliente.Size = new System.Drawing.Size(632, 30);
             this.txt_nombreCliente.TabIndex = 1001;
             // 
-            // pictureBox11
-            // 
-            this.pictureBox11.Image = global::TemplateTPIntegrador.Properties.Resources.pngwing_com;
-            this.pictureBox11.Location = new System.Drawing.Point(22, 17);
-            this.pictureBox11.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.pictureBox11.Name = "pictureBox11";
-            this.pictureBox11.Size = new System.Drawing.Size(36, 37);
-            this.pictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox11.TabIndex = 1002;
-            this.pictureBox11.TabStop = false;
-            // 
             // panelSeleccionarCliente
             // 
             this.panelSeleccionarCliente.BackColor = System.Drawing.SystemColors.Window;
-            this.panelSeleccionarCliente.Controls.Add(this.pictureBox10);
             this.panelSeleccionarCliente.Controls.Add(this.cmb_clientes);
+            this.panelSeleccionarCliente.Controls.Add(this.pictureBox10);
             this.panelSeleccionarCliente.Location = new System.Drawing.Point(45, 89);
             this.panelSeleccionarCliente.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panelSeleccionarCliente.Name = "panelSeleccionarCliente";
             this.panelSeleccionarCliente.Size = new System.Drawing.Size(735, 69);
             this.panelSeleccionarCliente.TabIndex = 1016;
-            // 
-            // pictureBox10
-            // 
-            this.pictureBox10.Image = global::TemplateTPIntegrador.Properties.Resources.pngwing_com;
-            this.pictureBox10.Location = new System.Drawing.Point(22, 17);
-            this.pictureBox10.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.pictureBox10.Name = "pictureBox10";
-            this.pictureBox10.Size = new System.Drawing.Size(36, 37);
-            this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox10.TabIndex = 1000;
-            this.pictureBox10.TabStop = false;
-            // 
-            // cmb_clientes
-            // 
-            this.cmb_clientes.BackColor = System.Drawing.Color.Transparent;
-            this.cmb_clientes.BorderColor = System.Drawing.Color.White;
-            this.cmb_clientes.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cmb_clientes.DropDownHeight = 150;
-            this.cmb_clientes.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmb_clientes.DropDownWidth = 200;
-            this.cmb_clientes.FocusedColor = System.Drawing.Color.Empty;
-            this.cmb_clientes.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmb_clientes.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.cmb_clientes.IntegralHeight = false;
-            this.cmb_clientes.ItemHeight = 30;
-            this.cmb_clientes.Location = new System.Drawing.Point(82, 8);
-            this.cmb_clientes.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.cmb_clientes.Name = "cmb_clientes";
-            this.cmb_clientes.Size = new System.Drawing.Size(622, 36);
-            this.cmb_clientes.TabIndex = 0;
             // 
             // txt_cliente
             // 
@@ -165,9 +124,9 @@
             this.txt_cliente.Location = new System.Drawing.Point(39, 52);
             this.txt_cliente.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.txt_cliente.Name = "txt_cliente";
-            this.txt_cliente.Size = new System.Drawing.Size(284, 30);
+            this.txt_cliente.Size = new System.Drawing.Size(291, 30);
             this.txt_cliente.TabIndex = 1015;
-            this.txt_cliente.Text = "Ingrese DNI de cliente:";
+            this.txt_cliente.Text = "Ingrese DNI de cliente :";
             // 
             // cantidad_int
             // 
@@ -185,7 +144,7 @@
             this.cantidad_int.Name = "cantidad_int";
             this.cantidad_int.Size = new System.Drawing.Size(736, 69);
             this.cantidad_int.TabIndex = 100006;
-            this.cantidad_int.TextOffset = new System.Drawing.Point(235, 0);
+            this.cantidad_int.TextOffset = new System.Drawing.Point(354, 0);
             this.cantidad_int.UpDownButtonFillColor = System.Drawing.Color.White;
             this.cantidad_int.UpDownButtonForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
             // 
@@ -209,9 +168,9 @@
             this.label1.Location = new System.Drawing.Point(772, 320);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(84, 30);
+            this.label1.Size = new System.Drawing.Size(176, 30);
             this.label1.TabIndex = 100011;
-            this.label1.Text = "Stock:";
+            this.label1.Text = "Stock Actual :";
             // 
             // panel1
             // 
@@ -238,59 +197,16 @@
             this.stock_int.TabIndex = 1001;
             this.stock_int.WordWrap = false;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::TemplateTPIntegrador.Properties.Resources.pngwing_com;
-            this.pictureBox1.Location = new System.Drawing.Point(22, 17);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(36, 37);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 1002;
-            this.pictureBox1.TabStop = false;
-            // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.Window;
-            this.panel2.Controls.Add(this.pictureBox2);
             this.panel2.Controls.Add(this.cmb_productos);
+            this.panel2.Controls.Add(this.pictureBox2);
             this.panel2.Location = new System.Drawing.Point(45, 223);
             this.panel2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(735, 69);
             this.panel2.TabIndex = 100009;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::TemplateTPIntegrador.Properties.Resources.pngwing_com;
-            this.pictureBox2.Location = new System.Drawing.Point(22, 17);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(36, 37);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 1000;
-            this.pictureBox2.TabStop = false;
-            // 
-            // cmb_productos
-            // 
-            this.cmb_productos.BackColor = System.Drawing.Color.Transparent;
-            this.cmb_productos.BorderColor = System.Drawing.Color.White;
-            this.cmb_productos.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cmb_productos.DropDownHeight = 150;
-            this.cmb_productos.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmb_productos.DropDownWidth = 200;
-            this.cmb_productos.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cmb_productos.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cmb_productos.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmb_productos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.cmb_productos.IntegralHeight = false;
-            this.cmb_productos.ItemHeight = 30;
-            this.cmb_productos.Location = new System.Drawing.Point(82, 8);
-            this.cmb_productos.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.cmb_productos.Name = "cmb_productos";
-            this.cmb_productos.Size = new System.Drawing.Size(622, 36);
-            this.cmb_productos.TabIndex = 0;
-            this.cmb_productos.SelectedIndexChanged += new System.EventHandler(this.cmb_productos_SelectedIndexChanged);
             // 
             // label2
             // 
@@ -371,17 +287,6 @@
             this.txtPrecioUnitario.Size = new System.Drawing.Size(632, 30);
             this.txtPrecioUnitario.TabIndex = 1001;
             // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = global::TemplateTPIntegrador.Properties.Resources.pngwing_com;
-            this.pictureBox3.Location = new System.Drawing.Point(22, 17);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(36, 37);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox3.TabIndex = 1002;
-            this.pictureBox3.TabStop = false;
-            // 
             // dataGridViewCarrito
             // 
             this.dataGridViewCarrito.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
@@ -420,6 +325,89 @@
             this.btnEliminar.UseVisualStyleBackColor = false;
             this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
+            // cmb_clientes
+            // 
+            this.cmb_clientes.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cmb_clientes.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cmb_clientes.DropDownHeight = 30;
+            this.cmb_clientes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmb_clientes.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmb_clientes.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
+            this.cmb_clientes.FormattingEnabled = true;
+            this.cmb_clientes.IntegralHeight = false;
+            this.cmb_clientes.Location = new System.Drawing.Point(65, 22);
+            this.cmb_clientes.Name = "cmb_clientes";
+            this.cmb_clientes.Size = new System.Drawing.Size(639, 38);
+            this.cmb_clientes.TabIndex = 100040;
+            // 
+            // cmb_productos
+            // 
+            this.cmb_productos.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cmb_productos.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cmb_productos.DropDownHeight = 30;
+            this.cmb_productos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmb_productos.FormattingEnabled = true;
+            this.cmb_productos.IntegralHeight = false;
+            this.cmb_productos.Location = new System.Drawing.Point(65, 22);
+            this.cmb_productos.Name = "cmb_productos";
+            this.cmb_productos.Size = new System.Drawing.Size(639, 28);
+            this.cmb_productos.TabIndex = 100040;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = global::TemplateTPIntegrador.Properties.Resources.pngwing_com;
+            this.pictureBox3.Location = new System.Drawing.Point(22, 17);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(36, 37);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.TabIndex = 1002;
+            this.pictureBox3.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::TemplateTPIntegrador.Properties.Resources.pngwing_com;
+            this.pictureBox1.Location = new System.Drawing.Point(22, 17);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(36, 37);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 1002;
+            this.pictureBox1.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::TemplateTPIntegrador.Properties.Resources.pngwing_com;
+            this.pictureBox2.Location = new System.Drawing.Point(22, 17);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(36, 37);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 1000;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox11
+            // 
+            this.pictureBox11.Image = global::TemplateTPIntegrador.Properties.Resources.pngwing_com;
+            this.pictureBox11.Location = new System.Drawing.Point(22, 17);
+            this.pictureBox11.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pictureBox11.Name = "pictureBox11";
+            this.pictureBox11.Size = new System.Drawing.Size(36, 37);
+            this.pictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox11.TabIndex = 1002;
+            this.pictureBox11.TabStop = false;
+            // 
+            // pictureBox10
+            // 
+            this.pictureBox10.Image = global::TemplateTPIntegrador.Properties.Resources.pngwing_com;
+            this.pictureBox10.Location = new System.Drawing.Point(22, 17);
+            this.pictureBox10.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pictureBox10.Name = "pictureBox10";
+            this.pictureBox10.Size = new System.Drawing.Size(36, 37);
+            this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox10.TabIndex = 1000;
+            this.pictureBox10.TabStop = false;
+            // 
             // VentasForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -448,19 +436,19 @@
             this.Text = "VentasForm";
             this.panelFechaNacimiento.ResumeLayout(false);
             this.panelFechaNacimiento.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
             this.panelSeleccionarCliente.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cantidad_int)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCarrito)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -483,11 +471,9 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private Guna.UI2.WinForms.Guna2ComboBox cmb_productos;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button agregarcarrito_btn;
         private System.Windows.Forms.Button finalizar_btn;
-        private Guna.UI2.WinForms.Guna2ComboBox cmb_clientes;
         private System.Windows.Forms.Label lblPrecioUnitario;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.TextBox txtPrecioUnitario;
@@ -495,5 +481,7 @@
         private System.Windows.Forms.DataGridView dataGridViewCarrito;
         private System.Windows.Forms.Label lbl_Total;
         private System.Windows.Forms.Button btnEliminar;
+        private System.Windows.Forms.ComboBox cmb_clientes;
+        private System.Windows.Forms.ComboBox cmb_productos;
     }
 }
