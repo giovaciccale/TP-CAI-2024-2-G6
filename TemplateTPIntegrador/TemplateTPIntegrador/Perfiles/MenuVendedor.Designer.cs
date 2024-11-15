@@ -74,6 +74,8 @@
             this.btnCerrarSesion.FillColor = System.Drawing.Color.Empty;
             this.btnCerrarSesion.Font = new System.Drawing.Font("Century Gothic", 10F);
             this.btnCerrarSesion.ForeColor = System.Drawing.Color.White;
+            this.btnCerrarSesion.Image = ((System.Drawing.Image)(resources.GetObject("btnCerrarSesion.Image")));
+            this.btnCerrarSesion.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnCerrarSesion.Location = new System.Drawing.Point(0, 525);
             this.btnCerrarSesion.Name = "btnCerrarSesion";
             this.btnCerrarSesion.Size = new System.Drawing.Size(250, 40);
@@ -92,6 +94,8 @@
             this.btnSeccionCliente.FillColor = System.Drawing.Color.Empty;
             this.btnSeccionCliente.Font = new System.Drawing.Font("Century Gothic", 10F);
             this.btnSeccionCliente.ForeColor = System.Drawing.Color.White;
+            this.btnSeccionCliente.Image = ((System.Drawing.Image)(resources.GetObject("btnSeccionCliente.Image")));
+            this.btnSeccionCliente.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnSeccionCliente.Location = new System.Drawing.Point(0, 125);
             this.btnSeccionCliente.Name = "btnSeccionCliente";
             this.btnSeccionCliente.Size = new System.Drawing.Size(250, 40);
@@ -109,6 +113,8 @@
             this.btnSeccionVentas.FillColor = System.Drawing.Color.Empty;
             this.btnSeccionVentas.Font = new System.Drawing.Font("Century Gothic", 10F);
             this.btnSeccionVentas.ForeColor = System.Drawing.Color.White;
+            this.btnSeccionVentas.Image = ((System.Drawing.Image)(resources.GetObject("btnSeccionVentas.Image")));
+            this.btnSeccionVentas.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnSeccionVentas.Location = new System.Drawing.Point(0, 171);
             this.btnSeccionVentas.Name = "btnSeccionVentas";
             this.btnSeccionVentas.Size = new System.Drawing.Size(250, 40);
@@ -126,6 +132,8 @@
             this.btnSeccionReportes.FillColor = System.Drawing.Color.Empty;
             this.btnSeccionReportes.Font = new System.Drawing.Font("Century Gothic", 10F);
             this.btnSeccionReportes.ForeColor = System.Drawing.Color.White;
+            this.btnSeccionReportes.Image = ((System.Drawing.Image)(resources.GetObject("btnSeccionReportes.Image")));
+            this.btnSeccionReportes.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnSeccionReportes.Location = new System.Drawing.Point(0, 217);
             this.btnSeccionReportes.Name = "btnSeccionReportes";
             this.btnSeccionReportes.Size = new System.Drawing.Size(250, 40);

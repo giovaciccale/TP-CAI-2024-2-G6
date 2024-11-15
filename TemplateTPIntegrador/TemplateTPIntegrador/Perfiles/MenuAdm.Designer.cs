@@ -95,6 +95,8 @@
             this.btnSeccionReportes.FillColor = System.Drawing.Color.Empty;
             this.btnSeccionReportes.Font = new System.Drawing.Font("Century Gothic", 10F);
             this.btnSeccionReportes.ForeColor = System.Drawing.Color.White;
+            this.btnSeccionReportes.Image = ((System.Drawing.Image)(resources.GetObject("btnSeccionReportes.Image")));
+            this.btnSeccionReportes.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnSeccionReportes.Location = new System.Drawing.Point(0, 263);
             this.btnSeccionReportes.Name = "btnSeccionReportes";
             this.btnSeccionReportes.Size = new System.Drawing.Size(250, 40);
@@ -111,6 +113,8 @@
             this.btnSeccionProveedores.FillColor = System.Drawing.Color.Empty;
             this.btnSeccionProveedores.Font = new System.Drawing.Font("Century Gothic", 10F);
             this.btnSeccionProveedores.ForeColor = System.Drawing.Color.White;
+            this.btnSeccionProveedores.Image = ((System.Drawing.Image)(resources.GetObject("btnSeccionProveedores.Image")));
+            this.btnSeccionProveedores.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnSeccionProveedores.Location = new System.Drawing.Point(0, 217);
             this.btnSeccionProveedores.Name = "btnSeccionProveedores";
             this.btnSeccionProveedores.Size = new System.Drawing.Size(250, 40);
@@ -128,6 +132,8 @@
             this.btnSeccionProductos.FillColor = System.Drawing.Color.Empty;
             this.btnSeccionProductos.Font = new System.Drawing.Font("Century Gothic", 10F);
             this.btnSeccionProductos.ForeColor = System.Drawing.Color.White;
+            this.btnSeccionProductos.Image = ((System.Drawing.Image)(resources.GetObject("btnSeccionProductos.Image")));
+            this.btnSeccionProductos.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnSeccionProductos.Location = new System.Drawing.Point(0, 171);
             this.btnSeccionProductos.Name = "btnSeccionProductos";
             this.btnSeccionProductos.Size = new System.Drawing.Size(250, 40);
@@ -146,6 +152,8 @@
             this.btnSeccionUsuarios.FillColor = System.Drawing.Color.Empty;
             this.btnSeccionUsuarios.Font = new System.Drawing.Font("Century Gothic", 10F);
             this.btnSeccionUsuarios.ForeColor = System.Drawing.Color.White;
+            this.btnSeccionUsuarios.Image = ((System.Drawing.Image)(resources.GetObject("btnSeccionUsuarios.Image")));
+            this.btnSeccionUsuarios.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnSeccionUsuarios.Location = new System.Drawing.Point(0, 125);
             this.btnSeccionUsuarios.Name = "btnSeccionUsuarios";
             this.btnSeccionUsuarios.Size = new System.Drawing.Size(250, 40);
