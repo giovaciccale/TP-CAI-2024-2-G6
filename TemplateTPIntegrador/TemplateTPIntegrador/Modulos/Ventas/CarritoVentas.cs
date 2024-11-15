@@ -16,5 +16,10 @@ namespace TemplateTPIntegrador.Modulos.Ventas
             // Muestra el total acumulado en un Label
             lbl_Total.Text = $"Total acumulado: ${totalAcumulado:F2}";
         }
+
+        private void lbl_Total_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

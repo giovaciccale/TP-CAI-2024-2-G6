@@ -48,12 +48,12 @@
             this.label2 = new System.Windows.Forms.Label();
             this.agregarcarrito_btn = new System.Windows.Forms.Button();
             this.finalizar_btn = new System.Windows.Forms.Button();
-            this.vercarrito_btn = new System.Windows.Forms.Button();
             this.lblPrecioUnitario = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.txtPrecioUnitario = new System.Windows.Forms.TextBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.dataGridViewCarrito = new System.Windows.Forms.DataGridView();
+            this.lbl_Total = new System.Windows.Forms.Label();
             this.panelFechaNacimiento.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
             this.panelSeleccionarCliente.SuspendLayout();
@@ -329,22 +329,6 @@
             this.finalizar_btn.Text = "FINALIZAR COMPRA";
             this.finalizar_btn.UseVisualStyleBackColor = false;
             // 
-            // vercarrito_btn
-            // 
-            this.vercarrito_btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.vercarrito_btn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.vercarrito_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.vercarrito_btn.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.vercarrito_btn.ForeColor = System.Drawing.Color.White;
-            this.vercarrito_btn.Location = new System.Drawing.Point(636, 772);
-            this.vercarrito_btn.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.vercarrito_btn.Name = "vercarrito_btn";
-            this.vercarrito_btn.Size = new System.Drawing.Size(315, 54);
-            this.vercarrito_btn.TabIndex = 100034;
-            this.vercarrito_btn.Text = "VER CARRITO";
-            this.vercarrito_btn.UseVisualStyleBackColor = false;
-            this.vercarrito_btn.Click += new System.EventHandler(this.vercarrito_btn_Click);
-            // 
             // lblPrecioUnitario
             // 
             this.lblPrecioUnitario.AutoSize = true;
@@ -394,6 +378,7 @@
             // 
             // dataGridViewCarrito
             // 
+            this.dataGridViewCarrito.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewCarrito.BackgroundColor = System.Drawing.Color.White;
             this.dataGridViewCarrito.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridViewCarrito.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -401,18 +386,27 @@
             this.dataGridViewCarrito.Location = new System.Drawing.Point(44, 455);
             this.dataGridViewCarrito.Name = "dataGridViewCarrito";
             this.dataGridViewCarrito.RowHeadersWidth = 62;
-            this.dataGridViewCarrito.Size = new System.Drawing.Size(1467, 300);
+            this.dataGridViewCarrito.Size = new System.Drawing.Size(1467, 270);
             this.dataGridViewCarrito.TabIndex = 100037;
+            // 
+            // lbl_Total
+            // 
+            this.lbl_Total.AutoSize = true;
+            this.lbl_Total.Location = new System.Drawing.Point(41, 737);
+            this.lbl_Total.Name = "lbl_Total";
+            this.lbl_Total.Size = new System.Drawing.Size(174, 20);
+            this.lbl_Total.TabIndex = 100038;
+            this.lbl_Total.Text = "Total acumulado: $0.00";
             // 
             // VentasForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1575, 923);
+            this.Controls.Add(this.lbl_Total);
             this.Controls.Add(this.dataGridViewCarrito);
             this.Controls.Add(this.lblPrecioUnitario);
             this.Controls.Add(this.panel3);
-            this.Controls.Add(this.vercarrito_btn);
             this.Controls.Add(this.finalizar_btn);
             this.Controls.Add(this.agregarcarrito_btn);
             this.Controls.Add(this.label1);
@@ -471,12 +465,12 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button agregarcarrito_btn;
         private System.Windows.Forms.Button finalizar_btn;
-        private System.Windows.Forms.Button vercarrito_btn;
         private Guna.UI2.WinForms.Guna2ComboBox cmb_clientes;
         private System.Windows.Forms.Label lblPrecioUnitario;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.TextBox txtPrecioUnitario;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.DataGridView dataGridViewCarrito;
+        private System.Windows.Forms.Label lbl_Total;
     }
 }
