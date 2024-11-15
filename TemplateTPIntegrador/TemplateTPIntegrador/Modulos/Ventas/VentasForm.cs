@@ -184,8 +184,24 @@ namespace TemplateTPIntegrador.Modulos.Ventas
 
         private void btnFinalizarCompra_Click(object sender, EventArgs e)
         {
+            if (carrito.Count == 0)
+            {
+                MessageBox.Show("Debe agregar al menos un producto al carrito para finalizar la compra.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
 
-            FacturaForm formComprobante = new FacturaForm();
+            if (cmb_clientes.SelectedValue == null)
+            {
+                MessageBox.Show("Seleccione un cliente antes de finalizar la compra.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            var clienteSeleccionado = cmb_clientes.SelectedItem as ClienteWS;
+
+            string nombreCompletoCliente = $"{clienteSeleccionado.nombre} {clienteSeleccionado.apellido}";
+            string dniCliente = clienteSeleccionado.dni.ToString();
+
+            FacturaForm formComprobante = new FacturaForm(carrito, nombreCompletoCliente, dniCliente, totalAcumulado);
             formComprobante.Show();
             
         }
