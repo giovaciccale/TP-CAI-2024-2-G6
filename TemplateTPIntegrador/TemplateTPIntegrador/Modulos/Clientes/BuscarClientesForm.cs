@@ -35,7 +35,7 @@ namespace TemplateTPIntegrador.Modulos.Clientes
 
                 // Bind ComboBox to List of ClienteWS
                 cmb_clientes.DataSource = clientesActivos;
-                cmb_clientes.DisplayMember = "nombre"; // campo que mostrara
+                cmb_clientes.DisplayMember = "dni"; // campo que mostrara
                 cmb_clientes.ValueMember = "Id";       // Ensure ClienteWS has this property
 
                 // Previene autoseleccion
