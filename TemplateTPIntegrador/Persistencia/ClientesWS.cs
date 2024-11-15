@@ -99,6 +99,44 @@ namespace Persistencia
                 return false;
             }
         }
+
+        public bool ActualizarDatosCliente(string idcliente, string nuevaDireccion, string nuevoTelefono, string nuevoEmail)
+        {
+            try
+            {
+                // Crear el objeto que será enviado en el cuerpo de la solicitud
+                var request = new
+                {
+                    id = idcliente,               // ID del cliente que quieres dar de baja
+                    direccion = nuevaDireccion, // ID del cliente con permisos para dar de baja (en este caso el admin)
+                    telefono = nuevoTelefono,
+                    email = nuevoEmail
+                };
+
+                // Convertir el objeto a formato JSON
+                string jsonRequest = JsonConvert.SerializeObject(request);
+
+                // Llamar al método PATCH con cuerpo del WebHelper
+                HttpResponseMessage response = WebHelper.Patch("Cliente/PatchCliente", jsonRequest);
+
+                // Verificar si la respuesta fue exitosa
+                if (response.IsSuccessStatusCode)
+                {
+                    Console.WriteLine("Los datos del cliente fueron actualizados exitosamente.");
+                    return true;
+                }
+                else
+                {
+                    Console.WriteLine($"Error al actualizar datos del cliente: {response.StatusCode}");
+                    return false;
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error al actualizar datos del cliente: " + ex.Message);
+                return false;
+            }
+        }
         public List<ClienteWS> buscarDatosCliente()
         {
             try
