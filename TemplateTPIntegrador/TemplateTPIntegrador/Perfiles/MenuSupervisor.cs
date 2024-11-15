@@ -179,5 +179,40 @@ namespace TemplateTPIntegrador
         {
             Application.Exit();
         }
+
+        private void btnCerrarSesion_Click(object sender, EventArgs e)
+        {
+            {
+                // Mostrar mensaje de confirmación
+                DialogResult resultado = MessageBox.Show(
+                    "¿Seguro que quiere cerrar sesión?",
+                    "Confirmar cierre de sesión",
+                    MessageBoxButtons.YesNo,
+                    MessageBoxIcon.Warning
+                );
+
+                // Si el usuario selecciona "No", no se hace nada
+                if (resultado == DialogResult.No)
+                {
+                    return;
+                }
+
+                // Cerrar todos los formularios abiertos excepto el principal
+                foreach (Form form in Application.OpenForms.Cast<Form>().ToList())
+                {
+                    if (form.Name != "LoginForm") // Reemplaza "LoginForm" con el nombre de tu formulario de Login
+                    {
+                        form.Close();
+                    }
+                }
+
+                // Abrir el formulario de Login
+                LoginForm loginForm = new LoginForm(); // Asegúrate de que este sea el nombre correcto de tu formulario de Login
+                loginForm.Show();
+
+                // Cerrar el formulario actual (MenuVendedor)
+                this.Close();
+            }
+        }
     }
 }

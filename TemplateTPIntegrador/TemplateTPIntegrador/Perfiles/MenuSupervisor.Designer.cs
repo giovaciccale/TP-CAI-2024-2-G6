@@ -43,9 +43,9 @@
             this.tabDevoluciones = new Guna.UI2.WinForms.Guna2Button();
             this.tabModificarProductos = new Guna.UI2.WinForms.Guna2Button();
             this.tabAltaProductos = new Guna.UI2.WinForms.Guna2Button();
-            this.btnCerrar = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panelContenedor = new System.Windows.Forms.Panel();
+            this.btnCerrarSesion = new Guna.UI2.WinForms.Guna2Button();
             this.menuVertical.SuspendLayout();
             this.barraTitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -54,6 +54,7 @@
             // menuVertical
             // 
             this.menuVertical.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
+            this.menuVertical.Controls.Add(this.btnCerrarSesion);
             this.menuVertical.Controls.Add(this.btnSeccionDevoluciones);
             this.menuVertical.Controls.Add(this.btnSeccionReportes);
             this.menuVertical.Controls.Add(this.btnSeccionProductos);
@@ -148,7 +149,6 @@
             this.barraTitulo.Controls.Add(this.tabDevoluciones);
             this.barraTitulo.Controls.Add(this.tabModificarProductos);
             this.barraTitulo.Controls.Add(this.tabAltaProductos);
-            this.barraTitulo.Controls.Add(this.btnCerrar);
             this.barraTitulo.Controls.Add(this.pictureBox1);
             this.barraTitulo.Dock = System.Windows.Forms.DockStyle.Top;
             this.barraTitulo.Location = new System.Drawing.Point(250, 0);
@@ -287,7 +287,6 @@
             this.tabModificarProductos.Size = new System.Drawing.Size(180, 50);
             this.tabModificarProductos.TabIndex = 1006;
             this.tabModificarProductos.Text = "Modificar Productos";
-
             // 
             // tabAltaProductos
             // 
@@ -312,22 +311,6 @@
             this.tabAltaProductos.Text = "Alta Productos";
             this.tabAltaProductos.Click += new System.EventHandler(this.tabAltaProductos_Click);
             // 
-            // btnCerrar
-            // 
-            this.btnCerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnCerrar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCerrar.FlatAppearance.BorderSize = 0;
-            this.btnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCerrar.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCerrar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.btnCerrar.Location = new System.Drawing.Point(1000, 0);
-            this.btnCerrar.Name = "btnCerrar";
-            this.btnCerrar.Size = new System.Drawing.Size(50, 50);
-            this.btnCerrar.TabIndex = 1002;
-            this.btnCerrar.Text = "X";
-            this.btnCerrar.UseVisualStyleBackColor = true;
-            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
-            // 
             // pictureBox1
             // 
             this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -347,6 +330,23 @@
             this.panelContenedor.Name = "panelContenedor";
             this.panelContenedor.Size = new System.Drawing.Size(1050, 600);
             this.panelContenedor.TabIndex = 1005;
+            // 
+            // btnCerrarSesion
+            // 
+            this.btnCerrarSesion.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            this.btnCerrarSesion.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnCerrarSesion.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnCerrarSesion.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnCerrarSesion.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnCerrarSesion.FillColor = System.Drawing.Color.Empty;
+            this.btnCerrarSesion.Font = new System.Drawing.Font("Century Gothic", 10F);
+            this.btnCerrarSesion.ForeColor = System.Drawing.Color.White;
+            this.btnCerrarSesion.Location = new System.Drawing.Point(0, 525);
+            this.btnCerrarSesion.Name = "btnCerrarSesion";
+            this.btnCerrarSesion.Size = new System.Drawing.Size(250, 40);
+            this.btnCerrarSesion.TabIndex = 1005;
+            this.btnCerrarSesion.Text = "Cerrar Sesión";
+            this.btnCerrarSesion.Click += new System.EventHandler(this.btnCerrarSesion_Click);
             // 
             // MenuSupervisor
             // 
@@ -381,7 +381,6 @@
         private Guna.UI2.WinForms.Guna2Button tabBajaProductos;
         private Guna.UI2.WinForms.Guna2Button tabModificarProductos;
         private Guna.UI2.WinForms.Guna2Button tabAltaProductos;
-        private System.Windows.Forms.Button btnCerrar;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panelContenedor;
         private Guna.UI2.WinForms.Guna2Button btnSeccionDevoluciones;
@@ -389,5 +388,6 @@
         private Guna.UI2.WinForms.Guna2Button tabReporteVentasxVendedor;
         private Guna.UI2.WinForms.Guna2Button tabStockCritico;
         private Guna.UI2.WinForms.Guna2Button tabProductosMasVendidos;
+        private Guna.UI2.WinForms.Guna2Button btnCerrarSesion;
     }
 }
