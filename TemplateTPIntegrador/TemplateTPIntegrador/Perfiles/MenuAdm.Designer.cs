@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MenuForm));
             this.menuVertical = new System.Windows.Forms.Panel();
+            this.btnCerrarSesion = new Guna.UI2.WinForms.Guna2Button();
             this.btnSeccionReportes = new Guna.UI2.WinForms.Guna2Button();
             this.btnSeccionProveedores = new Guna.UI2.WinForms.Guna2Button();
             this.btnSeccionProductos = new Guna.UI2.WinForms.Guna2Button();
@@ -44,7 +45,6 @@
             this.tabRegistrarUsuarios = new Guna.UI2.WinForms.Guna2Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panelContenedor = new System.Windows.Forms.Panel();
-            this.btnCerrarSesion = new Guna.UI2.WinForms.Guna2Button();
             this.menuVertical.SuspendLayout();
             this.barraTitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -66,6 +66,25 @@
             this.menuVertical.Size = new System.Drawing.Size(250, 650);
             this.menuVertical.TabIndex = 993;
             // 
+            // btnCerrarSesion
+            // 
+            this.btnCerrarSesion.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            this.btnCerrarSesion.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnCerrarSesion.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnCerrarSesion.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnCerrarSesion.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnCerrarSesion.FillColor = System.Drawing.Color.Empty;
+            this.btnCerrarSesion.Font = new System.Drawing.Font("Century Gothic", 10F);
+            this.btnCerrarSesion.ForeColor = System.Drawing.Color.White;
+            this.btnCerrarSesion.Image = ((System.Drawing.Image)(resources.GetObject("btnCerrarSesion.Image")));
+            this.btnCerrarSesion.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnCerrarSesion.Location = new System.Drawing.Point(0, 525);
+            this.btnCerrarSesion.Name = "btnCerrarSesion";
+            this.btnCerrarSesion.Size = new System.Drawing.Size(250, 40);
+            this.btnCerrarSesion.TabIndex = 1004;
+            this.btnCerrarSesion.Text = "Cerrar Sesión";
+            this.btnCerrarSesion.Click += new System.EventHandler(this.btnCerrarSesion_Click);
+            // 
             // btnSeccionReportes
             // 
             this.btnSeccionReportes.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
@@ -76,6 +95,8 @@
             this.btnSeccionReportes.FillColor = System.Drawing.Color.Empty;
             this.btnSeccionReportes.Font = new System.Drawing.Font("Century Gothic", 10F);
             this.btnSeccionReportes.ForeColor = System.Drawing.Color.White;
+            this.btnSeccionReportes.Image = ((System.Drawing.Image)(resources.GetObject("btnSeccionReportes.Image")));
+            this.btnSeccionReportes.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnSeccionReportes.Location = new System.Drawing.Point(0, 263);
             this.btnSeccionReportes.Name = "btnSeccionReportes";
             this.btnSeccionReportes.Size = new System.Drawing.Size(250, 40);
@@ -92,6 +113,8 @@
             this.btnSeccionProveedores.FillColor = System.Drawing.Color.Empty;
             this.btnSeccionProveedores.Font = new System.Drawing.Font("Century Gothic", 10F);
             this.btnSeccionProveedores.ForeColor = System.Drawing.Color.White;
+            this.btnSeccionProveedores.Image = ((System.Drawing.Image)(resources.GetObject("btnSeccionProveedores.Image")));
+            this.btnSeccionProveedores.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnSeccionProveedores.Location = new System.Drawing.Point(0, 217);
             this.btnSeccionProveedores.Name = "btnSeccionProveedores";
             this.btnSeccionProveedores.Size = new System.Drawing.Size(250, 40);
@@ -109,6 +132,8 @@
             this.btnSeccionProductos.FillColor = System.Drawing.Color.Empty;
             this.btnSeccionProductos.Font = new System.Drawing.Font("Century Gothic", 10F);
             this.btnSeccionProductos.ForeColor = System.Drawing.Color.White;
+            this.btnSeccionProductos.Image = ((System.Drawing.Image)(resources.GetObject("btnSeccionProductos.Image")));
+            this.btnSeccionProductos.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnSeccionProductos.Location = new System.Drawing.Point(0, 171);
             this.btnSeccionProductos.Name = "btnSeccionProductos";
             this.btnSeccionProductos.Size = new System.Drawing.Size(250, 40);
@@ -127,6 +152,8 @@
             this.btnSeccionUsuarios.FillColor = System.Drawing.Color.Empty;
             this.btnSeccionUsuarios.Font = new System.Drawing.Font("Century Gothic", 10F);
             this.btnSeccionUsuarios.ForeColor = System.Drawing.Color.White;
+            this.btnSeccionUsuarios.Image = ((System.Drawing.Image)(resources.GetObject("btnSeccionUsuarios.Image")));
+            this.btnSeccionUsuarios.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnSeccionUsuarios.Location = new System.Drawing.Point(0, 125);
             this.btnSeccionUsuarios.Name = "btnSeccionUsuarios";
             this.btnSeccionUsuarios.Size = new System.Drawing.Size(250, 40);
@@ -306,23 +333,6 @@
             this.panelContenedor.Name = "panelContenedor";
             this.panelContenedor.Size = new System.Drawing.Size(1050, 600);
             this.panelContenedor.TabIndex = 1004;
-            // 
-            // btnCerrarSesion
-            // 
-            this.btnCerrarSesion.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
-            this.btnCerrarSesion.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnCerrarSesion.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnCerrarSesion.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnCerrarSesion.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnCerrarSesion.FillColor = System.Drawing.Color.Empty;
-            this.btnCerrarSesion.Font = new System.Drawing.Font("Century Gothic", 10F);
-            this.btnCerrarSesion.ForeColor = System.Drawing.Color.White;
-            this.btnCerrarSesion.Location = new System.Drawing.Point(0, 525);
-            this.btnCerrarSesion.Name = "btnCerrarSesion";
-            this.btnCerrarSesion.Size = new System.Drawing.Size(250, 40);
-            this.btnCerrarSesion.TabIndex = 1004;
-            this.btnCerrarSesion.Text = "Cerrar Sesión";
-            this.btnCerrarSesion.Click += new System.EventHandler(this.btnCerrarSesion_Click);
             // 
             // MenuForm
             // 
