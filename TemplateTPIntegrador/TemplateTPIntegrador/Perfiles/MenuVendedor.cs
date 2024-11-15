@@ -106,7 +106,7 @@ namespace TemplateTPIntegrador
             // Mostrar tabs de Clientes
             tabBuscarCliente.Visible = true;
             tabAgregarCliente.Visible = true;
-
+            tabModificarCliente.Visible = true;
 
             // Seleccionar tab por defecto y cargar el formulario correspondiente
             tabBuscarCliente.Checked = true;
@@ -119,6 +119,7 @@ namespace TemplateTPIntegrador
             // Esconder tabs de Clientes
             tabBuscarCliente.Visible = false;
             tabAgregarCliente.Visible = false;
+            tabModificarCliente.Visible = false;
 
             // Esconder tabs de Reportes
             tabVentasPorVendedor.Visible = false;
@@ -137,6 +138,7 @@ namespace TemplateTPIntegrador
             // Esconder tabs de Clientes
             tabBuscarCliente.Visible = false;
             tabAgregarCliente.Visible = false;
+            tabModificarCliente.Visible = false;
 
 
             // Esconder tabs de Ventas
@@ -219,5 +221,6 @@ namespace TemplateTPIntegrador
                 this.Close();
             }
         }
+
     }
 }

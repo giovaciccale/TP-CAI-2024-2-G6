@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MenuVendedor));
             this.menuVertical = new System.Windows.Forms.Panel();
+            this.btnCerrarSesion = new Guna.UI2.WinForms.Guna2Button();
             this.btnSeccionCliente = new Guna.UI2.WinForms.Guna2Button();
             this.btnSeccionVentas = new Guna.UI2.WinForms.Guna2Button();
             this.btnSeccionReportes = new Guna.UI2.WinForms.Guna2Button();
@@ -37,12 +38,12 @@
             this.label4 = new System.Windows.Forms.Label();
             this.barraTitulo = new System.Windows.Forms.Panel();
             this.tabVentas = new Guna.UI2.WinForms.Guna2Button();
+            this.tabModificarCliente = new Guna.UI2.WinForms.Guna2Button();
             this.tabVentasPorVendedor = new Guna.UI2.WinForms.Guna2Button();
             this.tabAgregarCliente = new Guna.UI2.WinForms.Guna2Button();
             this.tabBuscarCliente = new Guna.UI2.WinForms.Guna2Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panelContenedor = new System.Windows.Forms.Panel();
-            this.btnCerrarSesion = new Guna.UI2.WinForms.Guna2Button();
             this.menuVertical.SuspendLayout();
             this.barraTitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -62,6 +63,23 @@
             this.menuVertical.Name = "menuVertical";
             this.menuVertical.Size = new System.Drawing.Size(250, 650);
             this.menuVertical.TabIndex = 994;
+            // 
+            // btnCerrarSesion
+            // 
+            this.btnCerrarSesion.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            this.btnCerrarSesion.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnCerrarSesion.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnCerrarSesion.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnCerrarSesion.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnCerrarSesion.FillColor = System.Drawing.Color.Empty;
+            this.btnCerrarSesion.Font = new System.Drawing.Font("Century Gothic", 10F);
+            this.btnCerrarSesion.ForeColor = System.Drawing.Color.White;
+            this.btnCerrarSesion.Location = new System.Drawing.Point(0, 525);
+            this.btnCerrarSesion.Name = "btnCerrarSesion";
+            this.btnCerrarSesion.Size = new System.Drawing.Size(250, 40);
+            this.btnCerrarSesion.TabIndex = 1003;
+            this.btnCerrarSesion.Text = "Cerrar Sesión";
+            this.btnCerrarSesion.Click += new System.EventHandler(this.btnCerrarSesion_Click);
             // 
             // btnSeccionCliente
             // 
@@ -140,6 +158,7 @@
             // barraTitulo
             // 
             this.barraTitulo.Controls.Add(this.tabVentas);
+            this.barraTitulo.Controls.Add(this.tabModificarCliente);
             this.barraTitulo.Controls.Add(this.tabVentasPorVendedor);
             this.barraTitulo.Controls.Add(this.tabAgregarCliente);
             this.barraTitulo.Controls.Add(this.tabBuscarCliente);
@@ -173,6 +192,28 @@
             this.tabVentas.TabIndex = 1010;
             this.tabVentas.Text = "Ventas";
             this.tabVentas.Visible = false;
+            // 
+            // tabModificarCliente
+            // 
+            this.tabModificarCliente.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            this.tabModificarCliente.CheckedState.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
+            this.tabModificarCliente.CheckedState.FillColor = System.Drawing.SystemColors.ControlLight;
+            this.tabModificarCliente.CustomBorderColor = System.Drawing.SystemColors.Control;
+            this.tabModificarCliente.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 3);
+            this.tabModificarCliente.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.tabModificarCliente.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.tabModificarCliente.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.tabModificarCliente.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.tabModificarCliente.FillColor = System.Drawing.SystemColors.Control;
+            this.tabModificarCliente.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabModificarCliente.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
+            this.tabModificarCliente.HoverState.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
+            this.tabModificarCliente.Location = new System.Drawing.Point(621, 0);
+            this.tabModificarCliente.Name = "tabModificarCliente";
+            this.tabModificarCliente.Size = new System.Drawing.Size(180, 50);
+            this.tabModificarCliente.TabIndex = 1014;
+            this.tabModificarCliente.Text = "Modificar Cliente";
+            this.tabModificarCliente.Click += new System.EventHandler(this.tabModificarCliente_Click);
             // 
             // tabVentasPorVendedor
             // 
@@ -263,23 +304,6 @@
             this.panelContenedor.TabIndex = 1005;
             this.panelContenedor.Click += new System.EventHandler(this.btnSeccionClientes_Click);
             // 
-            // btnCerrarSesion
-            // 
-            this.btnCerrarSesion.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
-            this.btnCerrarSesion.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnCerrarSesion.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnCerrarSesion.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnCerrarSesion.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnCerrarSesion.FillColor = System.Drawing.Color.Empty;
-            this.btnCerrarSesion.Font = new System.Drawing.Font("Century Gothic", 10F);
-            this.btnCerrarSesion.ForeColor = System.Drawing.Color.White;
-            this.btnCerrarSesion.Location = new System.Drawing.Point(0, 525);
-            this.btnCerrarSesion.Name = "btnCerrarSesion";
-            this.btnCerrarSesion.Size = new System.Drawing.Size(250, 40);
-            this.btnCerrarSesion.TabIndex = 1003;
-            this.btnCerrarSesion.Text = "Cerrar Sesión";
-            this.btnCerrarSesion.Click += new System.EventHandler(this.btnCerrarSesion_Click);
-            // 
             // MenuVendedor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -318,5 +342,6 @@
         private Guna.UI2.WinForms.Guna2Button btnSeccionCliente;
         private Guna.UI2.WinForms.Guna2Button tabAgregarCliente;
         private Guna.UI2.WinForms.Guna2Button btnCerrarSesion;
+        private Guna.UI2.WinForms.Guna2Button tabModificarCliente;
     }
 }
