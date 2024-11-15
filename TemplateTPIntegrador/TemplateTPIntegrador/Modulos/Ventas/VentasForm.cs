@@ -19,6 +19,7 @@ namespace TemplateTPIntegrador.Modulos.Ventas
         public class CarritoItem
         {
             public string IdProducto { get; set; }
+            public string Nombre { get; set; }
             public int Cantidad { get; set; }
             public double PrecioUnitario { get; set; } // Precio unitario del producto
             public double Total { get; set; } // Total = Cantidad * PrecioUnitario
@@ -99,6 +100,8 @@ namespace TemplateTPIntegrador.Modulos.Ventas
 
         private void cmb_productos_SelectedIndexChanged(object sender, EventArgs e)
         {
+            txtPrecioUnitario.Text = string.Empty;
+            stock_int.Text = string.Empty;
             if (cmb_productos.SelectedIndex != -1)
             {
                 var productoSeleccionado = cmb_productos.SelectedItem as ProductoWS;
@@ -106,6 +109,7 @@ namespace TemplateTPIntegrador.Modulos.Ventas
                 if (productoSeleccionado != null)
                 {
                     stock_int.Text = productoSeleccionado.stock.ToString();
+                    txtPrecioUnitario.Text = productoSeleccionado.precio.ToString();
                 }
                 else
                 {
@@ -141,6 +145,7 @@ namespace TemplateTPIntegrador.Modulos.Ventas
             }
 
             double precioUnitario = productoSeleccionado.precio;
+            string nombreProducto = productoSeleccionado.nombre;
 
             // Llama al método AgregarVenta para guardar en el backend y obtener el Id de la venta
             string idVenta = ventasWS.AgregarVenta(idCliente, IDUSUARIO, idProducto, cantidad);
@@ -154,12 +159,15 @@ namespace TemplateTPIntegrador.Modulos.Ventas
                 var nuevaVenta = new CarritoItem
                 {
                     IdProducto = idProducto,
+                    Nombre = nombreProducto,
                     Cantidad = cantidad,
                     PrecioUnitario = precioUnitario,
                     Total = total
                 };
 
                 carrito.Add(nuevaVenta);
+                dataGridViewCarrito.DataSource = carrito;
+
 
                 // Suma el total al total acumulado
                 totalAcumulado += total;
@@ -186,5 +194,11 @@ namespace TemplateTPIntegrador.Modulos.Ventas
             CarritoVentas carritoForm = new CarritoVentas(carrito, totalAcumulado);
             carritoForm.Show();
         }
+
+        private void VentasForm_Load(object sender, EventArgs e)
+        {
+
+        }
+
     }
 }
