@@ -48,7 +48,7 @@
             this.Controls.Add(this.cmb_productos);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ReporteStockForm";
-            this.Text = "ReporteProductosForm";
+            this.Text = "ReporteStockForm";
             this.ResumeLayout(false);
 
         }

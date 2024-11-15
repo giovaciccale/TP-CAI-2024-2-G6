@@ -142,7 +142,7 @@ namespace TemplateTPIntegrador
 
 
             // Esconder tabs de Ventas
-            tabAgregarCliente.Visible = false;
+            tabVentas.Visible = false;
 
             // Mostrar tabs de Reportes
             tabVentasPorVendedor.Visible = true;
