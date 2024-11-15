@@ -36,15 +36,15 @@
             this.btnSeccionUsuarios = new Guna.UI2.WinForms.Guna2Button();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.btnCerrar = new System.Windows.Forms.Button();
             this.barraTitulo = new System.Windows.Forms.Panel();
-            this.tabEliminarProveedores = new Guna.UI2.WinForms.Guna2Button();
             this.tabRegistrarProveedores = new Guna.UI2.WinForms.Guna2Button();
-            this.tabEliminarUsuario = new Guna.UI2.WinForms.Guna2Button();
+            this.tabEliminarProveedores = new Guna.UI2.WinForms.Guna2Button();
             this.tabAltaProductos = new Guna.UI2.WinForms.Guna2Button();
+            this.tabEliminarUsuario = new Guna.UI2.WinForms.Guna2Button();
             this.tabRegistrarUsuarios = new Guna.UI2.WinForms.Guna2Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panelContenedor = new System.Windows.Forms.Panel();
+            this.btnCerrarSesion = new Guna.UI2.WinForms.Guna2Button();
             this.menuVertical.SuspendLayout();
             this.barraTitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -53,6 +53,7 @@
             // menuVertical
             // 
             this.menuVertical.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
+            this.menuVertical.Controls.Add(this.btnCerrarSesion);
             this.menuVertical.Controls.Add(this.btnSeccionReportes);
             this.menuVertical.Controls.Add(this.btnSeccionProveedores);
             this.menuVertical.Controls.Add(this.btnSeccionProductos);
@@ -155,30 +156,13 @@
             this.label4.TabIndex = 996;
             this.label4.Text = "Desarrollo Por";
             // 
-            // btnCerrar
-            // 
-            this.btnCerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnCerrar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCerrar.FlatAppearance.BorderSize = 0;
-            this.btnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCerrar.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCerrar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.btnCerrar.Location = new System.Drawing.Point(1000, 0);
-            this.btnCerrar.Name = "btnCerrar";
-            this.btnCerrar.Size = new System.Drawing.Size(50, 50);
-            this.btnCerrar.TabIndex = 1002;
-            this.btnCerrar.Text = "X";
-            this.btnCerrar.UseVisualStyleBackColor = true;
-            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
-            // 
             // barraTitulo
             // 
-            this.barraTitulo.Controls.Add(this.tabEliminarProveedores);
             this.barraTitulo.Controls.Add(this.tabRegistrarProveedores);
-            this.barraTitulo.Controls.Add(this.tabEliminarUsuario);
+            this.barraTitulo.Controls.Add(this.tabEliminarProveedores);
             this.barraTitulo.Controls.Add(this.tabAltaProductos);
+            this.barraTitulo.Controls.Add(this.tabEliminarUsuario);
             this.barraTitulo.Controls.Add(this.tabRegistrarUsuarios);
-            this.barraTitulo.Controls.Add(this.btnCerrar);
             this.barraTitulo.Controls.Add(this.pictureBox1);
             this.barraTitulo.Dock = System.Windows.Forms.DockStyle.Top;
             this.barraTitulo.Location = new System.Drawing.Point(250, 0);
@@ -186,29 +170,6 @@
             this.barraTitulo.Size = new System.Drawing.Size(1050, 50);
             this.barraTitulo.TabIndex = 1003;
             this.barraTitulo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.barraTitulo_MouseDown);
-            // 
-            // tabEliminarProveedores
-            // 
-            this.tabEliminarProveedores.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
-            this.tabEliminarProveedores.CheckedState.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.tabEliminarProveedores.CheckedState.FillColor = System.Drawing.SystemColors.ControlLight;
-            this.tabEliminarProveedores.CustomBorderColor = System.Drawing.SystemColors.Control;
-            this.tabEliminarProveedores.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 3);
-            this.tabEliminarProveedores.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.tabEliminarProveedores.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.tabEliminarProveedores.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.tabEliminarProveedores.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.tabEliminarProveedores.FillColor = System.Drawing.SystemColors.Control;
-            this.tabEliminarProveedores.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabEliminarProveedores.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.tabEliminarProveedores.HoverState.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.tabEliminarProveedores.Location = new System.Drawing.Point(425, 0);
-            this.tabEliminarProveedores.Name = "tabEliminarProveedores";
-            this.tabEliminarProveedores.Size = new System.Drawing.Size(180, 50);
-            this.tabEliminarProveedores.TabIndex = 1007;
-            this.tabEliminarProveedores.Text = "Baja Proveedor";
-            this.tabEliminarProveedores.Visible = false;
-            this.tabEliminarProveedores.Click += new System.EventHandler(this.tabEliminarProveedores_Click);
             // 
             // tabRegistrarProveedores
             // 
@@ -226,7 +187,7 @@
             this.tabRegistrarProveedores.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabRegistrarProveedores.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
             this.tabRegistrarProveedores.HoverState.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.tabRegistrarProveedores.Location = new System.Drawing.Point(249, 0);
+            this.tabRegistrarProveedores.Location = new System.Drawing.Point(339, 0);
             this.tabRegistrarProveedores.Name = "tabRegistrarProveedores";
             this.tabRegistrarProveedores.Size = new System.Drawing.Size(180, 50);
             this.tabRegistrarProveedores.TabIndex = 1006;
@@ -234,27 +195,28 @@
             this.tabRegistrarProveedores.Visible = false;
             this.tabRegistrarProveedores.Click += new System.EventHandler(this.tabRegistrarProveedores_Click);
             // 
-            // tabEliminarUsuario
+            // tabEliminarProveedores
             // 
-            this.tabEliminarUsuario.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
-            this.tabEliminarUsuario.CheckedState.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.tabEliminarUsuario.CheckedState.FillColor = System.Drawing.SystemColors.ControlLight;
-            this.tabEliminarUsuario.CustomBorderColor = System.Drawing.SystemColors.Control;
-            this.tabEliminarUsuario.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 3);
-            this.tabEliminarUsuario.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.tabEliminarUsuario.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.tabEliminarUsuario.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.tabEliminarUsuario.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.tabEliminarUsuario.FillColor = System.Drawing.SystemColors.Control;
-            this.tabEliminarUsuario.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabEliminarUsuario.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.tabEliminarUsuario.HoverState.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.tabEliminarUsuario.Location = new System.Drawing.Point(425, 0);
-            this.tabEliminarUsuario.Name = "tabEliminarUsuario";
-            this.tabEliminarUsuario.Size = new System.Drawing.Size(180, 50);
-            this.tabEliminarUsuario.TabIndex = 1004;
-            this.tabEliminarUsuario.Text = "Baja Usuario";
-            this.tabEliminarUsuario.Click += new System.EventHandler(this.tabEliminarUsuarios_Click);
+            this.tabEliminarProveedores.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            this.tabEliminarProveedores.CheckedState.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
+            this.tabEliminarProveedores.CheckedState.FillColor = System.Drawing.SystemColors.ControlLight;
+            this.tabEliminarProveedores.CustomBorderColor = System.Drawing.SystemColors.Control;
+            this.tabEliminarProveedores.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 3);
+            this.tabEliminarProveedores.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.tabEliminarProveedores.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.tabEliminarProveedores.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.tabEliminarProveedores.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.tabEliminarProveedores.FillColor = System.Drawing.SystemColors.Control;
+            this.tabEliminarProveedores.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabEliminarProveedores.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
+            this.tabEliminarProveedores.HoverState.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
+            this.tabEliminarProveedores.Location = new System.Drawing.Point(525, 0);
+            this.tabEliminarProveedores.Name = "tabEliminarProveedores";
+            this.tabEliminarProveedores.Size = new System.Drawing.Size(180, 50);
+            this.tabEliminarProveedores.TabIndex = 1007;
+            this.tabEliminarProveedores.Text = "Baja Proveedor";
+            this.tabEliminarProveedores.Visible = false;
+            this.tabEliminarProveedores.Click += new System.EventHandler(this.tabEliminarProveedores_Click);
             // 
             // tabAltaProductos
             // 
@@ -272,13 +234,35 @@
             this.tabAltaProductos.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabAltaProductos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
             this.tabAltaProductos.HoverState.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.tabAltaProductos.Location = new System.Drawing.Point(249, 0);
+            this.tabAltaProductos.Location = new System.Drawing.Point(435, 0);
             this.tabAltaProductos.Name = "tabAltaProductos";
             this.tabAltaProductos.Size = new System.Drawing.Size(180, 50);
             this.tabAltaProductos.TabIndex = 1005;
             this.tabAltaProductos.Text = "Agregar Producto";
             this.tabAltaProductos.Visible = false;
             this.tabAltaProductos.Click += new System.EventHandler(this.tabAltaProductos_Click);
+            // 
+            // tabEliminarUsuario
+            // 
+            this.tabEliminarUsuario.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            this.tabEliminarUsuario.CheckedState.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
+            this.tabEliminarUsuario.CheckedState.FillColor = System.Drawing.SystemColors.ControlLight;
+            this.tabEliminarUsuario.CustomBorderColor = System.Drawing.SystemColors.Control;
+            this.tabEliminarUsuario.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 3);
+            this.tabEliminarUsuario.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.tabEliminarUsuario.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.tabEliminarUsuario.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.tabEliminarUsuario.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.tabEliminarUsuario.FillColor = System.Drawing.SystemColors.Control;
+            this.tabEliminarUsuario.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabEliminarUsuario.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
+            this.tabEliminarUsuario.HoverState.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
+            this.tabEliminarUsuario.Location = new System.Drawing.Point(525, 0);
+            this.tabEliminarUsuario.Name = "tabEliminarUsuario";
+            this.tabEliminarUsuario.Size = new System.Drawing.Size(180, 50);
+            this.tabEliminarUsuario.TabIndex = 1004;
+            this.tabEliminarUsuario.Text = "Baja Usuario";
+            this.tabEliminarUsuario.Click += new System.EventHandler(this.tabEliminarUsuarios_Click);
             // 
             // tabRegistrarUsuarios
             // 
@@ -296,7 +280,7 @@
             this.tabRegistrarUsuarios.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabRegistrarUsuarios.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
             this.tabRegistrarUsuarios.HoverState.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.tabRegistrarUsuarios.Location = new System.Drawing.Point(249, 0);
+            this.tabRegistrarUsuarios.Location = new System.Drawing.Point(339, 0);
             this.tabRegistrarUsuarios.Name = "tabRegistrarUsuarios";
             this.tabRegistrarUsuarios.Size = new System.Drawing.Size(180, 50);
             this.tabRegistrarUsuarios.TabIndex = 0;
@@ -322,6 +306,23 @@
             this.panelContenedor.Name = "panelContenedor";
             this.panelContenedor.Size = new System.Drawing.Size(1050, 600);
             this.panelContenedor.TabIndex = 1004;
+            // 
+            // btnCerrarSesion
+            // 
+            this.btnCerrarSesion.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            this.btnCerrarSesion.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnCerrarSesion.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnCerrarSesion.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnCerrarSesion.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnCerrarSesion.FillColor = System.Drawing.Color.Empty;
+            this.btnCerrarSesion.Font = new System.Drawing.Font("Century Gothic", 10F);
+            this.btnCerrarSesion.ForeColor = System.Drawing.Color.White;
+            this.btnCerrarSesion.Location = new System.Drawing.Point(0, 525);
+            this.btnCerrarSesion.Name = "btnCerrarSesion";
+            this.btnCerrarSesion.Size = new System.Drawing.Size(250, 40);
+            this.btnCerrarSesion.TabIndex = 1004;
+            this.btnCerrarSesion.Text = "Cerrar Sesión";
+            this.btnCerrarSesion.Click += new System.EventHandler(this.btnCerrarSesion_Click);
             // 
             // MenuForm
             // 
@@ -349,7 +350,6 @@
 
         #endregion
         private System.Windows.Forms.Panel menuVertical;
-        private System.Windows.Forms.Button btnCerrar;
         private System.Windows.Forms.Panel barraTitulo;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panelContenedor;
@@ -364,5 +364,6 @@
         private Guna.UI2.WinForms.Guna2Button btnSeccionReportes;
         private Guna.UI2.WinForms.Guna2Button tabRegistrarProveedores;
         private Guna.UI2.WinForms.Guna2Button tabEliminarProveedores;
+        private Guna.UI2.WinForms.Guna2Button btnCerrarSesion;
     }
 }
