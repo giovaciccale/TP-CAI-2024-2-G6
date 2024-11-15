@@ -231,7 +231,7 @@
             this.tabVentasPorVendedor.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabVentasPorVendedor.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
             this.tabVentasPorVendedor.HoverState.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.tabVentasPorVendedor.Location = new System.Drawing.Point(621, 0);
+            this.tabVentasPorVendedor.Location = new System.Drawing.Point(435, 0);
             this.tabVentasPorVendedor.Name = "tabVentasPorVendedor";
             this.tabVentasPorVendedor.Size = new System.Drawing.Size(180, 50);
             this.tabVentasPorVendedor.TabIndex = 1011;

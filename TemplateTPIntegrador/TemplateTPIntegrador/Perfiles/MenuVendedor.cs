@@ -142,14 +142,14 @@ namespace TemplateTPIntegrador
 
 
             // Esconder tabs de Ventas
-            tabAgregarCliente.Visible = false;
+            tabVentas.Visible = false;
 
             // Mostrar tabs de Reportes
             tabVentasPorVendedor.Visible = true;
 
             // Seleccionar tab por defecto y cargar el formulario correspondiente
             tabVentasPorVendedor.Checked = true;
-            abrirFormInPanel(new ReportesPorVendedorForm());
+            abrirFormInPanel(new ReporteStockForm());
         }
 
         private void abrirFormInPanel(object formHijo)
