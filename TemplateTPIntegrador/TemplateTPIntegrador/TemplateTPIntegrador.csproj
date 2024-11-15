@@ -91,6 +91,12 @@
     <Compile Include="Modulos\Proveedores\RegistrarProveedoresForm.Designer.cs">
       <DependentUpon>RegistrarProveedoresForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Modulos\Reportes\ReporteStockForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modulos\Reportes\ReporteStockForm.Designer.cs">
+      <DependentUpon>ReporteStockForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Modulos\Reportes\ReportesPorVendedorForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -171,6 +177,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Modulos\Proveedores\RegistrarProveedoresForm.resx">
       <DependentUpon>RegistrarProveedoresForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modulos\Reportes\ReporteStockForm.resx">
+      <DependentUpon>ReporteStockForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Modulos\Reportes\ReportesPorVendedorForm.resx">
       <DependentUpon>ReportesPorVendedorForm.cs</DependentUpon>

@@ -147,7 +147,7 @@ namespace TemplateTPIntegrador
 
             // Seleccionar tab por defecto y cargar el formulario correspondiente
             tabVentasPorVendedor.Checked = true;
-            abrirFormInPanel(new ReportesPorVendedorForm());
+            abrirFormInPanel(new ReporteStockForm());
         }
 
         private void abrirFormInPanel(object formHijo)
