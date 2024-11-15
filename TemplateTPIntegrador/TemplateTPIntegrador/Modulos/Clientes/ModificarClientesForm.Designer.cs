@@ -110,7 +110,7 @@
             this.panelTelefono.BackColor = System.Drawing.SystemColors.Control;
             this.panelTelefono.Controls.Add(this.pictureBox9);
             this.panelTelefono.Controls.Add(this.txt_telefono);
-            this.panelTelefono.Location = new System.Drawing.Point(36, 227);
+            this.panelTelefono.Location = new System.Drawing.Point(36, 205);
             this.panelTelefono.Name = "panelTelefono";
             this.panelTelefono.Size = new System.Drawing.Size(490, 45);
             this.panelTelefono.TabIndex = 1015;
@@ -135,13 +135,16 @@
             this.txt_telefono.Name = "txt_telefono";
             this.txt_telefono.Size = new System.Drawing.Size(421, 20);
             this.txt_telefono.TabIndex = 0;
+            this.txt_telefono.Click += new System.EventHandler(this.txt_telefono_TextChanged);
+            this.txt_telefono.TextChanged += new System.EventHandler(this.txt_telefono_TextChanged);
+            this.txt_telefono.Enter += new System.EventHandler(this.txt_telefono_TextChanged);
             // 
             // lblTelefono
             // 
             this.lblTelefono.AutoSize = true;
             this.lblTelefono.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.lblTelefono.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.lblTelefono.Location = new System.Drawing.Point(32, 203);
+            this.lblTelefono.Location = new System.Drawing.Point(32, 181);
             this.lblTelefono.Name = "lblTelefono";
             this.lblTelefono.Size = new System.Drawing.Size(84, 21);
             this.lblTelefono.TabIndex = 1017;
@@ -152,7 +155,7 @@
             this.lblDireccion.AutoSize = true;
             this.lblDireccion.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.lblDireccion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.lblDireccion.Location = new System.Drawing.Point(32, 128);
+            this.lblDireccion.Location = new System.Drawing.Point(32, 106);
             this.lblDireccion.Name = "lblDireccion";
             this.lblDireccion.Size = new System.Drawing.Size(91, 21);
             this.lblDireccion.TabIndex = 1016;
@@ -163,7 +166,7 @@
             this.panelDireccion.BackColor = System.Drawing.SystemColors.Control;
             this.panelDireccion.Controls.Add(this.pictureBox8);
             this.panelDireccion.Controls.Add(this.txt_direccion);
-            this.panelDireccion.Location = new System.Drawing.Point(36, 152);
+            this.panelDireccion.Location = new System.Drawing.Point(36, 130);
             this.panelDireccion.Name = "panelDireccion";
             this.panelDireccion.Size = new System.Drawing.Size(490, 45);
             this.panelDireccion.TabIndex = 1014;
@@ -188,13 +191,16 @@
             this.txt_direccion.Name = "txt_direccion";
             this.txt_direccion.Size = new System.Drawing.Size(421, 20);
             this.txt_direccion.TabIndex = 0;
+            this.txt_direccion.Click += new System.EventHandler(this.txt_direccion_TextChanged);
+            this.txt_direccion.TextChanged += new System.EventHandler(this.txt_direccion_TextChanged);
+            this.txt_direccion.Enter += new System.EventHandler(this.txt_direccion_TextChanged);
             // 
             // panelEmail
             // 
             this.panelEmail.BackColor = System.Drawing.SystemColors.Control;
             this.panelEmail.Controls.Add(this.pictureBox6);
             this.panelEmail.Controls.Add(this.txt_email);
-            this.panelEmail.Location = new System.Drawing.Point(36, 303);
+            this.panelEmail.Location = new System.Drawing.Point(36, 280);
             this.panelEmail.Name = "panelEmail";
             this.panelEmail.Size = new System.Drawing.Size(490, 45);
             this.panelEmail.TabIndex = 100005;
@@ -219,13 +225,16 @@
             this.txt_email.Name = "txt_email";
             this.txt_email.Size = new System.Drawing.Size(416, 20);
             this.txt_email.TabIndex = 0;
+            this.txt_email.Click += new System.EventHandler(this.txt_email_TextChanged);
+            this.txt_email.TextChanged += new System.EventHandler(this.txt_email_TextChanged);
+            this.txt_email.Enter += new System.EventHandler(this.txt_email_TextChanged);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.label2.Location = new System.Drawing.Point(33, 279);
+            this.label2.Location = new System.Drawing.Point(32, 256);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(59, 21);
             this.label2.TabIndex = 100006;

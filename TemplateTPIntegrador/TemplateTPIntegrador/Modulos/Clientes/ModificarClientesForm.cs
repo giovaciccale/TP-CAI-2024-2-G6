@@ -92,5 +92,39 @@ namespace TemplateTPIntegrador.Modulos.Clientes
                 MessageBox.Show("Por favor seleccione un cliente.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
+
+        private void txt_direccion_TextChanged(object sender, EventArgs e)
+        {
+            panelSeleccionarCliente.BackColor = SystemColors.Control;
+            cmb_clientes.BackColor = SystemColors.Control;
+            panelEmail.BackColor = SystemColors.Control;
+            txt_email.BackColor = SystemColors.Control;
+            panelDireccion.BackColor = Color.White;
+            txt_direccion.BackColor = Color.White;
+            panelTelefono.BackColor = SystemColors.Control;
+            txt_telefono.BackColor = SystemColors.Control;
+        }
+        private void txt_telefono_TextChanged(object sender, EventArgs e)
+        {
+            panelSeleccionarCliente.BackColor = SystemColors.Control;
+            cmb_clientes.BackColor = SystemColors.Control;
+            panelEmail.BackColor = SystemColors.Control;
+            txt_email.BackColor = SystemColors.Control;
+            panelDireccion.BackColor = SystemColors.Control;
+            txt_direccion.BackColor = SystemColors.Control;
+            panelTelefono.BackColor = Color.White;
+            txt_telefono.BackColor = Color.White;
+        }
+        private void txt_email_TextChanged(object sender, EventArgs e)
+        {
+            panelSeleccionarCliente.BackColor = SystemColors.Control;
+            cmb_clientes.BackColor = SystemColors.Control;
+            panelEmail.BackColor = Color.White;
+            txt_email.BackColor = Color.White;
+            panelDireccion.BackColor = SystemColors.Control;
+            txt_direccion.BackColor = SystemColors.Control;
+            panelTelefono.BackColor = SystemColors.Control;
+            txt_telefono.BackColor = SystemColors.Control;
+        }
     }
 }

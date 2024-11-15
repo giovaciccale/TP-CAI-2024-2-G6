@@ -80,7 +80,7 @@ namespace TemplateTPIntegrador.Modulos.Clientes
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.label6.Location = new System.Drawing.Point(32, 246);
+            this.label6.Location = new System.Drawing.Point(32, 256);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(183, 21);
             this.label6.TabIndex = 100016;
@@ -91,7 +91,7 @@ namespace TemplateTPIntegrador.Modulos.Clientes
             this.panelFechaNacimiento.BackColor = System.Drawing.SystemColors.Control;
             this.panelFechaNacimiento.Controls.Add(this.txt_fecha);
             this.panelFechaNacimiento.Controls.Add(this.pictureBox11);
-            this.panelFechaNacimiento.Location = new System.Drawing.Point(36, 270);
+            this.panelFechaNacimiento.Location = new System.Drawing.Point(36, 280);
             this.panelFechaNacimiento.Name = "panelFechaNacimiento";
             this.panelFechaNacimiento.Size = new System.Drawing.Size(489, 45);
             this.panelFechaNacimiento.TabIndex = 100005;
@@ -104,7 +104,7 @@ namespace TemplateTPIntegrador.Modulos.Clientes
             this.txt_fecha.Name = "txt_fecha";
             this.txt_fecha.Size = new System.Drawing.Size(416, 24);
             this.txt_fecha.TabIndex = 0;
-            this.txt_fecha.Value = DateTime.Now; // Se ajusta a la fecha actual
+            this.txt_fecha.Value = new System.DateTime(2024, 11, 15, 15, 39, 15, 516);
             this.txt_fecha.ValueChanged += new System.EventHandler(this.txt_fecha_ValueChanged);
             this.txt_fecha.Enter += new System.EventHandler(this.txt_fecha_ValueChanged);
             // 
@@ -123,7 +123,7 @@ namespace TemplateTPIntegrador.Modulos.Clientes
             this.panelEmail.BackColor = System.Drawing.SystemColors.Control;
             this.panelEmail.Controls.Add(this.pictureBox6);
             this.panelEmail.Controls.Add(this.txt_email);
-            this.panelEmail.Location = new System.Drawing.Point(35, 195);
+            this.panelEmail.Location = new System.Drawing.Point(36, 205);
             this.panelEmail.Name = "panelEmail";
             this.panelEmail.Size = new System.Drawing.Size(490, 45);
             this.panelEmail.TabIndex = 100004;
@@ -157,7 +157,7 @@ namespace TemplateTPIntegrador.Modulos.Clientes
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.label2.Location = new System.Drawing.Point(32, 171);
+            this.label2.Location = new System.Drawing.Point(32, 181);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(59, 21);
             this.label2.TabIndex = 100014;
@@ -168,7 +168,7 @@ namespace TemplateTPIntegrador.Modulos.Clientes
             this.panelTelefono.BackColor = System.Drawing.SystemColors.Control;
             this.panelTelefono.Controls.Add(this.pictureBox9);
             this.panelTelefono.Controls.Add(this.txt_telefono);
-            this.panelTelefono.Location = new System.Drawing.Point(525, 195);
+            this.panelTelefono.Location = new System.Drawing.Point(526, 205);
             this.panelTelefono.Name = "panelTelefono";
             this.panelTelefono.Size = new System.Drawing.Size(490, 45);
             this.panelTelefono.TabIndex = 100008;
@@ -202,7 +202,7 @@ namespace TemplateTPIntegrador.Modulos.Clientes
             this.panelApellido.BackColor = System.Drawing.SystemColors.Control;
             this.panelApellido.Controls.Add(this.pictureBox4);
             this.panelApellido.Controls.Add(this.txt_apellido);
-            this.panelApellido.Location = new System.Drawing.Point(35, 120);
+            this.panelApellido.Location = new System.Drawing.Point(36, 130);
             this.panelApellido.Name = "panelApellido";
             this.panelApellido.Size = new System.Drawing.Size(490, 45);
             this.panelApellido.TabIndex = 100003;
@@ -236,7 +236,7 @@ namespace TemplateTPIntegrador.Modulos.Clientes
             this.lblApellido.AutoSize = true;
             this.lblApellido.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.lblApellido.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.lblApellido.Location = new System.Drawing.Point(31, 96);
+            this.lblApellido.Location = new System.Drawing.Point(32, 106);
             this.lblApellido.Name = "lblApellido";
             this.lblApellido.Size = new System.Drawing.Size(82, 21);
             this.lblApellido.TabIndex = 100019;
@@ -247,7 +247,7 @@ namespace TemplateTPIntegrador.Modulos.Clientes
             this.lblTelefono.AutoSize = true;
             this.lblTelefono.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.lblTelefono.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.lblTelefono.Location = new System.Drawing.Point(521, 171);
+            this.lblTelefono.Location = new System.Drawing.Point(522, 181);
             this.lblTelefono.Name = "lblTelefono";
             this.lblTelefono.Size = new System.Drawing.Size(84, 21);
             this.lblTelefono.TabIndex = 100013;
@@ -258,7 +258,7 @@ namespace TemplateTPIntegrador.Modulos.Clientes
             this.panelDni.BackColor = System.Drawing.SystemColors.Control;
             this.panelDni.Controls.Add(this.pictureBox7);
             this.panelDni.Controls.Add(this.txt_dni);
-            this.panelDni.Location = new System.Drawing.Point(525, 45);
+            this.panelDni.Location = new System.Drawing.Point(526, 55);
             this.panelDni.Name = "panelDni";
             this.panelDni.Size = new System.Drawing.Size(490, 45);
             this.panelDni.TabIndex = 100006;
@@ -292,7 +292,7 @@ namespace TemplateTPIntegrador.Modulos.Clientes
             this.lblDireccion.AutoSize = true;
             this.lblDireccion.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.lblDireccion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.lblDireccion.Location = new System.Drawing.Point(521, 96);
+            this.lblDireccion.Location = new System.Drawing.Point(522, 106);
             this.lblDireccion.Name = "lblDireccion";
             this.lblDireccion.Size = new System.Drawing.Size(91, 21);
             this.lblDireccion.TabIndex = 100012;
@@ -303,7 +303,7 @@ namespace TemplateTPIntegrador.Modulos.Clientes
             this.lblDni.AutoSize = true;
             this.lblDni.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.lblDni.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.lblDni.Location = new System.Drawing.Point(521, 21);
+            this.lblDni.Location = new System.Drawing.Point(522, 31);
             this.lblDni.Name = "lblDni";
             this.lblDni.Size = new System.Drawing.Size(47, 21);
             this.lblDni.TabIndex = 100011;
@@ -314,7 +314,7 @@ namespace TemplateTPIntegrador.Modulos.Clientes
             this.panelDireccion.BackColor = System.Drawing.SystemColors.Control;
             this.panelDireccion.Controls.Add(this.pictureBox8);
             this.panelDireccion.Controls.Add(this.txt_direccion);
-            this.panelDireccion.Location = new System.Drawing.Point(525, 120);
+            this.panelDireccion.Location = new System.Drawing.Point(526, 130);
             this.panelDireccion.Name = "panelDireccion";
             this.panelDireccion.Size = new System.Drawing.Size(490, 45);
             this.panelDireccion.TabIndex = 100007;
@@ -348,7 +348,7 @@ namespace TemplateTPIntegrador.Modulos.Clientes
             this.lblNombre.AutoSize = true;
             this.lblNombre.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.lblNombre.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.lblNombre.Location = new System.Drawing.Point(28, 21);
+            this.lblNombre.Location = new System.Drawing.Point(32, 31);
             this.lblNombre.Name = "lblNombre";
             this.lblNombre.Size = new System.Drawing.Size(81, 21);
             this.lblNombre.TabIndex = 100018;
@@ -359,7 +359,7 @@ namespace TemplateTPIntegrador.Modulos.Clientes
             this.panelNombre.BackColor = System.Drawing.Color.White;
             this.panelNombre.Controls.Add(this.pictureBox1);
             this.panelNombre.Controls.Add(this.txt_nombre);
-            this.panelNombre.Location = new System.Drawing.Point(35, 45);
+            this.panelNombre.Location = new System.Drawing.Point(36, 55);
             this.panelNombre.Name = "panelNombre";
             this.panelNombre.Size = new System.Drawing.Size(490, 45);
             this.panelNombre.TabIndex = 100002;
