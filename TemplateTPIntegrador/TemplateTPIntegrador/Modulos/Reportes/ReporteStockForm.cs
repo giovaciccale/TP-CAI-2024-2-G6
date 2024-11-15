@@ -19,5 +19,6 @@ namespace TemplateTPIntegrador.Modulos.Reportes
         {
             InitializeComponent();
         }
+
     }
 }
