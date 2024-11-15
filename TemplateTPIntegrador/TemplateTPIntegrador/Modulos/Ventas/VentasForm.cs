@@ -16,6 +16,7 @@ namespace TemplateTPIntegrador.Modulos.Ventas
         private VentasWS ventasWS; // Servicio para ventas
         private double totalAcumulado = 0; // Total acumulado para el carrito
         private BindingList<CarritoItem> carrito = new BindingList<CarritoItem>();
+
         public class CarritoItem
         {
             public string IdProducto { get; set; }
@@ -38,6 +39,7 @@ namespace TemplateTPIntegrador.Modulos.Ventas
             cmb_clientes.SelectedIndexChanged += cmb_clientes_SelectedIndexChanged;
             cmb_productos.SelectedIndexChanged += cmb_productos_SelectedIndexChanged;
             btnEliminar.Click += btnEliminar_Click;
+            finalizar_btn.Click += btnConfirmarVenta_Click; // Botón para confirmar la venta
         }
 
         private void CargarClientes()
@@ -148,66 +150,85 @@ namespace TemplateTPIntegrador.Modulos.Ventas
             double precioUnitario = productoSeleccionado.precio;
             string nombreProducto = productoSeleccionado.nombre;
 
-            // Llama al método AgregarVenta para guardar en el backend y obtener el Id de la venta
-            string idVenta = ventasWS.AgregarVenta(idCliente, IDUSUARIO, idProducto, cantidad);
+            // Calcula el total de esta venta
+            double total = precioUnitario * cantidad;
 
-            if (!string.IsNullOrEmpty(idProducto))
+            // Si se agrega exitosamente, guarda también la venta localmente
+            var nuevaVenta = new CarritoItem
             {
-                // Calcula el total de esta venta
-                double total = precioUnitario * cantidad;
+                IdProducto = idProducto,
+                Nombre = nombreProducto,
+                Cantidad = cantidad,
+                PrecioUnitario = precioUnitario,
+                Total = total
+            };
 
-                // Si se agrega exitosamente, guarda también la venta localmente
-                var nuevaVenta = new CarritoItem
-                {
-                    IdProducto = idProducto,
-                    Nombre = nombreProducto,
-                    Cantidad = cantidad,
-                    PrecioUnitario = precioUnitario,
-                    Total = total
-                };
+            if (!int.TryParse(stock_int.Text, out int stockDisponible))
+            {
+                MessageBox.Show("Error al leer el stock disponible.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
 
-                if (!int.TryParse(stock_int.Text, out int stockDisponible))
+            if (cantidad > stockDisponible)
+            {
+                MessageBox.Show("No hay suficiente stock disponible.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            else if (cantidad == stockDisponible)
+            {
+                DialogResult resultado = MessageBox.Show(
+                    "Al agregar esta cantidad el stock quedará en 0. ¿Desea continuar?",
+                    "Advertencia",
+                    MessageBoxButtons.YesNo,
+                    MessageBoxIcon.Warning
+                );
+
+                if (resultado == DialogResult.No)
                 {
-                    MessageBox.Show("Error al leer el stock disponible.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+            }
+            carrito.Add(nuevaVenta);
+            dataGridViewCarrito.DataSource = null;
+            dataGridViewCarrito.DataSource = carrito;
+            totalAcumulado += total;
+            lbl_Total.Text = $"Total acumulado: ${totalAcumulado:F2}";
+            MessageBox.Show("Producto agregado exitosamente al carrito.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void btnConfirmarVenta_Click(object sender, EventArgs e)
+        {
+            if (carrito.Count == 0)
+            {
+                MessageBox.Show("El carrito está vacío. Agregue productos antes de confirmar la venta.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            foreach (var item in carrito)
+            {
+                // Llama al método AgregarVenta para guardar en el backend y obtener el Id de la venta
+                string idVenta = ventasWS.AgregarVenta(cmb_clientes.SelectedValue.ToString(), IDUSUARIO, item.IdProducto, item.Cantidad);
+
+                if (string.IsNullOrEmpty(idVenta))
+                {
+                    MessageBox.Show("Hubo un error al confirmar la venta. Intente de nuevo.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
 
-                if (cantidad > stockDisponible)
-                {
-                    MessageBox.Show("No hay suficiente stock disponible.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    return;
-                }
-                else if (cantidad == stockDisponible)
-                {
-                    DialogResult resultado = MessageBox.Show(
-                        "Al agregar esta cantidad el stock quedará en 0. ¿Desea continuar?",
-                        "Advertencia",
-                        MessageBoxButtons.YesNo,
-                        MessageBoxIcon.Warning
-                    );
+                // Actualiza el stock del producto
+                productosWS.ActualizarStock(item.IdProducto, item.Cantidad);
+            }
 
-                    if (resultado == DialogResult.No)
-                    {
-                        return;
-                    }
-                }
-                carrito.Add(nuevaVenta);
-                dataGridViewCarrito.DataSource = null;
-                dataGridViewCarrito.DataSource = carrito;
-                totalAcumulado += total;
-                lbl_Total.Text = $"Total acumulado: ${totalAcumulado:F2}";
-                MessageBox.Show("Producto agregado exitosamente al carrito.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-            else
-            {
-                MessageBox.Show("Hubo un error al agregar la venta. Intente de nuevo.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+            MessageBox.Show("Venta confirmada exitosamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            carrito.Clear();
+            dataGridViewCarrito.DataSource = null;
+            dataGridViewCarrito.DataSource = carrito;
+            totalAcumulado = 0;
+            lbl_Total.Text = $"Total acumulado: ${totalAcumulado:F2}";
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            bool seEliminoFila = false; // Bandera para verificar si se eliminó al menos una fila
-
             // Verifica si hay filas seleccionadas antes de proceder
             if (dataGridViewCarrito.SelectedRows.Count > 0)
             {
@@ -221,24 +242,19 @@ namespace TemplateTPIntegrador.Modulos.Ventas
                         {
                             carrito.Remove(item); // Elimina el elemento directamente de BindingList
                             totalAcumulado -= item.Total; // Resta el total del item eliminado
-                            seEliminoFila = true; // Marca que se eliminó al menos una fila
                         }
                     }
                 }
 
-                // Si se eliminó alguna fila, actualizamos el total acumulado
-                if (seEliminoFila)
-                {
-                    lbl_Total.Text = $"Total acumulado: ${totalAcumulado:F2}";
-                }
+                // Actualiza el total acumulado
+                lbl_Total.Text = $"Total acumulado: ${totalAcumulado:F2}";
             }
-
-            // Muestra el mensaje solo si no se eliminó ninguna fila
-            if (!seEliminoFila)
+            else
             {
                 MessageBox.Show("Por favor, selecciona al menos una fila para eliminar.", "Eliminar", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
+
     }
 }
 

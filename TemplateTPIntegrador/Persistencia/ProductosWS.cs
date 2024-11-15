@@ -4,6 +4,8 @@ using Persistencia.Utils;
 using System;
 using System.Collections.Generic;
 using System.Net.Http;
+using System.Linq;
+
 
 namespace Persistencia
 {
@@ -86,6 +88,23 @@ namespace Persistencia
                 return null;
             }
         }
+
+            public bool ActualizarStock(string idProducto, int cantidadVendida)
+            {
+                // Lógica para actualizar el stock del producto en la base de datos
+                // Aquí deberías restar la cantidadVendida del stock actual del producto con idProducto
+
+                // Ejemplo de lógica (esto dependerá de cómo manejes tu base de datos):
+                var producto = buscarDatosProducto().FirstOrDefault(p => p.id.ToString() == idProducto);
+                if (producto != null)
+                {
+                    producto.stock -= cantidadVendida;
+                    // Código para guardar los cambios en la base de datos
+                    return true; // Retorna true si la actualización fue exitosa
+                }
+                return false; // Retorna false si no se encontró el producto
+            }
+        
     }
 
 
