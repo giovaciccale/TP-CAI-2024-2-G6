@@ -173,10 +173,10 @@
             // 
             // barraTitulo
             // 
-            this.barraTitulo.Controls.Add(this.tabEliminarProveedores);
             this.barraTitulo.Controls.Add(this.tabRegistrarProveedores);
-            this.barraTitulo.Controls.Add(this.tabEliminarUsuario);
+            this.barraTitulo.Controls.Add(this.tabEliminarProveedores);
             this.barraTitulo.Controls.Add(this.tabAltaProductos);
+            this.barraTitulo.Controls.Add(this.tabEliminarUsuario);
             this.barraTitulo.Controls.Add(this.tabRegistrarUsuarios);
             this.barraTitulo.Controls.Add(this.btnCerrar);
             this.barraTitulo.Controls.Add(this.pictureBox1);
@@ -202,7 +202,7 @@
             this.tabEliminarProveedores.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabEliminarProveedores.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
             this.tabEliminarProveedores.HoverState.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.tabEliminarProveedores.Location = new System.Drawing.Point(425, 0);
+            this.tabEliminarProveedores.Location = new System.Drawing.Point(525, 0);
             this.tabEliminarProveedores.Name = "tabEliminarProveedores";
             this.tabEliminarProveedores.Size = new System.Drawing.Size(180, 50);
             this.tabEliminarProveedores.TabIndex = 1007;
@@ -226,7 +226,7 @@
             this.tabRegistrarProveedores.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabRegistrarProveedores.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
             this.tabRegistrarProveedores.HoverState.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.tabRegistrarProveedores.Location = new System.Drawing.Point(249, 0);
+            this.tabRegistrarProveedores.Location = new System.Drawing.Point(339, 0);
             this.tabRegistrarProveedores.Name = "tabRegistrarProveedores";
             this.tabRegistrarProveedores.Size = new System.Drawing.Size(180, 50);
             this.tabRegistrarProveedores.TabIndex = 1006;
@@ -249,7 +249,7 @@
             this.tabEliminarUsuario.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabEliminarUsuario.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
             this.tabEliminarUsuario.HoverState.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.tabEliminarUsuario.Location = new System.Drawing.Point(425, 0);
+            this.tabEliminarUsuario.Location = new System.Drawing.Point(525, 0);
             this.tabEliminarUsuario.Name = "tabEliminarUsuario";
             this.tabEliminarUsuario.Size = new System.Drawing.Size(180, 50);
             this.tabEliminarUsuario.TabIndex = 1004;
@@ -272,7 +272,7 @@
             this.tabAltaProductos.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabAltaProductos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
             this.tabAltaProductos.HoverState.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.tabAltaProductos.Location = new System.Drawing.Point(249, 0);
+            this.tabAltaProductos.Location = new System.Drawing.Point(435, 0);
             this.tabAltaProductos.Name = "tabAltaProductos";
             this.tabAltaProductos.Size = new System.Drawing.Size(180, 50);
             this.tabAltaProductos.TabIndex = 1005;
@@ -296,7 +296,7 @@
             this.tabRegistrarUsuarios.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabRegistrarUsuarios.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
             this.tabRegistrarUsuarios.HoverState.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.tabRegistrarUsuarios.Location = new System.Drawing.Point(249, 0);
+            this.tabRegistrarUsuarios.Location = new System.Drawing.Point(339, 0);
             this.tabRegistrarUsuarios.Name = "tabRegistrarUsuarios";
             this.tabRegistrarUsuarios.Size = new System.Drawing.Size(180, 50);
             this.tabRegistrarUsuarios.TabIndex = 0;
