@@ -394,7 +394,10 @@
             // 
             // dataGridViewCarrito
             // 
+            this.dataGridViewCarrito.BackgroundColor = System.Drawing.Color.White;
+            this.dataGridViewCarrito.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridViewCarrito.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewCarrito.GridColor = System.Drawing.SystemColors.Control;
             this.dataGridViewCarrito.Location = new System.Drawing.Point(44, 455);
             this.dataGridViewCarrito.Name = "dataGridViewCarrito";
             this.dataGridViewCarrito.RowHeadersWidth = 62;
