@@ -165,13 +165,36 @@ namespace TemplateTPIntegrador.Modulos.Ventas
                     Total = total
                 };
 
+                if (!int.TryParse(stock_int.Text, out int stockDisponible))
+                {
+                    MessageBox.Show("Error al leer el stock disponible.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                if (cantidad > stockDisponible)
+                {
+                    MessageBox.Show("No hay suficiente stock disponible.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+                else if (cantidad == stockDisponible)
+                {
+                    DialogResult resultado = MessageBox.Show(
+                        "Al agregar esta cantidad el stock quedará en 0. ¿Desea continuar?",
+                        "Advertencia",
+                        MessageBoxButtons.YesNo,
+                        MessageBoxIcon.Warning
+                    );
+
+                    if (resultado == DialogResult.No)
+                    {
+                        return;
+                    }
+                }
                 carrito.Add(nuevaVenta);
+                dataGridViewCarrito.DataSource = null;
                 dataGridViewCarrito.DataSource = carrito;
-
-
-                // Suma el total al total acumulado
                 totalAcumulado += total;
-
+                lbl_Total.Text = $"Total acumulado: ${totalAcumulado:F2}";
                 MessageBox.Show("Producto agregado exitosamente al carrito.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
@@ -182,23 +205,29 @@ namespace TemplateTPIntegrador.Modulos.Ventas
 
 
 
-        private void vercarrito_btn_Click(object sender, EventArgs e)
-        {
-            if (cmb_clientes.SelectedValue == null)
-            {
-                MessageBox.Show("Seleccione un cliente para ver el carrito.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
 
-            // Abre el formulario CarritoVentas con los elementos del carrito y el total acumulado
-            CarritoVentas carritoForm = new CarritoVentas(carrito, totalAcumulado);
-            carritoForm.Show();
+
+
+
+
+          /*   private void vercarrito_btn_Click(object sender, EventArgs e)
+             {
+                 if (cmb_clientes.SelectedValue == null)
+                 {
+                     MessageBox.Show("Seleccione un cliente para ver el carrito.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                     return;
+                 }
+
+                 // Abre el formulario CarritoVentas con los elementos del carrito y el total acumulado
+                 CarritoVentas carritoForm = new CarritoVentas(carrito, totalAcumulado);
+                 carritoForm.Show();
+             } */
+
+             private void VentasForm_Load(object sender, EventArgs e)
+             {
+
+             }
+            
         }
-
-        private void VentasForm_Load(object sender, EventArgs e)
-        {
-
-        }
-
     }
-}
+

@@ -32,26 +32,25 @@
             this.lbl_Total = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCarrito)).BeginInit();
             this.SuspendLayout();
-
             // 
             // dataGridViewCarrito
             // 
             this.dataGridViewCarrito.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewCarrito.Location = new System.Drawing.Point(12, 12);
             this.dataGridViewCarrito.Name = "dataGridViewCarrito";
+            this.dataGridViewCarrito.RowHeadersWidth = 62;
             this.dataGridViewCarrito.Size = new System.Drawing.Size(760, 300);
             this.dataGridViewCarrito.TabIndex = 0;
-
             // 
             // lbl_Total
             // 
             this.lbl_Total.AutoSize = true;
             this.lbl_Total.Location = new System.Drawing.Point(12, 330);
             this.lbl_Total.Name = "lbl_Total";
-            this.lbl_Total.Size = new System.Drawing.Size(100, 23);
+            this.lbl_Total.Size = new System.Drawing.Size(174, 20);
             this.lbl_Total.TabIndex = 1;
             this.lbl_Total.Text = "Total acumulado: $0.00";
-
+            this.lbl_Total.Click += new System.EventHandler(this.lbl_Total_Click);
             // 
             // CarritoVentas
             // 
@@ -63,6 +62,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCarrito)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
+
         }
 
 
