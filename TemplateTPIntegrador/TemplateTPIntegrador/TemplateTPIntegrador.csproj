@@ -181,6 +181,9 @@
     <EmbeddedResource Include="Modulos\Usuarios\CambiarContraseña.resx">
       <DependentUpon>CambiarContraseña.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Modulos\Ventas\CarritoVentas.resx">
+      <DependentUpon>CarritoVentas.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Modulos\Ventas\VentasForm.resx">
       <DependentUpon>VentasForm.cs</DependentUpon>
     </EmbeddedResource>

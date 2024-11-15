@@ -1,20 +1,20 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace TemplateTPIntegrador.Modulos.Ventas
 {
     public partial class CarritoVentas : Form
     {
-        public CarritoVentas()
+        public CarritoVentas(List<VentasForm.CarritoItem> carrito, double totalAcumulado)
         {
             InitializeComponent();
+
+            // Asigna la lista de carrito al DataGridView
+            dataGridViewCarrito.DataSource = carrito;
+
+            // Muestra el total acumulado en un Label
+            lbl_Total.Text = $"Total acumulado: ${totalAcumulado:F2}";
         }
     }
 }
