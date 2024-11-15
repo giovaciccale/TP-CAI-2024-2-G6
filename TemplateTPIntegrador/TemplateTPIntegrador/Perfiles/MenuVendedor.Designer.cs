@@ -138,8 +138,8 @@
             // 
             // barraTitulo
             // 
-            this.barraTitulo.Controls.Add(this.tabVentasPorVendedor);
             this.barraTitulo.Controls.Add(this.tabVentas);
+            this.barraTitulo.Controls.Add(this.tabVentasPorVendedor);
             this.barraTitulo.Controls.Add(this.tabAgregarCliente);
             this.barraTitulo.Controls.Add(this.tabBuscarCliente);
             this.barraTitulo.Controls.Add(this.btnCerrar);
@@ -167,7 +167,7 @@
             this.tabVentasPorVendedor.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabVentasPorVendedor.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
             this.tabVentasPorVendedor.HoverState.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.tabVentasPorVendedor.Location = new System.Drawing.Point(557, 0);
+            this.tabVentasPorVendedor.Location = new System.Drawing.Point(621, 0);
             this.tabVentasPorVendedor.Name = "tabVentasPorVendedor";
             this.tabVentasPorVendedor.Size = new System.Drawing.Size(180, 50);
             this.tabVentasPorVendedor.TabIndex = 1011;
@@ -190,7 +190,7 @@
             this.tabVentas.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabVentas.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
             this.tabVentas.HoverState.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.tabVentas.Location = new System.Drawing.Point(371, 0);
+            this.tabVentas.Location = new System.Drawing.Point(435, 0);
             this.tabVentas.Name = "tabVentas";
             this.tabVentas.Size = new System.Drawing.Size(180, 50);
             this.tabVentas.TabIndex = 1010;
@@ -212,7 +212,7 @@
             this.tabAgregarCliente.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabAgregarCliente.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
             this.tabAgregarCliente.HoverState.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.tabAgregarCliente.Location = new System.Drawing.Point(371, 0);
+            this.tabAgregarCliente.Location = new System.Drawing.Point(435, 0);
             this.tabAgregarCliente.Name = "tabAgregarCliente";
             this.tabAgregarCliente.Size = new System.Drawing.Size(180, 50);
             this.tabAgregarCliente.TabIndex = 1013;
@@ -235,7 +235,7 @@
             this.tabBuscarCliente.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabBuscarCliente.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
             this.tabBuscarCliente.HoverState.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.tabBuscarCliente.Location = new System.Drawing.Point(185, 0);
+            this.tabBuscarCliente.Location = new System.Drawing.Point(249, 0);
             this.tabBuscarCliente.Name = "tabBuscarCliente";
             this.tabBuscarCliente.Size = new System.Drawing.Size(180, 50);
             this.tabBuscarCliente.TabIndex = 1012;

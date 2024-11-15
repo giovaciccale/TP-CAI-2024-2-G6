@@ -2,6 +2,7 @@
 using Persistencia;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Windows.Forms;
 
@@ -14,8 +15,7 @@ namespace TemplateTPIntegrador.Modulos.Ventas
         private ProductosWS productosWS;
         private VentasWS ventasWS; // Servicio para ventas
         private double totalAcumulado = 0; // Total acumulado para el carrito
-        private List<CarritoItem> carrito = new List<CarritoItem>();
-
+        private BindingList<CarritoItem> carrito = new BindingList<CarritoItem>();
         public class CarritoItem
         {
             public string IdProducto { get; set; }
@@ -37,6 +37,7 @@ namespace TemplateTPIntegrador.Modulos.Ventas
 
             cmb_clientes.SelectedIndexChanged += cmb_clientes_SelectedIndexChanged;
             cmb_productos.SelectedIndexChanged += cmb_productos_SelectedIndexChanged;
+            btnEliminar.Click += btnEliminar_Click;
         }
 
         private void CargarClientes()
@@ -203,31 +204,41 @@ namespace TemplateTPIntegrador.Modulos.Ventas
             }
         }
 
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            bool seEliminoFila = false; // Bandera para verificar si se eliminó al menos una fila
 
+            // Verifica si hay filas seleccionadas antes de proceder
+            if (dataGridViewCarrito.SelectedRows.Count > 0)
+            {
+                // Recorre las filas seleccionadas en el DataGridView
+                foreach (DataGridViewRow row in dataGridViewCarrito.SelectedRows)
+                {
+                    if (!row.IsNewRow)
+                    {
+                        CarritoItem item = row.DataBoundItem as CarritoItem;
+                        if (item != null)
+                        {
+                            carrito.Remove(item); // Elimina el elemento directamente de BindingList
+                            totalAcumulado -= item.Total; // Resta el total del item eliminado
+                            seEliminoFila = true; // Marca que se eliminó al menos una fila
+                        }
+                    }
+                }
 
+                // Si se eliminó alguna fila, actualizamos el total acumulado
+                if (seEliminoFila)
+                {
+                    lbl_Total.Text = $"Total acumulado: ${totalAcumulado:F2}";
+                }
+            }
 
-
-
-
-
-          /*   private void vercarrito_btn_Click(object sender, EventArgs e)
-             {
-                 if (cmb_clientes.SelectedValue == null)
-                 {
-                     MessageBox.Show("Seleccione un cliente para ver el carrito.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                     return;
-                 }
-
-                 // Abre el formulario CarritoVentas con los elementos del carrito y el total acumulado
-                 CarritoVentas carritoForm = new CarritoVentas(carrito, totalAcumulado);
-                 carritoForm.Show();
-             } */
-
-             private void VentasForm_Load(object sender, EventArgs e)
-             {
-
-             }
-            
+            // Muestra el mensaje solo si no se eliminó ninguna fila
+            if (!seEliminoFila)
+            {
+                MessageBox.Show("Por favor, selecciona al menos una fila para eliminar.", "Eliminar", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
     }
+}
 
