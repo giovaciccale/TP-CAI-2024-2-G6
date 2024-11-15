@@ -45,7 +45,7 @@
             this.comboBoxVendedores.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.comboBoxVendedores.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.comboBoxVendedores.FormattingEnabled = true;
-            this.comboBoxVendedores.Location = new System.Drawing.Point(472, 107);
+            this.comboBoxVendedores.Location = new System.Drawing.Point(563, 109);
             this.comboBoxVendedores.Name = "comboBoxVendedores";
             this.comboBoxVendedores.Size = new System.Drawing.Size(121, 29);
             this.comboBoxVendedores.TabIndex = 0;
@@ -69,7 +69,7 @@
             // panel1
             // 
             this.panel1.Font = new System.Drawing.Font("Century Gothic", 12F);
-            this.panel1.Location = new System.Drawing.Point(291, 194);
+            this.panel1.Location = new System.Drawing.Point(321, 185);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(431, 255);
             this.panel1.TabIndex = 3;
@@ -81,7 +81,7 @@
             this.btn_crearUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_crearUsuario.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_crearUsuario.ForeColor = System.Drawing.Color.White;
-            this.btn_crearUsuario.Location = new System.Drawing.Point(436, 477);
+            this.btn_crearUsuario.Location = new System.Drawing.Point(445, 477);
             this.btn_crearUsuario.Name = "btn_crearUsuario";
             this.btn_crearUsuario.Size = new System.Drawing.Size(148, 35);
             this.btn_crearUsuario.TabIndex = 100011;
@@ -91,7 +91,7 @@
             // TxtVentasPorVendedor
             // 
             this.TxtVentasPorVendedor.Font = new System.Drawing.Font("Century Gothic", 12F);
-            this.TxtVentasPorVendedor.Location = new System.Drawing.Point(150, 294);
+            this.TxtVentasPorVendedor.Location = new System.Drawing.Point(388, 111);
             this.TxtVentasPorVendedor.Name = "TxtVentasPorVendedor";
             this.TxtVentasPorVendedor.Size = new System.Drawing.Size(100, 27);
             this.TxtVentasPorVendedor.TabIndex = 100012;

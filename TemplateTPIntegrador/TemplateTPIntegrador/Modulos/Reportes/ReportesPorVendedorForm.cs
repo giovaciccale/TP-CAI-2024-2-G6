@@ -38,12 +38,12 @@ namespace TemplateTPIntegrador.Modulos.Reportes
                 {
                     if (usuario.host == 1) // Verifica si el usuario es un vendedor
                     {
-                        comboBoxVendedores.Items.Add(new { Nombre = usuario.nombreUsuario, Id = usuario.Id });
+                        comboBoxVendedores.Items.Add(new { Dni = usuario.dni, Id = usuario.Id });
                     }
                 }
 
                 // Establecer el formato para mostrar el nombre en el ComboBox
-                comboBoxVendedores.DisplayMember = "Nombre"; // Campo que se mostrará
+                comboBoxVendedores.DisplayMember = "Dni"; // Campo que se mostrará
                 comboBoxVendedores.ValueMember = "Id"; // Campo que se utilizará como valor
             }
             else
