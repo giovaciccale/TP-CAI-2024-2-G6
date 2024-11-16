@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
 using System.Windows.Forms;
+using TemplateTPIntegrador.Modulos.Ventas;
 
 namespace TemplateTPIntegrador.Modulos.Ventas
 {
@@ -15,16 +16,8 @@ namespace TemplateTPIntegrador.Modulos.Ventas
         private ProductosWS productosWS;
         private VentasWS ventasWS; // Servicio para ventas
         private double totalAcumulado = 0; // Total acumulado para el carrito
-        private BindingList<CarritoItem> carrito = new BindingList<CarritoItem>();
-
-        public class CarritoItem
-        {
-            public string IdProducto { get; set; }
-            public string Nombre { get; set; }
-            public int Cantidad { get; set; }
-            public double PrecioUnitario { get; set; } // Precio unitario del producto
-            public double Total { get; set; } // Total = Cantidad * PrecioUnitario
-        }
+        private List<CarritoItem> carrito = new List<CarritoItem>();
+        private List<Promocion> promociones = new List<Promocion>();
 
         public VentasForm()
         {
@@ -197,11 +190,38 @@ namespace TemplateTPIntegrador.Modulos.Ventas
             }
 
             var clienteSeleccionado = cmb_clientes.SelectedItem as ClienteWS;
+            
+            if (clienteSeleccionado == null)
+            {
+                MessageBox.Show("Cliente no válido.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+            // Verificar si el cliente tiene ventas previas
+            List<VentaWS> ventasDelCliente = ventasWS.ObtenerVentasPorCliente(clienteSeleccionado.Id.ToString());
+            bool esPrimeraVenta = ventasDelCliente == null || ventasDelCliente.Count == 0;
+
+            // Aplicar descuento si es la primera compra
+            double totalConDescuento = totalAcumulado;
+            List<Promocion> promociones = new List<Promocion>();
+            
+            if (esPrimeraVenta)
+            {
+                double descuento = totalAcumulado * 0.05; // Aplicar 5% de descuento
+                totalConDescuento -= descuento;
+
+                promociones.Add(new Promocion
+                {
+                    Nombre = "Descuento por primera compra",
+                    Monto = descuento
+                });
+
+                MessageBox.Show("Felicidades! Por ser tu primera compra, recibes un 5% de descuento.", "Descuento Aplicado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
 
             string nombreCompletoCliente = $"{clienteSeleccionado.nombre} {clienteSeleccionado.apellido}";
             string dniCliente = clienteSeleccionado.dni.ToString();
 
-            FacturaForm formComprobante = new FacturaForm(carrito, nombreCompletoCliente, dniCliente, totalAcumulado);
+            FacturaForm formComprobante = new FacturaForm(carrito, nombreCompletoCliente, dniCliente, totalConDescuento, promociones);
             formComprobante.Show();
             
         }
@@ -219,7 +239,7 @@ namespace TemplateTPIntegrador.Modulos.Ventas
                         CarritoItem item = row.DataBoundItem as CarritoItem;
                         if (item != null)
                         {
-                            carrito.Remove(item); // Elimina el elemento directamente de BindingList
+                            carrito.Remove(item); // Elimina el elemento directamente de la Lista
                             totalAcumulado -= item.Total; // Resta el total del item eliminado
                         }
                     }
@@ -233,7 +253,6 @@ namespace TemplateTPIntegrador.Modulos.Ventas
                 MessageBox.Show("Por favor, selecciona al menos una fila para eliminar.", "Eliminar", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
-
     }
 }
 

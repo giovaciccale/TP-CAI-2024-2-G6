@@ -24,8 +24,6 @@
             this.dgvDetalle = new System.Windows.Forms.DataGridView();
             this.lblPromociones = new System.Windows.Forms.Label();
             this.dgvPromociones = new System.Windows.Forms.DataGridView();
-            this.colPromocion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colDescuento = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lblTotal = new System.Windows.Forms.Label();
             this.txtTotal = new System.Windows.Forms.TextBox();
             this.lbldni = new System.Windows.Forms.Label();
@@ -119,27 +117,13 @@
             // 
             this.dgvPromociones.AllowUserToAddRows = false;
             this.dgvPromociones.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvPromociones.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.EnableWithoutHeaderText;
             this.dgvPromociones.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvPromociones.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.colPromocion,
-            this.colDescuento});
             this.dgvPromociones.Location = new System.Drawing.Point(15, 480);
             this.dgvPromociones.Name = "dgvPromociones";
             this.dgvPromociones.RowHeadersWidth = 62;
             this.dgvPromociones.Size = new System.Drawing.Size(834, 158);
             this.dgvPromociones.TabIndex = 5;
-            // 
-            // colPromocion
-            // 
-            this.colPromocion.HeaderText = "Nombre Promoción";
-            this.colPromocion.MinimumWidth = 8;
-            this.colPromocion.Name = "colPromocion";
-            // 
-            // colDescuento
-            // 
-            this.colDescuento.HeaderText = "Monto Descuento";
-            this.colDescuento.MinimumWidth = 8;
-            this.colDescuento.Name = "colDescuento";
             // 
             // lblTotal
             // 
@@ -190,6 +174,7 @@
             this.button1.TabIndex = 9;
             this.button1.Text = "Confirmar";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
@@ -245,8 +230,6 @@
         private System.Windows.Forms.DataGridView dgvDetalle;
         private System.Windows.Forms.Label lblPromociones;
         private System.Windows.Forms.DataGridView dgvPromociones;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colPromocion;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colDescuento;
         private System.Windows.Forms.Label lblTotal;
         private System.Windows.Forms.TextBox txtTotal;
         private System.Windows.Forms.Label lbldni;
