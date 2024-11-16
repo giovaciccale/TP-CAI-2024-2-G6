@@ -3,6 +3,7 @@ using Guna.UI2.WinForms;
 using Persistencia;
 using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Windows.Forms;
 
 namespace TemplateTPIntegrador.Usuarios.Aministrador
@@ -97,5 +98,34 @@ namespace TemplateTPIntegrador.Usuarios.Aministrador
             // Evento para manejar cambios en el valor de stock si se necesita
         }
 
+        private void nombre_txt_TextChanged(object sender, EventArgs e)
+        {
+            panlNombreProducto.BackColor = Color.White;
+            nombre_txt.BackColor = Color.White;
+            cmbcategoria.BackColor = SystemColors.Control;
+            panlCategoria.BackColor = SystemColors.Control;
+            precio_in.BackColor = SystemColors.Control;
+            pnlPrecio.BackColor = SystemColors.Control;
+        }
+
+        private void cmbcategoria_SelectedIndexChanged_1(object sender, EventArgs e)
+        {
+            panlNombreProducto.BackColor = SystemColors.Control;
+            nombre_txt.BackColor = SystemColors.Control;
+            cmbcategoria.BackColor = Color.White;
+            panlCategoria.BackColor = Color.White;
+            precio_in.BackColor = SystemColors.Control;
+            pnlPrecio.BackColor = SystemColors.Control;
+        }
+
+        private void precio_in_TextChanged(object sender, EventArgs e)
+        {
+            panlNombreProducto.BackColor = SystemColors.Control;
+            nombre_txt.BackColor = SystemColors.Control;
+            cmbcategoria.BackColor = SystemColors.Control;
+            panlCategoria.BackColor = SystemColors.Control;
+            precio_in.BackColor = Color.White;
+            pnlPrecio.BackColor = Color.White;
+        }
     }
 }
