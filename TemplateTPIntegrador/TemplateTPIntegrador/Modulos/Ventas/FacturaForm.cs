@@ -74,7 +74,8 @@ namespace TemplateTPIntegrador.Modulos.Ventas
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            MessageBox.Show("Compra realizada con Éxito.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            this.Close();
         }
     }
 }
