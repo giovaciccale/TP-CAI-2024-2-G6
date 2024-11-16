@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using System.Runtime.InteropServices;
 using TemplateTPIntegrador.Usuarios.Aministrador;
 using TemplateTPIntegrador.Modulos.Proveedores;
+using TemplateTPIntegrador.Modulos.Reportes;
 
 namespace TemplateTPIntegrador
 {
@@ -226,5 +227,15 @@ namespace TemplateTPIntegrador
             }
         }
 
+        private void btnSeccionReportes_Click(object sender, EventArgs e)
+        {
+            // Ocultar tabs de Usuarios
+            tabRegistrarUsuarios.Visible = false;
+            tabEliminarUsuario.Visible = false;
+            tabRegistrarProveedores.Visible = false;
+            tabEliminarProveedores.Visible = false;
+            abrirFormInPanel(new ReportesPorVendedorForm());
+
+        }
     }
 }

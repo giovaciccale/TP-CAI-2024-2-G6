@@ -8,6 +8,7 @@ using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TemplateTPIntegrador.Modulos.Ventas;
 using TemplateTPIntegrador.Usuarios.Aministrador;
 
 namespace TemplateTPIntegrador
@@ -76,6 +77,7 @@ namespace TemplateTPIntegrador
                 enSeccionDevoluciones = true;
                 enSeccionProductos = false;
                 enSeccionReportes = false;
+                abrirFormInPanel(new Devoluciones());
             }
         }
 
@@ -88,6 +90,7 @@ namespace TemplateTPIntegrador
                 enSeccionReportes=true;
                 enSeccionProductos=false;
                 enSeccionDevoluciones=false;
+                abrirFormInPanel(new Devoluciones());
             }
         }
 
@@ -104,8 +107,7 @@ namespace TemplateTPIntegrador
 
             // Mostrar tabs de Productos
             tabAltaProductos.Visible = true;
-            tabModificarProductos.Visible = true;
-            tabBajaProductos.Visible = true;
+ 
 
             // Seleccionar tab por defecto y cargar el formulario correspondiente
             tabAltaProductos.Checked = true;
@@ -117,8 +119,8 @@ namespace TemplateTPIntegrador
         {
             // Esconder tabs de Productos
             tabAltaProductos.Visible = false;
-            tabModificarProductos.Visible = false;
-            tabBajaProductos.Visible = false;
+     
+  
 
             // Esconder tabs de Reportes
             tabStockCritico.Visible = false;
@@ -138,8 +140,7 @@ namespace TemplateTPIntegrador
         {
             // Esconder tabs de Productos
             tabAltaProductos.Visible = false;
-            tabModificarProductos.Visible = false;
-            tabBajaProductos.Visible = false;
+
 
             // Esconder tabs de Devoluciones
             tabDevoluciones.Visible = false;
