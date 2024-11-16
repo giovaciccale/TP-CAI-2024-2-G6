@@ -13,14 +13,47 @@ namespace TemplateTPIntegrador.Modulos.Ventas
 {
     public partial class FacturaForm : Form
     {
-        public FacturaForm(BindingList<VentasForm.CarritoItem> carrito, string nombrCompletoCliente, string dniCliente, double totalAcumulado)
+
+        private List<CarritoItem> carrito;
+        private List<Promocion> promociones;
+
+        public FacturaForm(List<CarritoItem> carrito, string nombrCompletoCliente, string dniCliente, double total, List<Promocion> promociones)
         {
             InitializeComponent();
+            this.carrito = carrito;
+            this.promociones = promociones;
+
+            dgvDetalle.DataSource = null;
+            dgvDetalle.DataSource = carrito;
+
+            dgvPromociones.DataSource = null;
+            dgvPromociones.DataSource = promociones;
+
             txtCliente.Text = nombrCompletoCliente;
             textBox1.Text = dniCliente;
-            txtTotal.Text = totalAcumulado.ToString("F2");
+            txtTotal.Text = total.ToString("F2");
 
             dgvDetalle.DataSource = carrito;
+        }
+
+        private void ConfigurarDgvPromociones()
+        {
+            dgvPromociones.AutoGenerateColumns = false;
+
+            dgvPromociones.Columns.Add(new DataGridViewTextBoxColumn
+            {
+                DataPropertyName = "Nombre",
+                HeaderText = "Promoción Aplicada"
+            });
+
+            dgvPromociones.Columns.Add(new DataGridViewTextBoxColumn
+            {
+                DataPropertyName = "Monto",
+                HeaderText = "Monto Descuento",
+                DefaultCellStyle = new DataGridViewCellStyle { Format = "C2"}
+            });
+
+            dgvPromociones.DataSource = promociones;
         }
 
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
@@ -37,6 +70,11 @@ namespace TemplateTPIntegrador.Modulos.Ventas
         {
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
