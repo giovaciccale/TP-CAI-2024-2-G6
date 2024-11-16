@@ -127,6 +127,12 @@
     <Compile Include="Modulos\Usuarios\LoginForm.Designer.cs">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Modulos\Ventas\Devoluciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modulos\Ventas\Devoluciones.Designer.cs">
+      <DependentUpon>Devoluciones.cs</DependentUpon>
+    </Compile>
     <Compile Include="Modulos\Ventas\FacturaForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -190,6 +196,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Modulos\Usuarios\CambiarContraseña.resx">
       <DependentUpon>CambiarContraseña.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modulos\Ventas\Devoluciones.resx">
+      <DependentUpon>Devoluciones.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Modulos\Ventas\FacturaForm.resx">
       <DependentUpon>FacturaForm.cs</DependentUpon>

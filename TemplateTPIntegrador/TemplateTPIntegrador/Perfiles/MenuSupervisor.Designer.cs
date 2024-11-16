@@ -38,11 +38,9 @@
             this.label4 = new System.Windows.Forms.Label();
             this.barraTitulo = new System.Windows.Forms.Panel();
             this.tabProductosMasVendidos = new Guna.UI2.WinForms.Guna2Button();
-            this.tabBajaProductos = new Guna.UI2.WinForms.Guna2Button();
             this.tabReporteVentasxVendedor = new Guna.UI2.WinForms.Guna2Button();
             this.tabStockCritico = new Guna.UI2.WinForms.Guna2Button();
             this.tabDevoluciones = new Guna.UI2.WinForms.Guna2Button();
-            this.tabModificarProductos = new Guna.UI2.WinForms.Guna2Button();
             this.tabAltaProductos = new Guna.UI2.WinForms.Guna2Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panelContenedor = new System.Windows.Forms.Panel();
@@ -167,12 +165,10 @@
             // 
             // barraTitulo
             // 
-            this.barraTitulo.Controls.Add(this.tabProductosMasVendidos);
-            this.barraTitulo.Controls.Add(this.tabBajaProductos);
-            this.barraTitulo.Controls.Add(this.tabReporteVentasxVendedor);
             this.barraTitulo.Controls.Add(this.tabStockCritico);
+            this.barraTitulo.Controls.Add(this.tabProductosMasVendidos);
             this.barraTitulo.Controls.Add(this.tabDevoluciones);
-            this.barraTitulo.Controls.Add(this.tabModificarProductos);
+            this.barraTitulo.Controls.Add(this.tabReporteVentasxVendedor);
             this.barraTitulo.Controls.Add(this.tabAltaProductos);
             this.barraTitulo.Controls.Add(this.pictureBox1);
             this.barraTitulo.Dock = System.Windows.Forms.DockStyle.Top;
@@ -196,33 +192,12 @@
             this.tabProductosMasVendidos.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabProductosMasVendidos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
             this.tabProductosMasVendidos.HoverState.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.tabProductosMasVendidos.Location = new System.Drawing.Point(621, 0);
+            this.tabProductosMasVendidos.Location = new System.Drawing.Point(621, 3);
             this.tabProductosMasVendidos.Name = "tabProductosMasVendidos";
             this.tabProductosMasVendidos.Size = new System.Drawing.Size(180, 50);
             this.tabProductosMasVendidos.TabIndex = 1011;
             this.tabProductosMasVendidos.Text = "Productos Más Vendidos";
             this.tabProductosMasVendidos.Visible = false;
-            // 
-            // tabBajaProductos
-            // 
-            this.tabBajaProductos.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
-            this.tabBajaProductos.CheckedState.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.tabBajaProductos.CheckedState.FillColor = System.Drawing.SystemColors.ControlLight;
-            this.tabBajaProductos.CustomBorderColor = System.Drawing.SystemColors.Control;
-            this.tabBajaProductos.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 3);
-            this.tabBajaProductos.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.tabBajaProductos.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.tabBajaProductos.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.tabBajaProductos.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.tabBajaProductos.FillColor = System.Drawing.SystemColors.Control;
-            this.tabBajaProductos.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabBajaProductos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.tabBajaProductos.HoverState.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.tabBajaProductos.Location = new System.Drawing.Point(621, 0);
-            this.tabBajaProductos.Name = "tabBajaProductos";
-            this.tabBajaProductos.Size = new System.Drawing.Size(180, 50);
-            this.tabBajaProductos.TabIndex = 1007;
-            this.tabBajaProductos.Text = "Baja Productos";
             // 
             // tabReporteVentasxVendedor
             // 
@@ -239,7 +214,7 @@
             this.tabReporteVentasxVendedor.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabReporteVentasxVendedor.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
             this.tabReporteVentasxVendedor.HoverState.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.tabReporteVentasxVendedor.Location = new System.Drawing.Point(435, 0);
+            this.tabReporteVentasxVendedor.Location = new System.Drawing.Point(435, 3);
             this.tabReporteVentasxVendedor.Name = "tabReporteVentasxVendedor";
             this.tabReporteVentasxVendedor.Size = new System.Drawing.Size(180, 50);
             this.tabReporteVentasxVendedor.TabIndex = 1010;
@@ -285,33 +260,12 @@
             this.tabDevoluciones.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabDevoluciones.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
             this.tabDevoluciones.HoverState.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.tabDevoluciones.Location = new System.Drawing.Point(435, 0);
+            this.tabDevoluciones.Location = new System.Drawing.Point(435, 3);
             this.tabDevoluciones.Name = "tabDevoluciones";
             this.tabDevoluciones.Size = new System.Drawing.Size(180, 50);
             this.tabDevoluciones.TabIndex = 1008;
             this.tabDevoluciones.Text = "Devoluciones";
             this.tabDevoluciones.Visible = false;
-            // 
-            // tabModificarProductos
-            // 
-            this.tabModificarProductos.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
-            this.tabModificarProductos.CheckedState.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.tabModificarProductos.CheckedState.FillColor = System.Drawing.SystemColors.ControlLight;
-            this.tabModificarProductos.CustomBorderColor = System.Drawing.SystemColors.Control;
-            this.tabModificarProductos.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 3);
-            this.tabModificarProductos.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.tabModificarProductos.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.tabModificarProductos.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.tabModificarProductos.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.tabModificarProductos.FillColor = System.Drawing.SystemColors.Control;
-            this.tabModificarProductos.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabModificarProductos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.tabModificarProductos.HoverState.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.tabModificarProductos.Location = new System.Drawing.Point(435, 0);
-            this.tabModificarProductos.Name = "tabModificarProductos";
-            this.tabModificarProductos.Size = new System.Drawing.Size(180, 50);
-            this.tabModificarProductos.TabIndex = 1006;
-            this.tabModificarProductos.Text = "Modificar Productos";
             // 
             // tabAltaProductos
             // 
@@ -329,7 +283,7 @@
             this.tabAltaProductos.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabAltaProductos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
             this.tabAltaProductos.HoverState.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.tabAltaProductos.Location = new System.Drawing.Point(249, 0);
+            this.tabAltaProductos.Location = new System.Drawing.Point(435, 0);
             this.tabAltaProductos.Name = "tabAltaProductos";
             this.tabAltaProductos.Size = new System.Drawing.Size(180, 50);
             this.tabAltaProductos.TabIndex = 1005;
@@ -386,8 +340,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Panel barraTitulo;
-        private Guna.UI2.WinForms.Guna2Button tabBajaProductos;
-        private Guna.UI2.WinForms.Guna2Button tabModificarProductos;
         private Guna.UI2.WinForms.Guna2Button tabAltaProductos;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panelContenedor;
