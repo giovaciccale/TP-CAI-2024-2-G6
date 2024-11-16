@@ -42,10 +42,9 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.label1.Location = new System.Drawing.Point(44, 126);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(29, 82);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(324, 30);
+            this.label1.Size = new System.Drawing.Size(211, 21);
             this.label1.TabIndex = 100028;
             this.label1.Text = "Elija Usuario a Desactivar :";
             // 
@@ -56,10 +55,9 @@
             this.btn_desactivarUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_desactivarUsuario.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_desactivarUsuario.ForeColor = System.Drawing.Color.White;
-            this.btn_desactivarUsuario.Location = new System.Drawing.Point(567, 392);
-            this.btn_desactivarUsuario.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btn_desactivarUsuario.Location = new System.Drawing.Point(378, 255);
             this.btn_desactivarUsuario.Name = "btn_desactivarUsuario";
-            this.btn_desactivarUsuario.Size = new System.Drawing.Size(292, 54);
+            this.btn_desactivarUsuario.Size = new System.Drawing.Size(195, 35);
             this.btn_desactivarUsuario.TabIndex = 100030;
             this.btn_desactivarUsuario.Text = "DESACTIVAR USUARIO";
             this.btn_desactivarUsuario.UseVisualStyleBackColor = false;
@@ -70,10 +68,9 @@
             this.panelSeleccionarCliente.BackColor = System.Drawing.SystemColors.Window;
             this.panelSeleccionarCliente.Controls.Add(this.cmb_usuarios);
             this.panelSeleccionarCliente.Controls.Add(this.pictureBox10);
-            this.panelSeleccionarCliente.Location = new System.Drawing.Point(49, 195);
-            this.panelSeleccionarCliente.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.panelSeleccionarCliente.Location = new System.Drawing.Point(33, 127);
             this.panelSeleccionarCliente.Name = "panelSeleccionarCliente";
-            this.panelSeleccionarCliente.Size = new System.Drawing.Size(735, 69);
+            this.panelSeleccionarCliente.Size = new System.Drawing.Size(490, 45);
             this.panelSeleccionarCliente.TabIndex = 100032;
             // 
             // cmb_usuarios
@@ -82,34 +79,35 @@
             this.cmb_usuarios.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.cmb_usuarios.DropDownHeight = 30;
             this.cmb_usuarios.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmb_usuarios.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmb_usuarios.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
             this.cmb_usuarios.FormattingEnabled = true;
             this.cmb_usuarios.IntegralHeight = false;
-            this.cmb_usuarios.Location = new System.Drawing.Point(65, 22);
+            this.cmb_usuarios.Location = new System.Drawing.Point(44, 9);
+            this.cmb_usuarios.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cmb_usuarios.Name = "cmb_usuarios";
-            this.cmb_usuarios.Size = new System.Drawing.Size(639, 28);
+            this.cmb_usuarios.Size = new System.Drawing.Size(427, 29);
             this.cmb_usuarios.TabIndex = 100040;
             // 
             // pictureBox10
             // 
             this.pictureBox10.Image = global::TemplateTPIntegrador.Properties.Resources.pngwing_com;
-            this.pictureBox10.Location = new System.Drawing.Point(22, 17);
-            this.pictureBox10.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pictureBox10.Location = new System.Drawing.Point(15, 11);
             this.pictureBox10.Name = "pictureBox10";
-            this.pictureBox10.Size = new System.Drawing.Size(36, 37);
+            this.pictureBox10.Size = new System.Drawing.Size(24, 24);
             this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox10.TabIndex = 1000;
             this.pictureBox10.TabStop = false;
             // 
             // BajaUsuarios
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1575, 923);
+            this.ClientSize = new System.Drawing.Size(1050, 600);
             this.Controls.Add(this.panelSeleccionarCliente);
             this.Controls.Add(this.btn_desactivarUsuario);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "BajaUsuarios";
             this.Text = "BajaUsuarios";
             this.panelSeleccionarCliente.ResumeLayout(false);

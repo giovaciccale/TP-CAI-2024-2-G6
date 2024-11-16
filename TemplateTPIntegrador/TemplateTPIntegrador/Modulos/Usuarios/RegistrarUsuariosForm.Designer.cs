@@ -46,6 +46,7 @@ namespace TemplateTPIntegrador
             this.label2 = new System.Windows.Forms.Label();
             this.txt_host = new System.Windows.Forms.Label();
             this.panelTipoUsuario = new System.Windows.Forms.Panel();
+            this.comboBoxTipoUsuario = new System.Windows.Forms.ComboBox();
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
             this.panelTelefono = new System.Windows.Forms.Panel();
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
@@ -68,7 +69,6 @@ namespace TemplateTPIntegrador
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.txt_nombre = new System.Windows.Forms.TextBox();
             this.btn_crearUsuario = new System.Windows.Forms.Button();
-            this.comboBoxTipoUsuario = new System.Windows.Forms.ComboBox();
             this.panelCrearCuenta.SuspendLayout();
             this.panelNombreUsuario.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -113,9 +113,8 @@ namespace TemplateTPIntegrador
             this.panelCrearCuenta.Controls.Add(this.btn_crearUsuario);
             this.panelCrearCuenta.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelCrearCuenta.Location = new System.Drawing.Point(0, 0);
-            this.panelCrearCuenta.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panelCrearCuenta.Name = "panelCrearCuenta";
-            this.panelCrearCuenta.Size = new System.Drawing.Size(1575, 923);
+            this.panelCrearCuenta.Size = new System.Drawing.Size(1050, 600);
             this.panelCrearCuenta.TabIndex = 0;
             // 
             // panelNombreUsuario
@@ -123,19 +122,17 @@ namespace TemplateTPIntegrador
             this.panelNombreUsuario.BackColor = System.Drawing.SystemColors.Control;
             this.panelNombreUsuario.Controls.Add(this.pictureBox3);
             this.panelNombreUsuario.Controls.Add(this.txt_usuario);
-            this.panelNombreUsuario.Location = new System.Drawing.Point(54, 566);
-            this.panelNombreUsuario.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.panelNombreUsuario.Location = new System.Drawing.Point(36, 368);
             this.panelNombreUsuario.Name = "panelNombreUsuario";
-            this.panelNombreUsuario.Size = new System.Drawing.Size(1468, 69);
+            this.panelNombreUsuario.Size = new System.Drawing.Size(979, 45);
             this.panelNombreUsuario.TabIndex = 10;
             // 
             // pictureBox3
             // 
             this.pictureBox3.Image = global::TemplateTPIntegrador.Properties.Resources.pngwing_com;
-            this.pictureBox3.Location = new System.Drawing.Point(21, 18);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pictureBox3.Location = new System.Drawing.Point(14, 12);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(36, 37);
+            this.pictureBox3.Size = new System.Drawing.Size(24, 24);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox3.TabIndex = 1002;
             this.pictureBox3.TabStop = false;
@@ -146,10 +143,9 @@ namespace TemplateTPIntegrador
             this.txt_usuario.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt_usuario.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_usuario.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.txt_usuario.Location = new System.Drawing.Point(82, 18);
-            this.txt_usuario.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txt_usuario.Location = new System.Drawing.Point(55, 12);
             this.txt_usuario.Name = "txt_usuario";
-            this.txt_usuario.Size = new System.Drawing.Size(1366, 30);
+            this.txt_usuario.Size = new System.Drawing.Size(911, 20);
             this.txt_usuario.TabIndex = 0;
             this.txt_usuario.Click += new System.EventHandler(this.txt_nombreUsuario_TextChanged);
             this.txt_usuario.TextChanged += new System.EventHandler(this.txt_nombreUsuario_TextChanged);
@@ -160,10 +156,9 @@ namespace TemplateTPIntegrador
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.label3.Location = new System.Drawing.Point(50, 529);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(33, 344);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(256, 30);
+            this.label3.Size = new System.Drawing.Size(166, 21);
             this.label3.TabIndex = 1006;
             this.label3.Text = "Nombre de Usuario :";
             // 
@@ -172,10 +167,9 @@ namespace TemplateTPIntegrador
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.label6.Location = new System.Drawing.Point(782, 32);
-            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label6.Location = new System.Drawing.Point(521, 21);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(282, 30);
+            this.label6.Size = new System.Drawing.Size(183, 21);
             this.label6.TabIndex = 1006;
             this.label6.Text = "Fecha de Nacimiento:";
             // 
@@ -184,22 +178,20 @@ namespace TemplateTPIntegrador
             this.panelFechaNacimiento.BackColor = System.Drawing.SystemColors.Control;
             this.panelFechaNacimiento.Controls.Add(this.txt_fecha);
             this.panelFechaNacimiento.Controls.Add(this.pictureBox11);
-            this.panelFechaNacimiento.Location = new System.Drawing.Point(788, 69);
-            this.panelFechaNacimiento.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.panelFechaNacimiento.Location = new System.Drawing.Point(525, 45);
             this.panelFechaNacimiento.Name = "panelFechaNacimiento";
-            this.panelFechaNacimiento.Size = new System.Drawing.Size(734, 69);
+            this.panelFechaNacimiento.Size = new System.Drawing.Size(489, 45);
             this.panelFechaNacimiento.TabIndex = 5;
             // 
             // txt_fecha
             // 
             this.txt_fecha.CalendarFont = new System.Drawing.Font("Century Gothic", 10F);
             this.txt_fecha.Font = new System.Drawing.Font("Century Gothic", 10F);
-            this.txt_fecha.Location = new System.Drawing.Point(82, 17);
-            this.txt_fecha.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txt_fecha.Location = new System.Drawing.Point(55, 11);
             this.txt_fecha.MaxDate = new System.DateTime(2030, 12, 31, 0, 0, 0, 0);
             this.txt_fecha.MinDate = new System.DateTime(1934, 1, 1, 0, 0, 0, 0);
             this.txt_fecha.Name = "txt_fecha";
-            this.txt_fecha.Size = new System.Drawing.Size(622, 32);
+            this.txt_fecha.Size = new System.Drawing.Size(416, 24);
             this.txt_fecha.TabIndex = 0;
             this.txt_fecha.ValueChanged += new System.EventHandler(this.txt_fecha_ValueChanged);
             this.txt_fecha.Enter += new System.EventHandler(this.txt_fecha_ValueChanged);
@@ -207,10 +199,9 @@ namespace TemplateTPIntegrador
             // pictureBox11
             // 
             this.pictureBox11.Image = global::TemplateTPIntegrador.Properties.Resources.pngwing_com;
-            this.pictureBox11.Location = new System.Drawing.Point(22, 17);
-            this.pictureBox11.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pictureBox11.Location = new System.Drawing.Point(15, 11);
             this.pictureBox11.Name = "pictureBox11";
-            this.pictureBox11.Size = new System.Drawing.Size(36, 37);
+            this.pictureBox11.Size = new System.Drawing.Size(24, 24);
             this.pictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox11.TabIndex = 1002;
             this.pictureBox11.TabStop = false;
@@ -220,19 +211,17 @@ namespace TemplateTPIntegrador
             this.panelEmail.BackColor = System.Drawing.SystemColors.Control;
             this.panelEmail.Controls.Add(this.pictureBox6);
             this.panelEmail.Controls.Add(this.txt_email);
-            this.panelEmail.Location = new System.Drawing.Point(52, 415);
-            this.panelEmail.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.panelEmail.Location = new System.Drawing.Point(35, 270);
             this.panelEmail.Name = "panelEmail";
-            this.panelEmail.Size = new System.Drawing.Size(735, 69);
+            this.panelEmail.Size = new System.Drawing.Size(490, 45);
             this.panelEmail.TabIndex = 3;
             // 
             // pictureBox6
             // 
             this.pictureBox6.Image = global::TemplateTPIntegrador.Properties.Resources.pngwing_com;
-            this.pictureBox6.Location = new System.Drawing.Point(22, 18);
-            this.pictureBox6.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pictureBox6.Location = new System.Drawing.Point(15, 12);
             this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(36, 37);
+            this.pictureBox6.Size = new System.Drawing.Size(24, 24);
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox6.TabIndex = 1001;
             this.pictureBox6.TabStop = false;
@@ -243,10 +232,9 @@ namespace TemplateTPIntegrador
             this.txt_email.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt_email.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_email.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.txt_email.Location = new System.Drawing.Point(82, 18);
-            this.txt_email.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txt_email.Location = new System.Drawing.Point(55, 12);
             this.txt_email.Name = "txt_email";
-            this.txt_email.Size = new System.Drawing.Size(624, 30);
+            this.txt_email.Size = new System.Drawing.Size(416, 20);
             this.txt_email.TabIndex = 0;
             this.txt_email.Click += new System.EventHandler(this.txt_email_TextChanged);
             this.txt_email.TextChanged += new System.EventHandler(this.txt_email_TextChanged);
@@ -257,10 +245,9 @@ namespace TemplateTPIntegrador
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.label2.Location = new System.Drawing.Point(48, 378);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(32, 246);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(92, 30);
+            this.label2.Size = new System.Drawing.Size(59, 21);
             this.label2.TabIndex = 1004;
             this.label2.Text = "Email :";
             // 
@@ -269,10 +256,9 @@ namespace TemplateTPIntegrador
             this.txt_host.AutoSize = true;
             this.txt_host.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.txt_host.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.txt_host.Location = new System.Drawing.Point(48, 32);
-            this.txt_host.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.txt_host.Location = new System.Drawing.Point(32, 21);
             this.txt_host.Name = "txt_host";
-            this.txt_host.Size = new System.Drawing.Size(210, 30);
+            this.txt_host.Size = new System.Drawing.Size(136, 21);
             this.txt_host.TabIndex = 1004;
             this.txt_host.Text = "Tipo De Usuario :";
             // 
@@ -281,19 +267,33 @@ namespace TemplateTPIntegrador
             this.panelTipoUsuario.BackColor = System.Drawing.SystemColors.Window;
             this.panelTipoUsuario.Controls.Add(this.comboBoxTipoUsuario);
             this.panelTipoUsuario.Controls.Add(this.pictureBox10);
-            this.panelTipoUsuario.Location = new System.Drawing.Point(52, 69);
-            this.panelTipoUsuario.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.panelTipoUsuario.Location = new System.Drawing.Point(35, 45);
             this.panelTipoUsuario.Name = "panelTipoUsuario";
-            this.panelTipoUsuario.Size = new System.Drawing.Size(735, 69);
+            this.panelTipoUsuario.Size = new System.Drawing.Size(490, 45);
             this.panelTipoUsuario.TabIndex = 0;
+            // 
+            // comboBoxTipoUsuario
+            // 
+            this.comboBoxTipoUsuario.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.comboBoxTipoUsuario.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.comboBoxTipoUsuario.DropDownHeight = 30;
+            this.comboBoxTipoUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.comboBoxTipoUsuario.Font = new System.Drawing.Font("Century Gothic", 12F);
+            this.comboBoxTipoUsuario.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
+            this.comboBoxTipoUsuario.FormattingEnabled = true;
+            this.comboBoxTipoUsuario.IntegralHeight = false;
+            this.comboBoxTipoUsuario.Location = new System.Drawing.Point(45, 9);
+            this.comboBoxTipoUsuario.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBoxTipoUsuario.Name = "comboBoxTipoUsuario";
+            this.comboBoxTipoUsuario.Size = new System.Drawing.Size(427, 29);
+            this.comboBoxTipoUsuario.TabIndex = 100040;
             // 
             // pictureBox10
             // 
             this.pictureBox10.Image = global::TemplateTPIntegrador.Properties.Resources.pngwing_com;
-            this.pictureBox10.Location = new System.Drawing.Point(22, 17);
-            this.pictureBox10.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pictureBox10.Location = new System.Drawing.Point(15, 11);
             this.pictureBox10.Name = "pictureBox10";
-            this.pictureBox10.Size = new System.Drawing.Size(36, 37);
+            this.pictureBox10.Size = new System.Drawing.Size(24, 24);
             this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox10.TabIndex = 1000;
             this.pictureBox10.TabStop = false;
@@ -303,19 +303,17 @@ namespace TemplateTPIntegrador
             this.panelTelefono.BackColor = System.Drawing.SystemColors.Control;
             this.panelTelefono.Controls.Add(this.pictureBox9);
             this.panelTelefono.Controls.Add(this.txt_telefono);
-            this.panelTelefono.Location = new System.Drawing.Point(788, 415);
-            this.panelTelefono.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.panelTelefono.Location = new System.Drawing.Point(525, 270);
             this.panelTelefono.Name = "panelTelefono";
-            this.panelTelefono.Size = new System.Drawing.Size(735, 69);
+            this.panelTelefono.Size = new System.Drawing.Size(490, 45);
             this.panelTelefono.TabIndex = 8;
             // 
             // pictureBox9
             // 
             this.pictureBox9.Image = global::TemplateTPIntegrador.Properties.Resources.pngwing_com;
-            this.pictureBox9.Location = new System.Drawing.Point(21, 18);
-            this.pictureBox9.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pictureBox9.Location = new System.Drawing.Point(14, 12);
             this.pictureBox9.Name = "pictureBox9";
-            this.pictureBox9.Size = new System.Drawing.Size(36, 37);
+            this.pictureBox9.Size = new System.Drawing.Size(24, 24);
             this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox9.TabIndex = 1002;
             this.pictureBox9.TabStop = false;
@@ -326,10 +324,9 @@ namespace TemplateTPIntegrador
             this.txt_telefono.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt_telefono.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_telefono.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.txt_telefono.Location = new System.Drawing.Point(82, 18);
-            this.txt_telefono.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txt_telefono.Location = new System.Drawing.Point(55, 12);
             this.txt_telefono.Name = "txt_telefono";
-            this.txt_telefono.Size = new System.Drawing.Size(632, 30);
+            this.txt_telefono.Size = new System.Drawing.Size(421, 20);
             this.txt_telefono.TabIndex = 0;
             this.txt_telefono.Click += new System.EventHandler(this.txt_telefono_TextChanged);
             this.txt_telefono.TextChanged += new System.EventHandler(this.txt_telefono_TextChanged);
@@ -340,19 +337,17 @@ namespace TemplateTPIntegrador
             this.panelApellido.BackColor = System.Drawing.SystemColors.Control;
             this.panelApellido.Controls.Add(this.pictureBox4);
             this.panelApellido.Controls.Add(this.txt_apellido);
-            this.panelApellido.Location = new System.Drawing.Point(52, 300);
-            this.panelApellido.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.panelApellido.Location = new System.Drawing.Point(35, 195);
             this.panelApellido.Name = "panelApellido";
-            this.panelApellido.Size = new System.Drawing.Size(735, 69);
+            this.panelApellido.Size = new System.Drawing.Size(490, 45);
             this.panelApellido.TabIndex = 2;
             // 
             // pictureBox4
             // 
             this.pictureBox4.Image = global::TemplateTPIntegrador.Properties.Resources.pngwing_com;
-            this.pictureBox4.Location = new System.Drawing.Point(22, 17);
-            this.pictureBox4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pictureBox4.Location = new System.Drawing.Point(15, 11);
             this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(36, 37);
+            this.pictureBox4.Size = new System.Drawing.Size(24, 24);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox4.TabIndex = 998;
             this.pictureBox4.TabStop = false;
@@ -363,10 +358,9 @@ namespace TemplateTPIntegrador
             this.txt_apellido.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt_apellido.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_apellido.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.txt_apellido.Location = new System.Drawing.Point(82, 18);
-            this.txt_apellido.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txt_apellido.Location = new System.Drawing.Point(55, 12);
             this.txt_apellido.Name = "txt_apellido";
-            this.txt_apellido.Size = new System.Drawing.Size(624, 30);
+            this.txt_apellido.Size = new System.Drawing.Size(416, 20);
             this.txt_apellido.TabIndex = 0;
             this.txt_apellido.TextChanged += new System.EventHandler(this.txt_apellido_Click);
             this.txt_apellido.Enter += new System.EventHandler(this.txt_apellido_Click);
@@ -376,10 +370,9 @@ namespace TemplateTPIntegrador
             this.lblApellido.AutoSize = true;
             this.lblApellido.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.lblApellido.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.lblApellido.Location = new System.Drawing.Point(46, 263);
-            this.lblApellido.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblApellido.Location = new System.Drawing.Point(31, 171);
             this.lblApellido.Name = "lblApellido";
-            this.lblApellido.Size = new System.Drawing.Size(126, 30);
+            this.lblApellido.Size = new System.Drawing.Size(82, 21);
             this.lblApellido.TabIndex = 100000;
             this.lblApellido.Text = "Apellido :";
             // 
@@ -388,10 +381,9 @@ namespace TemplateTPIntegrador
             this.lblTelefono.AutoSize = true;
             this.lblTelefono.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.lblTelefono.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.lblTelefono.Location = new System.Drawing.Point(782, 378);
-            this.lblTelefono.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblTelefono.Location = new System.Drawing.Point(521, 246);
             this.lblTelefono.Name = "lblTelefono";
-            this.lblTelefono.Size = new System.Drawing.Size(131, 30);
+            this.lblTelefono.Size = new System.Drawing.Size(84, 21);
             this.lblTelefono.TabIndex = 1002;
             this.lblTelefono.Text = "Teléfono :";
             // 
@@ -400,19 +392,17 @@ namespace TemplateTPIntegrador
             this.panelDni.BackColor = System.Drawing.SystemColors.Control;
             this.panelDni.Controls.Add(this.pictureBox7);
             this.panelDni.Controls.Add(this.txt_dni);
-            this.panelDni.Location = new System.Drawing.Point(788, 185);
-            this.panelDni.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.panelDni.Location = new System.Drawing.Point(525, 120);
             this.panelDni.Name = "panelDni";
-            this.panelDni.Size = new System.Drawing.Size(735, 69);
+            this.panelDni.Size = new System.Drawing.Size(490, 45);
             this.panelDni.TabIndex = 6;
             // 
             // pictureBox7
             // 
             this.pictureBox7.Image = global::TemplateTPIntegrador.Properties.Resources.pngwing_com;
-            this.pictureBox7.Location = new System.Drawing.Point(22, 17);
-            this.pictureBox7.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pictureBox7.Location = new System.Drawing.Point(15, 11);
             this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(36, 37);
+            this.pictureBox7.Size = new System.Drawing.Size(24, 24);
             this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox7.TabIndex = 1000;
             this.pictureBox7.TabStop = false;
@@ -423,10 +413,9 @@ namespace TemplateTPIntegrador
             this.txt_dni.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt_dni.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_dni.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.txt_dni.Location = new System.Drawing.Point(82, 18);
-            this.txt_dni.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txt_dni.Location = new System.Drawing.Point(55, 12);
             this.txt_dni.Name = "txt_dni";
-            this.txt_dni.Size = new System.Drawing.Size(632, 30);
+            this.txt_dni.Size = new System.Drawing.Size(421, 20);
             this.txt_dni.TabIndex = 0;
             this.txt_dni.Click += new System.EventHandler(this.txt_dni_TextChanged);
             this.txt_dni.TextChanged += new System.EventHandler(this.txt_dni_TextChanged);
@@ -437,10 +426,9 @@ namespace TemplateTPIntegrador
             this.lblDireccion.AutoSize = true;
             this.lblDireccion.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.lblDireccion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.lblDireccion.Location = new System.Drawing.Point(782, 263);
-            this.lblDireccion.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblDireccion.Location = new System.Drawing.Point(521, 171);
             this.lblDireccion.Name = "lblDireccion";
-            this.lblDireccion.Size = new System.Drawing.Size(143, 30);
+            this.lblDireccion.Size = new System.Drawing.Size(91, 21);
             this.lblDireccion.TabIndex = 1001;
             this.lblDireccion.Text = "Dirección :";
             // 
@@ -449,10 +437,9 @@ namespace TemplateTPIntegrador
             this.lblDni.AutoSize = true;
             this.lblDni.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.lblDni.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.lblDni.Location = new System.Drawing.Point(782, 148);
-            this.lblDni.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblDni.Location = new System.Drawing.Point(521, 96);
             this.lblDni.Name = "lblDni";
-            this.lblDni.Size = new System.Drawing.Size(69, 30);
+            this.lblDni.Size = new System.Drawing.Size(47, 21);
             this.lblDni.TabIndex = 1000;
             this.lblDni.Text = "DNI :";
             // 
@@ -461,19 +448,17 @@ namespace TemplateTPIntegrador
             this.panelDireccion.BackColor = System.Drawing.SystemColors.Control;
             this.panelDireccion.Controls.Add(this.pictureBox8);
             this.panelDireccion.Controls.Add(this.txt_direccion);
-            this.panelDireccion.Location = new System.Drawing.Point(788, 300);
-            this.panelDireccion.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.panelDireccion.Location = new System.Drawing.Point(525, 195);
             this.panelDireccion.Name = "panelDireccion";
-            this.panelDireccion.Size = new System.Drawing.Size(735, 69);
+            this.panelDireccion.Size = new System.Drawing.Size(490, 45);
             this.panelDireccion.TabIndex = 7;
             // 
             // pictureBox8
             // 
             this.pictureBox8.Image = global::TemplateTPIntegrador.Properties.Resources.pngwing_com;
-            this.pictureBox8.Location = new System.Drawing.Point(22, 17);
-            this.pictureBox8.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pictureBox8.Location = new System.Drawing.Point(15, 11);
             this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Size = new System.Drawing.Size(36, 37);
+            this.pictureBox8.Size = new System.Drawing.Size(24, 24);
             this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox8.TabIndex = 1001;
             this.pictureBox8.TabStop = false;
@@ -484,10 +469,9 @@ namespace TemplateTPIntegrador
             this.txt_direccion.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt_direccion.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_direccion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.txt_direccion.Location = new System.Drawing.Point(82, 18);
-            this.txt_direccion.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txt_direccion.Location = new System.Drawing.Point(55, 12);
             this.txt_direccion.Name = "txt_direccion";
-            this.txt_direccion.Size = new System.Drawing.Size(632, 30);
+            this.txt_direccion.Size = new System.Drawing.Size(421, 20);
             this.txt_direccion.TabIndex = 0;
             this.txt_direccion.Click += new System.EventHandler(this.txt_direccion_TextChanged);
             this.txt_direccion.TextChanged += new System.EventHandler(this.txt_direccion_TextChanged);
@@ -498,10 +482,9 @@ namespace TemplateTPIntegrador
             this.lblNombre.AutoSize = true;
             this.lblNombre.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.lblNombre.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.lblNombre.Location = new System.Drawing.Point(48, 148);
-            this.lblNombre.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblNombre.Location = new System.Drawing.Point(32, 96);
             this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(124, 30);
+            this.lblNombre.Size = new System.Drawing.Size(81, 21);
             this.lblNombre.TabIndex = 10000;
             this.lblNombre.Text = "Nombre :";
             // 
@@ -510,19 +493,17 @@ namespace TemplateTPIntegrador
             this.panelNombre.BackColor = System.Drawing.SystemColors.Control;
             this.panelNombre.Controls.Add(this.pictureBox1);
             this.panelNombre.Controls.Add(this.txt_nombre);
-            this.panelNombre.Location = new System.Drawing.Point(52, 185);
-            this.panelNombre.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.panelNombre.Location = new System.Drawing.Point(35, 120);
             this.panelNombre.Name = "panelNombre";
-            this.panelNombre.Size = new System.Drawing.Size(735, 69);
+            this.panelNombre.Size = new System.Drawing.Size(490, 45);
             this.panelNombre.TabIndex = 1;
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::TemplateTPIntegrador.Properties.Resources.pngwing_com;
-            this.pictureBox1.Location = new System.Drawing.Point(22, 17);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pictureBox1.Location = new System.Drawing.Point(15, 11);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(36, 37);
+            this.pictureBox1.Size = new System.Drawing.Size(24, 24);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 997;
             this.pictureBox1.TabStop = false;
@@ -533,10 +514,9 @@ namespace TemplateTPIntegrador
             this.txt_nombre.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt_nombre.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_nombre.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.txt_nombre.Location = new System.Drawing.Point(82, 18);
-            this.txt_nombre.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txt_nombre.Location = new System.Drawing.Point(55, 12);
             this.txt_nombre.Name = "txt_nombre";
-            this.txt_nombre.Size = new System.Drawing.Size(624, 30);
+            this.txt_nombre.Size = new System.Drawing.Size(416, 20);
             this.txt_nombre.TabIndex = 0;
             this.txt_nombre.Click += new System.EventHandler(this.txt_nombre_Click);
             this.txt_nombre.TextChanged += new System.EventHandler(this.txt_nombre_Click);
@@ -549,36 +529,21 @@ namespace TemplateTPIntegrador
             this.btn_crearUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_crearUsuario.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_crearUsuario.ForeColor = System.Drawing.Color.White;
-            this.btn_crearUsuario.Location = new System.Drawing.Point(676, 831);
-            this.btn_crearUsuario.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btn_crearUsuario.Location = new System.Drawing.Point(451, 540);
             this.btn_crearUsuario.Name = "btn_crearUsuario";
-            this.btn_crearUsuario.Size = new System.Drawing.Size(222, 54);
+            this.btn_crearUsuario.Size = new System.Drawing.Size(148, 35);
             this.btn_crearUsuario.TabIndex = 12;
             this.btn_crearUsuario.Text = "CREAR USUARIO";
             this.btn_crearUsuario.UseVisualStyleBackColor = false;
             this.btn_crearUsuario.Click += new System.EventHandler(this.btn_crearUsuario_Click);
             // 
-            // comboBoxTipoUsuario
-            // 
-            this.comboBoxTipoUsuario.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.comboBoxTipoUsuario.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.comboBoxTipoUsuario.DropDownHeight = 30;
-            this.comboBoxTipoUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.comboBoxTipoUsuario.FormattingEnabled = true;
-            this.comboBoxTipoUsuario.IntegralHeight = false;
-            this.comboBoxTipoUsuario.Location = new System.Drawing.Point(67, 24);
-            this.comboBoxTipoUsuario.Name = "comboBoxTipoUsuario";
-            this.comboBoxTipoUsuario.Size = new System.Drawing.Size(639, 28);
-            this.comboBoxTipoUsuario.TabIndex = 100040;
-            // 
             // RegistrarUsuariosForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1575, 923);
+            this.ClientSize = new System.Drawing.Size(1050, 600);
             this.Controls.Add(this.panelCrearCuenta);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "RegistrarUsuariosForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AltaUsuariosForm";
