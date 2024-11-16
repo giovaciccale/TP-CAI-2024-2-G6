@@ -42,7 +42,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.label1.Location = new System.Drawing.Point(29, 82);
+            this.label1.Location = new System.Drawing.Point(276, 98);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(211, 21);
             this.label1.TabIndex = 100028;
@@ -55,7 +55,7 @@
             this.btn_desactivarUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_desactivarUsuario.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_desactivarUsuario.ForeColor = System.Drawing.Color.White;
-            this.btn_desactivarUsuario.Location = new System.Drawing.Point(378, 255);
+            this.btn_desactivarUsuario.Location = new System.Drawing.Point(428, 540);
             this.btn_desactivarUsuario.Name = "btn_desactivarUsuario";
             this.btn_desactivarUsuario.Size = new System.Drawing.Size(195, 35);
             this.btn_desactivarUsuario.TabIndex = 100030;
@@ -68,7 +68,7 @@
             this.panelSeleccionarCliente.BackColor = System.Drawing.SystemColors.Window;
             this.panelSeleccionarCliente.Controls.Add(this.cmb_usuarios);
             this.panelSeleccionarCliente.Controls.Add(this.pictureBox10);
-            this.panelSeleccionarCliente.Location = new System.Drawing.Point(33, 127);
+            this.panelSeleccionarCliente.Location = new System.Drawing.Point(280, 127);
             this.panelSeleccionarCliente.Name = "panelSeleccionarCliente";
             this.panelSeleccionarCliente.Size = new System.Drawing.Size(490, 45);
             this.panelSeleccionarCliente.TabIndex = 100032;
@@ -84,7 +84,7 @@
             this.cmb_usuarios.FormattingEnabled = true;
             this.cmb_usuarios.IntegralHeight = false;
             this.cmb_usuarios.Location = new System.Drawing.Point(44, 9);
-            this.cmb_usuarios.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmb_usuarios.Margin = new System.Windows.Forms.Padding(2);
             this.cmb_usuarios.Name = "cmb_usuarios";
             this.cmb_usuarios.Size = new System.Drawing.Size(427, 29);
             this.cmb_usuarios.TabIndex = 100040;
